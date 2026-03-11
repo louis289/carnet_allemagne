@@ -1,0 +1,32 @@
+[
+  {
+    "titre": "Voyage dans le temps",
+    "type_de_jeu": "CTF",
+    "terre": "__",
+    "eau": "",
+    "air": "",
+    "feu": "",
+    "espace": "",
+    "nombre_enfants": "12",
+    "nombre_adultes": "2",
+    "objectifs_ppdb": [
+      "A1: obj...",
+      "A2: obj..."
+    ],
+    "duree": "2h",
+    "materiel": "...",
+    "but_du_jeu": "...",
+    "deroulement": [
+      "1. Sensibilisation: Introduction au voyage dans le temps",
+      "2. Règles: Explication des règles du jeu",
+      "3. Déroulement: Les équipes doivent récupérer des objets dans le temps",
+      "4. Dénouement/Remise au calme: Les équipes se rassemblent pour présenter leurs objets",
+      "5. Bilan: Récapitulation et évaluation du jeu"
+    ],
+    "fin_du_jeu": "...",
+    "a_noter": "...",
+    "imaginaire": "...",
+    "mecanique_recolte_expressions": "...",
+    "pour_aller_plus_loin": "..."
+  }
+]

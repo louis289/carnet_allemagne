@@ -1,0 +1,184 @@
+{
+  "type_de_jeu_et_titre": {
+    "page": 1,
+    "x": 90,
+    "y": 620,
+    "width": 387,
+    "font": "Helvetica-Bold",
+    "size": 14,
+    "lines": 1,
+    "height": 25,
+    "bg_color": "#f7f7f7",
+    "align": "center"
+  },
+  "terre": {
+    "page": 1,
+    "x": 132,
+    "y": 537,
+    "width": 24,
+    "font": "Helvetica-Bold",
+    "size": 14,
+    "lines": 1,
+    "height": 20
+  },
+  "eau": {
+    "page": 1,
+    "x": 160,
+    "y": 537,
+    "width": 26,
+    "font": "Helvetica-Bold",
+    "size": 14,
+    "lines": 1,
+    "height": 20
+  },
+  "air": {
+    "page": 1,
+    "x": 188,
+    "y": 537,
+    "width": 21,
+    "font": "Helvetica-Bold",
+    "size": 14,
+    "lines": 1,
+    "height": 20
+  },
+  "feu": {
+    "page": 1,
+    "x": 216,
+    "y": 535,
+    "width": 27,
+    "font": "Helvetica-Bold",
+    "size": 14,
+    "lines": 1,
+    "height": 20
+  },
+  "espace": {
+    "page": 1,
+    "x": 247,
+    "y": 535,
+    "width": 22,
+    "font": "Helvetica-Bold",
+    "size": 14,
+    "lines": 1,
+    "height": 20
+  },
+  "nombre_enfants": {
+    "page": 1,
+    "x": 128,
+    "y": 498,
+    "width": 157,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 1,
+    "height": 14
+  },
+  "nombre_adultes": {
+    "page": 1,
+    "x": 130,
+    "y": 486,
+    "width": 91,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 1,
+    "height": 14
+  },
+  "objectifs_ppdb": {
+    "page": 1,
+    "x": 283,
+    "y": 540,
+    "width": 289,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 5,
+    "height": 66
+  },
+  "duree": {
+    "page": 1,
+    "x": 63,
+    "y": 512,
+    "width": 74,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 1,
+    "height": 14
+  },
+  "materiel": {
+    "page": 1,
+    "x": 21,
+    "y": 443,
+    "width": 139,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 13,
+    "height": 180
+  },
+  "but_du_jeu": {
+    "page": 1,
+    "x": 183,
+    "y": 444,
+    "width": 392,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 3,
+    "height": 45
+  },
+  "deroulement": {
+    "page": 1,
+    "x": 183,
+    "y": 390,
+    "width": 390,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 14,
+    "height": 201
+  },
+  "fin_du_jeu": {
+    "page": 1,
+    "x": 184,
+    "y": 175,
+    "width": 388,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 9,
+    "height": 120
+  },
+  "a_noter": {
+    "page": 1,
+    "x": 21,
+    "y": 233,
+    "width": 138,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 13,
+    "height": 178
+  },
+  "imaginaire": {
+    "page": 2,
+    "x": 307,
+    "y": 511,
+    "width": 260,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 32,
+    "height": 445
+  },
+  "mecanique_recolte_expressions": {
+    "page": 2,
+    "x": 23,
+    "y": 756,
+    "width": 545,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 15,
+    "height": 211
+  },
+  "pour_aller_plus_loin": {
+    "page": 2,
+    "x": 24,
+    "y": 512,
+    "width": 264,
+    "font": "Helvetica",
+    "size": 10,
+    "lines": 32,
+    "height": 449
+  }
+}
