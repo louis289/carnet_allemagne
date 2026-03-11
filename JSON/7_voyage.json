@@ -1,0 +1,834 @@
+{
+  "carnet_scout": {
+    "categorie": "Voyage",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "À la gare / Dans le train",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]est[/V1] [N1]notre train[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]unser Zug[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]oun-zeur tsouk[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]our train[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]aou-eur tréïn[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[A1]Quel[/A1] [N1]quai[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Welches[/A1] [N1]Gleis[/N1]?",
+              "prononciation_FR": "[A1]Vêl-chess[/A1] [N1]glaïs[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]Which[/A1] [N1]platform[/N1]?",
+              "prononciation_FR": "[A1]Witch[/A1] [N1]plat-form[/N1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Le billet[/N1] s'il vous plaît.",
+            "allemand": {
+              "texte": "[N1]Die Fahrkarte[/N1] bitte.",
+              "prononciation_FR": "[N1]Di far-kar-teu[/N1] [A1]bi-teu[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The ticket[/N1] please.",
+              "prononciation_FR": "[N1]Ze ti-kêt[/N1] pliz."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Le train[/N1] [V1]est arrivé[/V1].",
+            "allemand": {
+              "texte": "[N1]Der Zug[/N1] [V1]ist da[/V1].",
+              "prononciation_FR": "[N1]Dér tsouk[/N1] [V1]ist da[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]The train[/N1] [V1]has arrived[/V1].",
+              "prononciation_FR": "[N1]Ze tréïn[/N1] [V1]haz é-raïvd[/V1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Dépêchez[/V1]-[N1]vous[/N1] !",
+            "allemand": {
+              "texte": "[V1]Beeilt[/V1] [N1]euch[/N1]!",
+              "prononciation_FR": "[V1]Bé-aïlt[/V1] [N1]oïch[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Hurry up[/V1]!",
+              "prononciation_FR": "[V1]Heu-ri eup[/V1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Dans le bus / car",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Montez[/V1] dans [N1]le bus[/N1].",
+            "allemand": {
+              "texte": "[V1]Steigt[/V1] in [N1]den Bus[/N1] [V1]ein[/V1].",
+              "prononciation_FR": "[V1]Chtaïkt[/V1] in [N1]déne bouss[/N1] [V1]aïn[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]Get on[/V1] [N1]the bus[/N1].",
+              "prononciation_FR": "[V1]Guét on[/V1] [N1]ze beuss[/N1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Ma place[/N1] [V1]est[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[N1]Mein Platz[/N1] [V1]ist[/V1] [A1]hier[/A1].",
+              "prononciation_FR": "[N1]Maïn plats[/N1] [V1]ist[/V1] [A1]hir[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]My seat[/N1] [V1]is[/V1] [A1]here[/A1].",
+              "prononciation_FR": "[N1]Maï sit[/N1] [V1]iz[/V1] [A1]hir[/A1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Le sac[/N1] en [N2]soute[/N2].",
+            "allemand": {
+              "texte": "[N1]Die Tasche[/N1] in [N2]den Kofferraum[/N2].",
+              "prononciation_FR": "[N1]Di ta-cheu[/N1] in [N2]déne ko-fèr-raoum[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]The bag[/N1] in [N2]the trunk[/N2].",
+              "prononciation_FR": "[N1]Ze bag[/N1] in [N2]ze treunk[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]On[/N1] [V1]s'arrête[/V1] [A1]quand[/A1] ?",
+            "allemand": {
+              "texte": "[A1]Wann[/A1] [V1]halten[/V1] [N1]wir[/N1] [V1]an[/V1]?",
+              "prononciation_FR": "[A1]Van[/A1] [V1]hal-teun[/V1] [N1]vir[/N1] [V1]an[/V1]?"
+            },
+            "anglais": {
+              "texte": "[A1]When[/A1] [V1]do[/V1] [N1]we[/N1] [V2]stop[/V2]?",
+              "prononciation_FR": "[A1]Wène[/A1] [V1]dou[/V1] [N1]wi[/N1] [V2]stop[/V2]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]malade[/A1].",
+            "allemand": {
+              "texte": "[N1]Mir[/N1] [V1]ist[/V1] [A1]schlecht[/A1].",
+              "prononciation_FR": "[N1]Mir[/N1] [V1]ist[/V1] [A1]chlècht[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]feel[/V1] [A1]sick[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]fil[/V1] [A1]sik[/A1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Douanes et identité",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Voici[/N1] [N2]ma carte[/N2].",
+            "allemand": {
+              "texte": "[N1]Hier ist[/N1] [N2]mein Ausweis[/N2].",
+              "prononciation_FR": "[N1]Hir ist[/N1] [N2]maïn aous-vaïs[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]Here is[/N1] [N2]my ID[/N2].",
+              "prononciation_FR": "[N1]Hir iz[/N1] [N2]maï aï-di[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]mon[/A1] [N2]passeport[/N2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]mein[/A1] [N2]Pass[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]maïn[/A1] [N2]pass[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]This[/N1] [V1]is[/V1] [A1]my[/A1] [N2]passport[/N2].",
+              "prononciation_FR": "[N1]Ziss[/N1] [V1]iz[/V1] [A1]maï[/A1] [N2]pass-port[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [V1]fais partie[/V1] du [N2]groupe scout[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]gehöre zur[/V1] [N2]Pfadfindergruppe[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]gué-heu-reu tsour[/V1] [N2]pfat-fin-deur-grou-peu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am part[/V1] of the [N2]scout group[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame part[/V1] ov ze [N2]skaout group[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Pas de problème[/N1].",
+            "allemand": {
+              "texte": "[N1]Kein Problem[/N1].",
+              "prononciation_FR": "[N1]Kaïn pro-blème[/N1]."
+            },
+            "anglais": {
+              "texte": "[N1]No problem[/N1].",
+              "prononciation_FR": "[N1]No pro-blem[/N1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [V1]n'ai rien à déclarer[/V1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe nichts zu verzollen[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu nichts tsou fèr-tso-leun[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]have nothing to declare[/V1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]hav no-sing tou di-clèr[/V1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "Acheter un billet ou aux bornes",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Un[/N1] [N2]ticket[/N2] pour [N3]Berlin[/N3].",
+            "allemand": {
+              "texte": "[N1]Ein[/N1] [N2]Ticket[/N2] nach [N3]Berlin[/N3].",
+              "prononciation_FR": "[N1]Aïn[/N1] [N2]ti-kêt[/N2] nakh [N3]Bèr-line[/N3]."
+            },
+            "anglais": {
+              "texte": "[N1]One[/N1] [N2]ticket[/N2] to [N3]Berlin[/N3].",
+              "prononciation_FR": "[N1]Weun[/N1] [N2]ti-kêt[/N2] tou [N3]Beur-line[/N3]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[A1]Combien[/A1] [N1]ça[/N1] [V1]coûte[/V1] ?",
+            "allemand": {
+              "texte": "[A1]Wie viel[/A1] [V1]kostet[/V1] [N1]das[/N1]?",
+              "prononciation_FR": "[A1]Vi fil[/A1] [V1]kos-têt[/V1] [N1]dass[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]How much[/A1] [V1]does[/V1] [N1]it[/N1] [V2]cost[/V2]?",
+              "prononciation_FR": "[A1]Haou meutch[/A1] [V1]deuz[/V1] [N1]it[/N1] [V2]kost[/V2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Peux[/V1]-[N1]je[/N1] [V2]payer[/V2] par [N2]carte[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Kann[/V1] [N1]ich[/N1] mit [N2]Karte[/N2] [V2]zahlen[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]ich[/N1] mit [N2]kar-teu[/N2] [V2]tsa-leun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]I[/N1] [V2]pay[/V2] by [N2]card[/N2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]Aï[/N1] [V2]péï[/V2] baï [N2]kard[/N2]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Avez[/V1]-[N1]vous[/N1] de [N2]la monnaie[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Haben[/V1] [N1]Sie[/N1] [N2]Wechselgeld[/N2]?",
+              "prononciation_FR": "[V1]Ha-beun[/V1] [N1]zi[/N1] [N2]vèk-sel-guèlt[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]have[/V2] [N2]change[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]hav[/V2] [N2]tchéïndj[/N2]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Le distributeur[/N1] [V1]est[/V1] [A1]cassé[/A1].",
+            "allemand": {
+              "texte": "[N1]Der Automat[/N1] [V1]ist[/V1] [A1]kaputt[/A1].",
+              "prononciation_FR": "[N1]Dér aou-to-mat[/N1] [V1]ist[/V1] [A1]ka-pout[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The machine[/N1] [V1]is[/V1] [A1]broken[/A1].",
+              "prononciation_FR": "[N1]Ze ma-chine[/N1] [V1]iz[/V1] [A1]bro-keun[/A1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 5,
+        "nom_du_cas": "Gérer les sacs / bagages",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Ce sac[/N1] [V1]est[/V1] [A1]lourd[/A1].",
+            "allemand": {
+              "texte": "[N1]Diese Tasche[/N1] [V1]ist[/V1] [A1]schwer[/A1].",
+              "prononciation_FR": "[N1]Di-zeu ta-cheu[/N1] [V1]ist[/V1] [A1]chvér[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]This bag[/N1] [V1]is[/V1] [A1]heavy[/A1].",
+              "prononciation_FR": "[N1]Ziss bag[/N1] [V1]iz[/V1] [A1]hé-vi[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Aide[/V1]-[N1]moi[/N1] à le [V2]porter[/V2].",
+            "allemand": {
+              "texte": "[V1]Hilf[/V1] [N1]mir[/N1] ihn zu [V2]tragen[/V2].",
+              "prononciation_FR": "[V1]Hilf[/V1] [N1]mir[/N1] in tsou [V2]tra-gueun[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Help[/V1] [N1]me[/N1] [V2]carry[/V2] it.",
+              "prononciation_FR": "[V1]Help[/V1] [N1]mi[/N1] [V2]ka-ri[/V2] it."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "Où [V1]sont[/V1] [N1]les sacs à dos[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Rucksäcke[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di rouk-zè-keu[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the backpacks[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze bak-paks[/N1]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Ma valise[/N1] [V1]est[/V1] [A1]rouge[/A1].",
+            "allemand": {
+              "texte": "[N1]Mein Koffer[/N1] [V1]ist[/V1] [A1]rot[/A1].",
+              "prononciation_FR": "[N1]Maïn ko-feur[/N1] [V1]ist[/V1] [A1]rot[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]My suitcase[/N1] [V1]is[/V1] [A1]red[/A1].",
+              "prononciation_FR": "[N1]Maï sout-kéïss[/N1] [V1]iz[/V1] [A1]rèd[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Compte[/V1] [N1]les bagages[/N1] !",
+            "allemand": {
+              "texte": "[V1]Zähl[/V1] [N1]das Gepäck[/N1]!",
+              "prononciation_FR": "[V1]Tsèl[/V1] [N1]dass gué-pêk[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Count[/V1] [N1]the luggage[/N1]!",
+              "prononciation_FR": "[V1]Kaount[/V1] [N1]ze leu-guidj[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 6,
+        "nom_du_cas": "Retards et galères",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Le train[/N1] [V1]est en retard[/V1].",
+            "allemand": {
+              "texte": "[N1]Der Zug[/N1] [V1]hat Verspätung[/V1].",
+              "prononciation_FR": "[N1]Dér tsouk[/N1] [V1]hat fèr-chpè-toung[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]The train[/N1] [V1]is late[/V1].",
+              "prononciation_FR": "[N1]Ze tréïn[/N1] [V1]iz léït[/V1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Nous[/N1] [V1]avons raté[/V1] [N2]la correspondance[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]haben[/V1] [N2]den Anschluss[/N2] [V2]verpasst[/V2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]ha-beun[/V1] [N2]déne an-chlouss[/N2] [V2]fèr-past[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]missed[/V1] [N2]the connection[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]mist[/V1] [N2]ze ko-nek-cheun[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Le bus[/N1] [V1]est complet[/V1].",
+            "allemand": {
+              "texte": "[N1]Der Bus[/N1] [V1]ist voll[/V1].",
+              "prononciation_FR": "[N1]Dér bouss[/N1] [V1]ist fol[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]The bus[/N1] [V1]is full[/V1].",
+              "prononciation_FR": "[N1]Ze beuss[/N1] [V1]iz foul[/V1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]On fait quoi[/V1] [A1]maintenant[/A1] ?",
+            "allemand": {
+              "texte": "[A1]Was[/A1] [V1]machen wir[/V1] [A1]jetzt[/A1]?",
+              "prononciation_FR": "[A1]Vass[/A1] [V1]ma-kheun vir[/V1] [A1]yètst[/A1]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [V1]do we do[/V1] [A1]now[/A1]?",
+              "prononciation_FR": "[A1]Wot[/A1] [V1]dou wi dou[/V1] [A1]naou[/A1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Il[/N1] [V1]faut[/V1] [V2]attendre[/V2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]müssen[/V1] [V2]warten[/V2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]mu-sseun[/V1] [V2]var-teun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]have[/V1] to [V2]wait[/V2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]hav[/V1] tou [V2]wéït[/V2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 7,
+        "nom_du_cas": "Faire une pause trajet",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[A1]Combien de temps[/A1] pour [N1]la pause[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wie lange[/A1] ist [N1]die Pause[/N1]?",
+              "prononciation_FR": "[A1]Vi lan-gueu[/A1] ist [N1]di pao-zeu[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]How long[/A1] is [N1]the break[/N1]?",
+              "prononciation_FR": "[A1]Haou long[/A1] iz [N1]ze bréïk[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]dois[/V1] [V2]aller[/V2] aux [N2]toilettes[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]muss[/V1] auf [N2]die Toilette[/N2] [V2]gehen[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]mouss[/V1] aouf [N2]di to-a-lèt-teu[/N2] [V2]gué-heun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] to [V2]go[/V2] to the [N2]restroom[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] tou [V2]go[/V2] tou ze [N2]rest-roum[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]On[/N1] [V1]mange[/V1] [A1]quelque chose[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Essen[/V1] [N1]wir[/N1] [A1]etwas[/A1]?",
+              "prononciation_FR": "[V1]È-sseun[/V1] [N1]vir[/N1] [A1]èt-vass[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]we[/N1] [V2]eat[/V2] [A1]something[/A1]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]wi[/N1] [V2]it[/V2] [A1]seum-sing[/A1]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]On repart[/V1] dans [A1]dix minutes[/A1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]geht weiter[/V1] in [A1]zehn Minuten[/A1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]guét vaï-teur[/V1] in [A1]tséne mi-nou-teun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]leave[/V1] in [A1]ten minutes[/A1]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]liv[/V1] in [A1]tèn mi-neuts[/A1]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Dégourdissez[/V1]-[N1]vous[/N1] [N2]les jambes[/N2].",
+            "allemand": {
+              "texte": "[V1]Vertretet[/V1] [N1]euch[/N1] [N2]die Beine[/N2].",
+              "prononciation_FR": "[V1]Fêr-tré-têt[/V1] [N1]oïch[/N1] [N2]di baï-neu[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Stretch[/V1] [N1]your[/N1] [N2]legs[/N2].",
+              "prononciation_FR": "[V1]Stretcḥ[/V1] [N1]your[/N1] [N2]lègz[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 8,
+        "nom_du_cas": "Rencontre de voyageurs",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Ce siège[/N1] [V1]est[/V1] [A1]libre[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Ist[/V1] [N1]dieser Platz[/N1] [A1]frei[/A1]?",
+              "prononciation_FR": "[V1]Ist[/V1] [N1]di-zeur plats[/N1] [A1]fraï[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Is[/V1] [N1]this seat[/N1] [A1]free[/A1]?",
+              "prononciation_FR": "[V1]Iz[/V1] [N1]ziss sit[/N1] [A1]fri[/A1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "Où [V1]allez[/V1]-[N1]vous[/N1] ?",
+            "allemand": {
+              "texte": "Wohin [V1]fahren[/V1] [N1]Sie[/N1]?",
+              "prononciation_FR": "Vo-hine [V1]fa-reun[/V1] [N1]zi[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]you[/N1] [V2]going[/V2]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]you[/N1] [V2]go-ing[/V2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Beau[/N1] [N2]voyage[/N2] !",
+            "allemand": {
+              "texte": "[A1]Gute[/A1] [N2]Reise[/N2]!",
+              "prononciation_FR": "[A1]Gou-teu[/A1] [N2]raï-zeu[/A2]!"
+            },
+            "anglais": {
+              "texte": "[A1]Good[/A1] [N2]trip[/N2]!",
+              "prononciation_FR": "[A1]Goud[/A1] [N2]trip[/N2]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Pardon[/V1], je [V2]dois[/V2] [V3]passer[/V3].",
+            "allemand": {
+              "texte": "[V1]Entschuldigung[/V1], ich [V2]muss[/V2] [V3]durch[/V3].",
+              "prononciation_FR": "[V1]Èn-tchoul-di-goung[/V1], ich [V2]mouss[/V2] [V3]dourch[/V3]."
+            },
+            "anglais": {
+              "texte": "[V1]Excuse me[/V1], I [V2]need[/V2] to [V3]pass[/V3].",
+              "prononciation_FR": "[V1]Ik-skiouz mi[/V1], Aï [V2]nid[/V2] tou [V3]pass[/V3]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Faites[/V1] [N1]attention[/N1] aux [N2]portes[/N2].",
+            "allemand": {
+              "texte": "[V1]Vorsicht[/V1] an [N2]den Türen[/N2].",
+              "prononciation_FR": "[V1]For-zicht[/V1] ane [N2]déne tu-reun[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Watch[/V1] [N2]the doors[/N2].",
+              "prononciation_FR": "[V1]Wotch[/V1] [N2]ze dorz[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 9,
+        "nom_du_cas": "Arrivée",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]est[/V1] [A1]arrivé[/A1] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]sind[/V1] [A1]angekommen[/A1]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zind[/V1] [A1]an-gué-ko-meun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]have[/V1] [A1]arrived[/A1]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]hav[/V1] [A1]e-raïvd[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]le terminus[/N2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [N2]die Endstation[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [N2]di ênt-chta-tsione[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]the final stop[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]ze faï-nal stop[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]N'oubliez[/V1] [A1]rien[/A1] !",
+            "allemand": {
+              "texte": "[V1]Vergesst[/V1] [A1]nichts[/A1]!",
+              "prononciation_FR": "[V1]Fèr-gêst[/V1] [A1]nichts[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Do not forget[/V1] [A1]anything[/A1]!",
+              "prononciation_FR": "[V1]Dou not for-guét[/V1] [A1]é-ni-sing[/A1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Rassemblement[/V1] sur [N1]le quai[/N1].",
+            "allemand": {
+              "texte": "[V1]Sammeln[/V1] auf [N1]dem Bahnsteig[/N1].",
+              "prononciation_FR": "[V1]Za-meuln[/V1] aouf [N1]dém ban-chtaïk[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Gather[/V1] on [N1]the platform[/N1].",
+              "prononciation_FR": "[V1]Ga-zeur[/V1] on [N1]ze plat-form[/N1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "Où [V1]est[/V1] [N1]la sortie[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]der Ausgang[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dér aous-gang[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the exit[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze ek-sit[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 10,
+        "nom_du_cas": "Informations aux guichets",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]sont[/V1] [N1]les guichets[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Schalter[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di chal-teur[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the ticket offices[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze ti-kêt o-fi-siz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Avez[/V1]-[N1]vous[/N1] [N2]un plan[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Haben[/V1] [N1]Sie[/N1] [N2]einen Plan[/N2]?",
+              "prononciation_FR": "[V1]Ha-beun[/V1] [N1]zi[/N1] [N2]aï-neun plan[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]have[/V2] [N2]a map[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]hav[/V2] [N2]eu map[/N2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]On[/N1] [V1]cherche[/V1] [N2]cette ville[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]suchen[/V1] [N2]diese Stadt[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zou-kheun[/V1] [N2]di-zeu chtat[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are looking for[/V1] [N2]this city[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar lou-king for[/V1] [N2]ziss si-ti[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Où [V1]sont[/V1] [N1]les taxis[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Taxis[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di tak-siss[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the taxis[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze tak-siz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[A1]A quelle heure[/A1] [V1]fermez[/V1]-[N1]vous[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Um wie viel Uhr[/A1] [V1]schließen[/V1] [N1]Sie[/N1]?",
+              "prononciation_FR": "[A1]Oum vi fil our[/A1] [V1]chli-sseun[/V1] [N1]zi[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]At what time[/A1] [V1]do[/V1] [N1]you[/N1] [V2]close[/V2]?",
+              "prononciation_FR": "[A1]At wot taïm[/A1] [V1]dou[/V1] [N1]you[/N1] [V2]kloz[/V2]?"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Gare",
+        "allemand": {
+          "texte": "Bahnhof",
+          "prononciation_FR": "Ban-hof"
+        },
+        "anglais": {
+          "texte": "Station",
+          "prononciation_FR": "Stéï-cheun"
+        }
+      },
+      {
+        "francais": "Train",
+        "allemand": {
+          "texte": "Zug",
+          "prononciation_FR": "Tsouk"
+        },
+        "anglais": {
+          "texte": "Train",
+          "prononciation_FR": "Tréïn"
+        }
+      },
+      {
+        "francais": "Bus",
+        "allemand": {
+          "texte": "Bus",
+          "prononciation_FR": "Bouss"
+        },
+        "anglais": {
+          "texte": "Bus",
+          "prononciation_FR": "Beuss"
+        }
+      },
+      {
+        "francais": "Billet",
+        "allemand": {
+          "texte": "Fahrkarte",
+          "prononciation_FR": "Far-kar-teu"
+        },
+        "anglais": {
+          "texte": "Ticket",
+          "prononciation_FR": "Ti-kêt"
+        }
+      },
+      {
+        "francais": "Place",
+        "allemand": {
+          "texte": "Platz",
+          "prononciation_FR": "Plats"
+        },
+        "anglais": {
+          "texte": "Seat",
+          "prononciation_FR": "Sit"
+        }
+      },
+      {
+        "francais": "Bagage",
+        "allemand": {
+          "texte": "Gepäck",
+          "prononciation_FR": "Gué-pêk"
+        },
+        "anglais": {
+          "texte": "Luggage",
+          "prononciation_FR": "Leu-guidj"
+        }
+      },
+      {
+        "francais": "Valise",
+        "allemand": {
+          "texte": "Koffer",
+          "prononciation_FR": "Ko-feur"
+        },
+        "anglais": {
+          "texte": "Suitcase",
+          "prononciation_FR": "Sout-kéïss"
+        }
+      },
+      {
+        "francais": "Sac",
+        "allemand": {
+          "texte": "Rucksack",
+          "prononciation_FR": "Rouk-zak"
+        },
+        "anglais": {
+          "texte": "Bag / Backpack",
+          "prononciation_FR": "Bag / Bak-pak"
+        }
+      },
+      {
+        "francais": "Quai",
+        "allemand": {
+          "texte": "Gleis",
+          "prononciation_FR": "Glaïs"
+        },
+        "anglais": {
+          "texte": "Platform",
+          "prononciation_FR": "Plat-form"
+        }
+      },
+      {
+        "francais": "Départ",
+        "allemand": {
+          "texte": "Abfahrt",
+          "prononciation_FR": "Ap-fart"
+        },
+        "anglais": {
+          "texte": "Departure",
+          "prononciation_FR": "Di-par-tchour"
+        }
+      },
+      {
+        "francais": "Arrivée",
+        "allemand": {
+          "texte": "Ankunft",
+          "prononciation_FR": "An-kounft"
+        },
+        "anglais": {
+          "texte": "Arrival",
+          "prononciation_FR": "E-raï-val"
+        }
+      },
+      {
+        "francais": "Retard",
+        "allemand": {
+          "texte": "Verspätung",
+          "prononciation_FR": "Fèr-chpè-toung"
+        },
+        "anglais": {
+          "texte": "Delay",
+          "prononciation_FR": "Di-léï"
+        }
+      },
+      {
+        "francais": "Guichet",
+        "allemand": {
+          "texte": "Schalter",
+          "prononciation_FR": "Chal-teur"
+        },
+        "anglais": {
+          "texte": "Counter / Ticket office",
+          "prononciation_FR": "Kaoun-teur / Ti-kêt o-fiss"
+        }
+      },
+      {
+        "francais": "Sortie",
+        "allemand": {
+          "texte": "Ausgang",
+          "prononciation_FR": "Aous-gang"
+        },
+        "anglais": {
+          "texte": "Exit",
+          "prononciation_FR": "Ek-sit"
+        }
+      },
+      {
+        "francais": "Passeport",
+        "allemand": {
+          "texte": "Pass",
+          "prononciation_FR": "Pass"
+        },
+        "anglais": {
+          "texte": "Passport",
+          "prononciation_FR": "Pass-port"
+        }
+      }
+    ]
+  }
+}

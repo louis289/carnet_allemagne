@@ -1,0 +1,196 @@
+{
+  "carnet_scout": {
+    "categorie": "Expressions anglaises (Traduites litteralement)",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Facilité et Surprises",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Un morceau[/N1] de [N2]gâteau[/N2]. (C'est très facile / C'est du gâteau)",
+            "allemand": {
+              "texte": "[N1]Ein Stück[/N1] [N2]Kuchen[/N2].",
+              "prononciation_FR": "[N1]Aïn chtuk[/N1] [N2]kou-kheun[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]A piece[/N1] of [N2]cake[/N2].",
+              "prononciation_FR": "[N1]Eu piss[/N1] ov [N2]kéïk[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Il[/N1] [V1]pleut[/V1] [N2]des chats[/N2] et [N3]des chiens[/N3]. (Il pleut des cordes)",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]regnet[/V1] [N2]Katzen[/N2] und [N3]Hunde[/N3].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]rêk-nêt[/V1] [N2]kat-tseun[/N2] ount [N3]houn-deu[/N3]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is raining[/V1] [N2]cats[/N2] and [N3]dogs[/N3].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz réï-ning[/V1] [N2]kats[/N2] and [N3]dogz[/N3]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[A1]Quand[/A1] [N1]les cochons[/N1] [V1]voleront[/V1]. (Quand les poules auront des dents)",
+            "allemand": {
+              "texte": "[A1]Wenn[/A1] [N1]Schweine[/N1] [V1]fliegen[/V1].",
+              "prononciation_FR": "[A1]Vên[/A1] [N1]chvaï-neu[/N1] [V1]fli-gueun[/V1]."
+            },
+            "anglais": {
+              "texte": "[A1]When[/A1] [N1]pigs[/N1] [V1]fly[/V1].",
+              "prononciation_FR": "[A1]Wêne[/A1] [N1]pigz[/N1] [V1]flaï[/V1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Renverser[/V1] [N1]les haricots[/N1]. (Vendre la mèche / Cracher le morceau)",
+            "allemand": {
+              "texte": "[N1]Die Bohnen[/N1] [V1]verschütten[/V1].",
+              "prononciation_FR": "[N1]Di bo-neun[/N1] [V1]fêr-chu-teun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To spill[/V1] [N1]the beans[/N1].",
+              "prononciation_FR": "[V1]Tou spil[/V1] [N1]ze binz[/N1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Une patate[/N1] de [N2]canapé[/N2]. (Quelqu'un de très paresseux / Une loque)",
+            "allemand": {
+              "texte": "[N1]Eine Kartoffel[/N1] von [N2]Sofa[/N2].",
+              "prononciation_FR": "[N1]Aï-neu kar-to-feul[/N1] fone [N2]zo-fa[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]A potato[/N1] of [N2]couch[/N2].",
+              "prononciation_FR": "[N1]Eu po-téï-to[/N1] ov [N2]kaoutch[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Encouragements et Problèmes",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Casser[/V1] [N1]une jambe[/N1]. (Merde ! / Bonne chance !)",
+            "allemand": {
+              "texte": "[N1]Ein Bein[/N1] [V1]brechen[/V1].",
+              "prononciation_FR": "[N1]Aïn baïn[/N1] [V1]bré-cheun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To break[/V1] [N1]a leg[/N1].",
+              "prononciation_FR": "[V1]Tou bréïk[/V1] [N1]eu lêk[/N1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Mordre[/V1] [N1]la balle[/N1]. (Serrer les dents / Faire avec)",
+            "allemand": {
+              "texte": "[N1]Die Kugel[/N1] [V1]beißen[/V1].",
+              "prononciation_FR": "[N1]Di kou-gueul[/N1] [V1]baï-sseun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To bite[/V1] [N1]the bullet[/N1].",
+              "prononciation_FR": "[V1]Tou baït[/V1] [N1]ze bou-lêt[/N1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Tirer[/V1] [N1]ma jambe[/N1]. (Se moquer de moi / Faire marcher quelqu'un)",
+            "allemand": {
+              "texte": "An [N1]meinem Bein[/N1] [V1]ziehen[/V1].",
+              "prononciation_FR": "An [N1]maï-neum baïn[/N1] [V1]tsi-heun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To pull[/V1] [N1]my leg[/N1].",
+              "prononciation_FR": "[V1]Tou poul[/V1] [N1]maï lêk[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[A1]Sous[/A1] [N1]la météo[/N1]. (Ne pas être dans son assiette / Être malade)",
+            "allemand": {
+              "texte": "[A1]Unter[/A1] [N1]dem Wetter[/N1].",
+              "prononciation_FR": "[A1]Oun-teur[/A1] [N1]dém vê-teur[/N1]."
+            },
+            "anglais": {
+              "texte": "[A1]Under[/A1] [N1]the weather[/N1].",
+              "prononciation_FR": "[A1]Eun-deur[/A1] [N1]ze wé-zeur[/N1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Être[/V1] sur [N1]le petit nuage[/N1]. (Être sur un petit nuage)",
+            "allemand": {
+              "texte": "Auf [N1]Wolke[/N1] sieben [V1]schweben[/V1].",
+              "prononciation_FR": "Aouf [N1]vol-keu[/N1] zi-beun [V1]chvé-beun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To be[/V1] on [N1]cloud[/N1] nine.",
+              "prononciation_FR": "[V1]Tou bi[/V1] on [N1]klaoud[/N1] naïn."
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Gâteau",
+        "allemand": {
+          "texte": "Kuchen",
+          "prononciation_FR": "Kou-kheun"
+        },
+        "anglais": {
+          "texte": "Cake",
+          "prononciation_FR": "Kéïk"
+        }
+      },
+      {
+        "francais": "Cochon",
+        "allemand": {
+          "texte": "Schwein",
+          "prononciation_FR": "Chvaïn"
+        },
+        "anglais": {
+          "texte": "Pig",
+          "prononciation_FR": "Pig"
+        }
+      },
+      {
+        "francais": "Haricot",
+        "allemand": {
+          "texte": "Bohne",
+          "prononciation_FR": "Bo-neu"
+        },
+        "anglais": {
+          "texte": "Bean",
+          "prononciation_FR": "Bin"
+        }
+      },
+      {
+        "francais": "Jambe",
+        "allemand": {
+          "texte": "Bein",
+          "prononciation_FR": "Baïn"
+        },
+        "anglais": {
+          "texte": "Leg",
+          "prononciation_FR": "Lêk"
+        }
+      },
+      {
+        "francais": "Seau",
+        "allemand": {
+          "texte": "Eimer",
+          "prononciation_FR": "Aï-meur"
+        },
+        "anglais": {
+          "texte": "Bucket",
+          "prononciation_FR": "Beu-kêt"
+        }
+      }
+    ]
+  }
+}

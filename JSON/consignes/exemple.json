@@ -1,0 +1,50 @@
+{
+    "carnet_scout": {
+        "categorie": "Drague et amitiés",
+        "cas": [
+            {
+                "id_cas": 1,
+                "nom_du_cas": "Faire un compliment",
+                "expressions": [
+                    {
+                        "id_expression": 1,
+                        "francais": "[N1]Ton foulard[/N1] [V1]est[/V1] [A1]très beau[/A1].",
+                        "allemand": {
+                            "texte": "[N1]Dein Halstuch[/N1] [V1]ist[/V1] [A1]sehr schön[/A1].",
+                            "prononciation_FR": "[N1]Daïn hals-toukh[/N1] [V1]ist[/V1] [A1]zèr cheun[/A1]."
+                        },
+                        "anglais": {
+                            "texte": "[N1]Your neckerchief[/N1] [V1]is[/V1] [A1]very beautiful[/A1].",
+                            "prononciation_FR": "[N1]Your né-keur-tchif[/N1] [V1]iz[/V1] [A1]vé-ri biou-ti-foul[/A1]."
+                        }
+                    },
+                    {
+                        "id_expression": 2,
+                        "francais": "[V1]Veux[/V1]-[N1]tu[/N1] [V2]échanger[/V2] [N2]ton écusson[/N2] ?",
+                        "allemand": {
+                            "texte": "[V1]Möchtest[/V1] [N1]du[/N1] [N2]deinen Aufnäher[/N2] [V2]tauschen[/V2]?",
+                            "prononciation_FR": "[V1]Meuch-test[/V1] [N1]dou[/N1] [N2]daï-neun aouf-nè-heur[/N2] [V2]tao-cheun[/V2]?"
+                        },
+                        "anglais": {
+                            "texte": "[V1]Do want[/V1] [N1]you[/N1] [V2]to swap[/V2] [N2]your badge[/N2]?",
+                            "prononciation_FR": "[V1]Dou want[/V1] [N1]you[/N1] [V2]tou swop[/V2] [N2]your badje[/N2]?"
+                        }
+                    }
+                ]
+            }
+        ],
+        "vocabulaire": [
+            {
+                "francais": "Le sourire",
+                "allemand": {
+                    "texte": "Das Lächeln",
+                    "prononciation_FR": "Dass lè-cheuln"
+                },
+                "anglais": {
+                    "texte": "The smile",
+                    "prononciation_FR": "Ze smaïl"
+                }
+            }
+        ]
+    }
+}

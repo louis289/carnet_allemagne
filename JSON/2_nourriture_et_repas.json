@@ -1,0 +1,834 @@
+{
+  "carnet_scout": {
+    "categorie": "Nourriture et repas",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Avoir faim ou soif",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [A1]très[/A1] [N2]faim[/N2] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [A1]großen[/A1] [N2]Hunger[/N2]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [A1]gros-seun[/A1] [N2]hou-nguer[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]very[/A1] [N2]hungry[/N2]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]vé-ri[/A1] [N2]heun-gri[/N2]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [A1]besoin[/A1] d'[N2]eau[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]Wasser[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]va-sseur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]water[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]wo-teur[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[A1]Quand[/A1] [V1]mange[/V1]-[N1]t-on[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wann[/A1] [V1]essen[/V1] [N1]wir[/N1]?",
+              "prononciation_FR": "[A1]Van[/A1] [V1]è-sseun[/V1] [N1]vir[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]When[/A1] [V1]do[/V1] [N1]we[/N1] [V2]eat[/V2]?",
+              "prononciation_FR": "[A1]Wène[/A1] [V1]dou[/V1] [N1]wi[/N1] [V2]it[/V2]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]soif[/N2] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]Durst[/N2]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]dourst[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [N2]thirsty[/N2]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]seurz-ti[/N2]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Est-ce que[/N1] [N2]le repas[/N2] [V1]est[/V1] [A1]prêt[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Ist[/V1] [N2]das Essen[/N2] [A1]fertig[/A1]?",
+              "prononciation_FR": "[V1]Ist[/V1] [N2]dass è-sseun[/N2] [A1]fer-tig[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Is[/V1] [N2]the meal[/N2] [A1]ready[/A1]?",
+              "prononciation_FR": "[V1]Iz[/V1] [N2]ze mil[/N2] [A1]ré-di[/A1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Demander des aliments",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Passe[/V1]-[N1]moi[/N1] [N2]le pain[/N2], s'il-te-plaît.",
+            "allemand": {
+              "texte": "[V1]Gib[/V1] [N1]mir[/N1] bitte [N2]das Brot[/N2].",
+              "prononciation_FR": "[V1]Guib[/V1] [N1]mir[/N1] [A1]bi-teu[/A1] [N2]dass brot[/N2]."
+            },
+            "anglais": {
+              "texte": "Please [V1]pass[/V1] [N1]me[/N1] [N2]the bread[/N2].",
+              "prononciation_FR": "Pliz [V1]pass[/V1] [N1]mi[/N1] [N2]ze bred[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]As[/V1]-[N1]tu[/N1] du [N2]fromage[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Hast[/V1] [N1]du[/N1] [N2]Käse[/N2]?",
+              "prononciation_FR": "[V1]Hast[/V1] [N1]dou[/N1] [N2]kè-zeu[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]have[/V2] [N2]cheese[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]hav[/V2] [N2]tchiz[/N2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [V1]voudrais[/V1] de la [N2]viande[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]möchte[/V1] [N2]Fleisch[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]meuch-teu[/V1] [N2]flaïch[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]would like[/V1] [N2]meat[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]woud laïk[/V1] [N2]mit[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Où [V1]est[/V1] [N1]le sel[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das Salz[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass salts[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the salt[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze solt[/N1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Il[/N1] [V1]manque[/V1] des [N2]pâtes[/N2].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]fehlen[/V1] [N2]Nudeln[/N2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]fè-leun[/V1] [N2]nou-deuln[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are missing[/V1] [N2]pasta[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar mi-sing[/N1] [N2]pas-ta[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Apprécier le repas",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]très bon[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]sehr lecker[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]zèr lè-keur[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]very good[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]vé-ri goud[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]adore[/V1] [N2]ce plat[/N2] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]liebe[/V1] [N2]dieses Gericht[/N2]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]li-beu[/V1] [N2]di-zess gué-richt[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]love[/V1] [N2]this dish[/N2]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]leuv[/V1] [N2]ziss dich[/N2]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[A1]Beau[/A1] [N1]travail[/N1], [N2]les cuistots[/N2] !",
+            "allemand": {
+              "texte": "[A1]Gute[/A1] [N1]Arbeit[/N1], [N2]Köche[/N2]!",
+              "prononciation_FR": "[A1]Gou-teu[/A1] [N1]ar-baït[/N1], [N2]keu-cheu[/N2]!"
+            },
+            "anglais": {
+              "texte": "[A1]Good[/A1] [N1]job[/N1], [N2]cooks[/N2]!",
+              "prononciation_FR": "[A1]Goud[/A1] [N1]djob[/N1], [N2]kouks[/N2]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Donnes[/V1]-[N1]moi[/N1] [N2]la recette[/N2].",
+            "allemand": {
+              "texte": "[V1]Gib[/V1] [N1]mir[/N1] [N2]das Rezept[/N2].",
+              "prononciation_FR": "[V1]Guib[/V1] [N1]mir[/N1] [N2]dass ré-tsèpt[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Give[/V1] [N1]me[/N1] [N2]the recipe[/N2].",
+              "prononciation_FR": "[V1]Guiv[/V1] [N1]mi[/N1] [N2]ze ré-si-pi[/N2]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [N2]n'[/N2][V1]ai[/V1] [A1]plus[/A1] [N3]faim[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]satt[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [A1]sat[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]full[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]foul[/A1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "Goûts et dégoûts (difficiles)",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]mange[/V1] [A1]pas[/A1] d'[N3]oignons[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]esse[/V1] [A1]keine[/A1] [N3]Zwiebeln[/N3].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]è-sseu[/V1] [A1]kaï-neu[/A1] [N3]tsvi-beuln[/N3]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]do[/V1] [A1]not[/A1] [V2]eat[/V2] [N3]onions[/N3].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]dou[/V1] [A1]not[/A1] [V2]it[/V2] [N3]o-nieuns[/N3]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]trop[/A1] [A2]épicé[/A2] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]zu[/A1] [A2]scharf[/A2]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]tsou[/A1] [A2]charf[/A2]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]too[/A1] [A2]spicy[/A2]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]tou[/A1] [A2]spaï-si[/A2]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [N2]n'[/N2][V1]aime[/V1] [A1]pas[/A1] [N3]ça[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]mag[/V1] [N3]das[/N3] [A1]nicht[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]mag[/V1] [N3]dass[/N3] [A1]nicht[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]do[/V1] [A1]not[/A1] [V2]like[/V2] [N3]that[/N3].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]dou[/V1] [A1]not[/A1] [V2]laïk[/V2] [N3]zat[/N3]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Ce[/N1] [N2]n'[/N2][V1]est[/V1] [A1]pas cuit[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]nicht durch[/A1].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]nicht dourch[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]not cooked[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]not koukt[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "Où [V1]sont[/V1] [N1]les bonbons[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Süßigkeiten[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di su-ssisch-kaï-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the candies[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze kan-diz[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 5,
+        "nom_du_cas": "Laver et ranger et aider",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Qui[/N1] [V1]fait[/V1] [N2]la vaisselle[/N2] ?",
+            "allemand": {
+              "texte": "[N1]Wer[/N1] [V1]wäscht[/V1] [N2]ab[/N2]?",
+              "prononciation_FR": "[N1]Vér[/N1] [V1]vècht[/V1] [N2]ap[/N2]?"
+            },
+            "anglais": {
+              "texte": "[N1]Who[/N1] [V1]does[/V1] [N2]the dishes[/N2]?",
+              "prononciation_FR": "[N1]Hou[/N1] [V1]deuz[/V1] [N2]ze di-chiz[/N2]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Aide[/V1]-[N1]moi[/N1] à [V2]ranger[/V2].",
+            "allemand": {
+              "texte": "[V1]Hilf[/V1] [N1]mir[/N1] [V2]aufräumen[/V2].",
+              "prononciation_FR": "[V1]Hilf[/V1] [N1]mir[/N1] [V2]aouf-roï-meun[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Help[/V1] [N1]me[/N1] [V2]tidy up[/V2].",
+              "prononciation_FR": "[V1]Help[/V1] [N1]mi[/N1] [V2]taï-di eup[/V2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Les gamelles[/N1] [V1]sont[/V1] [A1]sales[/A1].",
+            "allemand": {
+              "texte": "[N1]Das Geschirr[/N1] [V1]ist[/V1] [A1]schmutzig[/A1].",
+              "prononciation_FR": "[N1]Dass gué-chir[/N1] [V1]ist[/V1] [A1]chmout-sig[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The mess tins[/N1] [V1]are[/V1] [A1]dirty[/A1].",
+              "prononciation_FR": "[N1]Ze mess tinz[/N1] [V1]ar[/V1] [A1]deur-ti[/A1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Où [V1]est[/V1] [N1]l'éponge[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]der Schwamm[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dér chvam[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the sponge[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze speundj[/N1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]nettoie[/V1] [N2]la table[/N2] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]putzen[/V1] [N2]den Tisch[/N2]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]pout-seun[/V1] [N2]déne tich[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]clean[/V1] [N2]the table[/N2]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]klin[/V1] [N2]ze téï-beul[/N2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 6,
+        "nom_du_cas": "Cuisson sur feu",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Le feu[/N1] [V1]est[/V1] [A1]prêt[/A1].",
+            "allemand": {
+              "texte": "[N1]Das Feuer[/N1] [V1]ist[/V1] [A1]bereit[/A1].",
+              "prononciation_FR": "[N1]Dass foï-eur[/N1] [V1]ist[/V1] [A1]bé-raït[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The fire[/N1] [V1]is[/V1] [A1]ready[/A1].",
+              "prononciation_FR": "[N1]Ze faï-eur[/N1] [V1]iz[/V1] [A1]ré-di[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Il[/N1] [V1]faut[/V1] du [N2]bois[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]brauchen[/V1] [N2]Holz[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]braou-kheun[/V1] [N2]holts[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]need[/V1] [N2]wood[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]nid[/V1] [N2]woud[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Tourne[/V1] [N1]la grille[/N1] !",
+            "allemand": {
+              "texte": "[V1]Dreh[/V1] [N1]den Rost[/N1]!",
+              "prononciation_FR": "[V1]Dré[/V1] [N1]déne rost[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Turn[/V1] [N1]the grill[/N1]!",
+              "prononciation_FR": "[V1]Teurn[/V1] [N1]ze gril[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Aïe, [N1]c'[/N1][V1]est[/V1] [A1]brûlé[/A1] !",
+            "allemand": {
+              "texte": "Aua, [N1]das[/N1] [V1]ist[/V1] [A1]verbrannt[/A1]!",
+              "prononciation_FR": "A-oua, [N1]dass[/N1] [V1]ist[/V1] [A1]fèr-brant[/A1]!"
+            },
+            "anglais": {
+              "texte": "Ouch, [N1]it[/N1] [V1]is[/V1] [A1]burnt[/A1]!",
+              "prononciation_FR": "Aoutcḥ, [N1]it[/N1] [V1]iz[/V1] [A1]beurnt[/A1]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Attention[/V1], [N1]c'[/N1][V2]est[/V2] [A1]chaud[/A1] !",
+            "allemand": {
+              "texte": "[V1]Vorsicht[/V1], [N1]es[/N1] [V2]ist[/V2] [A1]heiß[/A1]!",
+              "prononciation_FR": "[V1]For-zicht[/V1], [N1]ess[/N1] [V2]ist[/V2] [A1]haïs[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Careful[/V1], [N1]it[/N1] [V2]is[/V2] [A1]hot[/A1]!",
+              "prononciation_FR": "[V1]Kèr-foul[/V1], [N1]it[/N1] [V2]iz[/V2] [A1]hot[/A1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 7,
+        "nom_du_cas": "Partager",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Tu[/N1] [V1]en veux[/V1] [A1]un peu[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Willst[/V1] [N1]du[/N1] [A1]etwas[/A1]?",
+              "prononciation_FR": "[V1]Vilst[/V1] [N1]dou[/N1] [A1]èt-vass[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]want[/V2] [A1]some[/A1]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]wont[/V2] [A1]seum[/A1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [V1]coupe[/V1] en [A1]deux[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Schneiden[/V1] [N1]wir[/N1] in [A1]zwei[/A1]?",
+              "prononciation_FR": "[V1]Chnaï-deun[/V1] [N1]vir[/N1] in [A1]tsvaï[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]we[/N1] [V2]cut[/V2] in [A1]half[/A1]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]wi[/N1] [V2]keut[/V2] in [A1]haf[/A1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Prends[/V1] [N1]ma part[/N1].",
+            "allemand": {
+              "texte": "[V1]Nimm[/V1] [N1]meinen Teil[/N1].",
+              "prononciation_FR": "[V1]Nim[/V1] [N1]maï-neun taïl[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Take[/V1] [N1]my share[/N1].",
+              "prononciation_FR": "[V1]Téïk[/V1] [N1]maï chèr[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]mon dernier[/N2] [N3]gâteau[/N3].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [N2]mein letzter[/N2] [N3]Keks[/N3].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [N2]maïn lets-teur[/N2] [N3]kéks[/N3]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]my last[/N2] [N3]cookie[/N3].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]maï last[/N2] [N3]kou-ki[/N3]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Servez[/V1]-[N1]vous[/N1] !",
+            "allemand": {
+              "texte": "[V1]Bedient[/V1] [N1]euch[/N1]!",
+              "prononciation_FR": "[V1]Bé-dint[/V1] [N1]oïch[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Help[/V1] [N1]yourselves[/N1]!",
+              "prononciation_FR": "[V1]Help[/V1] [N1]your-selvz[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 8,
+        "nom_du_cas": "Régimes spéciaux",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]végétarien[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]Vegetarier[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [A1]vé-gué-ta-ri-eur[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]vegetarian[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]vé-djé-ta-ri-ane[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Y a-t-il[/V1] du [N1]porc[/N1] ?",
+            "allemand": {
+              "texte": "[V1]Gibt es[/V1] [N1]Schweinefleisch[/N1]?",
+              "prononciation_FR": "[V1]Guibt ess[/V1] [N1]chvaï-neu-flaïch[/N1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Is there[/V1] [N1]pork[/N1]?",
+              "prononciation_FR": "[V1]Iz zèr[/V1] [N1]pork[/N1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [A1]une allergie[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [A1]eine Allergie[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [A1]aï-neu a-lèr-gui[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]have[/V1] [A1]an allergy[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]hav[/V1] [A1]ane a-leur-dji[/A1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]dois[/V1] [V2]manger[/V2] [A1]sans gluten[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]muss[/V1] [A1]glutenfrei[/A1] [V2]essen[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]mouss[/V1] [A1]glou-teun-fraï[/A1] [V2]è-sseun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]must[/V1] [V2]eat[/V2] [A1]gluten-free[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]meust[/V1] [V2]it[/V2] [A1]glou-teun fri[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "Où [V1]est[/V1] [N1]le menu sans viande[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das vegetarische Menü[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass vé-gué-ta-ri-cheu mé-nu[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the meatless menu[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze mit-less mé-nyou[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 9,
+        "nom_du_cas": "En rando / Pique-nique",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]sont[/V1] [N1]les sandwichs[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Brote[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di bro-teu[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the sandwiches[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze san-dwi-tchiz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]mon écuelle[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]meinen Napf[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]maï-neun napf[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]have[/V1] [N2]my bowl[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]hav[/V1] [N2]maï bol[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Ma gourde[/N1] [V1]est[/V1] [A1]vide[/A1].",
+            "allemand": {
+              "texte": "[N1]Meine Feldflasche[/N1] [V1]ist[/V1] [A1]leer[/A1].",
+              "prononciation_FR": "[N1]Maï-neu fèld-fla-cheu[/N1] [V1]ist[/V1] [A1]lèr[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]My water bottle[/N1] [V1]is[/V1] [A1]empty[/A1].",
+              "prononciation_FR": "[N1]Maï wo-teur bo-teul[/N1] [V1]iz[/V1] [A1]emp-ti[/A1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]On[/N1] [V1]fait[/V1] [N2]la pause[/N2] [A1]ici[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Machen[/V1] [N1]wir[/N1] [A1]hier[/A1] [N2]Pause[/N2]?",
+              "prononciation_FR": "[V1]Ma-kheun[/V1] [N1]vir[/N1] [A1]hir[/A1] [N2]pao-zeu[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]we[/N1] [V2]take[/V2] [N2]the break[/N2] [A1]here[/A1]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]wi[/N1] [V2]téïk[/V2] [N2]ze bréïk[/N2] [A1]hir[/A1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Sortez[/V1] [N1]le saucisson[/N1] !",
+            "allemand": {
+              "texte": "[V1]Holt[/V1] [N1]die Salami[/N1] [A1]raus[/A1]!",
+              "prononciation_FR": "[V1]Holt[/V1] [N1]di za-la-mi[/N1] [A1]raous[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Take out[/V1] [N1]the sausage[/N1]!",
+              "prononciation_FR": "[V1]Téïk aout[/V1] [N1]ze so-ssidj[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 10,
+        "nom_du_cas": "Petits dèj",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Le lait[/N1] [V1]est[/V1] [A1]chaud[/A1].",
+            "allemand": {
+              "texte": "[N1]Die Milch[/N1] [V1]ist[/V1] [A1]warm[/A1].",
+              "prononciation_FR": "[N1]Di milch[/N1] [V1]ist[/V1] [A1]varm[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The milk[/N1] [V1]is[/V1] [A1]hot[/A1].",
+              "prononciation_FR": "[N1]Ze milk[/N1] [V1]iz[/V1] [A1]hot[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "Du [N1]café[/N1] ou du [N2]thé[/N2] ?",
+            "allemand": {
+              "texte": "[N1]Kaffee[/N1] oder [N2]Tee[/N2]?",
+              "prononciation_FR": "[N1]Ka-fé[/N1] o-deur [N2]té[/N2]?"
+            },
+            "anglais": {
+              "texte": "[N1]Coffee[/N1] or [N2]tea[/N2]?",
+              "prononciation_FR": "[N1]Ko-fi[/N1] or [N2]ti[/N2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "Passe le [N1]sucre[/N1].",
+            "allemand": {
+              "texte": "Gib den [N1]Zucker[/N1].",
+              "prononciation_FR": "Guib déne [N1]tsou-keur[/N1]."
+            },
+            "anglais": {
+              "texte": "Pass the [N1]sugar[/N1].",
+              "prononciation_FR": "Pass ze [N1]chou-gueur[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Où[/N1] [V1]est[/V1] la [N2]confiture[/N2] ?",
+            "allemand": {
+              "texte": "[N1]Wo[/N1] [V1]ist[/V1] die [N2]Marmelade[/N2]?",
+              "prononciation_FR": "[N1]Vo[/N1] [V1]ist[/V1] di [N2]mar-mé-la-deu[/N2]?"
+            },
+            "anglais": {
+              "texte": "[N1]Where[/N1] [V1]is[/V1] the [N2]jam[/N2]?",
+              "prononciation_FR": "[N1]Wèr[/N1] [V1]iz[/V1] ze [N2]djam[/N2]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]J'[/N1][V1]aime[/V1] [A1]bien[/A1] le [N2]beurre[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]mag[/V1] die [N2]Butter[/N2] [A1]gern[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]mag[/V1] di [N2]bou-teur[/N2] [A1]guèrn[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [A1]really[/A1] [V1]like[/V1] the [N2]butter[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [A1]ri-li[/A1] [V1]laïk[/V1] ze [N2]beu-teur[/N2]."
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Faim",
+        "allemand": {
+          "texte": "Hunger",
+          "prononciation_FR": "Hou-nguer"
+        },
+        "anglais": {
+          "texte": "Hunger",
+          "prononciation_FR": "Heung-gueur"
+        }
+      },
+      {
+        "francais": "Soif",
+        "allemand": {
+          "texte": "Durst",
+          "prononciation_FR": "Dourst"
+        },
+        "anglais": {
+          "texte": "Thirst",
+          "prononciation_FR": "Seurzt"
+        }
+      },
+      {
+        "francais": "Eau",
+        "allemand": {
+          "texte": "Wasser",
+          "prononciation_FR": "Va-sseur"
+        },
+        "anglais": {
+          "texte": "Water",
+          "prononciation_FR": "Wo-teur"
+        }
+      },
+      {
+        "francais": "Boire",
+        "allemand": {
+          "texte": "Trinken",
+          "prononciation_FR": "Trin-keun"
+        },
+        "anglais": {
+          "texte": "Drink",
+          "prononciation_FR": "Drink"
+        }
+      },
+      {
+        "francais": "Manger",
+        "allemand": {
+          "texte": "Essen",
+          "prononciation_FR": "È-sseun"
+        },
+        "anglais": {
+          "texte": "Eat",
+          "prononciation_FR": "It"
+        }
+      },
+      {
+        "francais": "Repas",
+        "allemand": {
+          "texte": "Essen",
+          "prononciation_FR": "È-sseun"
+        },
+        "anglais": {
+          "texte": "Meal",
+          "prononciation_FR": "Mil"
+        }
+      },
+      {
+        "francais": "Pain",
+        "allemand": {
+          "texte": "Brot",
+          "prononciation_FR": "Brot"
+        },
+        "anglais": {
+          "texte": "Bread",
+          "prononciation_FR": "Bred"
+        }
+      },
+      {
+        "francais": "Sel",
+        "allemand": {
+          "texte": "Salz",
+          "prononciation_FR": "Salts"
+        },
+        "anglais": {
+          "texte": "Salt",
+          "prononciation_FR": "Solt"
+        }
+      },
+      {
+        "francais": "Assiette",
+        "allemand": {
+          "texte": "Teller",
+          "prononciation_FR": "Tè-leur"
+        },
+        "anglais": {
+          "texte": "Plate",
+          "prononciation_FR": "Pléït"
+        }
+      },
+      {
+        "francais": "Fourchette",
+        "allemand": {
+          "texte": "Gabel",
+          "prononciation_FR": "Ga-beul"
+        },
+        "anglais": {
+          "texte": "Fork",
+          "prononciation_FR": "Fork"
+        }
+      },
+      {
+        "francais": "Couteau",
+        "allemand": {
+          "texte": "Messer",
+          "prononciation_FR": "Mè-sseur"
+        },
+        "anglais": {
+          "texte": "Knife",
+          "prononciation_FR": "Naïf"
+        }
+      },
+      {
+        "francais": "Cuillère",
+        "allemand": {
+          "texte": "Löffel",
+          "prononciation_FR": "Leu-feul"
+        },
+        "anglais": {
+          "texte": "Spoon",
+          "prononciation_FR": "Spoune"
+        }
+      },
+      {
+        "francais": "Chaud",
+        "allemand": {
+          "texte": "Heiß",
+          "prononciation_FR": "Haïs"
+        },
+        "anglais": {
+          "texte": "Hot",
+          "prononciation_FR": "Hot"
+        }
+      },
+      {
+        "francais": "Froid",
+        "allemand": {
+          "texte": "Kalt",
+          "prononciation_FR": "Kalt"
+        },
+        "anglais": {
+          "texte": "Cold",
+          "prononciation_FR": "Kold"
+        }
+      },
+      {
+        "francais": "Gourde",
+        "allemand": {
+          "texte": "Feldflasche",
+          "prononciation_FR": "Fèld-fla-cheu"
+        },
+        "anglais": {
+          "texte": "Water bottle",
+          "prononciation_FR": "Wo-teur bo-teul"
+        }
+      }
+    ]
+  }
+}

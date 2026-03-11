@@ -1,0 +1,33 @@
+# Consignes pour le Générateur Web / PDF du Carnet
+
+## 1. Identité Visuelle (Charte EDLN 2025)
+- Couleurs de la charte :
+  - Vert foncé (texte) : #114C2A
+  - Rouge : #BF3030
+  - Vert logo : #16663A
+  - Jaune/Or : #EAB642
+  - Bleu foncé : #19355E
+  - Fond / texte clair : #F9F7F4 ou blanc.
+- Typographie : `Cabin Sketch` pour les titres, `Open Sans` pour le texte courant.
+
+## 2. Architecture Technique
+- Créer une Web App simple et statique dans `Web_PDF_Generator`.
+- 3 fichiers : `index.html`, `style.css`, `script.js`.
+- Le JS doit charger l'ensemble des fichiers JSON, les parser et générer le DOM dynamiquement.
+
+## 3. Mise en Page & Structure (Format A4 Paysage)
+- **Format** : A4 Paysage (Landscape) optimal pour imprimer en petits carnets (A5/A6) par la suite.
+- **Mise en page Ink-Friendly** : Fond blanc (transparent) pour éviter d'imprimer du vide texturé.
+- **Grille Haute Densité** : Pour rentrer le plus de phrases possible "l'une à côté de l'autre et en dessous", le CSS utilise 4 colonnes (`grid-template-columns: repeat(4, 1fr)`). Avec 4 Cas par page (soit 20 phrases), on exploite un maximum la surface A4.
+- **Ordre des pages** :
+  1. Page de garde (Titre, encart pour nom/prénom).
+  2. Page vide (pour l'impression recto/verso).
+  3. Sommaire (sur 2 colonnes).
+  4. Pages de contenu.
+
+## 4. Règles de Formatage Grammatical
+- Utilisation stricte du code couleur EDLN pour les balises :
+  - **[N] (Groupes Nominaux)** : Souligné en **bleu (#19355E)**.
+  - **[V] (Groupes Verbaux)** : Souligné en **vert (#16663A)**.
+  - **[A] (Adjectifs/Adverbes)** : Souligné en **rouge (#BF3030)**.
+- **Indicateurs numériques** : Le chiffre (*1, 2...*) en indice doit être abaissé davantage par rapport au trait pour ne pas gêner la lecture.

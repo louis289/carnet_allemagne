@@ -1,0 +1,834 @@
+{
+  "carnet_scout": {
+    "categorie": "Politesse et rencontres",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Dire bonjour et au revoir",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Salut[/V1] !",
+            "allemand": {
+              "texte": "[V1]Hallo[/V1]!",
+              "prononciation_FR": "[V1]Ha-lo[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Hello[/V1]!",
+              "prononciation_FR": "[V1]Hé-lo[/V1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Bonjour[/N1] !",
+            "allemand": {
+              "texte": "[N1]Guten Morgen[/N1]!",
+              "prononciation_FR": "[N1]Gou-teun mor-gueun[/N1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Good morning[/N1]!",
+              "prononciation_FR": "[N1]Goud mor-ning[/N1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Bonsoir[/N1] !",
+            "allemand": {
+              "texte": "[N1]Guten Abend[/N1]!",
+              "prononciation_FR": "[N1]Gou-teun a-beund[/N1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Good evening[/N1]!",
+              "prononciation_FR": "[N1]Goud i-vning[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Bonne nuit[/N1] !",
+            "allemand": {
+              "texte": "[N1]Gute Nacht[/N1]!",
+              "prononciation_FR": "[N1]Gou-teu nakht[/N1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Good night[/N1]!",
+              "prononciation_FR": "[N1]Goud naït[/N1]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Au revoir[/V1] !",
+            "allemand": {
+              "texte": "[V1]Tschüss[/V1]!",
+              "prononciation_FR": "[V1]Tchus[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Goodbye[/V1]!",
+              "prononciation_FR": "[V1]Goud-baï[/V1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Se présenter",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [N2]français[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [N2]Franzose[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [N2]fran-tso-zeu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [N2]French[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]Frentch[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [N2]m'[/N2][V1]appelle[/V1] [N3]Paul[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]heiße[/V1] [N3]Paul[/N3].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]haï-sseu[/V1] [N3]Paul[/N3]."
+            },
+            "anglais": {
+              "texte": "[N1]My name[/N1] [V1]is[/V1] [N3]Paul[/N3].",
+              "prononciation_FR": "[N1]Maï neïm[/N1] [V1]iz[/V1] [N3]Paul[/N3]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]quinze ans[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [N2]fünfzehn Jahre alt[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [N2]funf-tséne ya-reu alt[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [N2]fifteen years old[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]fif-tine yirz old[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]viens[/V1] de [N2]France[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]komme[/V1] aus [N2]Frankreich[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ko-meu[/V1] aous [N2]frank-raïch[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]come[/V1] from [N2]France[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]keum[/V1] from [N2]Franss[/N2]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Mon unité[/N1] [V1]est[/V1] de [N2]Paris[/N2].",
+            "allemand": {
+              "texte": "[N1]Meine Gruppe[/N1] [V1]ist[/V1] aus [N2]Paris[/N2].",
+              "prononciation_FR": "[N1]Maï-neu grou-peu[/N1] [V1]ist[/V1] aous [N2]Pa-ris[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]My group[/N1] [V1]is[/V1] from [N2]Paris[/N2].",
+              "prononciation_FR": "[N1]Maï group[/N1] [V1]iz[/V1] from [N2]Pa-ris[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Demander des informations sur l'autre",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Comment [N1]t'[/N1][V1]appelles[/V1]-[N2]tu[/N2] ?",
+            "allemand": {
+              "texte": "Wie [V1]heißt[/V1] [N2]du[/N2]?",
+              "prononciation_FR": "Vi [V1]haïst[/V1] [N2]dou[/N2]?"
+            },
+            "anglais": {
+              "texte": "What [V1]is[/V1] [N2]your name[/N2]?",
+              "prononciation_FR": "Wot [V1]iz[/V1] [N2]your neïm[/N2]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[A1]Quel[/A1] âge [V1]as[/V1]-[N1]tu[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wie[/A1] alt [V1]bist[/V1] [N1]du[/N1]?",
+              "prononciation_FR": "[A1]Vi[/A1] alt [V1]bist[/V1] [N1]dou[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]How[/A1] old [V1]are[/V1] [N1]you[/N1]?",
+              "prononciation_FR": "[A1]Haou[/A1] old [V1]ar[/V1] [N1]you[/N1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "D'où [V1]viens[/V1]-[N1]tu[/N1] ?",
+            "allemand": {
+              "texte": "Woher [V1]kommst[/V1] [N1]du[/N1]?",
+              "prononciation_FR": "Vo-hèr [V1]komst[/V1] [N1]dou[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]you[/N1] from?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]you[/N1] from?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Tu[/N1] [V1]es[/V1] [A1]allemand[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Bist[/V1] [N1]du[/N1] [A1]Deutscher[/A1]?",
+              "prononciation_FR": "[V1]Bist[/V1] [N1]dou[/N1] [A1]Doï-tcheur[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Are[/V1] [N1]you[/N1] [A1]German[/A1]?",
+              "prononciation_FR": "[V1]Ar[/V1] [N1]you[/N1] [A1]Djer-man[/A1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[A1]Quelle[/A1] [V1]est[/V1] [N1]ton unité[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Was[/A1] [V1]ist[/V1] [N1]deine Gruppe[/N1]?",
+              "prononciation_FR": "[A1]Vass[/A1] [V1]ist[/V1] [N1]daï-neu grou-peu[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [V1]is[/V1] [N1]your group[/N1]?",
+              "prononciation_FR": "[A1]Wot[/A1] [V1]iz[/V1] [N1]your group[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "Savoir comment ça va",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Comment [N1]ça[/N1] [V1]va[/V1] ?",
+            "allemand": {
+              "texte": "Wie [V1]geht's[/V1] [N1]dir[/N1]?",
+              "prononciation_FR": "Vi [V1]guéts[/V1] [N1]dir[/N1]?"
+            },
+            "anglais": {
+              "texte": "How [V1]are[/V1] [N1]you[/N1]?",
+              "prononciation_FR": "Haou [V1]ar[/V1] [N1]you[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Ça[/N1] [V1]va[/V1] [A1]bien[/A1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]geht[/V1] [N2]mir[/N2] [A1]gut[/A1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]guét[/V1] [N2]mir[/N2] [A1]gout[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]good[/A1]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]goud[/A1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Tout[/N1] [V1]est[/V1] [A1]génial[/A1] !",
+            "allemand": {
+              "texte": "[N1]Alles[/N1] [V1]ist[/V1] [A1]super[/A1]!",
+              "prononciation_FR": "[N1]A-less[/N1] [V1]ist[/V1] [A1]zou-per[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Everything[/N1] [V1]is[/V1] [A1]great[/A1]!",
+              "prononciation_FR": "[N1]E-vri-thing[/N1] [V1]iz[/V1] [A1]gréït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]fatigué[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]müde[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [A1]mu-deu[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]tired[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]taï-eurd[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "Et [N1]toi[/N1] ?",
+            "allemand": {
+              "texte": "Und [N1]du[/N1]?",
+              "prononciation_FR": "Ound [N1]dou[/N1]?"
+            },
+            "anglais": {
+              "texte": "And [N1]you[/N1]?",
+              "prononciation_FR": "End [N1]you[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 5,
+        "nom_du_cas": "Remercier et célébrer",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Merci[/N1] [A1]beaucoup[/A1] !",
+            "allemand": {
+              "texte": "[A1]Vielen[/A1] [N1]Dank[/N1]!",
+              "prononciation_FR": "[A1]Fi-leun[/A1] [N1]dank[/N1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Thank you[/N1] [A1]very much[/A1]!",
+              "prononciation_FR": "[N1]Senk you[/N1] [A1]vé-ri meutch[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[A1]Super[/A1] [N1]idée[/N1] !",
+            "allemand": {
+              "texte": "[A1]Tolle[/A1] [N1]Idee[/N1]!",
+              "prononciation_FR": "[A1]To-leu[/A1] [N1]i-dé[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]Great[/A1] [N1]idea[/N1]!",
+              "prononciation_FR": "[A1]Gréït[/A1] [N1]aï-di-a[/N1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]trop bien[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]zu gut[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]tsou gout[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]too good[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]tou goud[/A1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]content[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]froh[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [A1]fro[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]happy[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]ha-pi[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Passe[/V1] de [A1]bons[/A1] [N1]moments[/N1] !",
+            "allemand": {
+              "texte": "[V1]Hab[/V1] [A1]gute[/A1] [N1]Zeiten[/N1]!",
+              "prononciation_FR": "[V1]Hab[/V1] [A1]gou-teu[/A1] [N1]tsaï-teun[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Have[/V1] a [A1]good[/A1] [N1]time[/N1]!",
+              "prononciation_FR": "[V1]Hav[/V1] eu [A1]goud[/A1] [N1]taïm[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 6,
+        "nom_du_cas": "S'excuser",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Pardon[/N1] !",
+            "allemand": {
+              "texte": "[N1]Entschuldigung[/N1]!",
+              "prononciation_FR": "[N1]Enn-tchoul-di-goung[/N1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Sorry[/N1]!",
+              "prononciation_FR": "[N1]So-ri[/N1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Ce[/N1] [N2]n'[/N2][V1]est[/V1] [A1]pas grave[/A1].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]nicht schlimm[/A1].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]nicht chlim[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]not serious[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]not si-ri-euss[/A1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]désolé[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]tut[/V1] [N2]mir[/N2] [A1]leid[/A1].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]tout[/V1] [N2]mir[/N2] [A1]laïd[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]sorry[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]so-ri[/A1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Aucun[/N1] [N2]problème[/N2] !",
+            "allemand": {
+              "texte": "[N1]Kein[/N1] [N2]Problem[/N2]!",
+              "prononciation_FR": "[N1]Kaïn[/N1] [N2]pro-bléme[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]No[/N1] [N2]problem[/N2]!",
+              "prononciation_FR": "[N1]No[/N1] [N2]pro-blem[/N2]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]comprenais[/V1] [A1]pas[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [A1]nicht[/A1] [V2]verstanden[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [A1]nicht[/A1] [V2]fer-chtan-deun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]did[/V1] [A1]not[/A1] [V2]understand[/V2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]did[/V1] [A1]not[/A1] [V2]eun-der-stand[/V2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 7,
+        "nom_du_cas": "S'entraider et dépanner",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Peux[/V1]-[N1]tu[/N1] [N2]m'[/N2][V2]aider[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kannst[/V1] [N1]du[/N1] [N2]mir[/N2] [V2]helfen[/V2]?",
+              "prononciation_FR": "[V1]Kanst[/V1] [N1]dou[/N1] [N2]mir[/N2] [V2]hel-feun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]help[/V2] [N2]me[/N2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]help[/V2] [N2]mi[/N2]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]besoin[/N2] d'[N3]aide[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N3]Hilfe[/N3].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N3]hil-feu[/N3]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N3]help[/N3].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N3]help[/N3]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Prends[/V1] [N1]ma place[/N1].",
+            "allemand": {
+              "texte": "[V1]Nimm[/V1] [N1]meinen Platz[/N1].",
+              "prononciation_FR": "[V1]Nim[/V1] [N1]maï-neun plats[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Take[/V1] [N1]my seat[/N1].",
+              "prononciation_FR": "[V1]Téïk[/V1] [N1]maï sit[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Tiens[/V1], [N1]c'[/N1][V2]est[/V2] pour [N2]toi[/N2] !",
+            "allemand": {
+              "texte": "[V1]Hier[/V1], [N1]das[/N1] [V2]ist[/V2] für [N2]dich[/N2]!",
+              "prononciation_FR": "[V1]Hir[/V1], [N1]dass[/N1] [V2]ist[/V2] fur [N2]dich[/N2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Here[/V1], [N1]it[/N1] [V2]is[/V2] for [N2]you[/N2]!",
+              "prononciation_FR": "[V1]Hir[/V1], [N1]it[/N1] [V2]iz[/V2] for [N2]you[/N2]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]partage[/V1] [N2]ceci[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Teilen[/V1] [N1]wir[/N1] [N2]das[/N2]?",
+              "prononciation_FR": "[V1]Taï-leun[/V1] [N1]vir[/N1] [N2]dass[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]share[/V2] [N2]this[/N2]?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]chère[/V2] [N2]ziss[/N2]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 8,
+        "nom_du_cas": "Rire et ambiance",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]très drôle[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]sehr witzig[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]zèr vit-sig[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]very funny[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]vé-ri feun-ni[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Tu[/N1] [V1]fais[/V1] le [N2]fou[/N2] !",
+            "allemand": {
+              "texte": "[N1]Du[/N1] [V1]bist[/V1] [A1]verrückt[/A1]!",
+              "prononciation_FR": "[N1]Dou[/N1] [V1]bist[/V1] [A1]fèr-rukt[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]You[/N1] [V1]are[/V1] [A1]crazy[/A1]!",
+              "prononciation_FR": "[N1]You[/N1] [V1]ar[/V1] [A1]kré-zi[/A1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Viens[/V1] [V2]jouer[/V2] avec [N1]nous[/N1] !",
+            "allemand": {
+              "texte": "[V1]Komm[/V1] [V2]spiel[/V2] mit [N1]uns[/N1]!",
+              "prononciation_FR": "[V1]Kom[/V1] [V2]chpil[/V2] mit [N1]ouns[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Come[/V1] [V2]play[/V2] with [N1]us[/N1]!",
+              "prononciation_FR": "[V1]Keum[/V1] [V2]plé[/V2] wiz [N1]eus[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]On[/N1] [V1]rigole[/V1] [A1]bien[/A1] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]lachen[/V1] [A1]viel[/A1]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]la-kheun[/V1] [A1]fil[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]laugh[/V1] [A1]a lot[/A1]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]laf[/V1] [A1]eu lot[/A1]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[A1]Quelle[/A1] [N1]bonne ambiance[/N1] !",
+            "allemand": {
+              "texte": "[A1]Was für[/A1] eine [A2]gute[/A2] [N1]Stimmung[/N1]!",
+              "prononciation_FR": "[A1]Vass fur[/A1] aï-neu [A2]gou-teu[/A2] [N1]chti-moung[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]What a[/A1] [A2]great[/A2] [N1]atmosphere[/N1]!",
+              "prononciation_FR": "[A1]Wot eu[/A1] [A2]gréït[/A2] [N1]at-mos-fir[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 9,
+        "nom_du_cas": "Dire qu'on ne comprend pas",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]parle[/V1] [N2]pas[/N2] [A1]allemand[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]spreche[/V1] [N2]kein[/N2] [A1]Deutsch[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]chprè-cheu[/V1] [N2]kaïn[/N2] [A1]doïtsch[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]do[/V1] [N2]not[/N2] [V2]speak[/V2] [A1]German[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]dou[/V1] [N2]not[/N2] [V2]spik[/V2] [A1]djer-man[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Parles[/V1]-[N1]tu[/N1] [A1]anglais[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Sprichst[/V1] [N1]du[/N1] [A1]Englisch[/A1]?",
+              "prononciation_FR": "[V1]Chprichst[/V1] [N1]dou[/N1] [A1]ing-lisch[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]speak[/V2] [A1]English[/A1]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]spik[/V2] [A1]ing-lish[/A1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Répète[/V1] s'il te plaît.",
+            "allemand": {
+              "texte": "[V1]Wiederhole[/V1] das bitte.",
+              "prononciation_FR": "[V1]Vi-der-ho-leu[/V1] dass [A1]bi-teu[/A1]."
+            },
+            "anglais": {
+              "texte": "Please [V1]repeat[/V1].",
+              "prononciation_FR": "Pliz [V1]ri-pit[/V1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Parle[/V1] [A1]plus doucement[/A1].",
+            "allemand": {
+              "texte": "[V1]Sprich[/V1] [A1]langsamer[/A1].",
+              "prononciation_FR": "[V1]Chprich[/V1] [A1]lang-za-meur[/A1]."
+            },
+            "anglais": {
+              "texte": "[V1]Speak[/V1] [A1]slower[/A1].",
+              "prononciation_FR": "[V1]Spik[/V1] [A1]slo-weur[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]sais[/V1] [N2]pas[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]weiß[/V1] [N2]nicht[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]vaïs[/V1] [N2]nicht[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]do[/V1] [N2]not[/N2] [V2]know[/V2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]dou[/V1] [N2]not[/N2] [V2]no[/V2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 10,
+        "nom_du_cas": "Susciter d'autres rencontres",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Ça[/N1] te [V1]dit[/V1] [N2]de rester[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Möchtest[/V1] [N1]du[/N1] [N2]bleiben[/N2]?",
+              "prononciation_FR": "[V1]Meuch-test[/V1] [N1]dou[/N1] [N2]blaï-beun[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]want[/V2] [V3]to stay[/V3]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]wont[/V2] [V3]tou stéï[/V3]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [V1]se voit[/V1] [A1]ce soir[/A1] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]sehen[/V1] [N2]uns[/N2] [A1]heute Abend[/A1]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zé-heun[/V1] [N2]ouns[/N2] [A1]hoï-teu a-beund[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]will see[/V1] [N2]each other[/N2] [A1]tonight[/A1]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]wil si[/V1] [N2]itch eu-zeur[/N2] [A1]tou-naït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Apporte[/V1] [N1]ta guitare[/N1] !",
+            "allemand": {
+              "texte": "[V1]Bring[/V1] [N1]deine Gitarre[/N1] [V2]mit[/V2]!",
+              "prononciation_FR": "[V1]Bring[/V1] [N1]daï-neu gui-ta-reu[/N1] [V2]mit[/V2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Bring[/V1] [N1]your guitar[/N1]!",
+              "prononciation_FR": "[V1]Bring[/V1] [N1]your gui-tar[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]l'heure[/N2] de [V2]la veillée[/V2] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [N2]Zeit[/N2] für [N3]das Lagerfeuer[/N3]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [N2]tsaït[/N2] fur [N3]dass la-gueur-foï-eur[/N3]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]time[/N2] for [N3]the campfire[/N3]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]taïm[/N2] for [N3]ze kamp-faï-eur[/N3]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[A1]À demain[/A1], [N1]mon ami[/N1] !",
+            "allemand": {
+              "texte": "[A1]Bis morgen[/A1], [N1]mein Freund[/N1]!",
+              "prononciation_FR": "[A1]Biss mor-gueun[/A1], [N1]maïn froïnd[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]See you tomorrow[/A1], [N1]my friend[/N1]!",
+              "prononciation_FR": "[A1]Si you tou-mo-ro[/A1], [N1]maï frend[/N1]!"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Bonjour",
+        "allemand": {
+          "texte": "Guten Tag",
+          "prononciation_FR": "Gou-teun tag"
+        },
+        "anglais": {
+          "texte": "Hello",
+          "prononciation_FR": "Hé-lo"
+        }
+      },
+      {
+        "francais": "Salut",
+        "allemand": {
+          "texte": "Hallo",
+          "prononciation_FR": "Ha-lo"
+        },
+        "anglais": {
+          "texte": "Hi",
+          "prononciation_FR": "Haï"
+        }
+      },
+      {
+        "francais": "Au revoir",
+        "allemand": {
+          "texte": "Auf Wiedersehen",
+          "prononciation_FR": "Aouf vi-deur-zé-heun"
+        },
+        "anglais": {
+          "texte": "Goodbye",
+          "prononciation_FR": "Goud-baï"
+        }
+      },
+      {
+        "francais": "Merci",
+        "allemand": {
+          "texte": "Danke",
+          "prononciation_FR": "Dan-keu"
+        },
+        "anglais": {
+          "texte": "Thanks",
+          "prononciation_FR": "Sanks"
+        }
+      },
+      {
+        "francais": "S'il te plaît",
+        "allemand": {
+          "texte": "Bitte",
+          "prononciation_FR": "Bi-teu"
+        },
+        "anglais": {
+          "texte": "Please",
+          "prononciation_FR": "Pliz"
+        }
+      },
+      {
+        "francais": "Oui",
+        "allemand": {
+          "texte": "Ja",
+          "prononciation_FR": "Ya"
+        },
+        "anglais": {
+          "texte": "Yes",
+          "prononciation_FR": "Yess"
+        }
+      },
+      {
+        "francais": "Non",
+        "allemand": {
+          "texte": "Nein",
+          "prononciation_FR": "Naïn"
+        },
+        "anglais": {
+          "texte": "No",
+          "prononciation_FR": "No"
+        }
+      },
+      {
+        "francais": "Pardon",
+        "allemand": {
+          "texte": "Entschuldigung",
+          "prononciation_FR": "Enn-tchoul-di-goung"
+        },
+        "anglais": {
+          "texte": "Sorry",
+          "prononciation_FR": "So-ri"
+        }
+      },
+      {
+        "francais": "Ami",
+        "allemand": {
+          "texte": "Freund",
+          "prononciation_FR": "Froïnd"
+        },
+        "anglais": {
+          "texte": "Friend",
+          "prononciation_FR": "Frend"
+        }
+      },
+      {
+        "francais": "Camarade",
+        "allemand": {
+          "texte": "Kamerad",
+          "prononciation_FR": "Ka-mé-rad"
+        },
+        "anglais": {
+          "texte": "Mate",
+          "prononciation_FR": "Méït"
+        }
+      },
+      {
+        "francais": "Génial",
+        "allemand": {
+          "texte": "Geil",
+          "prononciation_FR": "Gaïl"
+        },
+        "anglais": {
+          "texte": "Awesome",
+          "prononciation_FR": "O-ssom"
+        }
+      },
+      {
+        "francais": "Bien",
+        "allemand": {
+          "texte": "Gut",
+          "prononciation_FR": "Gout"
+        },
+        "anglais": {
+          "texte": "Good",
+          "prononciation_FR": "Goud"
+        }
+      },
+      {
+        "francais": "Nom",
+        "allemand": {
+          "texte": "Name",
+          "prononciation_FR": "Na-meu"
+        },
+        "anglais": {
+          "texte": "Name",
+          "prononciation_FR": "Neïm"
+        }
+      },
+      {
+        "francais": "Âge",
+        "allemand": {
+          "texte": "Alter",
+          "prononciation_FR": "Al-teur"
+        },
+        "anglais": {
+          "texte": "Age",
+          "prononciation_FR": "Eïdj"
+        }
+      },
+      {
+        "francais": "Fatigué",
+        "allemand": {
+          "texte": "Müde",
+          "prononciation_FR": "Mu-deu"
+        },
+        "anglais": {
+          "texte": "Tired",
+          "prononciation_FR": "Taï-eurd"
+        }
+      }
+    ]
+  }
+}

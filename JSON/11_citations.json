@@ -1,0 +1,454 @@
+{
+  "carnet_scout": {
+    "categorie": "Citations (meme, film, livre)",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Star Wars",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [N2]ton père[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [N2]dein Vater[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [N2]daïn fa-teur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [N2]your father[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]your fa-zeur[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]C'[/N1][V1]est un piège[/V1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist eine Falle[/V1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist aï-neu fa-leu[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It's[/N1] [V1]a trap[/V1]!",
+              "prononciation_FR": "[N1]Its[/N1] [V1]eu trap[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "Que [N1]la force[/N1] [V1]soit[/V1] avec [N2]toi[/N2].",
+            "allemand": {
+              "texte": "Möge [N1]die Macht[/N1] mit [N2]dir[/N2] [V1]sein[/V1].",
+              "prononciation_FR": "Meu-gueu [N1]di makht[/N1] mit [N2]dir[/N2] [V1]zaïn[/V1]."
+            },
+            "anglais": {
+              "texte": "May [N1]the force[/N1] [V1]be[/V1] with [N2]you[/N2].",
+              "prononciation_FR": "Méï [N1]ze forss[/N1] [V1]bi[/V1] wiz [N2]you[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Toy Story",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Vers [N1]l'infini[/N1] et [N2]au-delà[/N2] !",
+            "allemand": {
+              "texte": "Bis in [N1]die Unendlichkeit[/N1] und [N2]noch viel weiter[/N2]!",
+              "prononciation_FR": "Biss in [N1]di ou-nènt-lich-kaït[/N1] ount [N2]nokh fil vaï-teur[/N2]!"
+            },
+            "anglais": {
+              "texte": "To [N1]infinity[/N1] and [N2]beyond[/N2]!",
+              "prononciation_FR": "Tou [N1]in-fi-ni-ti[/N1] and [N2]bi-yond[/N2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Apollo 13",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Houston[/N1], on [V1]a un problème[/V1].",
+            "allemand": {
+              "texte": "[N1]Houston[/N1], wir [V1]haben ein Problem[/V1].",
+              "prononciation_FR": "[N1]Hous-tône[/N1], vir [V1]ha-beun aïn pro-blème[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]Houston[/N1], we [V1]have a problem[/V1].",
+              "prononciation_FR": "[N1]Hious-tône[/N1], wi [V1]hav eu pro-blem[/V1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "E.T., l'extra-terrestre",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]E.T.[/N1] [V1]téléphone[/V1] [N2]maison[/N2].",
+            "allemand": {
+              "texte": "[N1]E.T.[/N1] [V1]nach Hause telefonieren[/V1].",
+              "prononciation_FR": "[N1]I-ti[/N1] [V1]nakh haou-zeu té-lé-fo-ni-reun[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]E.T.[/N1] [V1]phone[/V1] [N2]home[/N2].",
+              "prononciation_FR": "[N1]I-ti[/N1] [V1]fone[/V1] [N2]hom[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 5,
+        "nom_du_cas": "Le Seigneur des Anneaux",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Mon[/N1] [A1]précieux[/A1]...",
+            "allemand": {
+              "texte": "[N1]Mein[/N1] [A1]Schatz[/A1]...",
+              "prononciation_FR": "[N1]Maïn[/N1] [A1]chats[/A1]..."
+            },
+            "anglais": {
+              "texte": "[N1]My[/N1] [A1]precious[/A1]...",
+              "prononciation_FR": "[N1]Maï[/N1] [A1]pré-cheuss[/A1]..."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Fuyez[/N1], [A1]pauvres fous[/A1] !",
+            "allemand": {
+              "texte": "[N1]Flieht[/N1], [A1]ihr Narren[/A1]!",
+              "prononciation_FR": "[N1]Flit[/N1], [A1]ir na-reun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Fly[/N1], [A1]you fools[/A1]!",
+              "prononciation_FR": "[N1]Flaï[/N1], [A1]you foulz[/A1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Un anneau[/N1] pour les [V1]gouverner tous[/V1].",
+            "allemand": {
+              "texte": "[N1]Ein Ring[/N1], sie zu [V1]knechten[/V1].",
+              "prononciation_FR": "[N1]Aïn ring[/N1], zi tsou [V1]knéch-teun[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]One ring[/N1] to [V1]rule them all[/V1].",
+              "prononciation_FR": "[N1]Weun ring[/N1] tou [V1]roul zêm ol[/V1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "On ne [V1]marche[/V1] [A1]pas simplement[/A1] au Mordor.",
+            "allemand": {
+              "texte": "Man [V1]spaziert[/V1] [A1]nicht einfach[/A1] nach Mordor.",
+              "prononciation_FR": "Man [V1]chpa-tsirt[/V1] [A1]nicht aïn-fakh[/A1] nakh Mor-dor."
+            },
+            "anglais": {
+              "texte": "One does [A1]not simply[/A1] [V1]walk[/V1] into Mordor.",
+              "prononciation_FR": "Weun deuz [A1]not sim-pli[/A1] [V1]wok[/V1] in-tou Mor-dor."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Vous[/N1] [N2]ne[/N2] [V1]passerez[/V1] [A1]pas[/A1] !",
+            "allemand": {
+              "texte": "[N1]Du[/N1] [V1]kannst[/V1] [A1]nicht[/A1] [V2]vorbei[/V2]!",
+              "prononciation_FR": "[N1]Dou[/N1] [V1]kanst[/V1] [A1]nicht[/A1] [V2]for-baï[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]You[/N1] [V1]shall[/V1] [A1]not[/A1] [V2]pass[/V2]!",
+              "prononciation_FR": "[N1]You[/N1] [V1]chal[/V1] [A1]not[/A1] [V2]pass[/V2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 6,
+        "nom_du_cas": "Harry Potter",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Tu [V1]es[/V1] [N1]un sorcier[/N1], [N2]Harry[/N2] !",
+            "allemand": {
+              "texte": "Du [V1]bist[/V1] [N1]ein Zauberer[/N1], [N2]Harry[/N2]!",
+              "prononciation_FR": "Dou [V1]bist[/V1] [N1]aïn tsaou-bê-reur[/N1], [N2]Ha-ri[/N2]!"
+            },
+            "anglais": {
+              "texte": "You [V1]are[/V1] [N1]a wizard[/N1], [N2]Harry[/N2]!",
+              "prononciation_FR": "You [V1]ar[/V1] [N1]eu wi-zard[/N1], [N2]Ha-ri[/N2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 7,
+        "nom_du_cas": "Terminator",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]reviendrai[/V1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]komme wieder[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ko-meu vi-deur[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]will be back[/V1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]wil bi bak[/V1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Hasta la vista[/N1], [A1]baby[/A1] !",
+            "allemand": {
+              "texte": "[N1]Hasta la vista[/N1], [A1]Baby[/A1]!",
+              "prononciation_FR": "[N1]As-ta la vis-ta[/N1], [A1]bé-bi[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Hasta la vista[/N1], [A1]baby[/A1]!",
+              "prononciation_FR": "[N1]As-ta la vis-ta[/N1], [A1]béï-bi[/A1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 8,
+        "nom_du_cas": "James Bond",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Mon nom[/N1] [V1]est Bond[/V1]...",
+            "allemand": {
+              "texte": "[N1]Mein Name[/N1] [V1]ist Bond[/V1]...",
+              "prononciation_FR": "[N1]Maïn na-meu[/N1] [V1]ist Bond[/V1]..."
+            },
+            "anglais": {
+              "texte": "[N1]My name[/N1] [V1]is Bond[/V1]...",
+              "prononciation_FR": "[N1]Maï neïm[/N1] [V1]iz Bond[/V1]..."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 9,
+        "nom_du_cas": "Avengers",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Avengers[/N1], [V1]rassemblement[/V1] !",
+            "allemand": {
+              "texte": "[N1]Avengers[/N1], [V1]sammeln[/V1]!",
+              "prononciation_FR": "[N1]A-ven-djeurs[/N1], [V1]za-meuln[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Avengers[/N1], [V1]assemble[/V1]!",
+              "prononciation_FR": "[N1]A-ven-djeurs[/N1], [V1]a-sem-beul[/V1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 10,
+        "nom_du_cas": "Piège de Cristal",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Yippee-ki-yay, [N1]mon ami[/N1] !",
+            "allemand": {
+              "texte": "Yippie-ki-yay, [N1]mein Freund[/N1]!",
+              "prononciation_FR": "Yi-pi-kaï-yéy, [N1]maïn froïnd[/N1]!"
+            },
+            "anglais": {
+              "texte": "Yippee-ki-yay, [N1]my friend[/N1]!",
+              "prononciation_FR": "Yi-pi-kaï-yéy, [N1]maï frend[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 11,
+        "nom_du_cas": "Memes et Internet",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Tu[/N1] [N2]ne le[/N2] [V1]fais pas dire[/V1].",
+            "allemand": {
+              "texte": "[N1]Sag[/N1] [N2]nichts weiter[/N2].",
+              "prononciation_FR": "[N1]Zak[/N1] [N2]nichts vaï-teur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]You[/N1] [N2]don't[/N2] [V1]say[/V1].",
+              "prononciation_FR": "[N1]You[/N1] [N2]dont[/N2] [V1]séy[/V1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Fais[/V1]-[N1]le[/N1], tout simplement !",
+            "allemand": {
+              "texte": "[V1]Mach[/V1] [N1]es[/N1] einfach!",
+              "prononciation_FR": "[V1]Makh[/V1] [N1]ess[/N1] aïn-fakh!"
+            },
+            "anglais": {
+              "texte": "[A1]Just[/A1] [V1]do it[/V1]!",
+              "prononciation_FR": "[A1]Djeust[/A1] [V1]dou it[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Maman[/N1], va chercher [N2]la caméra[/N2] !",
+            "allemand": {
+              "texte": "[N1]Mama[/N1], hol [N2]die Kamera[/N2]!",
+              "prononciation_FR": "[N1]Ma-ma[/N1], hol [N2]di ka-mé-ra[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]Mom[/N1], get [N2]the camera[/N2]!",
+              "prononciation_FR": "[N1]Mom[/N1], guét [N2]ze ka-mé-ra[/N2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 12,
+        "nom_du_cas": "Les Dents de la Mer",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "On [V1]a besoin[/V1] [A1]d'un plus gros bateau[/A1].",
+            "allemand": {
+              "texte": "Wir [V1]brauchen[/V1] [A1]ein größeres Boot[/A1].",
+              "prononciation_FR": "Vir [V1]braou-kheun[/V1] [A1]aïn greu-ssé-ress bot[/A1]."
+            },
+            "anglais": {
+              "texte": "We're [V1]gonna need[/V1] [A1]a bigger boat[/A1].",
+              "prononciation_FR": "Wir [V1]go-na nid[/V1] [A1]eu bi-gueur bot[/A1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 13,
+        "nom_du_cas": "Forrest Gump",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]La vie[/N1] [V1]est comme[/V1] [N2]une boîte de chocolats[/N2].",
+            "allemand": {
+              "texte": "[N1]Das Leben[/N1] [V1]ist wie[/V1] [N2]eine Schachtel Pralinen[/N2].",
+              "prononciation_FR": "[N1]Dass lé-beun[/N1] [V1]ist vi[/V1] [N2]aï-neu chakh-teul pra-li-neun[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]Life[/N1] [V1]is like[/V1] [N2]a box of chocolates[/N2].",
+              "prononciation_FR": "[N1]Laïf[/N1] [V1]iz laïk[/V1] [N2]eu boks ov tcho-ko-lêts[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Courez[/V1], [N1]Forrest[/N1], [V1]courez[/V1] !",
+            "allemand": {
+              "texte": "[V1]Lauf[/V1], [N1]Forrest[/N1], [V1]Lauf[/V1]!",
+              "prononciation_FR": "[V1]Laouf[/V1], [N1]Fo-rêst[/N1], [V1]Laouf[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Run[/V1], [N1]Forrest[/N1], [V1]run[/V1]!",
+              "prononciation_FR": "[V1]Reun[/V1], [N1]Fo-rêst[/N1], [V1]reun[/V1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 14,
+        "nom_du_cas": "The Dark Knight",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Pourquoi [A1]tant de sérieux[/A1] ?",
+            "allemand": {
+              "texte": "Warum [A1]denn so ernst[/A1]?",
+              "prononciation_FR": "Va-roum [A1]dêne zo êrnst[/A1]?"
+            },
+            "anglais": {
+              "texte": "Why [A1]so serious[/A1]?",
+              "prononciation_FR": "Waï [A1]so si-ri-euss[/A1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 15,
+        "nom_du_cas": "Titanic",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]suis le roi du monde[/V1] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin der König der Welt[/V1]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine dér keu-nikhh dér vêlt[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am the king of the world[/V1]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame ze king ov ze weurld[/V1]!"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Force",
+        "allemand": {
+          "texte": "Macht",
+          "prononciation_FR": "Makht"
+        },
+        "anglais": {
+          "texte": "Force",
+          "prononciation_FR": "Forss"
+        }
+      },
+      {
+        "francais": "Anneau",
+        "allemand": {
+          "texte": "Ring",
+          "prononciation_FR": "Ring"
+        },
+        "anglais": {
+          "texte": "Ring",
+          "prononciation_FR": "Ring"
+        }
+      },
+      {
+        "francais": "Sorcier",
+        "allemand": {
+          "texte": "Zauberer",
+          "prononciation_FR": "Tsaou-bê-reur"
+        },
+        "anglais": {
+          "texte": "Wizard",
+          "prononciation_FR": "Wi-zard"
+        }
+      },
+      {
+        "francais": "Blague",
+        "allemand": {
+          "texte": "Witz",
+          "prononciation_FR": "Vits"
+        },
+        "anglais": {
+          "texte": "Joke",
+          "prononciation_FR": "Djok"
+        }
+      },
+      {
+        "francais": "Roi",
+        "allemand": {
+          "texte": "König",
+          "prononciation_FR": "Keu-nikhh"
+        },
+        "anglais": {
+          "texte": "King",
+          "prononciation_FR": "King"
+        }
+      }
+    ]
+  }
+}

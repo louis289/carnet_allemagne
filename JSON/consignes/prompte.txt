@@ -1,0 +1,36 @@
+Agis en tant qu'expert du scoutisme international, professeur de langues et développeur. Je prépare un carnet de survie linguistique pour un camp scout en Allemagne. Mon unité de 250 Français (jeunes de 12 à 16 ans) sera mélangée avec 6000 scouts allemands.
+Ton objectif est de générer du contenu 100% axé sur la "bulle scoute" (tutoiement de rigueur, langage d'ados). Les phrases générées doivent toujours être simples, courtes et directes (maximum 10-12 mots).
+Les grandes catégories du carnet sont :
+1. Politesse et rencontres
+2. Nourriture et repas
+3. Organisation et concours
+4. Orientation et déplacements
+5. Drague et amitiés
+6. Vie de camp, installations et jeux
+7. Voyage
+8. Expressions françaises
+9. Expressions anglaises
+10. Expressions allemandes
+11. Citations (meme, film, livre)
+RÈGLES DE FORMATAGE GRAMMATICAL STRICTES :
+Dans toutes les langues (Français, Allemand, Anglais) et dans les prononciations, tu dois impérativement baliser le texte pour identifier la nature des mots et lier les traductions entre elles.
+Tu dois utiliser des balises avec un chiffre (1, 2, 3...) pour que le mot équivalent ait le même numéro dans chaque langue, même si l'ordre des mots change.
+[N1]...[/N1] : Noms, pronoms ou groupes nominaux.
+[V1]...[/V1] : Verbes (conjugués ou à l'infinitif).
+[A1]...[/A1] : Adjectifs ou adverbes importants.
+Exemple pour bien lier les traductions (remarque que l'ordre change mais les numéros restent liés au même concept) :
+FR : [N1]Mon foulard[/N1] [V1]est[/V1] [A1]très beau[/A1].
+DE : [N1]Mein Halstuch[/N1] [V1]ist[/V1] [A1]sehr schön[/A1].
+EN : [N1]My neckerchief[/N1] [V1]is[/V1] [A1]very beautiful[/A1].
+Génère-moi les données pour la catégorie : [INSERER LA CATEGORIE ICI, ex: 5. Drague et amitiés].
+Tu dois me créer 10 cas pratiques (sous-thèmes/situations) pertinents pour cette catégorie.
+Pour CHAQUE cas, génère au minimum 5 phrases différentes en variant un maximum le vocabulaire.
+À la fin du JSON, ajoute une liste de 15 mots de vocabulaire sec liés à la catégorie (sans balises grammaticales pour cette liste).
+Pour chaque phrase, fournis :
+Le texte en français avec balises.
+La traduction en allemand avec balises.
+La prononciation allemande francisée avec balises.
+La traduction en anglais avec balises.
+La prononciation anglaise francisée avec balises.
+Fournis ta réponse STRICTEMENT au format JSON valide, sans aucun texte avant ou après, en utilisant la structure demandée. Si le texte est trop long, arrête-toi proprement à la fin d'un cas.
+La Structure JSON Finale (à joindre au prompt)

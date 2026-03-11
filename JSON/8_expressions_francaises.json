@@ -1,0 +1,196 @@
+{
+  "carnet_scout": {
+    "categorie": "Expressions francaises (Traduites litteralement)",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Faim, Froid et Déceptions",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]la dalle[/N2] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]die Platte[/N2]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]di pla-teu[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]have[/V1] [N2]the slab[/N2]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]hav[/V1] [N2]ze slab[/N2]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Donner[/V1] [N1]sa langue[/N1] au [N2]chat[/N2].",
+            "allemand": {
+              "texte": "[N1]Seine Zunge[/N1] der [N2]Katze[/N2] [V1]geben[/V1].",
+              "prononciation_FR": "[N1]Zaï-neu tsoun-gueu[/N1] dér [N2]kat-tseu[/N2] [V1]gué-beun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]Give[/V1] [N1]his tongue[/N1] to the [N2]cat[/N2].",
+              "prononciation_FR": "[V1]Guiv[/V1] [N1]hiz teung[/N1] tou ze [N2]kat[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Poser[/V1] [N1]un lapin[/N1].",
+            "allemand": {
+              "texte": "[N1]Einen Hasen[/N1] [V1]hinlegen[/V1].",
+              "prononciation_FR": "[N1]Aï-neun ha-zeun[/N1] [V1]hine-lé-gueun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To put down[/V1] [N1]a rabbit[/N1].",
+              "prononciation_FR": "[V1]Tou pout daoun[/V1] [N1]eu ra-bit[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Il[/N1] [V1]fait un froid[/V1] de [N2]canard[/N2].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]macht eine Kälte[/V1] von [N2]Ente[/N2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]makht aï-neu kèl-teu[/V1] fone [N2]ên-teu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]makes a cold[/V1] of [N2]duck[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]méïks eu kold[/V1] ov [N2]deuk[/N2]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Avoir[/V1] [N1]le cafard[/N1].",
+            "allemand": {
+              "texte": "[N1]Die Kakerlake[/N1] [V1]haben[/V1].",
+              "prononciation_FR": "[N1]Di ka-kêr-la-keu[/N1] [V1]ha-beun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To have[/V1] [N1]the cockroach[/N1].",
+              "prononciation_FR": "[V1]Tou hav[/V1] [N1]ze ko-krotch[/N1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Fatigue et Menteries",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Avoir[/V1] [N1]un coup[/N1] de [N2]barre[/N2].",
+            "allemand": {
+              "texte": "[N1]Einen Schlag[/N1] von [N2]Stange[/N2] [V1]haben[/V1].",
+              "prononciation_FR": "[N1]Aï-neun chlak[/N1] fone [N2]chtan-gueu[/N2] [V1]ha-beun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To have[/V1] [N1]a hit[/N1] of [N2]bar[/N2].",
+              "prononciation_FR": "[V1]Tou hav[/V1] [N1]eu hit[/N1] ov [N2]bar[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Tomber[/V1] dans [N1]les pommes[/N1].",
+            "allemand": {
+              "texte": "In [N1]die Äpfel[/N1] [V1]fallen[/V1].",
+              "prononciation_FR": "In [N1]di èp-feul[/N1] [V1]fa-leun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To fall[/V1] in [N1]the apples[/N1].",
+              "prononciation_FR": "[V1]Tou fol[/V1] in [N1]zi a-peulz[/N1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Appuyer[/V1] sur [N1]le champignon[/N1].",
+            "allemand": {
+              "texte": "Auf [N1]den Pilz[/N1] [V1]drücken[/V1].",
+              "prononciation_FR": "Aouf [N1]déne pilts[/N1] [V1]dru-keun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To press[/V1] on [N1]the mushroom[/N1].",
+              "prononciation_FR": "[V1]Tou prêss[/V1] on [N1]ze meuch-roum[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Raconter[/V1] [N1]des salades[/N1].",
+            "allemand": {
+              "texte": "[N1]Salate[/N1] [V1]erzählen[/V1].",
+              "prononciation_FR": "[N1]Za-la-teu[/N1] [V1]êr-tsé-leun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To tell[/V1] [N1]salads[/N1].",
+              "prononciation_FR": "[V1]Tou tèl[/V1] [N1]sa-ladz[/N1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Casser[/V1] [N1]les pieds[/N1].",
+            "allemand": {
+              "texte": "[N1]Die Füße[/N1] [V1]brechen[/V1].",
+              "prononciation_FR": "[N1]Di fu-sseu[/N1] [V1]bré-cheun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To break[/V1] [N1]the feet[/N1].",
+              "prononciation_FR": "[V1]Tou bréïk[/V1] [N1]ze fit[/N1]."
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Chat",
+        "allemand": {
+          "texte": "Katze",
+          "prononciation_FR": "Kat-tseu"
+        },
+        "anglais": {
+          "texte": "Cat",
+          "prononciation_FR": "Kat"
+        }
+      },
+      {
+        "francais": "Lapin",
+        "allemand": {
+          "texte": "Hase",
+          "prononciation_FR": "Ha-zeu"
+        },
+        "anglais": {
+          "texte": "Rabbit",
+          "prononciation_FR": "Ra-bit"
+        }
+      },
+      {
+        "francais": "Champignon",
+        "allemand": {
+          "texte": "Pilz",
+          "prononciation_FR": "Pilts"
+        },
+        "anglais": {
+          "texte": "Mushroom",
+          "prononciation_FR": "Meuch-roum"
+        }
+      },
+      {
+        "francais": "Cafard",
+        "allemand": {
+          "texte": "Kakerlake",
+          "prononciation_FR": "Ka-kêr-la-keu"
+        },
+        "anglais": {
+          "texte": "Cockroach",
+          "prononciation_FR": "Ko-krotch"
+        }
+      },
+      {
+        "francais": "Pieds",
+        "allemand": {
+          "texte": "Füße",
+          "prononciation_FR": "Fu-sseu"
+        },
+        "anglais": {
+          "texte": "Feet",
+          "prononciation_FR": "Fit"
+        }
+      }
+    ]
+  }
+}

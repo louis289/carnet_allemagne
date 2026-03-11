@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éditeur de Carnet Scout (Audite)</title>
+    <style>
+        :root {
+            --bg-color: #fcefe3;
+            --primary-color: #d1562b;
+            --secondary-color: #1a4220;
+            --text-color: #2c2c2c;
+            --border-radius: 8px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        select,
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        select {
+            background-color: white;
+            cursor: pointer;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #b04320;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .file-info {
+            background: white;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .file-info h2 {
+            margin-top: 0;
+            color: var(--secondary-color);
+        }
+
+        .cas-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .cas-section h3 {
+            margin-top: 0;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .expression-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .expression-card h4 {
+            grid-column: 1 / -1;
+            margin: 0 0 1rem 0;
+            color: #555;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .field-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #444;
+        }
+
+        input,
+        textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 40px;
+        }
+
+        .status-msg {
+            margin-left: 1rem;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #8ded91;
+        }
+
+        .error {
+            color: #ff8e8e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Éditeur de JSON - Audite</h1>
+        <div class="controls">
+            <select id="file-select">
+                <option value="">-- Choisir un fichier JSON --</option>
+            </select>
+            <button id="save-btn" disabled>Enregistrer les modifications</button>
+            <span id="status" class="status-msg"></span>
+        </div>
+    </header>
+
+    <div class="container" id="editor-container">
+        <div class="file-info" style="display:none;" id="file-info">
+            <h2 id="meta-filename"></h2>
+            <p><strong>Catégorie globale: </strong> <span id="meta-category"></span></p>
+        </div>
+
+        <div id="content-area">
+            <!-- Content gets rendered here -->
+        </div>
+    </div>
+
+    <script>
+        let currentData = null;
+        let currentFilename = '';
+
+        const selectEl = document.getElementById('file-select');
+        const saveBtn = document.getElementById('save-btn');
+        const statusEl = document.getElementById('status');
+        const fileInfoEl = document.getElementById('file-info');
+        const metaFilenameEl = document.getElementById('meta-filename');
+        const metaCategoryEl = document.getElementById('meta-category');
+        const contentArea = document.getElementById('content-area');
+
+        async function loadFiles() {
+            try {
+                const res = await fetch('/api/files');
+                const files = await res.json();
+                files.forEach(f => {
+                    const option = document.createElement('option');
+                    option.value = f;
+                    option.textContent = f;
+                    selectEl.appendChild(option);
+                });
+            } catch (e) {
+                console.error('Error loading files:', e);
+                showStatus('Erreur de chargement des fichiers', 'error');
+            }
+        }
+
+        async function loadFile(filename) {
+            try {
+                const res = await fetch(`/api/file?name=${encodeURIComponent(filename)}`);
+                if (!res.ok) throw new Error('File not found');
+                currentData = await res.json();
+                currentFilename = filename;
+                renderEditor();
+                saveBtn.disabled = false;
+            } catch (e) {
+                console.error(e);
+                showStatus('Erreur de chargement du fichier', 'error');
+            }
+        }
+
+        function showStatus(msg, type) {
+            statusEl.textContent = msg;
+            statusEl.className = 'status-msg ' + type;
+            setTimeout(() => statusEl.textContent = '', 3000);
+        }
+
+        selectEl.addEventListener('change', (e) => {
+            if (e.target.value) {
+                loadFile(e.target.value);
+            } else {
+                contentArea.innerHTML = '';
+                fileInfoEl.style.display = 'none';
+                saveBtn.disabled = true;
+                currentData = null;
+                currentFilename = '';
+            }
+        });
+
+        saveBtn.addEventListener('click', async () => {
+            if (!currentData || !currentFilename) return;
+
+            saveBtn.disabled = true;
+            saveBtn.textContent = 'Enregistrement...';
+
+            try {
+                const res = await fetch('/api/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ filename: currentFilename, content: currentData })
+                });
+                if (!res.ok) throw new Error('Failed to save');
+                showStatus('Enregistré avec succès !', 'success');
+            } catch (e) {
+                console.error(e);
+                showStatus('Erreur d\'enregistrement', 'error');
+            } finally {
+                saveBtn.disabled = false;
+                saveBtn.textContent = 'Enregistrer les modifications';
+            }
+        });
+
+        function renderEditor() {
+            contentArea.innerHTML = '';
+
+            if (!currentData.carnet_scout) {
+                contentArea.innerHTML = '<p>Le fichier JSON ne semble pas correspondre à la structure carnet_scout.</p>';
+                return;
+            }
+
+            const category = currentData.carnet_scout.categorie || 'Non définie';
+            fileInfoEl.style.display = 'block';
+            metaFilenameEl.textContent = `Fichier: ${currentFilename}`;
+            metaCategoryEl.textContent = category;
+
+            const casList = currentData.carnet_scout.cas || [];
+
+            casList.forEach((cas, casIndex) => {
+                const section = document.createElement('div');
+                section.className = 'cas-section';
+
+                const casTitleInfo = currentData.carnet_scout.cas[casIndex].nom_du_cas || 'Cas inconnu';
+
+                const title = document.createElement('h3');
+                title.textContent = `Cas : ${casTitleInfo}`;
+                section.appendChild(title);
+
+                (cas.expressions || []).forEach((expr, exprIndex) => {
+                    // Ensure commentaire exists
+                    if (currentData.carnet_scout.cas[casIndex].expressions[exprIndex].commentaire === undefined) {
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].commentaire = '';
+                    }
+
+                    const card = document.createElement('div');
+                    card.className = 'expression-card';
+
+                    const header = document.createElement('h4');
+                    header.innerHTML = `<span>Expression #${expr.id_expression}</span> <span style="font-size: 0.9em; font-weight: normal;">${currentFilename} > ${casTitleInfo}</span>`;
+                    card.appendChild(header);
+
+                    // FR
+                    card.appendChild(createField('Français (phrase visée)', expr.francais, (val) => {
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].francais = val;
+                    }, 'full-width', 'fr-FR'));
+
+                    // DE
+                    const de = expr.allemand || { texte: '', prononciation_FR: '' };
+                    card.appendChild(createField('Allemand (Texte)', de.texte, (val) => {
+                        if (!currentData.carnet_scout.cas[casIndex].expressions[exprIndex].allemand)
+                            currentData.carnet_scout.cas[casIndex].expressions[exprIndex].allemand = {};
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].allemand.texte = val;
+                    }, '', 'de-DE'));
+                    card.appendChild(createField('Allemand (Prononciation)', de.prononciation_FR, (val) => {
+                        if (!currentData.carnet_scout.cas[casIndex].expressions[exprIndex].allemand)
+                            currentData.carnet_scout.cas[casIndex].expressions[exprIndex].allemand = {};
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].allemand.prononciation_FR = val;
+                    }));
+
+                    // EN
+                    const en = expr.anglais || { texte: '', prononciation_FR: '' };
+                    card.appendChild(createField('Anglais (Texte)', en.texte, (val) => {
+                        if (!currentData.carnet_scout.cas[casIndex].expressions[exprIndex].anglais)
+                            currentData.carnet_scout.cas[casIndex].expressions[exprIndex].anglais = {};
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].anglais.texte = val;
+                    }, '', 'en-GB'));
+                    card.appendChild(createField('Anglais (Prononciation)', en.prononciation_FR, (val) => {
+                        if (!currentData.carnet_scout.cas[casIndex].expressions[exprIndex].anglais)
+                            currentData.carnet_scout.cas[casIndex].expressions[exprIndex].anglais = {};
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].anglais.prononciation_FR = val;
+                    }));
+
+                    // Commentaire
+                    card.appendChild(createField('Commentaire (Notes, contexte...)', expr.commentaire, (val) => {
+                        currentData.carnet_scout.cas[casIndex].expressions[exprIndex].commentaire = val;
+                    }, 'full-width'));
+
+                    section.appendChild(card);
+                });
+
+                contentArea.appendChild(section);
+            });
+        }
+
+        function getCleanTextAndMap(text) {
+            let cleanText = "";
+            let map = [];
+            let inTag = false;
+            for (let i = 0; i < text.length; i++) {
+                if (text[i] === '[') {
+                    inTag = true;
+                } else if (text[i] === ']' && inTag) {
+                    inTag = false;
+                } else if (!inTag) {
+                    cleanText += text[i];
+                    map.push(i);
+                }
+            }
+            return { cleanText, map };
+        }
+
+        let synthVoices = [];
+        function loadVoices() {
+            synthVoices = window.speechSynthesis.getVoices();
+        }
+        if (window.speechSynthesis) {
+            window.speechSynthesis.onvoiceschanged = loadVoices;
+            loadVoices();
+        }
+
+        function speakText(text, lang, speed, inputEl) {
+            if (!window.speechSynthesis) {
+                alert("La synthèse vocale n'est pas supportée par votre navigateur.");
+                return;
+            }
+            window.speechSynthesis.cancel(); // Arrêter la lecture en cours si on clique vite
+
+            const { cleanText, map } = getCleanTextAndMap(text);
+
+            // S'assurer qu'il y a du texte à lire
+            if (!cleanText.trim()) return;
+
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            utterance.rate = speed;
+            utterance.lang = lang;
+
+            // Trouver et forcer la voix correspondante
+            let voices = window.speechSynthesis.getVoices();
+            if (voices.length === 0) voices = synthVoices;
+
+            if (voices.length > 0) {
+                const langPrefix = lang.split('-')[0].toLowerCase();
+                let voice = voices.find(v => v.lang.replace('_', '-').toLowerCase() === lang.toLowerCase());
+                if (!voice) {
+                    voice = voices.find(v => v.lang.toLowerCase().startsWith(langPrefix));
+                }
+                if (!voice && langPrefix === 'en') {
+                    // Fallback générique anglais
+                    voice = voices.find(v => v.lang.toLowerCase().includes('en-'));
+                }
+                if (!voice && langPrefix === 'de') {
+                    // Fallback générique allemand
+                    voice = voices.find(v => v.lang.toLowerCase().includes('de-'));
+                }
+                if (voice) {
+                    utterance.voice = voice;
+                }
+            }
+
+            if (inputEl) {
+                utterance.onboundary = (e) => {
+                    if (e.name === 'word') {
+                        const startClean = e.charIndex;
+                        let length = e.charLength;
+                        if (!length) {
+                            let endClean = cleanText.indexOf(' ', startClean);
+                            if (endClean === -1) endClean = cleanText.length;
+                            length = endClean - startClean;
+                        }
+                        if (startClean < map.length) {
+                            const startOri = map[startClean];
+                            let endCleanIdx = startClean + length - 1;
+                            if (endCleanIdx >= map.length) endCleanIdx = map.length - 1;
+                            const endOri = map[endCleanIdx] + 1;
+
+                            inputEl.focus();
+                            inputEl.setSelectionRange(startOri, endOri);
+                        }
+                    }
+                };
+
+                utterance.onend = () => {
+                    inputEl.setSelectionRange(0, 0);
+                    inputEl.blur();
+                    window.getSelection().removeAllRanges();
+                };
+
+                utterance.onerror = () => {
+                    inputEl.setSelectionRange(0, 0);
+                    inputEl.blur();
+                };
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function createField(label, value, onChange, extraClass = '', langTTS = null) {
+            const div = document.createElement('div');
+            div.className = `field-group ${extraClass}`;
+
+            const lblDiv = document.createElement('div');
+            lblDiv.style.display = 'flex';
+            lblDiv.style.justifyContent = 'space-between';
+            lblDiv.style.alignItems = 'center';
+
+            const lbl = document.createElement('label');
+            lbl.textContent = label;
+            lblDiv.appendChild(lbl);
+
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.value = value || '';
+
+            if (langTTS) {
+                const btnsDiv = document.createElement('div');
+                btnsDiv.style.display = 'flex';
+                btnsDiv.style.gap = '5px';
+
+                const btnNormal = document.createElement('button');
+                btnNormal.innerHTML = '🔊';
+                btnNormal.style.padding = '2px 8px';
+                btnNormal.style.fontSize = '0.75rem';
+                btnNormal.style.backgroundColor = '#1a4220';
+                btnNormal.title = "Écouter la prononciation correcte";
+                btnNormal.onclick = () => speakText(input.value, langTTS, 1.0, input);
+
+                const btnSlow = document.createElement('button');
+                btnSlow.innerHTML = '🐢 0.5x';
+                btnSlow.style.padding = '2px 8px';
+                btnSlow.style.fontSize = '0.75rem';
+                btnSlow.style.backgroundColor = '#386940';
+                btnSlow.title = "Écouter au ralenti (0.5x)";
+                btnSlow.onclick = () => speakText(input.value, langTTS, 0.5, input);
+
+                btnsDiv.appendChild(btnSlow);
+                btnsDiv.appendChild(btnNormal);
+                lblDiv.appendChild(btnsDiv);
+            }
+            input.addEventListener('input', (e) => onChange(e.target.value));
+
+            div.appendChild(lblDiv);
+            div.appendChild(input);
+            return div;
+        }
+
+        // Initialize
+        loadFiles();
+    </script>
+
+</body>
+
+</html>

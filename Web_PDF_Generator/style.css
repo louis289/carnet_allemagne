@@ -1,0 +1,359 @@
+/* CHARTE GRAPHIQUE EDLN 2025 */
+:root {
+    --edln-green: #114C2A;
+    --edln-red: #BF3030;
+    --edln-light-green: #16663A;
+    --edln-yellow: #EAB642;
+    --edln-blue: #19355E;
+    --edln-bg: #FFFFFF; /* FOND BLANC POUR L'ENCRE */
+    
+    /* Variables de Grammaire */
+    --grammar-n: var(--edln-blue);
+    --grammar-v: var(--edln-light-green);
+    --grammar-a: var(--edln-red);
+}
+
+@page {
+    size: A4 landscape;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Tahoma, sans-serif;
+    color: var(--edln-green);
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2, h3, h4, .title-font {
+    font-family: 'Cabin Sketch', cursive;
+}
+
+.loading {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Page Setup A4 Landscape: 297mm x 210mm */
+.page {
+    width: 297mm;
+    height: 210mm;
+    background: var(--edln-bg);
+    margin: 5mm auto;
+    page-break-after: always;
+    box-sizing: border-box;
+    padding: 15mm;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    /* Disposition pour accepter le plus de contenu possible */
+    display: flex;
+    flex-direction: column;
+    gap: 6mm;
+}
+
+@media print {
+    body { 
+        background: white; 
+        display: block; 
+    }
+    .page { 
+        margin: 0; 
+        box-shadow: none; 
+        page-break-after: always;
+    }
+    #app { display: block; }
+}
+
+/* Header & Footer par page */
+.page-number {
+    position: absolute;
+    bottom: 8mm;
+    right: 15mm;
+    font-size: 16pt;
+    color: var(--edln-green);
+    font-weight: bold;
+}
+
+.page-category-label {
+    position: absolute;
+    top: 8mm;
+    left: 15mm;
+    font-size: 22pt;
+    color: var(--edln-yellow);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Page de Garde */
+.page-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white; 
+    color: var(--edln-green);
+    border: none;
+    text-align: center;
+    padding: 30mm; /* Plus de padding pour ne pas coller au cadre */
+    position: relative;
+}
+
+/* Cadre décoratif qui ne touche pas les bords */
+.page-cover::before {
+    content: "";
+    position: absolute;
+    top: 10mm;
+    bottom: 10mm;
+    left: 10mm;
+    right: 10mm;
+    border: 5px solid var(--edln-green);
+    pointer-events: none;
+}
+
+.page-cover h1 {
+    font-size: 55pt;
+    margin: 0 0 10mm 0;
+    color: var(--edln-green);
+}
+.page-cover h2 {
+    font-size: 30pt;
+    margin: 0 0 15mm 0;
+    color: var(--edln-blue);
+}
+.identite-proprietaire {
+    margin-top: 10mm;
+    padding: 10mm;
+    border: 3px dashed var(--edln-green);
+    border-radius: 15px;
+    width: 70%;
+    text-align: left;
+    font-size: 18pt;
+    background: transparent;
+}
+.identite-proprietaire p {
+    margin: 6mm 0;
+    border-bottom: 2px dotted var(--edln-green);
+    padding-bottom: 2mm;
+}
+
+/* Sommaire */
+.page-toc {
+    display: flex;
+    flex-direction: column;
+}
+.page-toc h2 {
+    font-size: 45pt;
+    color: var(--edln-blue);
+    margin: 0 0 15mm 0;
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid var(--edln-yellow);
+}
+.toc-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.toc-columns {
+    display: flex;
+    width: 100%;
+    gap: 15mm;
+    font-size: 16pt;
+    line-height: 1.4;
+}
+.toc-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.toc-cat {
+    font-weight: bold;
+    color: var(--edln-red);
+    margin-top: 6mm;
+    font-size: 18pt;
+    text-transform: uppercase;
+    text-align: center; 
+    border-bottom: 2px dashed var(--edln-yellow);
+    padding-bottom: 2mm;
+    margin-bottom: 3mm;
+}
+.toc-cas {
+    color: var(--edln-green);
+    display: flex;
+    align-items: center;
+}
+.toc-cas span.dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted #ccc;
+    margin: 0 4mm;
+    position: relative;
+    top: 2px;
+}
+
+/* Grille de contenu (Cartes) */
+.page-content-wrapper {
+    margin-top: 15mm;
+    display: flex;
+    flex-direction: column;
+    gap: 8mm;
+    flex: 1; /* Prendre l'espace restant */
+}
+
+.cas-container {
+    width: 100%;
+    page-break-inside: avoid;
+}
+.cas-title {
+    font-size: 24pt;
+    color: var(--edln-blue);
+    margin: 0 0 5mm 0;
+    border-bottom: 2px solid var(--edln-yellow);
+    width: 100%;
+    font-weight: bold;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes par ligne */
+    gap: 8mm;
+    width: 100%;
+}
+
+.expression-card {
+    background: white;
+    border: none; 
+    border-left: 6px solid var(--edln-light-green); /* Reste la bande à gauche */
+    border-radius: 0; /* Suppression des arrondis pour gagner de l'espace net */
+    padding: 3mm 4mm; /* Moins de hauteur */
+    box-shadow: none; 
+    break-inside: avoid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrer verticalement */
+    height: 100%;
+}
+
+.expression-card.span-2 {
+    grid-column: span 2;
+}
+
+.expression-card.span-4 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.expression-fr {
+    font-weight: bold;
+    margin-bottom: 2mm; /* Moins d'espace en dessous */
+    font-size: 18pt; 
+    color: var(--edln-green);
+    line-height: 1.2;
+    word-wrap: break-word; 
+}
+
+/* Grille traduction (Force l'alignement Label|Texte) */
+.traduction {
+    display: grid;
+    grid-template-columns: 20mm 1fr;
+    margin-bottom: 1.5mm; /* Économie d'espace vertical */
+    background: transparent;
+    padding: 0;
+    column-gap: 2mm;
+    align-items: center; /* Aligner les textes horizontalement */
+}
+
+.lang {
+    font-weight: bold;
+    color: var(--edln-red);
+    font-size: 15pt;
+    white-space: nowrap;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.texte {
+    font-size: 15pt;
+    line-height: 1.3; /* Plus tassé */
+    word-wrap: break-word;
+    margin-bottom: 1mm;
+    overflow-wrap: break-word;
+}
+
+.prononciation {
+    display: flex;
+    align-items: center;
+    font-size: 13pt;
+    color: inherit;
+    font-style: normal;
+    margin-top: 0;
+    background: #f4f4f4;
+    padding: 1.5mm 3mm;
+    border-radius: 0; /* Suppression arrondi */
+    line-height: 1.3;
+    word-wrap: break-word;
+}
+
+.icon-dictaphone {
+    margin-right: 6px;
+    font-size: 14pt;
+}
+
+/* Grammaire (Balises) */
+.grammar {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    border-bottom: 3px solid;
+    margin-bottom: 4px;
+    /* Assouplissement du inline-block */
+    white-space: normal;
+}
+.grammar .index {
+    position: absolute;
+    bottom: -6px; /* Remonté pour éviter d'écraser la ligne 2 */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 9pt;
+    font-weight: bold;
+    background-color: white; /* Petit fond blanc pour ne pas couper le trait dessous */
+    padding: 0 2px;
+    line-height: 1;
+}
+
+/* Couleurs par type */
+.grammar-N {
+    color: var(--grammar-n);
+    border-bottom-color: var(--grammar-n);
+}
+.grammar-N .index { color: var(--grammar-n); }
+
+.grammar-V {
+    color: var(--grammar-v);
+    border-bottom-color: var(--grammar-v);
+}
+.grammar-V .index { color: var(--grammar-v); }
+
+.grammar-A {
+    color: var(--grammar-a);
+    border-bottom-color: var(--grammar-a);
+}
+.grammar-A .index { color: var(--grammar-a); }

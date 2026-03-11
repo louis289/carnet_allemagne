@@ -1,0 +1,196 @@
+{
+  "carnet_scout": {
+    "categorie": "Expressions allemandes (Traduites litteralement)",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Incompréhension et Problèmes",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] ne [V1]comprends[/V1] que [N2]gare[/N2]. (Je n'y comprends rien / C'est du chinois)",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]verstehe[/V1] nur [N2]Bahnhof[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fêr-chté-heu[/V1] nour [N2]ban-hof[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]understand[/V1] only [N2]train station[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]eun-deur-stand[/V1] on-li [N2]tréïn stéï-cheun[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[A1]Là[/A1] [N1]nous[/N1] [V1]avons[/V1] [N2]la salade[/N2] ! (Et voilà le travail ! / On est dans le pétrin)",
+            "allemand": {
+              "texte": "[A1]Da[/A1] [V1]haben[/V1] [N1]wir[/N1] [N2]den Salat[/N2]!",
+              "prononciation_FR": "[A1]Da[/A1] [V1]ha-beun[/V1] [N1]vir[/N1] [N2]déne za-lat[/N2]!"
+            },
+            "anglais": {
+              "texte": "[A1]There[/A1] [N1]we[/N1] [V1]have[/V1] [N2]the salad[/N2]!",
+              "prononciation_FR": "[A1]Zêr[/A1] [N1]wi[/N1] [V1]hav[/V1] [N2]ze sa-lad[/N2]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Ce[/N1] [V1]n'est pas[/V1] [N2]ma bière[/N2]. (Ce n'est pas mon problème / Mes oignons)",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist nicht[/V1] [N2]mein Bier[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist nicht[/V1] [N2]maïn bir[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]That[/N1] [V1]is not[/V1] [N2]my beer[/N2].",
+              "prononciation_FR": "[N1]Zat[/N1] [V1]iz not[/V1] [N2]maï bir[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Marcher[/V1] sur le [N1]biscuit[/N1] de [N2]quelqu'un[/N2]. (Taper sur les nerfs / Casser les pieds)",
+            "allemand": {
+              "texte": "[N2]Jemandem[/N2] auf den [N1]Keks[/N1] [V1]gehen[/V1].",
+              "prononciation_FR": "[N2]Yé-man-deum[/N2] aouf déne [N1]kéks[/N1] [V1]gué-heun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To walk[/V1] on [N2]someone's[/N2] [N1]cookie[/N1].",
+              "prononciation_FR": "[V1]Tou wok[/V1] on [N2]seum-weunz[/N2] [N1]kou-ki[/N1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Coûter[/V1] [N1]un argent[/N1] de [N2]cochon[/N2]. (Coûter une fortune / Les yeux de la tête)",
+            "allemand": {
+              "texte": "[N1]Ein Schweinegeld[/N1] [V1]kosten[/V1].",
+              "prononciation_FR": "[N1]Aïn chvaï-neu-guelt[/N1] [V1]kos-teun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To cost[/V1] [N2]pig[/N2] [N1]money[/N1].",
+              "prononciation_FR": "[V1]Tou kost[/V1] [N2]pig[/N2] [N1]meu-ni[/N1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Encouragements et Étonnement",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] te [V1]presse[/V1] [N2]les pouces[/N2]. (Je croise les doigts pour toi)",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]drücke[/V1] dir [N2]die Daumen[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]dru-keu[/V1] dir [N2]di daou-mên[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]press[/V1] you [N2]the thumbs[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]prêss[/V1] you [N2]ze seumbz[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Avoir[/V1] [N1]des tomates[/N1] sur [N2]les yeux[/N2]. (Ne rien voir / Être aveugle à une situation)",
+            "allemand": {
+              "texte": "[N1]Tomaten[/N1] auf [N2]den Augen[/N2] [V1]haben[/V1].",
+              "prononciation_FR": "[N1]To-ma-teun[/N1] aouf [N2]déne aou-guên[/N2] [V1]ha-beun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To have[/V1] [N1]tomatoes[/N1] on [N2]the eyes[/N2].",
+              "prononciation_FR": "[V1]Tou hav[/V1] [N1]to-méï-toz[/N1] on [N2]zi aïz[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Avoir[/V1] [N1]un matou[/N1]. (Avoir forcé la veille / Être courbaturé)",
+            "allemand": {
+              "texte": "[N1]Einen Kater[/N1] [V1]haben[/V1].",
+              "prononciation_FR": "[N1]Aï-neun ka-teur[/N1] [V1]ha-beun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To have[/V1] [N1]a tomcat[/N1].",
+              "prononciation_FR": "[V1]Tou hav[/V1] [N1]eu tom-kat[/N1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Jouer[/V1] [N1]la saucisse de foie[/N1] [A1]offensée[/A1]. (Faire la tête / Bouder)",
+            "allemand": {
+              "texte": "[N1]Die beleidigte Leberwurst[/N1] [V1]spielen[/V1].",
+              "prononciation_FR": "[N1]Di bé-laï-dik-teu lé-beur-vourst[/N1] [V1]chpi-leun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]To play[/V1] [N1]the liver sausage[/N1] [A1]insulted[/A1].",
+              "prononciation_FR": "[V1]Tou pléï[/V1] [N1]ze li-veur so-sidj[/N1] [A1]in-seul-têd[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [V1]crois que[/V1] [N2]mon cochon[/N2] [V2]siffle[/V2] ! (Je n'en crois pas mes yeux / J'hallucine)",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]glaube[/V1], [N2]mein Schwein[/N2] [V2]pfeift[/V2]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]glaou-beu[/V1], [N2]maïn chvaïn[/N2] [V2]pfaïft[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]believe[/V1] [N2]my pig[/N2] [V2]whistles[/V2]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]bi-liv[/V1] [N2]maï pig[/N2] [V2]wis-seulz[/V2]!"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Gare",
+        "allemand": {
+          "texte": "Bahnhof",
+          "prononciation_FR": "Ban-hof"
+        },
+        "anglais": {
+          "texte": "Train station",
+          "prononciation_FR": "Tréïn stéï-cheun"
+        }
+      },
+      {
+        "francais": "Bière",
+        "allemand": {
+          "texte": "Bier",
+          "prononciation_FR": "Bir"
+        },
+        "anglais": {
+          "texte": "Beer",
+          "prononciation_FR": "Bir"
+        }
+      },
+      {
+        "francais": "Biscuit",
+        "allemand": {
+          "texte": "Keks",
+          "prononciation_FR": "Kéks"
+        },
+        "anglais": {
+          "texte": "Cookie",
+          "prononciation_FR": "Kou-ki"
+        }
+      },
+      {
+        "francais": "Tomate",
+        "allemand": {
+          "texte": "Tomate",
+          "prononciation_FR": "To-ma-teu"
+        },
+        "anglais": {
+          "texte": "Tomato",
+          "prononciation_FR": "To-méï-to"
+        }
+      },
+      {
+        "francais": "Pouce",
+        "allemand": {
+          "texte": "Daumen",
+          "prononciation_FR": "Daou-mên"
+        },
+        "anglais": {
+          "texte": "Thumb",
+          "prononciation_FR": "Seumb"
+        }
+      }
+    ]
+  }
+}
