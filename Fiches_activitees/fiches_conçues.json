@@ -1,0 +1,128 @@
+[
+  {
+    "titre": "Les Gardiens du Code",
+    "type_de_jeu": "Grand jeu",
+    "imaginaire": "Création du Guide de Survie Interstellaire : Les jeunes sont des explorateurs spatiaux devant transmettre des données linguistiques vitales (Data-Mots) à la base sans se faire intercepter par les Brouilleurs.",
+    "element_preponderant": "Air (Vert) - Dynamisme, action / Eau (Blanc) - Discernement",
+    "objectifs_ppdb": [
+      "P3 : S'intéresser et pratiquer différentes activités physiques (Air)",
+      "S3 : Être capable de se mettre au service de l'équipe pour son bon fonctionnement (Feu)"
+    ],
+    "duree": "1h30 à 2h",
+    "materiel": "Foulards ou chasubles pour différencier les équipes, petits papiers (Data-Mots), stylos, une boîte (la Base de Données).",
+    "but_du_jeu": "Les Passeurs doivent apporter le plus de données validées à la Base de Données, en évitant de se faire toucher par les Brouilleurs.",
+    "mecanique_recolte_expressions": "Système de phases à complexité croissante pour l'encodage des données :\n- Phase 1 : Rédiger une \"Catégorie\" (ex: Urgences, Nourriture) chaque fois qu'un passeur arrive à la base.\n- Phase 2 : Rédiger une \"Situation\" (sous-thème) à partir des catégories piochées (ex: Je me suis perdu en forêt).\n- Phase 3 : Créer 3 phrases utiles pour répondre à la situation piochée.",
+    "deroulement": [
+      "1. Explication des règles et répartition des rôles (Passeurs / Brouilleurs).",
+      "2. Phase 1 (20 min) : Les passeurs remplissent des catégories de vocabulaire.",
+      "3. Échange des rôles.",
+      "4. Phase 2 (20 min) : Transformation des catégories en situations concrètes.",
+      "5. Échange des rôles.",
+      "6. Phase 3 (30 min) : Inventer les phrases de survie qui résoudront la situation."
+    ]
+  },
+  {
+    "titre": "L'Expédition Ultime : Les Épreuves de la Communication",
+    "type_de_jeu": "Jeu à postes",
+    "imaginaire": "L'Expédition Ultime s'aventure sur des terres inconnues. Pour ouvrir les frontières, ils doivent affronter de nombreux défis pour gagner la Clé de la Communication.",
+    "element_preponderant": "Eau (Blanc) - Discernement / Terre (Jaune) - Confiance / Feu (Rouge) - Solidarité",
+    "objectifs_ppdb": [
+      "I3 : Etre capable d'organiser sa pensée pour décrire une situation sans se focaliser sur les détails (Eau)",
+      "C1 : Savoir se construire un «défi» pour soi-même et le relever (Terre)"
+    ],
+    "duree": "2h",
+    "materiel": "Bandeaux pour les yeux, denrées alimentaires basiques (cuisine), jeux de société ou matériel de sport, stylos, carnets.",
+    "but_du_jeu": "Chaque cordée doit réussir l'épreuve de chaque poste pour avoir le droit de tirer une situation linguistique à résoudre.",
+    "mecanique_recolte_expressions": "Une épreuve réussie donne le droit et l'inspiration de tirer une carte 'Situation'. La cordée doit alors imaginer ensemble 3 phrases en français permettant de sortir de la situation/résoudre le problème, notées sur le carnet.",
+    "deroulement": [
+      "1. Poste Terre (Agilité) : Parcours d'agilité à l'aveugle, guidé par la voix.",
+      "2. Poste Eau (Logique) : Résolution d'une énigme en temps limité.",
+      "3. Poste Feu (Cuisine & Créativité) : Préparer une petite collation goûtue avec des ingrédients limités ou des restes.",
+      "4. Poste Air (Pédagogie / Explication) : Un éclaireur doit expliquer les règles d'un jeu court aux autres, mais sans utiliser certains mots interdits.",
+      "5. Lors de la réussite à chaque poste : Création de 3 phrases face à une situation en lien avec l'épreuve vécue."
+    ]
+  },
+  {
+    "titre": "Le Taboo des Explorateurs (Jeu de Description / Mime)",
+    "type_de_jeu": "Petit jeu / Temps de réflexion",
+    "imaginaire": "Les communicateurs officiels de la tribu essaient de transmettre un message urgent au reste de l'équipage. Mais leur vocabulaire est restreint par les brouilleurs de communication !",
+    "element_preponderant": "Eau (Blanc) - Discernement / Air (Vert) - Dynamisme",
+    "objectifs_ppdb": [
+      "I3 : Etre capable d'organiser sa pensée pour décrire une situation sans se focaliser sur les détails (Eau)"
+    ],
+    "duree": "45 min",
+    "materiel": "Cartes avec situations, mots ou photos/dessins souvenirs de camp (imprimés à l'avance), sablier ou chrono.",
+    "but_du_jeu": "Faire deviner le plus d'éléments d'une carte (situation, mot, ou photo) à son équipe pour marquer des points.",
+    "mecanique_recolte_expressions": "Chacun son tour, un éclaireur pioche une carte et n'a le droit qu'à 5 phrases courtes maximum pour décrire la situation ou la photo. Son équipe doit deviner la scène. Les fameuses 5 phrases inventées sont ensuite notées dans le carnet par le scribe de l'équipe si elles sont validées.",
+    "deroulement": [
+      "1. Les cordées s'affrontent ou jouent tour à tour en coopération.",
+      "2. Un joueur pioche une carte (ex: une photo d'un chef tombé dans la boue au camp d'été, ou un mot lié au camp).",
+      "3. Il énonce jusqu'à 5 phrases descriptives simples mais pertinentes pour faire deviner un maximum d'éléments.",
+      "4. Si l'équipe devine de quelle scène ou situation typique il s'agit, on note les bonnes phrases dans le carnet.",
+      "5. On passe au joueur suivant."
+    ]
+  },
+  {
+    "titre": "Le Cercle des Souvenirs Perdus",
+    "type_de_jeu": "Veillée",
+    "imaginaire": "Un ancien éclaireur qui campait avec la tribu l'année dernière est revenu, mais suite à un événement mystérieux, il a TOUT oublié de son passé scout ! Autour du feu, la tribu doit rassembler ses forces pour lui rendre la mémoire de ses propres aventures en lui rejouant des scènes réelles.",
+    "element_preponderant": "Feu (Rouge) - Solidarité, chaleur, empathie",
+    "objectifs_ppdb": [
+      "A2 : Etre capable de partager, dans un petit groupe, ses propres sentiments et émotions (Feu)",
+      "S1 : Etre capable d'exprimer à toute la tribu une connaissance ou une création que je souhaite partager (Feu)"
+    ],
+    "duree": "1h30",
+    "materiel": "Un grand feu de camp, déguisements variés, le 'Carnet de l'Amnésique', stylos.",
+    "but_du_jeu": "Présenter la scénette la plus immersive et fidèle à la réalité pour déclencher les souvenirs de l'ancien éclaireur amnésique (incarné par un chef).",
+    "mecanique_recolte_expressions": "Pendant la scénette, des Vaillants sont désignés 'Scribes' pour noter les expressions clés, les réactions et des phrases explicatives (ex: 'Rappelle-toi quand on a monté la tente sous la pluie !'). Ces phrases serviront de contenu pour le carnet de traduction.",
+    "deroulement": [
+      "1. L'Amnésique (un chef) arrive au feu de camp, confus. Il demande l'aide de ses anciens camarades.",
+      "2. Par cordées, 15 min de préparation d'une anecdote réelle du camp passé dans laquelle l'Amnésique était impliqué.",
+      "3. Représentation (10 min par cordée). L'Amnésique réagit, et les Scribes notent les phrases choc.",
+      "4. L'Amnésique 'retrouve' la mémoire petit à petit et valide émotionnellement la scène.",
+      "5. Mise en commun : lecture à la tribu des meilleures phrases récoltées."
+    ]
+  },
+  {
+    "titre": "La Boussole de la Salutation Mystique",
+    "type_de_jeu": "Jeu de piste",
+    "imaginaire": "Les morceaux constituant le Guide de Communication Interstellaire ont été dispersés. La tribu doit parcourir le territoire en suivant une mystérieuse piste pour récolter les fragments des Savoirs Anciens.",
+    "element_preponderant": "Eau (Blanc) - Curiosité, intelligence / Air (Vert) - Dynamisme",
+    "objectifs_ppdb": [
+      "I4 : Savoir lire et utiliser une carte pour guider un groupe (Eau)",
+      "I2 : Savoir utiliser son intelligence symbolique (Eau, Espace)"
+    ],
+    "duree": "2h",
+    "materiel": "Cartes IGN ou topographiques locales, balises cachées dans la nature, carnets de route, stylos.",
+    "but_du_jeu": "Trouver toutes les balises dans la nature et accomplir l'action intellectuelle associée pour reconstituer un chapitre du manuel.",
+    "mecanique_recolte_expressions": "À chaque balise trouvée, la cordée relève un défi d'observation lié à l'endroit (ex: près d'un arbre remarquable, près de l'eau). Le défi linguistique est de produire des situations ou des exemples de phrases inspirés par l'observation de ce repère naturel (ex: besoin de soin, admirer le paysage, orienter quelqu'un).",
+    "deroulement": [
+      "1. Remise des cartes aux différentes cordées et de l'énigme de départ.",
+      "2. Les cordées s'orientent d'une balise à l'autre.",
+      "3. Arrivées à la balise, découverte du thème en fonction de la topographie locale (eau, forêt, chemin).",
+      "4. Phase de réflexion collective : création des phrases adaptées.",
+      "5. Rassemblement final et mise en commun des fragments du Guide."
+    ]
+  },
+  {
+    "titre": "La Douane Intergalactique",
+    "type_de_jeu": "Grand jeu de négociation",
+    "imaginaire": "Les Vaillants doivent passer plusieurs frontières planétaires pour ramener des vivres (ou des éléments pour le lieu de camp). Aux douanes, les ambassadeurs (les chefs) ne laissent passer que ceux qui remplissent des 'formulaires administratifs' complexes en posant les bonnes phrases.",
+    "element_preponderant": "Terre (Jaune) - Confiance / Espace (Bleu) - Relation",
+    "objectifs_ppdb": [
+      "S1 : Accorder de l'importance et de l'écoute à l'autre (Feu, Terre)",
+      "C3 : Savoir affirmer sans violence son opinion dans une discussion (Terre, Espace)"
+    ],
+    "duree": "1h30",
+    "materiel": "Faux billets stellaires, papiers 'formulaires', costumes pour les douaniers (chefs), ressources à échanger.",
+    "but_du_jeu": "Ramener le plus de ressources au camp de base en négociant avec les douaniers sans se faire expulser.",
+    "mecanique_recolte_expressions": "Pour passer une frontière, il faut remplir un 'visa' linguistique: inventer 3 phrases polies, argumentatives ou des réponses d'excuses (ex: 'Puis-je passer s'il vous plaît', 'J'ai besoin de cette nourriture pour mon peuple').",
+    "deroulement": [
+      "1. Les douaniers s'installent dans différents 'bureaux' (postes) avec des exigences différentes (le douanier strict, le marchand filou, le médecin-chef...).",
+      "2. Les cordées préparent leurs phrases et viennent tenter de négocier le passage.",
+      "3. S'ils valident la douane avec des phrases correctes, on les ajoute au Carnet de Survie.",
+      "4. Si le visa est refusé, ils doivent retourner à leur base pour repenser de meilleures phrases.",
+      "5. Fin du jeu quand toutes les ressources ont été récupérées pour équiper le vaisseau/lieu de camp."
+    ]
+  }
+]
