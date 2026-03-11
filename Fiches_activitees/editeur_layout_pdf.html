@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Éditeur de Layout PDF</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .toolbar {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tools {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        #pdf-container {
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            background: white;
+            margin-bottom: 40px;
+            transform-origin: top left;
+        }
+
+        canvas {
+            display: block;
+        }
+
+        .field-box {
+            position: absolute;
+            border: 2px solid rgba(0, 120, 255, 0.8);
+            background: rgba(0, 120, 255, 0.2);
+            cursor: move;
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-start;
+            padding: 4px;
+            font-size: 10px;
+            color: #000;
+            user-select: none;
+            overflow: hidden;
+            font-family: Helvetica, sans-serif;
+            text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+        }
+
+        .field-box.active {
+            border-color: red;
+            background: rgba(255, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .resize-handle {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background: rgba(0, 120, 255, 0.8);
+            cursor: se-resize;
+        }
+
+        .active .resize-handle {
+            background: red;
+        }
+
+        #output-panel {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            font-family: monospace;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .field-config {
+            background: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        .field-config input {
+            padding: 4px;
+            width: 80px;
+        }
+    </style>
+    <!-- PDF.js via CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
+    </script>
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <div class="tools">
+            <input type="file" id="pdf-upload" accept="application/pdf" />
+            <button id="prev-page">Page -</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page">Page +</button>
+        </div>
+        <div class="tools">
+            <button id="zoom-in">Zoom +</button>
+            <button id="zoom-out">Zoom -</button>
+        </div>
+    </div>
+
+    <div class="field-config" id="field-config" style="display: none; max-width:800px; margin-bottom: 20px;">
+        <strong>Champ Actif : <span id="active-name"></span></strong>
+        <label>Police: <input type="text" id="active-font" /></label>
+        <label>Taille (pt): <input type="number" id="active-size" /></label>
+    </div>
+
+    <div id="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+        <div id="boxes-layer"></div>
+    </div>
+
+    <div id="output-panel">
+        <label for="json-input"><strong>Importer une configuration JSON :</strong> Collez votre PDF layout ici pour
+            charger vos paramètres existants.</label>
+        <div style="display: flex; gap: 10px;">
+            <textarea id="json-input" placeholder="Collez le contenu de pdf_layout_config.json ici..."></textarea>
+            <button id="import-json" style="align-self: flex-start;">Charger cette config</button>
+        </div>
+
+        <label for="json-output"><strong>Configuration générée (pdf_layout_config.json) :</strong> Copiez ce contenu
+            dans le fichier et sauvegardez.</label>
+        <textarea id="json-output"></textarea>
+        <button id="update-json">Copier dans le presse-papier</button>
+    </div>
+
+    <script>
+        // Configuration de base
+        let config = {
+            "titre": {
+                "page": 1,
+                "x": 289,
+                "y": 621,
+                "width": 191,
+                "font": "Helvetica-Bold",
+                "size": 14,
+                "lines": 1,
+                "height": 24
+            },
+            "type_de_jeu": {
+                "page": 1,
+                "x": 143,
+                "y": 625,
+                "width": 140,
+                "font": "Helvetica",
+                "size": 14,
+                "lines": 2,
+                "height": 35
+            },
+            "terre": {
+                "page": 1,
+                "x": 130,
+                "y": 545,
+                "width": 21,
+                "font": "Helvetica-Bold",
+                "size": 14,
+                "lines": 1,
+                "height": 20
+            },
+            "eau": {
+                "page": 1,
+                "x": 158,
+                "y": 546,
+                "width": 26,
+                "font": "Helvetica-Bold",
+                "size": 14,
+                "lines": 1,
+                "height": 20
+            },
+            "air": {
+                "page": 1,
+                "x": 186,
+                "y": 546,
+                "width": 21,
+                "font": "Helvetica-Bold",
+                "size": 14,
+                "lines": 1,
+                "height": 20
+            },
+            "feu": {
+                "page": 1,
+                "x": 213,
+                "y": 546,
+                "width": 27,
+                "font": "Helvetica-Bold",
+                "size": 14,
+                "lines": 1,
+                "height": 20
+            },
+            "espace": {
+                "page": 1,
+                "x": 244,
+                "y": 546,
+                "width": 22,
+                "font": "Helvetica-Bold",
+                "size": 14,
+                "lines": 1,
+                "height": 20
+            },
+            "nombre_enfants": {
+                "page": 1,
+                "x": 123,
+                "y": 498,
+                "width": 157,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 1,
+                "height": 14
+            },
+            "nombre_adultes": {
+                "page": 1,
+                "x": 126,
+                "y": 486,
+                "width": 91,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 1,
+                "height": 14
+            },
+            "objectifs_ppdb": {
+                "page": 1,
+                "x": 283,
+                "y": 540,
+                "width": 289,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 5,
+                "height": 66
+            },
+            "duree": {
+                "page": 1,
+                "x": 58,
+                "y": 512,
+                "width": 74,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 1,
+                "height": 14
+            },
+            "materiel": {
+                "page": 1,
+                "x": 21,
+                "y": 443,
+                "width": 139,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 13,
+                "height": 180
+            },
+            "but_du_jeu": {
+                "page": 1,
+                "x": 183,
+                "y": 444,
+                "width": 392,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 3,
+                "height": 45
+            },
+            "deroulement": {
+                "page": 1,
+                "x": 183,
+                "y": 390,
+                "width": 390,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 14,
+                "height": 201
+            },
+            "fin_du_jeu": {
+                "page": 1,
+                "x": 184,
+                "y": 175,
+                "width": 388,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 9,
+                "height": 120
+            },
+            "a_noter": {
+                "page": 1,
+                "x": 21,
+                "y": 233,
+                "width": 138,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 13,
+                "height": 178
+            },
+            "imaginaire": {
+                "page": 2,
+                "x": 307,
+                "y": 511,
+                "width": 260,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 32,
+                "height": 445
+            },
+            "mecanique_recolte_expressions": {
+                "page": 2,
+                "x": 23,
+                "y": 756,
+                "width": 545,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 15,
+                "height": 211
+            },
+            "pour_aller_plus_loin": {
+                "page": 2,
+                "x": 22,
+                "y": 515,
+                "width": 267,
+                "font": "Helvetica",
+                "size": 10,
+                "lines": 32,
+                "height": 449
+            }
+        }
+
+        let pdfDoc = null;
+        let pageNum = 1;
+        let pageRendering = false;
+        let pageNumPending = null;
+        let scale = 1.0;
+        const canvas = document.getElementById('pdf-canvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.getElementById('pdf-container');
+        const boxesLayer = document.getElementById('boxes-layer');
+        let activeField = null;
+
+        // Variables pour simuler la taille PDF (A4 en points)
+        const A4_HEIGHT = 842;
+
+        document.getElementById('json-output').value = JSON.stringify(config, null, 2);
+
+        function renderPage(num) {
+            pageRendering = true;
+            pdfDoc.getPage(num).then(function (page) {
+                const viewport = page.getViewport({ scale: scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                container.style.width = viewport.width + 'px';
+                container.style.height = viewport.height + 'px';
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                const renderTask = page.render(renderContext);
+
+                renderTask.promise.then(function () {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                    drawBoxes();
+                });
+            });
+            document.getElementById('page-info').textContent = "Page " + num;
+        }
+
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        document.getElementById('prev-page').addEventListener('click', () => {
+            if (pageNum <= 1) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        });
+
+        document.getElementById('next-page').addEventListener('click', () => {
+            if (pdfDoc === null || pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        });
+
+        document.getElementById('zoom-in').addEventListener('click', () => { scale += 0.2; queueRenderPage(pageNum); });
+        document.getElementById('zoom-out').addEventListener('click', () => { scale = Math.max(0.4, scale - 0.2); queueRenderPage(pageNum); });
+
+        document.getElementById('pdf-upload').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            if (file.type !== 'application/pdf') {
+                alert('Veuillez sélectionner un fichier PDF.');
+                return;
+            }
+            const fileReader = new FileReader();
+            fileReader.onload = function () {
+                const typedarray = new Uint8Array(this.result);
+                pdfjsLib.getDocument(typedarray).promise.then(function (pdfDoc_) {
+                    pdfDoc = pdfDoc_;
+                    pageNum = 1;
+                    queueRenderPage(pageNum);
+                });
+            };
+            fileReader.readAsArrayBuffer(file);
+        });
+
+        function createBox(key, data) {
+            const box = document.createElement('div');
+            box.className = 'field-box';
+
+            // Convertir PDF coordinates -> HTML coordinates (scaled)
+            // Dans PyPDF2/Reportlab, X est depuis la gauche, Y est depuis le bas (baseline)
+            const htmlX = data.x * scale;
+            // Pour avoir le haut de la boite en HTML, on fait: 
+            // Y de Reportlab est la BASELINE de la première ligne.
+            // Donc le haut de la boite est grosso-modo à Y + (size * 1).
+            const topY = A4_HEIGHT - (data.y + data.size);
+            const htmlY = topY * scale;
+
+            const boxHeight = data.height ? data.height : (data.size * 1.4 * (data.lines || 1));
+            const approxHeight = boxHeight * scale;
+
+            box.style.left = htmlX + 'px';
+            box.style.top = htmlY + 'px';
+            box.style.width = (data.width * scale) + 'px';
+            box.style.height = approxHeight + 'px';
+            box.dataset.key = key;
+            box.innerHTML = `<strong>${key}</strong>`;
+
+            const handle = document.createElement('div');
+            handle.className = 'resize-handle';
+            box.appendChild(handle);
+
+            // Drag logique
+            let isDragging = false, isResizing = false;
+            let startX, startY, startLeft, startTop, startW, startH;
+
+            box.addEventListener('mousedown', (e) => {
+                if (e.target === handle) {
+                    isResizing = true;
+                } else {
+                    isDragging = true;
+                }
+
+                document.querySelectorAll('.field-box').forEach(b => b.classList.remove('active'));
+                box.classList.add('active');
+                setActiveField(key);
+
+                startX = e.clientX; startY = e.clientY;
+                startLeft = parseFloat(box.style.left);
+                startTop = parseFloat(box.style.top);
+                startW = parseFloat(box.style.width);
+                startH = parseFloat(box.style.height);
+                e.preventDefault();
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging && !isResizing) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+
+                if (isDragging) {
+                    box.style.left = (startLeft + dx) + 'px';
+                    box.style.top = (startTop + dy) + 'px';
+                } else if (isResizing) {
+                    box.style.width = (startW + dx) + 'px';
+                    // height is visual only, but let's allow it
+                    box.style.height = Math.max(10, startH + dy) + 'px';
+                }
+                updateConfigFromUI();
+            });
+
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                isResizing = false;
+            });
+
+            boxesLayer.appendChild(box);
+        }
+
+        function drawBoxes() {
+            boxesLayer.innerHTML = '';
+            for (const [key, data] of Object.entries(config)) {
+                if (data.page === pageNum) {
+                    createBox(key, data);
+                }
+            }
+        }
+
+        function setActiveField(key) {
+            activeField = key;
+            document.getElementById('field-config').style.display = 'flex';
+            document.getElementById('active-name').textContent = key;
+            document.getElementById('active-font').value = config[key].font || 'Helvetica';
+            document.getElementById('active-size').value = config[key].size || 10;
+        }
+
+        document.getElementById('active-font').addEventListener('change', (e) => {
+            if (activeField) config[activeField].font = e.target.value;
+            generateJSON();
+        });
+        document.getElementById('active-size').addEventListener('change', (e) => {
+            if (activeField) {
+                config[activeField].size = parseInt(e.target.value, 10);
+                drawBoxes(); // redraw to fix box height
+                generateJSON();
+            }
+        });
+
+        function updateConfigFromUI() {
+            document.querySelectorAll('.field-box').forEach(box => {
+                const key = box.dataset.key;
+                const field = config[key];
+
+                const left = parseFloat(box.style.left) / scale;
+                const topHtml = parseFloat(box.style.top) / scale;
+                const width = parseFloat(box.style.width) / scale;
+                const height = parseFloat(box.style.height) / scale;
+
+                // PDF Y = 842 - Top HTML - font size (pour baseline)
+                const pdfY = A4_HEIGHT - topHtml - field.size;
+
+                field.x = Math.round(left);
+                field.y = Math.round(pdfY);
+                field.width = Math.round(width);
+                field.lines = Math.round(height / (field.size * 1.4));
+                field.height = Math.round(height);
+            });
+            generateJSON();
+        }
+
+        function generateJSON() {
+            const outputConfig = {};
+            for (const k in config) {
+                outputConfig[k] = Object.assign({}, config[k]);
+                if (!outputConfig[k].height) {
+                    outputConfig[k].height = Math.round(outputConfig[k].size * 1.4 * (outputConfig[k].lines || 1));
+                }
+            }
+            document.getElementById('json-output').value = JSON.stringify(outputConfig, null, 2);
+        }
+
+        document.getElementById('import-json').addEventListener('click', () => {
+            try {
+                const inputVal = document.getElementById('json-input').value;
+                if (!inputVal.trim()) return;
+                const newConfig = JSON.parse(inputVal);
+                config = newConfig;
+                drawBoxes();
+                generateJSON();
+                alert('Configuration chargée avec succès !');
+            } catch (e) {
+                alert('Erreur de lecture du JSON. Assurez-vous qu\'il est valide.');
+                console.error(e);
+            }
+        });
+
+        document.getElementById('update-json').addEventListener('click', () => {
+            const outputArea = document.getElementById('json-output');
+            outputArea.select();
+            document.execCommand('copy');
+            alert('JSON copié dans le presse-papier ! Remplacez le contenu de pdf_layout_config.json avec.');
+        });
+
+        // Auto-load on startup
+        window.addEventListener('load', async () => {
+            // Load JSON
+            try {
+                const resJson = await fetch('pdf_layout_config.json');
+                if (resJson.ok) {
+                    const newConfig = await resJson.json();
+                    config = newConfig;
+                    document.getElementById('json-input').value = JSON.stringify(config, null, 2);
+                    generateJSON();
+                    console.log("Configuration JSON chargée automatiquement.");
+                }
+            } catch (e) {
+                console.warn("Le chargement automatique de pdf_layout_config.json a échoué (souvent dû aux restrictions d'accès aux fichiers locaux par défaut du navigateur).");
+            }
+
+            // Load PDF
+            try {
+                const resPdf = await fetch('Ressources/Fiche-dactivite-Vaillants1.pdf');
+                if (resPdf.ok) {
+                    const arrayBuffer = await resPdf.arrayBuffer();
+                    const typedarray = new Uint8Array(arrayBuffer);
+                    pdfjsLib.getDocument(typedarray).promise.then(function (pdfDoc_) {
+                        pdfDoc = pdfDoc_;
+                        pageNum = 1;
+                        queueRenderPage(pageNum);
+                        console.log("Fichier PDF chargé automatiquement.");
+                    });
+                }
+            } catch (e) {
+                console.warn("Le chargement automatique du PDF a échoué.");
+            }
+        });
+    </script>
+</body>
+
+</html>

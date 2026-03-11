@@ -1,9 +1,7 @@
 [
   {
     "titre": "Les Gardiens du Code",
-    "type_de_jeu": "Grand jeu",
     "imaginaire": "Création du Guide de Survie Interstellaire : Les jeunes sont des explorateurs spatiaux devant transmettre des données linguistiques vitales (Data-Mots) à la base sans se faire intercepter par les Brouilleurs.",
-    "element_preponderant": "Air (Vert) - Dynamisme, action / Eau (Blanc) - Discernement",
     "objectifs_ppdb": [
       "P3 : S'intéresser et pratiquer différentes activités physiques (Air)",
       "S3 : Être capable de se mettre au service de l'équipe pour son bon fonctionnement (Feu)"
@@ -19,13 +17,22 @@
       "4. Phase 2 (20 min) : Transformation des catégories en situations concrètes.",
       "5. Échange des rôles.",
       "6. Phase 3 (30 min) : Inventer les phrases de survie qui résoudront la situation."
-    ]
+    ],
+    "nombre_enfants": "12 à 24",
+    "nombre_adultes": "2 à 4",
+    "pour_aller_plus_loin": "Adapter la difficulté en rajoutant des contraintes logistiques.",
+    "fin_du_jeu": "Le jeu se termine quand toutes les équipes ont accompli la mission.",
+    "a_noter": "Prévoir suffisamment d'eau et délimiter clairement le terrain.",
+    "type_de_jeu": "Grand jeu",
+    "terre": "",
+    "eau": "__",
+    "air": "__",
+    "feu": "",
+    "espace": ""
   },
   {
     "titre": "L'Expédition Ultime : Les Épreuves de la Communication",
-    "type_de_jeu": "Jeu à postes",
     "imaginaire": "L'Expédition Ultime s'aventure sur des terres inconnues. Pour ouvrir les frontières, ils doivent affronter de nombreux défis pour gagner la Clé de la Communication.",
-    "element_preponderant": "Eau (Blanc) - Discernement / Terre (Jaune) - Confiance / Feu (Rouge) - Solidarité",
     "objectifs_ppdb": [
       "I3 : Etre capable d'organiser sa pensée pour décrire une situation sans se focaliser sur les détails (Eau)",
       "C1 : Savoir se construire un «défi» pour soi-même et le relever (Terre)"
@@ -40,13 +47,22 @@
       "3. Poste Feu (Cuisine & Créativité) : Préparer une petite collation goûtue avec des ingrédients limités ou des restes.",
       "4. Poste Air (Pédagogie / Explication) : Un éclaireur doit expliquer les règles d'un jeu court aux autres, mais sans utiliser certains mots interdits.",
       "5. Lors de la réussite à chaque poste : Création de 3 phrases face à une situation en lien avec l'épreuve vécue."
-    ]
+    ],
+    "nombre_enfants": "12 à 24",
+    "nombre_adultes": "2 à 4",
+    "pour_aller_plus_loin": "Adapter la difficulté en rajoutant des contraintes logistiques.",
+    "fin_du_jeu": "Le jeu se termine quand toutes les équipes ont accompli la mission.",
+    "a_noter": "Prévoir suffisamment d'eau et délimiter clairement le terrain.",
+    "type_de_jeu": "Jeu à postes",
+    "terre": "__",
+    "eau": "__",
+    "air": "",
+    "feu": "__",
+    "espace": ""
   },
   {
     "titre": "Le Taboo des Explorateurs (Jeu de Description / Mime)",
-    "type_de_jeu": "Petit jeu / Temps de réflexion",
     "imaginaire": "Les communicateurs officiels de la tribu essaient de transmettre un message urgent au reste de l'équipage. Mais leur vocabulaire est restreint par les brouilleurs de communication !",
-    "element_preponderant": "Eau (Blanc) - Discernement / Air (Vert) - Dynamisme",
     "objectifs_ppdb": [
       "I3 : Etre capable d'organiser sa pensée pour décrire une situation sans se focaliser sur les détails (Eau)"
     ],
@@ -60,13 +76,22 @@
       "3. Il énonce jusqu'à 5 phrases descriptives simples mais pertinentes pour faire deviner un maximum d'éléments.",
       "4. Si l'équipe devine de quelle scène ou situation typique il s'agit, on note les bonnes phrases dans le carnet.",
       "5. On passe au joueur suivant."
-    ]
+    ],
+    "nombre_enfants": "12 à 24",
+    "nombre_adultes": "2 à 4",
+    "pour_aller_plus_loin": "Adapter la difficulté en rajoutant des contraintes logistiques.",
+    "fin_du_jeu": "Le jeu se termine quand toutes les équipes ont accompli la mission.",
+    "a_noter": "Prévoir suffisamment d'eau et délimiter clairement le terrain.",
+    "type_de_jeu": "Petit jeu / Temps de réflexion",
+    "terre": "",
+    "eau": "__",
+    "air": "__",
+    "feu": "",
+    "espace": ""
   },
   {
     "titre": "Le Cercle des Souvenirs Perdus",
-    "type_de_jeu": "Veillée",
     "imaginaire": "Un ancien éclaireur qui campait avec la tribu l'année dernière est revenu, mais suite à un événement mystérieux, il a TOUT oublié de son passé scout ! Autour du feu, la tribu doit rassembler ses forces pour lui rendre la mémoire de ses propres aventures en lui rejouant des scènes réelles.",
-    "element_preponderant": "Feu (Rouge) - Solidarité, chaleur, empathie",
     "objectifs_ppdb": [
       "A2 : Etre capable de partager, dans un petit groupe, ses propres sentiments et émotions (Feu)",
       "S1 : Etre capable d'exprimer à toute la tribu une connaissance ou une création que je souhaite partager (Feu)"
@@ -81,13 +106,22 @@
       "3. Représentation (10 min par cordée). L'Amnésique réagit, et les Scribes notent les phrases choc.",
       "4. L'Amnésique 'retrouve' la mémoire petit à petit et valide émotionnellement la scène.",
       "5. Mise en commun : lecture à la tribu des meilleures phrases récoltées."
-    ]
+    ],
+    "nombre_enfants": "12 à 24",
+    "nombre_adultes": "2 à 4",
+    "pour_aller_plus_loin": "Adapter la difficulté en rajoutant des contraintes logistiques.",
+    "fin_du_jeu": "Le jeu se termine quand toutes les équipes ont accompli la mission.",
+    "a_noter": "Prévoir suffisamment d'eau et délimiter clairement le terrain.",
+    "type_de_jeu": "Veillée",
+    "terre": "",
+    "eau": "",
+    "air": "",
+    "feu": "__",
+    "espace": ""
   },
   {
     "titre": "La Boussole de la Salutation Mystique",
-    "type_de_jeu": "Jeu de piste",
     "imaginaire": "Les morceaux constituant le Guide de Communication Interstellaire ont été dispersés. La tribu doit parcourir le territoire en suivant une mystérieuse piste pour récolter les fragments des Savoirs Anciens.",
-    "element_preponderant": "Eau (Blanc) - Curiosité, intelligence / Air (Vert) - Dynamisme",
     "objectifs_ppdb": [
       "I4 : Savoir lire et utiliser une carte pour guider un groupe (Eau)",
       "I2 : Savoir utiliser son intelligence symbolique (Eau, Espace)"
@@ -102,13 +136,22 @@
       "3. Arrivées à la balise, découverte du thème en fonction de la topographie locale (eau, forêt, chemin).",
       "4. Phase de réflexion collective : création des phrases adaptées.",
       "5. Rassemblement final et mise en commun des fragments du Guide."
-    ]
+    ],
+    "nombre_enfants": "12 à 24",
+    "nombre_adultes": "2 à 4",
+    "pour_aller_plus_loin": "Adapter la difficulté en rajoutant des contraintes logistiques.",
+    "fin_du_jeu": "Le jeu se termine quand toutes les équipes ont accompli la mission.",
+    "a_noter": "Prévoir suffisamment d'eau et délimiter clairement le terrain.",
+    "type_de_jeu": "Jeu de piste",
+    "terre": "",
+    "eau": "__",
+    "air": "__",
+    "feu": "",
+    "espace": ""
   },
   {
     "titre": "La Douane Intergalactique",
-    "type_de_jeu": "Grand jeu de négociation",
     "imaginaire": "Les Vaillants doivent passer plusieurs frontières planétaires pour ramener des vivres (ou des éléments pour le lieu de camp). Aux douanes, les ambassadeurs (les chefs) ne laissent passer que ceux qui remplissent des 'formulaires administratifs' complexes en posant les bonnes phrases.",
-    "element_preponderant": "Terre (Jaune) - Confiance / Espace (Bleu) - Relation",
     "objectifs_ppdb": [
       "S1 : Accorder de l'importance et de l'écoute à l'autre (Feu, Terre)",
       "C3 : Savoir affirmer sans violence son opinion dans une discussion (Terre, Espace)"
@@ -123,6 +166,17 @@
       "3. S'ils valident la douane avec des phrases correctes, on les ajoute au Carnet de Survie.",
       "4. Si le visa est refusé, ils doivent retourner à leur base pour repenser de meilleures phrases.",
       "5. Fin du jeu quand toutes les ressources ont été récupérées pour équiper le vaisseau/lieu de camp."
-    ]
+    ],
+    "nombre_enfants": "12 à 24",
+    "nombre_adultes": "2 à 4",
+    "pour_aller_plus_loin": "Adapter la difficulté en rajoutant des contraintes logistiques.",
+    "fin_du_jeu": "Le jeu se termine quand toutes les équipes ont accompli la mission.",
+    "a_noter": "Prévoir suffisamment d'eau et délimiter clairement le terrain.",
+    "type_de_jeu": "Grand jeu de négociation",
+    "terre": "__",
+    "eau": "",
+    "air": "",
+    "feu": "",
+    "espace": "__"
   }
 ]
