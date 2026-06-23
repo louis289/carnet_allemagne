@@ -5,7 +5,7 @@
     --edln-light-green: #16663A;
     --edln-yellow: #EAB642;
     --edln-blue: #19355E;
-    --edln-bg: #FFFFFF; /* FOND BLANC POUR L'ENCRE */
+    --edln-bg: #FFFFFF;
     
     /* Variables de Grammaire */
     --grammar-n: var(--edln-blue);
@@ -15,6 +15,13 @@
     /* Zone de spirale : 0 par défaut, 22mm en mode gabarit */
     --spiral-zone: 0mm;
     --page-pad: 15mm;
+
+    /* Offsets des éléments absolus (numéro, catégorie) :
+       Valeur de base = --page-pad. En mode gabarit, la spirale
+       repousse l'élément côté spirale de 22mm supplémentaires.
+       Ces variables sont surchargées par les classes directionnelles. */
+    --abs-left:  var(--page-pad);   /* offset gauche  des éléments absolus */
+    --abs-right: var(--page-pad);   /* offset droit   des éléments absolus */
 }
 
 @page {
@@ -101,22 +108,28 @@ body.print-mode {
     --spiral-zone: 22mm;
 }
 
-/* ── Marges selon le côté de la spirale ── */
+/* ── Marges + offsets absolus selon le côté de la spirale ── */
 
-/* Gauche (défaut) : décale le contenu vers la droite */
+/* Gauche (défaut) : décale le contenu et les éléments vers la droite */
 body.print-mode.spiral-left .page {
     padding-left: calc(var(--page-pad) + var(--spiral-zone));
+    --abs-left:  calc(var(--page-pad) + var(--spiral-zone));
+    --abs-right: var(--page-pad);
 }
 
-/* Droite : décale le contenu vers la gauche */
+/* Droite : décale le contenu et les éléments vers la gauche */
 body.print-mode.spiral-right .page {
     padding-left:  var(--page-pad);
     padding-right: calc(var(--page-pad) + var(--spiral-zone));
+    --abs-left:  var(--page-pad);
+    --abs-right: calc(var(--page-pad) + var(--spiral-zone));
 }
 
-/* Haut : décale le contenu vers le bas */
+/* Haut : décale uniquement vers le bas, offsets latéraux inchangés */
 body.print-mode.spiral-top .page {
     padding-top: calc(var(--page-pad) + var(--spiral-zone));
+    --abs-left:  var(--page-pad);
+    --abs-right: var(--page-pad);
 }
 
 /* ── Indicateur visuel : hachures rouges (écran uniquement) ── */
@@ -197,15 +210,6 @@ body.print-mode.spiral-top .page::after {
 
 /* ── Spirale ALTERNÉE — impair=gauche, pair=droite (mode recto/verso) ── */
 
-/* Marges */
-body.print-mode.spiral-alternating #app .page:nth-child(odd) {
-    padding-left:  calc(var(--page-pad) + var(--spiral-zone));
-    padding-right: var(--page-pad);
-}
-body.print-mode.spiral-alternating #app .page:nth-child(even) {
-    padding-right: calc(var(--page-pad) + var(--spiral-zone));
-    padding-left:  var(--page-pad);
-}
 
 /* Visuel pages IMPAIRES (spirale gauche) */
 body.print-mode.spiral-alternating #app .page:nth-child(odd)::before {
@@ -263,11 +267,11 @@ body.print-mode .page {
 }
 
 
-/* Header & Footer par page */
+/* Header & Footer par page — positions adaptées à la zone spirale */
 .page-number {
     position: absolute;
     bottom: 8mm;
-    right: 15mm;
+    right: var(--abs-right);   /* pousse le numéro hors de la zone spirale */
     font-size: 16pt;
     color: var(--edln-green);
     font-weight: bold;
@@ -276,11 +280,31 @@ body.print-mode .page {
 .page-category-label {
     position: absolute;
     top: 8mm;
-    left: 15mm;
+    left: var(--abs-left);     /* pousse la catégorie hors de la zone spirale */
     font-size: 22pt;
     color: var(--edln-yellow);
     font-weight: bold;
     text-transform: uppercase;
+    /* S'assure que le texte ne déborde pas dans la zone opposée */
+    max-width: calc(100% - var(--abs-left) - var(--abs-right) - 4mm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Spirale ALTERNÉE — pages impaires : spirale à gauche */
+body.print-mode.spiral-alternating #app .page:nth-child(odd) {
+    padding-left:  calc(var(--page-pad) + var(--spiral-zone));
+    padding-right: var(--page-pad);
+    --abs-left:  calc(var(--page-pad) + var(--spiral-zone));
+    --abs-right: var(--page-pad);
+}
+/* Spirale ALTERNÉE — pages paires : spirale à droite */
+body.print-mode.spiral-alternating #app .page:nth-child(even) {
+    padding-right: calc(var(--page-pad) + var(--spiral-zone));
+    padding-left:  var(--page-pad);
+    --abs-left:  var(--page-pad);
+    --abs-right: calc(var(--page-pad) + var(--spiral-zone));
 }
 
 /* Page de Garde */
