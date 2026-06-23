@@ -1,0 +1,211 @@
+{
+  "carnet_scout": {
+    "categorie": "Forum & cercles de parole",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Règles du cercle / Kreisregeln",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]forme[/V1] [N2]un cercle[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]bilden[/V1] [N2]einen Kreis[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]bil-deun[/V1] [N2]aï-neun kraïss[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Let's form[/V1] [N2]a circle[/N2].",
+              "prononciation_FR": "[V1]Lets form[/V1] [N2]eu seur-keul[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Chacun[/N1] [V1]a[/V1] [N2]la parole[/N2].",
+            "allemand": {
+              "texte": "[N1]Jeder[/N1] [V1]kommt[/V1] zu [N2]Wort[/N2].",
+              "prononciation_FR": "[N1]Yé-deur[/N1] [V1]komt[/V1] tsou [N2]vort[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]Everyone[/N1] [V1]gets to speak[/V1].",
+              "prononciation_FR": "[N1]E-vri-ouann[/N1] [V1]guéts tou spik[/V1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]On[/N1] [V1]écoute[/V1] sans [V2]interrompre[/V2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]hören zu[/V1], ohne zu [V2]unterbrechen[/V2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]heu-reun tsou[/V1], o-neu tsou [V2]oun-ter-bré-kheun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]listen[/V1] without [V2]interrupting[/V2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]liss-eun[/V1] oui-zaout [V2]ine-teur-eup-ting[/V2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Qui [V1]veux[/V1] [V2]commencer[/V2] ?",
+            "allemand": {
+              "texte": "Wer [V1]möchte[/V1] [V2]anfangen[/V2]?",
+              "prononciation_FR": "Vér [V1]meuch-teu[/V1] [V2]ann-fang-eun?"
+            },
+            "anglais": {
+              "texte": "Who [V1]wants[/V1] [V2]to start[/V2]?",
+              "prononciation_FR": "Hou [V1]ouonts[/V1] [V2]tou start?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [V1]passe[/V1] [N2]la parole[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]gebe[/V1] [N2]das Wort[/N2] weiter.",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]gué-beu[/V1] [N2]dass vort[/N2] vaï-teur."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]pass[/V1] [N2]the word[/N2] on.",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]pass[/V1] [N2]ze ouérd[/N2] onn."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Je[/N1] [V1]n'ai[/V1] [A1]rien[/A1] à [V2]dire[/V2] pour l'instant.",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] gerade [A1]nichts[/A1] zu [V2]sagen[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] gué-ra-deu [A1]nichts[/A1] tsou [V2]za-gueun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]have[/V1] [A1]nothing[/A1] [V2]to say[/V2] for now.",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]hav[/V1] [A1]na-thing[/A1] [V2]tou séï[/V2] for naou."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "Ce qui [V1]est dit[/V1] [A1]ici[/A1] [V2]reste[/V2] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[V1]Was[/V1] [A1]hier[/A1] [V2]gesagt wird[/V2], [V3]bleibt[/V3] [A1]hier[/A1].",
+              "prononciation_FR": "Vass [A1]hir[/A1] [V1]gué-zakt virt[/V1], [V2]blaïpt[/V2] [A1]hir[/A1]."
+            },
+            "anglais": {
+              "texte": "What's [V1]said[/V1] [A1]here[/A1] [V2]stays[/V2] [A1]here[/A1].",
+              "prononciation_FR": "Ouots [V1]séd[/V1] [A1]hir[/A1] [V2]steïz[/V2] [A1]hir[/A1]."
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]Je[/N1] [N2]me[/N2] [V1]sens écouté(e)[/V1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]fühle[/V1] [N2]mich[/N2] [V1]gehört[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fu-leu[/V1] [N2]mich[/N2] [V1]gué-heurt[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]feel heard[/V1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]fil heurd[/V1]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[V1]Merci[/V1] de [N2]m'[/N2][V2]avoir écouté(e)[/V2].",
+            "allemand": {
+              "texte": "[V1]Danke[/V1], dass [N1]ihr[/N1] [N2]mir[/N2] [V2]zugehört habt[/V2].",
+              "prononciation_FR": "[V1]Dan-keu[/V1], dass [N1]ir[/N1] [N2]mir[/N2] [V2]tsou-gué-heurt habt[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Thank you[/V1] for [V2]listening[/V2].",
+              "prononciation_FR": "[V1]Senk you[/V1] for [V2]liss-ning[/V2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Partage d'expérience / Erfahrungsaustausch",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]me[/N2] [V1]suis senti(e) bien[/V1] [A1]aujourd'hui[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]mich[/N2] [A1]heute[/A1] [V1]wohlgefühlt[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]mich[/N2] [A1]hoï-teu[/A1] [V1]vol-gué-fult[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]felt[/V1] [A1]good[/A1] [A2]today[/A2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]félt[/V1] [A1]goud[/A1] [A2]tou-déï[/A2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai trouvé[/V1] [N2]ça[/N2] [A1]difficile[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]fand[/V1] [N2]das[/N2] [A1]schwierig[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fannt[/V1] [N2]dass[/N2] [A1]chvi-rich[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]found[/V1] [N2]that[/N2] [A1]difficult[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]faound[/V1] [N2]zat[/N2] [A1]di-fi-keult[/A1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]J'[/N1][V1]ai appris[/V1] [N2]quelque chose[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]etwas[/N2] [V1]gelernt[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]ét-vass[/N2] [V1]gué-lernt[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]learnt[/V1] [N2]something[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]lernt[/V1] [N2]seum-thing[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]voudrais[/V1] [N2]m'[/N2][V2]excuser[/V2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]möchte[/V1] [N2]mich[/N2] [V2]entschuldigen[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]meuch-teu[/V1] [N2]mich[/N2] [V2]enn-tchoul-di-gueun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]would like[/V1] [V2]to apologise[/V2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]oud laïk[/V1] [V2]tou a-po-lo-djaïz[/V2]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]reconnaissant(e)[/A1] pour...",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]dankbar[/A1] für...",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]dank-bar[/A1] fur..."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]grateful[/A1] for...",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]greït-foul[/A1] for..."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Ce camp[/N1] [N2]m'[/N2][V1]a apporté[/V1]...",
+            "allemand": {
+              "texte": "[N1]Dieses Lager[/N1] [V1]hat[/V1] [N2]mir[/N2] [V1]gegeben[/V1]...",
+              "prononciation_FR": "[N1]Di-zeuss la-gueur[/N1] [V1]hat[/V1] [N2]mir[/N2] [V1]gué-gué-beun[/V1]..."
+            },
+            "anglais": {
+              "texte": "[N1]This camp[/N1] [V1]gave[/V1] [N2]me[/N2]...",
+              "prononciation_FR": "[N1]Ziss kamp[/N1] [V1]guéïv[/V1] [N2]mi[/N2]..."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]J'[/N1][V1]aimerais[/V1] qu'[N2]on[/N2] [V2]améliore[/V2]...",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]würde[/V1] gerne [V2]verbessern[/V2]...",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]vur-deu[/V1] guern [V2]fer-bess-eurn[/V2]..."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1]'d [V1]like[/V1] [N2]us[/N2] [V2]to improve[/V2]...",
+              "prononciation_FR": "[N1]Aïd[/N1] [V1]laïk[/V1] [N2]eus[/N2] [V2]tou im-prouv[/V2]..."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

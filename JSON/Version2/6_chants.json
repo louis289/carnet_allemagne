@@ -1,0 +1,139 @@
+{
+  "carnet_scout": {
+    "categorie": "Chants",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Chanter / Singen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]chante[/V1] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]singen[/V1]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zing-eun[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Let's sing[/V1]!",
+              "prononciation_FR": "[V1]Lets sing[/V1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Connaissez-vous[/V1] [N1]cette chanson[/N1] ?",
+            "allemand": {
+              "texte": "[V1]Kennt[/V1] [N1]ihr[/N1] [N2]dieses Lied[/N2]?",
+              "prononciation_FR": "[V1]Kent[/V1] [N1]ir[/N1] [N2]di-zeuss lit[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do you know[/V1] [N2]this song[/N2]?",
+              "prononciation_FR": "[V1]Dou you no[/V1] [N2]ziss song[/N2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Répétez[/V1] après [N1]moi[/N1] !",
+            "allemand": {
+              "texte": "[V1]Wiederholt[/V1] nach [N1]mir[/N1]!",
+              "prononciation_FR": "[V1]Vi-deur-holt[/V1] nakh [N1]mir[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Repeat[/V1] after [N1]me[/N1]!",
+              "prononciation_FR": "[V1]Ri-pit[/V1] af-teur [N1]mi[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[A1]Plus fort[/A1] !",
+            "allemand": {
+              "texte": "[A1]Lauter[/A1]!",
+              "prononciation_FR": "[A1]Laou-teur[/A1]!"
+            },
+            "anglais": {
+              "texte": "[A1]Louder[/A1]!",
+              "prononciation_FR": "[A1]Laou-deur[/A1]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[A1]Ensemble[/A1], [N1]tous en chœur[/N1] !",
+            "allemand": {
+              "texte": "[A1]Alle zusammen[/A1], [N1]im Chor[/N1]!",
+              "prononciation_FR": "[A1]A-leu tsou-za-meun[/A1], [N1]im kor[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]All together[/A1], [N1]in chorus[/N1]!",
+              "prononciation_FR": "[A1]Ol tou-gué-zeur[/A1], [N1]ine ko-reuss[/N1]!"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]le refrain[/N2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [N2]der Refrain[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [N2]dér ré-frain[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]This[/N1] [V1]is[/V1] [N2]the chorus[/N2].",
+              "prononciation_FR": "[N1]Ziss[/N1] [V1]iz[/V1] [N2]ze ko-reuss[/N2]."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[A1]Encore[/A1] !",
+            "allemand": {
+              "texte": "[A1]Nochmal[/A1]! / [A2]Zugabe[/A2]!",
+              "prononciation_FR": "[A1]Nokh-mal[/A1]! / [A2]Tsou-ga-beu[/A2]!"
+            },
+            "anglais": {
+              "texte": "[A1]Again[/A1]! / [A2]Encore[/A2]!",
+              "prononciation_FR": "[A1]E-guenn[/A1]! / [A2]Onn-kor[/A2]!"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[A1]Belle[/A1] [N1]voix[/N1] !",
+            "allemand": {
+              "texte": "[A1]Schöne[/A1] [N1]Stimme[/N1]!",
+              "prononciation_FR": "[A1]Cheu-neu[/A1] [N1]chti-meu[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]Beautiful[/A1] [N1]voice[/N1]!",
+              "prononciation_FR": "[A1]Biou-ti-foul[/A1] [N1]voïss[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Veillée et instruments / Lagerfeuerabend",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]fait[/V1] [N2]une veillée[/N2] [A1]ce soir[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Machen[/V1] [N1]wir[/N1] [A1]heute Abend[/A1] [N2]eine Lagerfeuerrunde[/N2]?",
+              "prononciation_FR": "[V1]Ma-kheun[/V1] [N1]vir[/N1] [A1]hoï-teu a-beund[/A1] [N2]aï-neu la-gueur-foï-eur-roun-deu[/N2]?"
+            },
+            "anglais": {
+              "texte": "[N2]Campfire[/N2] [A1]tonight[/A1]?",
+              "prononciation_FR": "[N2]Camp-faï-eur[/N2] [A1]tou-naït[/A1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]joue[/V1] de [N2]la guitare[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]spiele[/V1] [N2]Gitarre[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]chpi-leu[/V1] [N2]gui-ta-reu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]play[/V1] [N2]guitar[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]pléï[/V1] [N2]gui-tar[/N2]."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

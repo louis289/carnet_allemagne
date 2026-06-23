@@ -1,0 +1,259 @@
+{
+  "carnet_scout": {
+    "categorie": "Matériel de camping",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Matériel individuel / Persönliche Ausrüstung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]le sac de couchage[/N1]",
+            "allemand": {
+              "texte": "[N1]der Schlafsack[/N1]",
+              "prononciation_FR": "[N1]dér chlaf-zak[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the sleeping bag[/N1]",
+              "prononciation_FR": "[N1]ze sli-ping bag[/N1]"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]le tapis de sol[/N1]",
+            "allemand": {
+              "texte": "[N1]die Isomatte[/N1]",
+              "prononciation_FR": "[N1]di i-zo-ma-teu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the sleeping mat[/N1]",
+              "prononciation_FR": "[N1]ze sli-ping mat[/N1]"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]le sac à dos[/N1]",
+            "allemand": {
+              "texte": "[N1]der Rucksack[/N1]",
+              "prononciation_FR": "[N1]dér rouk-zak[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the backpack[/N1]",
+              "prononciation_FR": "[N1]ze bak-pak[/N1]"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]le couteau[/N1]",
+            "allemand": {
+              "texte": "[N1]das Messer[/N1]",
+              "prononciation_FR": "[N1]dass més-seur[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the knife[/N1]",
+              "prononciation_FR": "[N1]ze naïf[/N1]"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]la gourde[/N1]",
+            "allemand": {
+              "texte": "[N1]die Trinkflasche[/N1]",
+              "prononciation_FR": "[N1]di trink-flach-eu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the water bottle[/N1]",
+              "prononciation_FR": "[N1]ze wo-teur bot-eul[/N1]"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]le poncho / imperméable[/N1]",
+            "allemand": {
+              "texte": "[N1]der Regenponcho[/N1]",
+              "prononciation_FR": "[N1]dér ré-gueun-pon-tcho[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the rain poncho[/N1]",
+              "prononciation_FR": "[N1]ze réïn pon-tcho[/N1]"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]les chaussures de marche[/N1]",
+            "allemand": {
+              "texte": "[N1]die Wanderschuhe[/N1]",
+              "prononciation_FR": "[N1]di van-deur-chou-eu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the hiking boots[/N1]",
+              "prononciation_FR": "[N1]ze haï-king bouts[/N1]"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]la frontale[/N1]",
+            "allemand": {
+              "texte": "[N1]die Stirnlampe[/N1]",
+              "prononciation_FR": "[N1]di chtirn-lam-peu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the headlamp[/N1]",
+              "prononciation_FR": "[N1]ze héd-lamp[/N1]"
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]la lampe de poche[/N1]",
+            "allemand": {
+              "texte": "[N1]die Taschenlampe[/N1]",
+              "prononciation_FR": "[N1]di tach-eun-lam-peu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the torch / flashlight[/N1]",
+              "prononciation_FR": "[N1]ze tortch / flach-laït[/N1]"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Matériel de camp / Lagerausrüstung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]la tente[/N1]",
+            "allemand": {
+              "texte": "[N1]das Zelt[/N1]",
+              "prononciation_FR": "[N1]dass tselt[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the tent[/N1]",
+              "prononciation_FR": "[N1]ze tent[/N1]"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]la boussole[/N1]",
+            "allemand": {
+              "texte": "[N1]der Kompass[/N1]",
+              "prononciation_FR": "[N1]dér kom-pass[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the compass[/N1]",
+              "prononciation_FR": "[N1]ze kom-pass[/N1]"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]la carte[/N1]",
+            "allemand": {
+              "texte": "[N1]die Karte[/N1]",
+              "prononciation_FR": "[N1]di kar-teu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the map[/N1]",
+              "prononciation_FR": "[N1]ze map[/N1]"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]le bidon d'eau[/N1]",
+            "allemand": {
+              "texte": "[N1]der Wasserkanister[/N1]",
+              "prononciation_FR": "[N1]dér vas-seur-ka-nis-teur[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the jerrycan[/N1]",
+              "prononciation_FR": "[N1]ze djé-ri-kann[/N1]"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]la popote[/N1]",
+            "allemand": {
+              "texte": "[N1]das Kochgeschirr[/N1]",
+              "prononciation_FR": "[N1]dass kokh-gué-chir[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the cookset[/N1]",
+              "prononciation_FR": "[N1]ze kouk-sét[/N1]"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]le réchaud[/N1]",
+            "allemand": {
+              "texte": "[N1]der Kocher[/N1]",
+              "prononciation_FR": "[N1]dér ko-kheur[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the camp stove[/N1]",
+              "prononciation_FR": "[N1]ze kamp stouv[/N1]"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]les allumettes[/N1]",
+            "allemand": {
+              "texte": "[N1]die Streichhölzer[/N1]",
+              "prononciation_FR": "[N1]di chtraïkh-heul-tseur[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the matches[/N1]",
+              "prononciation_FR": "[N1]ze mat-chiz[/N1]"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]la corde[/N1]",
+            "allemand": {
+              "texte": "[N1]das Seil[/N1]",
+              "prononciation_FR": "[N1]dass zaïl[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the rope[/N1]",
+              "prononciation_FR": "[N1]ze roup[/N1]"
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]la bâche[/N1]",
+            "allemand": {
+              "texte": "[N1]die Plane[/N1]",
+              "prononciation_FR": "[N1]di pla-neu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the tarp[/N1]",
+              "prononciation_FR": "[N1]ze tarp[/N1]"
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]le piquet[/N1]",
+            "allemand": {
+              "texte": "[N1]der Hering[/N1]",
+              "prononciation_FR": "[N1]dér hé-ring[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the tent peg[/N1]",
+              "prononciation_FR": "[N1]ze tent pég[/N1]"
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[N1]la trousse de premiers secours[/N1]",
+            "allemand": {
+              "texte": "[N1]der Erste-Hilfe-Kasten[/N1]",
+              "prononciation_FR": "[N1]dér érs-teu-hil-feu-kas-teun[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the first aid kit[/N1]",
+              "prononciation_FR": "[N1]ze feurst éïd kit[/N1]"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

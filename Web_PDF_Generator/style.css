@@ -309,7 +309,9 @@ h1, h2, h3, h4, .title-font {
     padding: 1.5mm 3mm;
     border-radius: 0; /* Suppression arrondi */
     line-height: 1.3;
-    word-wrap: break-word;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .icon-dictaphone {

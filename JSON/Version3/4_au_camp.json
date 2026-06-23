@@ -1,0 +1,1272 @@
+{
+  "carnet_scout": {
+    "categorie": "Au camp",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Orientation au camp / Orientierung im Lager",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]est[/V1] [N1]ma tente[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]mein Zelt[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]maïn tselt[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]my tent[/N1]?",
+              "prononciation_FR": "Wér [V1]iz[/V1] [N1]maï tent[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]cherche[/V1] [N2]mon groupe[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]suche[/V1] [N2]meine Gruppe[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]sou-kheu[/V1] [N2]maï-neu grou-peu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [V1]looking for[/V1] [N2]my group[/N2].",
+              "prononciation_FR": "[N1]Aïm[/N1] [V1]lou-king for[/V1] [N2]maï group[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]C'[/N1][V1]est[/V1] par où ?",
+            "allemand": {
+              "texte": "Wo [V1]geht[/V1] [N1]es[/N1] lang?",
+              "prononciation_FR": "Vo [V1]guét[/V1] [N1]ess[/N1] lang?"
+            },
+            "anglais": {
+              "texte": "Which way [V1]is[/V1] [N1]it[/N1]?",
+              "prononciation_FR": "Ouitch ouéï [V1]iz[/V1] [N1]it[/N1]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[A1]Quelle[/A1] [N1]heure[/N1] [V1]est[/V1]-[N2]il[/N2] ?",
+            "allemand": {
+              "texte": "[A1]Wie spät[/A1] [V1]ist[/V1] [N2]es[/N2]?",
+              "prononciation_FR": "[A1]Vi chpèt[/A1] [V1]ist[/V1] [N2]ess[/N2]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [N1]time[/N1] [V1]is[/V1] [N2]it[/N2]?",
+              "prononciation_FR": "[A1]Wot[/A1] [N1]taïm[/N1] [V1]iz[/V1] [N2]it[/N2]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[A1]Quand[/A1] [V1]commence[/V1] [N1]le jeu[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wann[/A1] [V1]beginnt[/V1] [N1]das Spiel[/N1]?",
+              "prononciation_FR": "[A1]Van[/A1] [V1]bé-guint[/V1] [N1]dass chpil[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]When[/A1] [V1]does[/V1] [N1]the game[/N1] [V2]start[/V2]?",
+              "prononciation_FR": "[A1]Wène[/A1] [V1]deuz[/V1] [N1]ze guéïm[/N1] [V2]start[/V2]?"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "Où [V1]est[/V1] [N1]le rassemblement[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das Antreten[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass an-tré-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the assembly[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze a-sem-bli[/N1]?"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]On[/N1] [V1]part[/V1] à [N2]quelle heure[/N2] ?",
+            "allemand": {
+              "texte": "Um [N2]wie viel Uhr[/N2] [V1]gehen[/V1] [N1]wir[/N1]?",
+              "prononciation_FR": "Oum [N2]vi fil our[/N2] [V1]gué-heun[/V1] [N1]vir[/N1]?"
+            },
+            "anglais": {
+              "texte": "At [N2]what time[/N2] [V1]do[/V1] [N1]we[/N1] [V2]leave[/V2]?",
+              "prononciation_FR": "At [N2]wot taïm[/N2] [V1]dou[/V1] [N1]wi[/N1] [V2]liv[/V2]?"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]Nous[/N1] [V1]sommes[/V1] en [N2]retard[/N2] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]sind[/V1] [A1]spät[/A1] [V2]dran[/V2]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zind[/V1] [A1]chpèt[/A1] [V2]dran[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are[/V1] [A1]late[/A1]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar[/V1] [A1]léït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "Où [V1]est[/V1] [N1]le camp[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das Lager[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass la-gueur[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the camp[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze kamp[/N1]?"
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "Comment [V1]aller[/V1] à [N1]la gare[/N1] ?",
+            "allemand": {
+              "texte": "Wie [V1]komme[/V1] ich [N1]zum Bahnhof[/N1]?",
+              "prononciation_FR": "Vi [V1]ko-meu[/V1] ich [N1]tsoum ban-hof[/N1]?"
+            },
+            "anglais": {
+              "texte": "How to [V1]go[/V1] to [N1]the station[/N1]?",
+              "prononciation_FR": "Haou tou [V1]go[/V1] tou [N1]ze stéï-cheun[/N1]?"
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]perdu[/A1] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] mich [V2]verlaufen[/V2]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] mich [V2]fèr-laou-feun[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]lost[/A1]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]lost[/A1]!"
+            }
+          },
+          {
+            "id_expression": 12,
+            "francais": "Où [V1]sont[/V1] [N1]les toilettes[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Toiletten[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di to-a-lèt-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the toilets[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze toï-lets[/N1]?"
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[V1]Peux[/V1]-[N1]tu[/N1] [N2]me[/N2] [V2]montrer[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kannst[/V1] [N1]du[/N1] [N2]es mir[/N2] [V2]zeigen[/V2]?",
+              "prononciation_FR": "[V1]Kanst[/V1] [N1]dou[/N1] [N2]ess mir[/N2] [V2]tsaï-gueun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]show[/V2] [N2]me[/N2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]cho[/V2] [N2]mi[/N2]?"
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[V1]C'est[/V1] [A1]tout droit[/A1].",
+            "allemand": {
+              "texte": "[V1]Geh[/V1] [A1]geradeaus[/A1].",
+              "prononciation_FR": "[V1]Gué[/V1] [A1]gué-ra-deu-aous[/A1]."
+            },
+            "anglais": {
+              "texte": "[V1]Go[/V1] [A1]straight ahead[/A1].",
+              "prononciation_FR": "[V1]Go[/V1] [A1]stréït e-hed[/A1]."
+            }
+          },
+          {
+            "id_expression": 15,
+            "francais": "[V1]Tourne[/V1] à [N1]droite[/N1].",
+            "allemand": {
+              "texte": "[V1]Bieg[/V1] nach [N1]rechts[/N1] [V2]ab[/V2].",
+              "prononciation_FR": "[V1]Bik[/V1] nakh [N1]rèchts[/N1] [V2]ap[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Turn[/V1] [N1]right[/N1].",
+              "prononciation_FR": "[V1]Teurn[/V1] [N1]raït[/N1]."
+            }
+          },
+          {
+            "id_expression": 16,
+            "francais": "[V1]Va[/V1] à [N1]gauche[/N1].",
+            "allemand": {
+              "texte": "[V1]Geh[/V1] nach [N1]links[/N1].",
+              "prononciation_FR": "[V1]Gué[/V1] nakh [N1]links[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Go[/V1] [N1]left[/N1].",
+              "prononciation_FR": "[V1]Go[/V1] [N1]left[/N1]."
+            }
+          },
+          {
+            "id_expression": 17,
+            "francais": "[N1]C'[/N1][V1]est[/V1] par [A1]là[/A1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]geht[/V1] [A1]da lang[/A1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]guét[/V1] [A1]da lang[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]that way[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]zat wéï[/A1]!"
+            }
+          },
+          {
+            "id_expression": 18,
+            "francais": "[N1]Ce[/N1] [N2]n'[/N2][V1]est[/V1] [A1]pas loin[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]nicht weit[/A1].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]nicht vaït[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]not far[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]not far[/A1]."
+            }
+          },
+          {
+            "id_expression": 19,
+            "francais": "Où [V1]sommes[/V1]-[N1]nous[/N1] [A1]ici[/A1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]wir[/N1] [A1]hier[/A1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]vir[/N1] [A1]hir[/A1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]we[/N1] [A1]here[/A1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]wi[/N1] [A1]hir[/A1]?"
+            }
+          },
+          {
+            "id_expression": 20,
+            "francais": "[N1]Je[/N1] [V1]cherche[/V1] [N2]ce village[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]suche[/V1] [N2]dieses Dorf[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]zou-kheu[/V1] [N2]di-zess dorf[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am looking for[/V1] [N2]this village[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am louk-ing for[/V1] [N2]ziss vi-lidj[/N2]."
+            }
+          },
+          {
+            "id_expression": 21,
+            "francais": "Où [V1]est[/V1] [N1]le nord[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]Norden[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]nor-deun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]North[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]Nors[/N1]?"
+            }
+          },
+          {
+            "id_expression": 22,
+            "francais": "[V1]As[/V1]-[N1]tu[/N1] [A1]une[/A1] [N2]carte[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Hast[/V1] [N1]du[/N1] [A1]eine[/A1] [N2]Karte[/N2]?",
+              "prononciation_FR": "[V1]Hast[/V1] [N1]dou[/N1] [A1]aï-neu[/A1] [N2]kar-teu[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]have[/V2] [A1]a[/A1] [N2]map[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]hav[/V2] [A1]eu[/A1] [N2]map[/N2]?"
+            }
+          },
+          {
+            "id_expression": 23,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]le mauvais chemin[/N2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [N2]der falsche Weg[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [N2]dér fal-cheu vék[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]the wrong way[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]ze wrong wéï[/N2]."
+            }
+          },
+          {
+            "id_expression": 24,
+            "francais": "[N1]Ça[/N1] [V1]monte[/V1] [A1]beaucoup[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]geht[/V1] [A1]steil[/A1] [V2]bergauf[/V2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]guét[/V1] [A1]chtaïl[/A1] [V2]bèrk-aouf[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]goes[/V1] [A1]steep[/A1] [V2]up[/V2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]goz[/V1] [A1]stip[/A1] [V2]eup[/V2]."
+            }
+          },
+          {
+            "id_expression": 25,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]bientôt[/A1] fini ?",
+            "allemand": {
+              "texte": "[V1]Sind[/V1] [N1]wir[/N1] [A1]bald[/A1] da?",
+              "prononciation_FR": "[V1]Zind[/V1] [N1]vir[/N1] [A1]balt[/A1] da?"
+            },
+            "anglais": {
+              "texte": "[V1]Are[/V1] [N1]we[/N1] there [A1]soon[/A1]?",
+              "prononciation_FR": "[V1]Ar[/V1] [N1]wi[/N1] zèr [A1]soun[/A1]?"
+            }
+          },
+          {
+            "id_expression": 26,
+            "francais": "[V1]Faites[/V1] [N1]attention[/N1] aux [N2]racines[/N2].",
+            "allemand": {
+              "texte": "[V1]Achtung[/V1] auf [N2]die Wurzeln[/N2].",
+              "prononciation_FR": "[V1]Akh-toung[/V1] aouf [N2]di vour-tseln[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Watch out[/V1] for [N2]roots[/N2].",
+              "prononciation_FR": "[V1]Wotch aout[/V1] for [N2]routs[/N2]."
+            }
+          },
+          {
+            "id_expression": 27,
+            "francais": "[N1]Le sentier[/N1] [V1]descend[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[N1]Der Weg[/N1] [V1]geht[/V1] [A1]hier[/A1] [V2]bergab[/V2].",
+              "prononciation_FR": "[N1]Dér vék[/N1] [V1]guét[/V1] [A1]hir[/A1] [V2]bèrk-ap[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]The path[/N1] [V1]goes[/V1] [V2]down[/V2] [A1]here[/A1].",
+              "prononciation_FR": "[N1]Ze pass[/N1] [V1]goz[/V1] [V2]daoun[/V2] [A1]hir[/A1]."
+            }
+          },
+          {
+            "id_expression": 28,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]mal aux pieds[/N2].",
+            "allemand": {
+              "texte": "[N1]Meine Füße[/N1] [V1]tun[/V1] [N2]weh[/N2].",
+              "prononciation_FR": "[N1]Maï-neu fu-sseu[/N1] [V1]toun[/V1] [N2]vé[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]My feet[/N1] [V1]hurt[/V1].",
+              "prononciation_FR": "[N1]Maï fit[/N1] [V1]heurt[/V1]."
+            }
+          },
+          {
+            "id_expression": 29,
+            "francais": "Où [V1]est[/V1] [N1]l'arrêt de bus[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]die Bushaltestelle[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]di bouss-hal-teu-chtè-leu[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the bus stop[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze beuss stop[/N1]?"
+            }
+          },
+          {
+            "id_expression": 30,
+            "francais": "[A1]Quand[/A1] [V1]part[/V1] [N1]le train[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wann[/A1] [V1]fährt[/V1] [N1]der Zug[/N1] [V2]ab[/V2]?",
+              "prononciation_FR": "[A1]Van[/A1] [V1]fèrt[/V1] [N1]dér tsouk[/N1] [V2]ap[/V2]?"
+            },
+            "anglais": {
+              "texte": "[A1]When[/A1] [V1]does[/V1] [N1]the train[/N1] [V2]leave[/V2]?",
+              "prononciation_FR": "[A1]Wène[/A1] [V1]deuz[/V1] [N1]ze tréïn[/N1] [V2]liv[/V2]?"
+            }
+          },
+          {
+            "id_expression": 31,
+            "francais": "[N1]Deux[/N1] [N2]billets[/N2] s'il vous plaît.",
+            "allemand": {
+              "texte": "[N1]Zwei[/N1] [N2]Fahrkarten[/N2] bitte.",
+              "prononciation_FR": "[N1]Tsvaï[/N1] [N2]far-kar-teun[/N2] [A1]bi-teu[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]Two[/N1] [N2]tickets[/N2] please.",
+              "prononciation_FR": "[N1]Tou[/N1] [N2]ti-kêts[/N2] pliz."
+            }
+          },
+          {
+            "id_expression": 32,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]quel arrêt[/A1] ?",
+            "allemand": {
+              "texte": "[A1]Welche Haltestelle[/A1] [V1]ist[/V1] [N1]das[/N1]?",
+              "prononciation_FR": "[A1]Vêl-cheu hal-teu-chtè-leu[/A1] [V1]ist[/V1] [N1]dass[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]What stop[/A1] [V1]is[/V1] [N1]it[/N1]?",
+              "prononciation_FR": "[A1]Wot stop[/A1] [V1]iz[/V1] [N1]it[/N1]?"
+            }
+          },
+          {
+            "id_expression": 33,
+            "francais": "[N1]On[/N1] [V1]doit[/V1] [V2]descendre[/V2] [A1]ici[/A1] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]müssen[/V1] [A1]hier[/A1] [V2]aussteigen[/V2]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]mu-sseun[/V1] [A1]hir[/A1] [V2]aous-chtaï-gueun[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]must[/V1] [V2]get off[/V2] [A1]here[/A1]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]meust[/V1] [V2]guet off[/V2] [A1]hir[/A1]!"
+            }
+          },
+          {
+            "id_expression": 34,
+            "francais": "[A1]Combien[/A1] de [N1]kilomètres[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wie viele[/A1] [N1]Kilometer[/N1]?",
+              "prononciation_FR": "[A1]Vi fi-leu[/A1] [N1]ki-lo-mé-teur[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]How many[/A1] [N1]kilometers[/N1]?",
+              "prononciation_FR": "[A1]Haou mé-ni[/A1] [N1]ki-lo-mi-teurz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 35,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]encore loin[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Ist[/V1] [N1]es[/N1] [A1]noch weit[/A1]?",
+              "prononciation_FR": "[V1]Ist[/V1] [N1]ess[/N1] [A1]nokh vaït[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Is[/V1] [N1]it[/N1] [A1]still far[/A1]?",
+              "prononciation_FR": "[V1]Iz[/V1] [N1]it[/N1] [A1]stil far[/A1]?"
+            }
+          },
+          {
+            "id_expression": 36,
+            "francais": "[A1]Dans 10 minutes[/A1], [N1]on[/N1] [V1]arrive[/V1].",
+            "allemand": {
+              "texte": "[A1]In 10 Minuten[/A1] [V1]sind[/V1] [N1]wir[/N1] da.",
+              "prononciation_FR": "[A1]Inne tséne mi-nou-teun[/A1] [V1]zind[/V1] [N1]vir[/N1] da."
+            },
+            "anglais": {
+              "texte": "[A1]In 10 minutes[/A1], [N1]we[/N1] [V1]arrive[/V1].",
+              "prononciation_FR": "[A1]In tèn mi-neuts[/A1], [N1]wi[/N1] [V1]e-raïv[/V1]."
+            }
+          },
+          {
+            "id_expression": 37,
+            "francais": "[N1]On[/N1] [V1]a marché[/V1] [A1]longtemps[/A1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]sind[/V1] [A1]lange[/A1] [V2]gelaufen[/V2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zind[/V1] [A1]lan-gueu[/A1] [V2]gué-laou-feun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]have walked[/V1] [A1]for a long time[/A1].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]hav wokt[/V1] [A1]for eu long taïm[/A1]."
+            }
+          },
+          {
+            "id_expression": 38,
+            "francais": "[A1]C'est tout près[/A1], [V1]courage[/V1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]ganz nah[/A1], [V2]Kopf hoch[/V2]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]gants na[/A1], [V2]kopf hokh[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]very close[/A1], [V2]cheer up[/V2]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]vé-ri kloz[/A1], [V2]tchir eup[/V2]!"
+            }
+          },
+          {
+            "id_expression": 39,
+            "francais": "[V1]Passe[/V1]-[N1]moi[/N1] [N2]un piquet[/N2].",
+            "allemand": {
+              "texte": "[V1]Gib[/V1] [N1]mir[/N1] [N2]einen Hering[/N2].",
+              "prononciation_FR": "[V1]Guib[/V1] [N1]mir[/N1] [N2]aï-neun hé-ring[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Pass[/V1] [N1]me[/N1] [N2]a peg[/N2].",
+              "prononciation_FR": "[V1]Pass[/V1] [N1]mi[/N1] [N2]eu pég[/N2]."
+            }
+          },
+          {
+            "id_expression": 40,
+            "francais": "[N1]La tente[/N1] [V1]est[/V1] [A1]montée[/A1].",
+            "allemand": {
+              "texte": "[N1]Das Zelt[/N1] [V1]ist[/V1] [A1]aufgebaut[/A1].",
+              "prononciation_FR": "[N1]Dass tsèlt[/N1] [V1]ist[/V1] [A1]aouf-gué-baout[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The tent[/N1] [V1]is[/V1] [A1]set up[/A1].",
+              "prononciation_FR": "[N1]Ze tềnt[/N1] [V1]iz[/V1] [A1]set eup[/A1]."
+            }
+          },
+          {
+            "id_expression": 41,
+            "francais": "[V1]Tirez[/V1] [A1]fort[/A1] sur [N1]la ficelle[/N1] !",
+            "allemand": {
+              "texte": "[V1]Zieht[/V1] [A1]fest[/A1] an [N1]der Schnur[/N1]!",
+              "prononciation_FR": "[V1]Tsit[/V1] [A1]fèst[/A1] ane [N1]dér chnour[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Pull[/V1] [A1]hard[/A1] on [N1]the string[/N1]!",
+              "prononciation_FR": "[V1]Poul[/V1] [A1]hard[/A1] on [N1]ze string[/N1]!"
+            }
+          },
+          {
+            "id_expression": 42,
+            "francais": "Il [V1]manque[/V1] [N1]un mât[/N1].",
+            "allemand": {
+              "texte": "Es [V1]fehlt[/V1] [N1]eine Stange[/N1].",
+              "prononciation_FR": "Ess [V1]félt[/V1] [N1]aï-neu chtan-gueu[/N1]."
+            },
+            "anglais": {
+              "texte": "We [V1]are missing[/V1] [N1]a pole[/N1].",
+              "prononciation_FR": "Wi [V1]ar mi-sing[/V1] [N1]eu pol[/N1]."
+            }
+          },
+          {
+            "id_expression": 43,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]notre coin[/N2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [N2]unser Platz[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [N2]oun-zeur plats[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]our spot[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]aou-eur spot[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Vie de groupe / Gruppenleben",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Rassemblement[/N1] dans [A1]5 minutes[/A1] !",
+            "allemand": {
+              "texte": "[N1]Versammlung[/N1] in [A1]5 Minuten[/A1]!",
+              "prononciation_FR": "[N1]Fer-zam-loung[/N1] ine [A1]funf mi-nou-teun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Meeting[/N1] in [A1]5 minutes[/A1]!",
+              "prononciation_FR": "[N1]Mi-ting[/N1] ine [A1]faïv mi-nits[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [V1]y va[/V1] !",
+            "allemand": {
+              "texte": "[V1]Los geht's[/V1]!",
+              "prononciation_FR": "[V1]Loss guéts[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Let's go[/V1]!",
+              "prononciation_FR": "[V1]Lets go[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Attends[/V1]-[N1]moi[/N1] !",
+            "allemand": {
+              "texte": "[V1]Warte[/V1] auf [N1]mich[/N1]!",
+              "prononciation_FR": "[V1]Var-teu[/V1] aouf [N1]mich[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Wait[/V1] for [N1]me[/N1]!",
+              "prononciation_FR": "[V1]Ouéït[/V1] for [N1]mi[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]peux[/V1] [N2]t'[/N2][V2]aider[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kann[/V1] [N1]ich[/N1] [N2]dir[/N2] [V2]helfen[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]ich[/N1] [N2]dir[/N2] [V2]hel-feun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]I[/N1] [V2]help[/V2] [N2]you[/N2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]aï[/N1] [V2]help[/V2] [N2]you[/N2]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]fait équipe[/V1] ?",
+            "allemand": {
+              "texte": "[V1]Sollen[/V1] [N1]wir[/N1] [V2]zusammenarbeiten[/V2]?",
+              "prononciation_FR": "[V1]Zol-leun[/V1] [N1]vir[/N1] [V2]tsou-za-meun-ar-baï-teun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]team up[/V2]?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]tim-eup[/V2]?"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Tu[/N1] [V1]es[/V1] dans [N2]mon équipe[/N2].",
+            "allemand": {
+              "texte": "[N1]Du[/N1] [V1]bist[/V1] in [N2]meinem Team[/N2].",
+              "prononciation_FR": "[N1]Dou[/N1] [V1]bist[/V1] in [N2]maï-neun tim[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]You[/N1] [V1]are[/V1] in [N2]my team[/N2].",
+              "prononciation_FR": "[N1]You[/N1] [V1]ar[/V1] in [N2]maï tim[/N2]."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]Qui[/N1] [V1]est[/V1] [N2]le chef[/N2] ?",
+            "allemand": {
+              "texte": "[N1]Wer[/N1] [V1]ist[/V1] [N2]der Chef[/N2]?",
+              "prononciation_FR": "[N1]Vér[/N1] [V1]ist[/V1] [N2]dér chèf[/N2]?"
+            },
+            "anglais": {
+              "texte": "[N1]Who[/N1] [V1]is[/V1] [N2]the leader[/N2]?",
+              "prononciation_FR": "[N1]Hou[/N1] [V1]iz[/V1] [N2]ze li-deur[/N2]?"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]On[/N1] [V1]reste[/V1] [A1]ensemble[/A1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]bleiben[/V1] [A1]zusammen[/A1].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]blaï-beun[/V1] [A1]tsou-za-meun[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]stay[/V1] [A1]together[/A1].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]stéï[/V1] [A1]tou-gué-zeur[/A1]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[V1]Faites[/V1] [N1]deux groupes[/N1].",
+            "allemand": {
+              "texte": "[V1]Macht[/V1] [N1]zwei Gruppen[/N1].",
+              "prononciation_FR": "[V1]Makht[/V1] [N1]tsvaï grou-peun[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Make[/V1] [N1]two groups[/N1].",
+              "prononciation_FR": "[V1]Méïk[/V1] [N1]tou groups[/N1]."
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]à mon tour[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [N2]dran[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [N2]dran[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]my turn[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]maï teurn[/N2]."
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[V1]Suivez[/V1]-[N1]moi[/N1] !",
+            "allemand": {
+              "texte": "[V1]Folgt[/V1] [N1]mir[/N1]!",
+              "prononciation_FR": "[V1]Folkt[/V1] [N1]mir[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Follow[/V1] [N1]me[/N1]!",
+              "prononciation_FR": "[V1]Fo-lo[/V1] [N1]mi[/N1]!"
+            }
+          },
+          {
+            "id_expression": 12,
+            "francais": "[V1]Attendez[/V1]-[N1]nous[/N1] !",
+            "allemand": {
+              "texte": "[V1]Wartet[/V1] auf [N1]uns[/N1]!",
+              "prononciation_FR": "[V1]Var-tèt[/V1] aouf [N1]ouns[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Wait[/V1] for [N1]us[/N1]!",
+              "prononciation_FR": "[V1]Wéït[/V1] for [N1]eus[/N1]!"
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[N1]On[/N1] [V1]marche[/V1] [A1]trop vite[/A1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]gehen[/V1] [A1]zu schnell[/A1].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]gué-heun[/V1] [A1]tsou chnèl[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are walking[/V1] [A1]too fast[/A1].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar wo-king[/V1] [A1]tou fast[/A1]."
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[N1]Mettez[/N1]-vous par [N2]deux[/N2].",
+            "allemand": {
+              "texte": "[V1]Geht[/V1] zu [N2]zweit[/N2].",
+              "prononciation_FR": "[V1]Guét[/V1] tsou [N2]tsvaït[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Walk[/V1] in [N2]pairs[/N2].",
+              "prononciation_FR": "[V1]Wok[/V1] in [N2]pèrz[/N2]."
+            }
+          },
+          {
+            "id_expression": 15,
+            "francais": "[V1]Pouvez[/V1]-[N1]vous[/N1] [V2]signer[/V2] [A1]ça[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Können[/V1] [N1]Sie[/N1] [A1]das[/A1] [V2]unterschreiben[/V2]?",
+              "prononciation_FR": "[V1]Keu-neun[/V1] [N1]zi[/N1] [A1]dass[/A1] [V2]oun-teur-chraï-beun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]sign[/V2] [A1]this[/A1]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]saïn[/V2] [A1]ziss[/A1]?"
+            }
+          },
+          {
+            "id_expression": 16,
+            "francais": "[N1]On[/N1] [V1]fait[/V1] [A1]un[/A1] [N2]concours[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]machen[/V1] [A1]einen[/A1] [N2]Wettbewerb[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]ma-kheun[/V1] [A1]aï-neun[/A1] [N2]vêt-bé-vèrp[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are doing[/V1] [A1]a[/A1] [N2]contest[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar dou-ing[/V1] [A1]eu[/A1] [N2]kon-test[/N2]."
+            }
+          },
+          {
+            "id_expression": 17,
+            "francais": "[V1]On a besoin d'[/V1][A1]un[/A1] [N1]objet[/N1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]brauchen[/V1] [A1]einen[/A1] [N2]Gegenstand[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]braou-kheun[/V1] [A1]aï-neun[/A1] [N2]gué-gueun-chtant[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]need[/V1] [A1]an[/A1] [N2]object[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]nid[/V1] [A1]ane[/A1] [N2]ob-djekt[/N2]."
+            }
+          },
+          {
+            "id_expression": 18,
+            "francais": "[A1]Où[/A1] [V1]trouver[/V1] [A2]une[/A2] [N1]mairie[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wo[/A1] [V1]finden[/V1] wir [A2]ein[/A2] [N1]Rathaus[/N1]?",
+              "prononciation_FR": "[A1]Vo[/A1] [V1]fin-deun[/V1] vir [A2]aïn[/A2] [N1]rat-haous[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]Where[/A1] to [V1]find[/V1] [A2]a[/A2] [N1]town hall[/N1]?",
+              "prononciation_FR": "[A1]Wèr[/A1] tou [V1]faïnd[/V1] [A2]eu[/A2] [N1]taoun hol[/N1]?"
+            }
+          },
+          {
+            "id_expression": 19,
+            "francais": "[N1]Merci[/N1] pour [N2]votre temps[/N2] !",
+            "allemand": {
+              "texte": "[N1]Danke[/N1] für [N2]Ihre Zeit[/N2]!",
+              "prononciation_FR": "[N1]Dan-keu[/N1] fur [N2]i-reu tsaït[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]Thank you[/N1] for [N2]your time[/N2]!",
+              "prononciation_FR": "[N1]Sank you[/N1] for [N2]your taïm[/N2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Météo et matériel / Wetter und Material",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]J'[/N1][V1]ai besoin[/V1] d'[N2]une lampe[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]eine Taschenlampe[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]aï-neu tach-eun-lam-peu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a torch[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu tortch[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Il[/N1] [V1]pleut[/V1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]regnet[/V1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ré-gneut[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is raining[/V1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz réïn-ing[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Il[/N1] [V1]fait[/V1] [A1]chaud[/A1] / [A2]froid[/A2].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]heiß[/A1] / [A2]kalt[/A2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]haïss[/A1] / [A2]kalt[/A2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1]'s [A1]hot[/A1] / [A2]cold[/A2].",
+              "prononciation_FR": "[N1]Its[/N1] [A1]hot[/A1] / [A2]kold[/A2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Où [V1]est[/V1] [N1]la corde[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das Seil[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass zaïl[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the rope[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze rop[/N1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Donnez[/V1]-[N1]moi[/N1] [N2]les ballons[/N2].",
+            "allemand": {
+              "texte": "[V1]Gebt[/V1] [N1]mir[/N1] [N2]die Bälle[/N2].",
+              "prononciation_FR": "[V1]Guépt[/V1] [N1]mir[/N1] [N2]di bè-leu[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Give[/V1] [N1]me[/N1] [N2]the balls[/N2].",
+              "prononciation_FR": "[V1]Guiv[/V1] [N1]mi[/N1] [N2]ze bolz[/N2]."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Il[/N1] [V1]manque[/V1] [A1]une[/A1] [N2]boussole[/N2].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]fehlt[/V1] [A1]ein[/A1] [N2]Kompass[/N2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]félt[/V1] [A1]aïn[/A1] [N2]kom-pass[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are missing[/V1] [A1]a[/A1] [N2]compass[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar mi-sing[/N1] [A1]eu[/A1] [N2]keum-pass[/N2]."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]Je[/N1] [V1]prends[/V1] [N2]les papiers[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]nehme[/V1] [N2]die Zettel[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]né-meu[/V1] [N2]di tsè-teul[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]take[/V1] [N2]the papers[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]téïk[/V1] [N2]ze péï-peurz[/N2]."
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[V1]Partager[/V1] [A1]bien[/A1] [N1]le matériel[/N1].",
+            "allemand": {
+              "texte": "[V1]Teilt[/V1] [N1]das Material[/N1] [A1]gut auf[/A1].",
+              "prononciation_FR": "[V1]Taïlt[/V1] [N1]dass ma-té-ri-al[/N1] [A1]gout aouf[/A1]."
+            },
+            "anglais": {
+              "texte": "[V1]Share[/V1] [N1]the equipment[/N1] [A1]well[/A1].",
+              "prononciation_FR": "[V1]Chèr[/V1] [N1]ze i-kwip-meunt[/N1] [A1]wel[/A1]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]Il[/N1] [V1]pleut[/V1] [A1]fort[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]regnet[/V1] [A1]stark[/A1].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]rèk-net[/N1] [A1]chtark[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is raining[/V1] [A1]hard[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz réï-ning[/V1] [A1]hard[/A1]."
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [A1]froid[/A1].",
+            "allemand": {
+              "texte": "[N1]Mir[/N1] [V1]ist[/V1] [A1]kalt[/A1].",
+              "prononciation_FR": "[N1]Mir[/N1] [V1]ist[/V1] [A1]kalt[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]cold[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]kold[/A1]."
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "Où [V1]se cacher[/V1] ?",
+            "allemand": {
+              "texte": "Wo [V1]können[/V1] wir uns [V1]verstecken[/V1]?",
+              "prononciation_FR": "Vo [V1]keu-neun[/V1] vir ouns [V1]fèr-chtè-keun[/V1]?"
+            },
+            "anglais": {
+              "texte": "Where to [V1]hide[/V1]?",
+              "prononciation_FR": "Wèr tou [V1]haïd[/V1]?"
+            }
+          },
+          {
+            "id_expression": 12,
+            "francais": "[N1]Mes affaires[/N1] [V1]sont[/V1] [A1]mouillées[/A1].",
+            "allemand": {
+              "texte": "[N1]Meine Sachen[/N1] [V1]sind[/V1] [A1]nass[/A1].",
+              "prononciation_FR": "[N1]Maï-neu za-kheun[/N1] [V1]zind[/V1] [A1]nass[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]My things[/N1] [V1]are[/V1] [A1]wet[/A1].",
+              "prononciation_FR": "[N1]Maï singz[/N1] [V1]ar[/V1] [A1]wèt[/A1]."
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[V1]Sortez[/V1] [N1]les ponchos[/N1] !",
+            "allemand": {
+              "texte": "[V1]Holt[/V1] [N1]die Ponchos[/N1] [V2]raus[/V2]!",
+              "prononciation_FR": "[V1]Holt[/V1] [N1]di pon-choz[/N1] [V2]raous[/V2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Take out[/V1] [N1]the ponchos[/N1]!",
+              "prononciation_FR": "[V1]Téïk aout[/V1] [N1]ze pon-choz[/N1]!"
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[N1]Ce bois[/N1] [V1]est[/V1] [A1]solide[/A1].",
+            "allemand": {
+              "texte": "[N1]Dieses Holz[/N1] [V1]ist[/V1] [A1]stabil[/A1].",
+              "prononciation_FR": "[N1]Di-zess holts[/N1] [V1]ist[/V1] [A1]chta-bil[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]This wood[/N1] [V1]is[/V1] [A1]strong[/A1].",
+              "prononciation_FR": "[N1]Ziss woud[/N1] [V1]iz[/V1] [A1]strong[/A1]."
+            }
+          },
+          {
+            "id_expression": 15,
+            "francais": "Je [V1]fais[/V1] [N1]un nœud plat[/N1].",
+            "allemand": {
+              "texte": "Ich [V1]mache[/V1] [N1]einen Kreuzknoten[/N1].",
+              "prononciation_FR": "Ich [V1]ma-kheu[/V1] [N1]aï-neun kroïts-kno-teun[/N1]."
+            },
+            "anglais": {
+              "texte": "I [V1]tie[/V1] [N1]a reef knot[/N1].",
+              "prononciation_FR": "Aï [V1]taï[/V1] [N1]eu rif not[/N1]."
+            }
+          },
+          {
+            "id_expression": 16,
+            "francais": "[V1]Scie[/V1] [A1]ici[/A1], [A2]s'il te plaît[/A2].",
+            "allemand": {
+              "texte": "[V1]Säge[/V1] [A1]hier[/A1], bitte.",
+              "prononciation_FR": "[V1]Zè-gueu[/V1] [A1]hir[/A1], [A2]bi-teu[/A2]."
+            },
+            "anglais": {
+              "texte": "[V1]Saw[/V1] [A1]here[/A1], please.",
+              "prononciation_FR": "[V1]So[/V1] [A1]hir[/A1], [A2]pliz[/A2]."
+            }
+          },
+          {
+            "id_expression": 17,
+            "francais": "[V1]Coupe[/V1] [N1]cette corde[/N1].",
+            "allemand": {
+              "texte": "[V1]Schneide[/V1] [N1]dieses Seil[/N1] [V1]ab[/V1].",
+              "prononciation_FR": "[V1]Chnaï-deu[/V1] [N1]di-zess zaïl[/N1] [V1]ap[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]Cut[/V1] [N1]this rope[/N1].",
+              "prononciation_FR": "[V1]Keut[/V1] [N1]ziss rop[/N1]."
+            }
+          },
+          {
+            "id_expression": 18,
+            "francais": "[N1]La table[/N1] [V1]est[/V1] [A1]droite[/A1] !",
+            "allemand": {
+              "texte": "[N1]Der Tisch[/N1] [V1]ist[/V1] [A1]gerade[/A1]!",
+              "prononciation_FR": "[N1]Dér tich[/N1] [V1]ist[/V1] [A1]gué-ra-deu[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]The table[/N1] [V1]is[/V1] [A1]straight[/A1]!",
+              "prononciation_FR": "[N1]Ze téï-beul[/N1] [V1]iz[/V1] [A1]stréït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 19,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [V2]perdu[/V2] [N2]ma torche[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]meine Taschenlampe[/N2] [V2]verloren[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]maï-neu ta-cheun-lam-peu[/N2] [V2]fèr-lo-reun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]lost[/V1] [N2]my flashlight[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]lost[/V1] [N2]maï flach-laït[/N2]."
+            }
+          },
+          {
+            "id_expression": 20,
+            "francais": "Où [V1]est[/V1] [N1]mon couteau[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]mein Messer[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]maïn mè-sseur[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]my knife[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]maï naïf[/N1]?"
+            }
+          },
+          {
+            "id_expression": 21,
+            "francais": "[V1]As[/V1]-[N1]tu[/N1] [V2]vu[/V2] [N2]mon pull[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Hast[/V1] [N1]du[/N1] [N2]meinen Pullover[/N2] [V2]gesehen[/V2]?",
+              "prononciation_FR": "[V1]Hast[/V1] [N1]dou[/N1] [N2]maï-neun pou-lo-veur[/N2] [V2]gué-zé-heun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Have[/V1] [N1]you[/N1] [V2]seen[/V2] [N2]my sweater[/N2]?",
+              "prononciation_FR": "[V1]Hav[/V1] [N1]you[/N1] [V2]sine[/V2] [N2]maï swé-teur[/N2]?"
+            }
+          },
+          {
+            "id_expression": 22,
+            "francais": "[N1]Je[/N1] [V1]ne trouve plus[/V1] [A1]ça[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]finde[/V1] [A1]das[/A1] [V1]nicht mehr[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fin-deu[/V1] [A1]dass[/A1] [V1]nicht mèr[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]cannot find[/V1] [A1]it[/A1] [V1]anymore[/V1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]kan-not faïnd[/V1] [A1]it[/A1] [V1]e-ni-mor[/V1]."
+            }
+          },
+          {
+            "id_expression": 23,
+            "francais": "[N1]C'[/N1][V1]est[/V1] à [N2]qui[/N2] ?",
+            "allemand": {
+              "texte": "[N2]Wem[/N2] [V1]gehört[/V1] [N1]das[/N1]?",
+              "prononciation_FR": "[N2]Vém[/N2] [V1]gué-heurt[/V1] [N1]dass[/N1]?"
+            },
+            "anglais": {
+              "texte": "[N2]Whose[/N2] [V1]is[/V1] [N1]this[/N1]?",
+              "prononciation_FR": "[N2]Hooz[/N2] [V1]iz[/V1] [N1]ziss[/N1]?"
+            }
+          },
+          {
+            "id_expression": 24,
+            "francais": "[N1]Il[/N1] [V1]fait[/V1] [A1]froid[/A1] [N2]cette nuit[/N2].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]kalt[/A1] [N2]heute Nacht[/N2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]kalt[/A1] [N2]hoï-teu nakht[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]cold[/A1] [N2]tonight[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]kold[/A1] [N2]tou-naït[/N2]."
+            }
+          },
+          {
+            "id_expression": 25,
+            "francais": "[A1]Beaucoup[/A1] de [N1]vent[/N1] !",
+            "allemand": {
+              "texte": "[A1]Viel[/A1] [N1]Wind[/N1]!",
+              "prononciation_FR": "[A1]Fil[/A1] [N1]vint[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]A lot of[/A1] [N1]wind[/N1]!",
+              "prononciation_FR": "[A1]Eu lot ov[/A1] [N1]wind[/N1]!"
+            }
+          },
+          {
+            "id_expression": 26,
+            "francais": "[N1]L'orage[/N1] [V1]arrive[/V1].",
+            "allemand": {
+              "texte": "[N1]Das Gewitter[/N1] [V1]kommt[/V1].",
+              "prononciation_FR": "[N1]Dass gué-vi-teur[/N1] [V1]komt[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]The storm[/N1] [V1]is coming[/V1].",
+              "prononciation_FR": "[N1]Ze storm[/N1] [V1]iz keu-ming[/V1]."
+            }
+          },
+          {
+            "id_expression": 27,
+            "francais": "[N1]La tente[/N1] [V1]prend[/V1] [N2]l'eau[/N2] !",
+            "allemand": {
+              "texte": "[N1]Das Zelt[/N1] [V1]leckt[/V1]!",
+              "prononciation_FR": "[N1]Dass tsèlt[/N1] [V1]lèkt[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]The tent[/N1] [V1]is leaking[/V1]!",
+              "prononciation_FR": "[N1]Ze tềnt[/N1] [V1]iz li-king[/V1]!"
+            }
+          },
+          {
+            "id_expression": 28,
+            "francais": "[V1]Mets[/V1] [N1]ton pull[/N1].",
+            "allemand": {
+              "texte": "[V1]Zieh[/V1] [N1]deinen Pullover[/N1] [V1]an[/V1].",
+              "prononciation_FR": "[V1]Tsi[/V1] [N1]daï-neun pou-lo-veur[/N1] [V1]an[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]Put on[/V1] [N1]your sweater[/N1].",
+              "prononciation_FR": "[V1]Pout on[/V1] [N1]your swé-teur[/N1]."
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Plan",
+        "allemand": {
+          "texte": "Plan",
+          "prononciation_FR": "Plan"
+        },
+        "anglais": {
+          "texte": "Map",
+          "prononciation_FR": "Map"
+        }
+      },
+      {
+        "francais": "Nord",
+        "allemand": {
+          "texte": "Norden",
+          "prononciation_FR": "Nor-deun"
+        },
+        "anglais": {
+          "texte": "North",
+          "prononciation_FR": "Nors"
+        }
+      },
+      {
+        "francais": "Sud",
+        "allemand": {
+          "texte": "Süden",
+          "prononciation_FR": "Zu-deun"
+        },
+        "anglais": {
+          "texte": "South",
+          "prononciation_FR": "Saouss"
+        }
+      },
+      {
+        "francais": "Est",
+        "allemand": {
+          "texte": "Osten",
+          "prononciation_FR": "Os-teun"
+        },
+        "anglais": {
+          "texte": "East",
+          "prononciation_FR": "Ist"
+        }
+      },
+      {
+        "francais": "Ouest",
+        "allemand": {
+          "texte": "Westen",
+          "prononciation_FR": "Ves-teun"
+        },
+        "anglais": {
+          "texte": "West",
+          "prononciation_FR": "West"
+        }
+      },
+      {
+        "francais": "Chemin",
+        "allemand": {
+          "texte": "Weg",
+          "prononciation_FR": "Vék"
+        },
+        "anglais": {
+          "texte": "Path",
+          "prononciation_FR": "Pass"
+        }
+      },
+      {
+        "francais": "Boussole",
+        "allemand": {
+          "texte": "Kompass",
+          "prononciation_FR": "Kom-pass"
+        },
+        "anglais": {
+          "texte": "Compass",
+          "prononciation_FR": "Keum-pass"
+        }
+      },
+      {
+        "francais": "Gare",
+        "allemand": {
+          "texte": "Bahnhof",
+          "prononciation_FR": "Ban-hof"
+        },
+        "anglais": {
+          "texte": "Station",
+          "prononciation_FR": "Stéï-cheun"
+        }
+      },
+      {
+        "francais": "Rue",
+        "allemand": {
+          "texte": "Straße",
+          "prononciation_FR": "Chtra-sseu"
+        },
+        "anglais": {
+          "texte": "Street",
+          "prononciation_FR": "Strit"
+        }
+      },
+      {
+        "francais": "Village",
+        "allemand": {
+          "texte": "Dorf",
+          "prononciation_FR": "Dorf"
+        },
+        "anglais": {
+          "texte": "Village",
+          "prononciation_FR": "Vi-lidj"
+        }
+      },
+      {
+        "francais": "Forêt",
+        "allemand": {
+          "texte": "Wald",
+          "prononciation_FR": "Valt"
+        },
+        "anglais": {
+          "texte": "Forest",
+          "prononciation_FR": "Fo-rest"
+        }
+      },
+      {
+        "francais": "Droite",
+        "allemand": {
+          "texte": "Rechts",
+          "prononciation_FR": "Rèchts"
+        },
+        "anglais": {
+          "texte": "Right",
+          "prononciation_FR": "Raït"
+        }
+      },
+      {
+        "francais": "Gauche",
+        "allemand": {
+          "texte": "Links",
+          "prononciation_FR": "Links"
+        },
+        "anglais": {
+          "texte": "Left",
+          "prononciation_FR": "Left"
+        }
+      },
+      {
+        "francais": "Montagne",
+        "allemand": {
+          "texte": "Berg",
+          "prononciation_FR": "Bèrk"
+        },
+        "anglais": {
+          "texte": "Mountain",
+          "prononciation_FR": "Maoun-tène"
+        }
+      },
+      {
+        "francais": "Kilomètre",
+        "allemand": {
+          "texte": "Kilometer",
+          "prononciation_FR": "Ki-lo-mé-teur"
+        },
+        "anglais": {
+          "texte": "Kilometer",
+          "prononciation_FR": "Ki-lo-mi-teur"
+        }
+      }
+    ]
+  }
+}

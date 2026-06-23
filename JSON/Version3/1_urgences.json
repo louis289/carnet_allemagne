@@ -1,0 +1,478 @@
+{
+  "carnet_scout": {
+    "categorie": "Urgences",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Demander de l'aide / Notfälle",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Au secours[/V1] !",
+            "allemand": {
+              "texte": "[V1]Hilfe[/V1]!",
+              "prononciation_FR": "[V1]Hil-feu[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Help[/V1]!",
+              "prononciation_FR": "[V1]Help[/V1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Appelez[/V1] [N1]une ambulance[/N1] !",
+            "allemand": {
+              "texte": "[V1]Rufen Sie[/V1] [N1]einen Krankenwagen[/N1]!",
+              "prononciation_FR": "[V1]Rou-feun zi[/V1] [N1]aï-neun krank-eun-va-gueun[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Call[/V1] [N1]an ambulance[/N1]!",
+              "prononciation_FR": "[V1]Kol[/V1] [N1]an am-biou-lanss[/N1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]J'[/N1][V1]ai besoin[/V1] d'[N2]un médecin[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]einen Arzt[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]aï-neun artst[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a doctor[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu dok-teur[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]blessé(e)[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]verletzt[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]fer-letst[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]injured[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]in-djourd[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]J'[/N1][V1]ai mal[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[A1]Hier[/A1] [V1]tut[/V1] [N1]es mir weh[/N1].",
+              "prononciation_FR": "[A1]Hier[/A1] [V1]tout[/V1] [N1]ess mir ve[/N1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]hurts[/V1] [A1]here[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]hurts[/V1] [A1]here[/A1]."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]allergique[/A1] à...",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]allergisch[/A1] gegen...",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]a-ler-guich[/A1] gue-gueun..."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]allergic[/A1] to...",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]a-leur-djik[/A1] tou..."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]perdu(e)[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe mich verirrt[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu mich fer-irt[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]lost[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]lost[/A1]."
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]Je[/N1] [V1]me suis coupé[/V1] [N2]le doigt[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe mir[/V1] in [N2]den Finger[/N2] [V1]geschnitten[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu mir[/V1] in [N2]dén fin-gueur[/N2] [V1]gué-chni-teun[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]cut[/V1] [N2]my finger[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]keut[/V1] [N2]maï fin-gueur[/N2]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]Ça[/N1] [V1]saigne[/V1] [A1]beaucoup[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]blutet[/V1] [A1]stark[/A1].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]blou-teut[/V1] [A1]chtark[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is bleeding[/V1] [A1]a lot[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz bli-ding[/V1] [A1]eu lot[/A1]."
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "Où [V1]sont[/V1] [N1]les pansements[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Pflaster[/N1]?",
+              "prononciation_FR": "Vo [V1]zint[/V1] [N1]di pfla-steur[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the plasters[/N1]?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze plas-teurz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[N1]Il[/N1] [V1]faut désinfecter[/V1] [N2]la plaie[/N2].",
+            "allemand": {
+              "texte": "[N1]Man[/N1] [V1]muss[/V1] [N2]die Wunde[/N2] [V1]desinfizieren[/V1].",
+              "prononciation_FR": "[N1]Man[/N1] [V1]mouss[/V1] [N2]di voun-deu[/N2] [V1]dé-zin-fi-tsi-reun[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]must disinfect[/V1] [N2]the wound[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]meust di-zin-fekt[/V1] [N2]ze wound[/N2]."
+            }
+          },
+          {
+            "id_expression": 12,
+            "francais": "[V1]Ne touche pas[/V1], [N1]c'[/N1][V2]est[/V2] [A1]sale[/A1].",
+            "allemand": {
+              "texte": "[V1]Nicht anfassen[/V1], [N1]es[/N1] [V2]ist[/V2] [A1]schmutzig[/A1].",
+              "prononciation_FR": "[V1]Nicht an-fa-sseun[/V1], [N1]ess[/N1] [V2]ist[/V2] [A1]chmou-tsik[/A1]."
+            },
+            "anglais": {
+              "texte": "[V1]Do not touch[/V1], [N1]it[/N1] [V2]is[/V2] [A1]dirty[/A1].",
+              "prononciation_FR": "[V1]Dou not teutch[/V1], [N1]it[/N1] [V2]iz[/V2] [A1]deur-ti[/A1]."
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[N1]Je[/N1] [V1]ne me sens pas bien[/V1].",
+            "allemand": {
+              "texte": "[N1]Mir[/N1] [V1]ist nicht gut[/V1].",
+              "prononciation_FR": "[N1]Mir[/N1] [V1]ist nicht gout[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]do not feel well[/V1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]dou not fil wèl[/V1]."
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]la tête qui tourne[/N2].",
+            "allemand": {
+              "texte": "[N1]Mir[/N1] [V1]ist[/V1] [N2]schwindelig[/N2].",
+              "prononciation_FR": "[N1]Mir[/N1] [V1]ist[/V1] [N2]chvin-deu-lik[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]My[/N1] head [V1]is spinning[/V1].",
+              "prononciation_FR": "[N1]Maï[/N1] héd [V1]iz spi-ning[/V1]."
+            }
+          },
+          {
+            "id_expression": 15,
+            "francais": "[N1]Il[/N1] [V1]est tombé dans les pommes[/V1].",
+            "allemand": {
+              "texte": "[N1]Er[/N1] [V1]ist in Ohnmacht gefallen[/V1].",
+              "prononciation_FR": "[N1]Er[/N1] [V1]ist ine on-makht gué-fa-leun[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]He[/N1] [V1]fainted[/V1].",
+              "prononciation_FR": "[N1]Hi[/N1] [V1]féïn-téd[/V1]."
+            }
+          },
+          {
+            "id_expression": 16,
+            "francais": "[V1]Allongez[/V1]-[N1]le[/N1] et [V2]levez[/V2] [N2]ses jambes[/N2].",
+            "allemand": {
+              "texte": "[V1]Legt[/V1] [N1]ihn[/N1] [V1]hin[/V1] und [V2]hebt[/V2] [N2]seine Beine[/N2] [V2]hoch[/V2].",
+              "prononciation_FR": "[V1]Lékt[/V1] [N1]ine[/N1] [V1]hinne[/V1] ount [V2]hépt[/V2] [N2]zaï-neu baï-neu[/N2] [V2]hokh[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Lay[/V1] [N1]him[/N1] [V1]down[/V1] and [V2]raise[/V2] [N2]his legs[/N2].",
+              "prononciation_FR": "[V1]Léï[/V1] [N1]him[/N1] [V1]daoun[/V1] annd [V2]réïz[/V2] [N2]hiz lẹgz[/N2]."
+            }
+          },
+          {
+            "id_expression": 17,
+            "francais": "[V1]Donnez[/V1]-[N1]lui[/N1] [N2]un peu de sucre[/N2].",
+            "allemand": {
+              "texte": "[V1]Gebt[/V1] [N1]ihm[/N1] [N2]etwas Zucker[/N2].",
+              "prononciation_FR": "[V1]Gépt[/V1] [N1]ime[/N1] [N2]ét-vass tsou-keur[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Give[/V1] [N1]him[/N1] [N2]some sugar[/N2].",
+              "prononciation_FR": "[V1]Guiv[/V1] [N1]him[/N1] [N2]seum chou-gueur[/N2]."
+            }
+          },
+          {
+            "id_expression": 18,
+            "francais": "Est-ce qu'[N1]il[/N1] [V1]respire[/V1] ?",
+            "allemand": {
+              "texte": "[V1]Atmet[/V1] [N1]er[/N1]?",
+              "prononciation_FR": "[V1]At-mèt[/V1] [N1]ér[/N1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Is[/V1] [N1]he[/N1] [V1]breathing[/V1]?",
+              "prononciation_FR": "[V1]Iz[/V1] [N1]hi[/N1] [V1]bri-zing[/V1]?"
+            }
+          },
+          {
+            "id_expression": 19,
+            "francais": "[V1]Mettez[/V1]-[N1]le[/N1] en [N2]PLS[/N2].",
+            "allemand": {
+              "texte": "[V1]Bringt[/V1] [N1]ihn[/N1] in die [N2]stabile Seitenlage[/N2].",
+              "prononciation_FR": "[V1]Brinkt[/V1] [N1]ine[/N1] ine di [N2]chta-bi-leu zaï-teun-la-gueu[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Put[/V1] [N1]him[/N1] in the [N2]recovery position[/N2].",
+              "prononciation_FR": "[V1]Pout[/V1] [N1]him[/N1] ine ze [N2]ri-ko-veur-i po-zi-cheun[/N2]."
+            }
+          },
+          {
+            "id_expression": 20,
+            "francais": "[N1]Je[/N1] [V1]vais chercher[/V1] [N2]la trousse de secours[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]hole[/V1] [N2]den Erste-Hilfe-Kasten[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ho-leu[/V1] [N2]dén érs-teu-hil-feu-kas-teun[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]will get[/V1] [N2]the first aid kit[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]wil guét[/V1] [N2]ze feurst éïd kit[/N2]."
+            }
+          },
+          {
+            "id_expression": 21,
+            "francais": "[V1]Ne le bougez pas[/V1] !",
+            "allemand": {
+              "texte": "[V1]Bewegt[/V1] [N1]ihn[/N1] [V1]nicht[/V1]!",
+              "prononciation_FR": "[V1]Bé-vékt[/V1] [N1]ine[/N1] [V1]nicht[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Do not move[/V1] [N1]him[/N1]!",
+              "prononciation_FR": "[V1]Dou not mouv[/V1] [N1]him[/N1]!"
+            }
+          },
+          {
+            "id_expression": 22,
+            "francais": "[V1]Appuyez[/V1] [A1]fort[/A1] sur [N1]la blessure[/N1].",
+            "allemand": {
+              "texte": "[V1]Drückt[/V1] [A1]fest[/A1] auf [N1]die Wunde[/N1].",
+              "prononciation_FR": "[V1]Drukt[/V1] [A1]fést[/A1] aouf [N1]di vou-n-deu[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Press[/V1] [A1]hard[/A1] on [N1]the wound[/N1].",
+              "prononciation_FR": "[V1]Press[/V1] [A1]hard[/A1] on [N1]ze wound[/N1]."
+            }
+          },
+          {
+            "id_expression": 23,
+            "francais": "[V1]Appelez[/V1] [N1]une ambulance[/N1], [A1]vite[/A1] !",
+            "allemand": {
+              "texte": "[V1]Ruft[/V1] [N1]einen Krankenwagen[/N1], [A1]schnell[/A1]!",
+              "prononciation_FR": "[V1]Rouft[/V1] [N1]aï-neun krank-eun-va-gueun[/N1], [A1]chnèl[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Call[/V1] [N1]an ambulance[/N1], [A1]quick[/A1]!",
+              "prononciation_FR": "[V1]Kol[/V1] [N1]an am-biou-lanss[/N1], [A1]kwik[/A1]!"
+            }
+          },
+          {
+            "id_expression": 24,
+            "francais": "[A1]Quel[/A1] [V1]est[/V1] [N1]le numéro des urgences[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Was[/A1] [V1]ist[/V1] [N1]die Notrufnummer[/N1]?",
+              "prononciation_FR": "[A1]Vass[/A1] [V1]ist[/V1] [N1]di not-rouf-nou-meur[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [V1]is[/V1] [N1]the emergency number[/N1]?",
+              "prononciation_FR": "[A1]Wot[/A1] [V1]iz[/V1] [N1]zi i-meur-djen-si neum-beur[/N1]?"
+            }
+          },
+          {
+            "id_expression": 25,
+            "francais": "[N1]Il[/N1] y [V1]a[/V1] [N2]une urgence[/N2] ici !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]gibt[/V1] hier [N2]einen Notfall[/N2]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]guipt[/V1] hir [N2]aï-neun not-fal[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]There[/N1] [V1]is[/V1] [N2]an emergency[/N2] here!",
+              "prononciation_FR": "[N1]Zèr[/N1] [V1]iz[/V1] [N2]an i-meur-djen-si[/N2] hir!"
+            }
+          },
+          {
+            "id_expression": 26,
+            "francais": "Où [V1]est[/V1] [N1]l'hôpital le plus proche[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das nächste Krankenhaus[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass nêch-teu kran-keun-haous[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the nearest hospital[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze ni-rest hos-pi-tal[/N1]?"
+            }
+          },
+          {
+            "id_expression": 27,
+            "francais": "[N1]Nous[/N1] [V1]avons besoin[/V1] [N2]d'un médecin[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]brauchen[/V1] [N2]einen Arzt[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]braou-kheun[/V1] [N2]aï-neun artst[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]need[/V1] [N2]a doctor[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]nid[/V1] [N2]eu dok-teur[/N2]."
+            }
+          },
+          {
+            "id_expression": 28,
+            "francais": "Où [V1]est[/V1] [N1]la trousse à pharmacie[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]der Erste-Hilfe-Kasten[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dér èrs-teu-hil-feu-kas-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the first aid kit[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze feurst éïd kit[/N1]?"
+            }
+          },
+          {
+            "id_expression": 29,
+            "francais": "[N1]Je[/N1] [V1]saigne[/V1] [A1]un peu[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]blute[/V1] [A1]ein bisschen[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]blou-teu[/V1] [A1]aïn biss-cheun[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am bleeding[/V1] [A1]a little[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am bli-ding[/V1] [A1]eu li-teul[/A1]."
+            }
+          },
+          {
+            "id_expression": 30,
+            "francais": "[N1]J'[/N1][V1]ai besoin[/V1] d'[N2]un pansement[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]ein Pflaster[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]aïn pfla-steur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a plaster[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu plas-teur[/N2]."
+            }
+          },
+          {
+            "id_expression": 31,
+            "francais": "[V1]Appelle[/V1] [N1]le chef[/N1].",
+            "allemand": {
+              "texte": "[V1]Ruf[/V1] [N1]den Leiter[/N1].",
+              "prononciation_FR": "[V1]Rouf[/V1] [N1]déne laï-teur[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Call[/V1] [N1]the leader[/N1].",
+              "prononciation_FR": "[V1]Kol[/V1] [N1]ze li-deur[/N1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "S'orienter / Orientierung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]sont[/V1] [N1]les toilettes[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Toileetten[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di toï-le-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the toilets[/N1]?",
+              "prononciation_FR": "Wér [V1]ar[/V1] [N1]ze toï-lets[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Se présenter / Sich vorstellen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]m'[/N2][V1]appelle[/V1]... et [N1]je[/N1] [V2]viens[/V2] de [N3]France[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]heiße[/V1]... und [V2]komme[/V2] aus [N3]Frankreich[/N3].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]haï-sseu[/V1]... ount [V2]ko-meu[/V2] aous [N3]frank-raïch[/N3]."
+            },
+            "anglais": {
+              "texte": "[N2]My name[/N2] [V1]is[/V1]... and [N1]I[/N1] [V2]am[/V2] from [N3]France[/N3].",
+              "prononciation_FR": "[N2]Maï neïm[/N2] [V1]iz[/V1]... annd [N1]aïm[/N1] from [N3]Franss[/N3]."
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Sang",
+        "allemand": {
+          "texte": "Blut",
+          "prononciation_FR": "Blout"
+        },
+        "anglais": {
+          "texte": "Blood",
+          "prononciation_FR": "Bleud"
+        }
+      },
+      {
+        "francais": "Doigt",
+        "allemand": {
+          "texte": "Finger",
+          "prononciation_FR": "Fin-gueur"
+        },
+        "anglais": {
+          "texte": "Finger",
+          "prononciation_FR": "Fin-gueur"
+        }
+      },
+      {
+        "francais": "Tête",
+        "allemand": {
+          "texte": "Kopf",
+          "prononciation_FR": "Kopf"
+        },
+        "anglais": {
+          "texte": "Head",
+          "prononciation_FR": "Héd"
+        }
+      },
+      {
+        "francais": "Hôpital",
+        "allemand": {
+          "texte": "Krankenhaus",
+          "prononciation_FR": "Kran-keun-haous"
+        },
+        "anglais": {
+          "texte": "Hospital",
+          "prononciation_FR": "Hos-pi-tal"
+        }
+      },
+      {
+        "francais": "Médecin",
+        "allemand": {
+          "texte": "Arzt",
+          "prononciation_FR": "Artst"
+        },
+        "anglais": {
+          "texte": "Doctor",
+          "prononciation_FR": "Dok-teur"
+        }
+      }
+    ]
+  }
+}

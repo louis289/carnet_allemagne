@@ -1,0 +1,145 @@
+{
+  "carnet_scout": {
+    "categorie": "Activités & jeux",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Jouer ensemble / Zusammen spielen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "À qui [N1]le tour[/N1] ?",
+            "allemand": {
+              "texte": "Wer [V1]ist[/V1] [N1]dran[/N1]?",
+              "prononciation_FR": "Vér [V1]ist[/V1] [N1]drann[/N1]?"
+            },
+            "anglais": {
+              "texte": "Whose [N1]turn[/N1] [V1]is[/V1] it?",
+              "prononciation_FR": "Houz [N1]teurn[/N1] [V1]iz[/V1] it?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [V1]joue[/V1] [A1]ensemble[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Spielen[/V1] [N1]wir[/N1] [A1]zusammen[/A1]?",
+              "prononciation_FR": "[V1]Chpi-leun[/V1] [N1]vir[/N1] [A1]tsou-za-meun[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]play[/V2] [A1]together[/A1]?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]plé[/V2] [A1]tou-gué-zeur[/A1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[A1]Encore une fois[/A1] !",
+            "allemand": {
+              "texte": "[A1]Noch einmal[/A1]!",
+              "prononciation_FR": "[A1]Noch aïn-mal[/A1]!"
+            },
+            "anglais": {
+              "texte": "[A1]One more time[/A1]!",
+              "prononciation_FR": "[A1]Ouan mor taïm[/A1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]veux[/V1] [V2]essayer[/V2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]möchte[/V1] es [V2]versuchen[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]meuch-teu[/V1] ess [V2]fer-zou-kheun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]want[/V1] [V2]to try[/V2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ouont[/V1] [V2]tou traï[/V2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Règles et explications / Regeln",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]sais[/V1] [N2]pas[/N2] [V2]faire[/V2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]weiß[/V1] [N2]nicht[/N2] wie.",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]vaïss[/V1] [N2]nicht[/N2] vi."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [N2]don't[/N2] [V1]know[/V1] how.",
+              "prononciation_FR": "[N1]Aï[/N1] [N2]dont[/N2] [V1]no[/V1] haou."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Tu[/N1] [V1]peux[/V1] [N2]m'[/N2][V2]expliquer[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kannst[/V1] [N1]du[/N1] [N2]mir[/N2] [V2]erklären[/V2]?",
+              "prononciation_FR": "[V1]Kanst[/V1] [N1]dou[/N1] [N2]mir[/N2] [V2]er-klé-reun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]explain[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]ex-pléïn[/V2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]facile[/A1] / [A2]difficile[/A2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]einfach[/A1] / [A2]schwer[/A2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]aïn-fakh[/A1] / [A2]chvèr[/A2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1]'s [A1]easy[/A1] / [A2]hard[/A2].",
+              "prononciation_FR": "[N1]Its[/N1] [A1]i-zi[/A1] / [A2]hard[/A2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Célébration et encouragements / Feiern",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]super[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]toll[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]tol[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]That[/N1]'s [A1]great[/A1]!",
+              "prononciation_FR": "[N1]Zats[/N1] [A1]gréït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai gagné[/V1] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe gewonnen[/V1]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu gué-vo-neun[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]won[/V1]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ouon[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Bravo[/V1] !",
+            "allemand": {
+              "texte": "[V1]Gut gemacht[/V1]! / [V2]Bravo[/V2]!",
+              "prononciation_FR": "[V1]Gout gué-makht[/V1]! / [V2]Bra-vo[/V2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Well done[/V1]!",
+              "prononciation_FR": "[V1]Ouel dann[/V1]!"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

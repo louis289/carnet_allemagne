@@ -1,0 +1,133 @@
+{
+  "carnet_scout": {
+    "categorie": "Urgences",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Demander de l'aide / Notfälle",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Au secours[/V1] !",
+            "allemand": {
+              "texte": "[V1]Hilfe[/V1]!",
+              "prononciation_FR": "[V1]Hil-feu[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Help[/V1]!",
+              "prononciation_FR": "[V1]Help[/V1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Appelez[/V1] [N1]une ambulance[/N1] !",
+            "allemand": {
+              "texte": "[V1]Rufen Sie[/V1] [N1]einen Krankenwagen[/N1]!",
+              "prononciation_FR": "[V1]Rou-feun zi[/V1] [N1]aï-neun krank-eun-va-gueun[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Call[/V1] [N1]an ambulance[/N1]!",
+              "prononciation_FR": "[V1]Kol[/V1] [N1]an am-biou-lanss[/N1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]J'[/N1][V1]ai besoin[/V1] d'[N2]un médecin[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]einen Arzt[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]aï-neun artst[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a doctor[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu dok-teur[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]blessé(e)[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]verletzt[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]fer-letst[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]injured[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]in-djourd[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]J'[/N1][V1]ai mal[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[A1]Hier[/A1] [V1]tut[/V1] [N1]es mir weh[/N1].",
+              "prononciation_FR": "[A1]Hier[/A1] [V1]tout[/V1] [N1]ess mir ve[/N1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]hurts[/V1] [A1]here[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]hurts[/V1] [A1]here[/A1]."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]allergique[/A1] à...",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]allergisch[/A1] gegen...",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]a-ler-guich[/A1] gue-gueun..."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]allergic[/A1] to...",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]a-leur-djik[/A1] tou..."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]perdu(e)[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe mich verirrt[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu mich fer-irt[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]lost[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]lost[/A1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "S'orienter / Orientierung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]sont[/V1] [N1]les toilettes[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]sind[/V1] [N1]die Toileetten[/N1]?",
+              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di toï-le-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]the toilets[/N1]?",
+              "prononciation_FR": "Wér [V1]ar[/V1] [N1]ze toï-lets[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Se présenter / Sich vorstellen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]m'[/N2][V1]appelle[/V1]... et [N1]je[/N1] [V2]viens[/V2] de [N3]France[/N3].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]heiße[/V1]... und [V2]komme[/V2] aus [N3]Frankreich[/N3].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]haï-sseu[/V1]... ount [V2]ko-meu[/V2] aous [N3]frank-raïch[/N3]."
+            },
+            "anglais": {
+              "texte": "[N2]My name[/N2] [V1]is[/V1]... and [N1]I[/N1] [V2]am[/V2] from [N3]France[/N3].",
+              "prononciation_FR": "[N2]Maï neïm[/N2] [V1]iz[/V1]... annd [N1]aïm[/N1] from [N3]Franss[/N3]."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "carnet_scout": {
+    "categorie": "Au camp",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Orientation au camp / Orientierung im Lager",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]est[/V1] [N1]ma tente[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]mein Zelt[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]maïn tselt[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]my tent[/N1]?",
+              "prononciation_FR": "Wér [V1]iz[/V1] [N1]maï tent[/N1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]cherche[/V1] [N2]mon groupe[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]suche[/V1] [N2]meine Gruppe[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]sou-kheu[/V1] [N2]maï-neu grou-peu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [V1]looking for[/V1] [N2]my group[/N2].",
+              "prononciation_FR": "[N1]Aïm[/N1] [V1]lou-king for[/V1] [N2]maï group[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]C'[/N1][V1]est[/V1] par où ?",
+            "allemand": {
+              "texte": "Wo [V1]geht[/V1] [N1]es[/N1] lang?",
+              "prononciation_FR": "Vo [V1]guét[/V1] [N1]ess[/N1] lang?"
+            },
+            "anglais": {
+              "texte": "Which way [V1]is[/V1] [N1]it[/N1]?",
+              "prononciation_FR": "Ouitch ouéï [V1]iz[/V1] [N1]it[/N1]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Vie de groupe / Gruppenleben",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Rassemblement[/N1] dans [A1]5 minutes[/A1] !",
+            "allemand": {
+              "texte": "[N1]Versammlung[/N1] in [A1]5 Minuten[/A1]!",
+              "prononciation_FR": "[N1]Fer-zam-loung[/N1] ine [A1]funf mi-nou-teun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Meeting[/N1] in [A1]5 minutes[/A1]!",
+              "prononciation_FR": "[N1]Mi-ting[/N1] ine [A1]faïv mi-nits[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [V1]y va[/V1] !",
+            "allemand": {
+              "texte": "[V1]Los geht's[/V1]!",
+              "prononciation_FR": "[V1]Loss guéts[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Let's go[/V1]!",
+              "prononciation_FR": "[V1]Lets go[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Attends[/V1]-[N1]moi[/N1] !",
+            "allemand": {
+              "texte": "[V1]Warte[/V1] auf [N1]mich[/N1]!",
+              "prononciation_FR": "[V1]Var-teu[/V1] aouf [N1]mich[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Wait[/V1] for [N1]me[/N1]!",
+              "prononciation_FR": "[V1]Ouéït[/V1] for [N1]mi[/N1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]peux[/V1] [N2]t'[/N2][V2]aider[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kann[/V1] [N1]ich[/N1] [N2]dir[/N2] [V2]helfen[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]ich[/N1] [N2]dir[/N2] [V2]hel-feun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]I[/N1] [V2]help[/V2] [N2]you[/N2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]aï[/N1] [V2]help[/V2] [N2]you[/N2]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]fait équipe[/V1] ?",
+            "allemand": {
+              "texte": "[V1]Sollen[/V1] [N1]wir[/N1] [V2]zusammenarbeiten[/V2]?",
+              "prononciation_FR": "[V1]Zol-leun[/V1] [N1]vir[/N1] [V2]tsou-za-meun-ar-baï-teun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]team up[/V2]?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]tim-eup[/V2]?"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Météo et matériel / Wetter und Material",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]J'[/N1][V1]ai besoin[/V1] d'[N2]une lampe[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]eine Taschenlampe[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]aï-neu tach-eun-lam-peu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a torch[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu tortch[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Il[/N1] [V1]pleut[/V1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]regnet[/V1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ré-gneut[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is raining[/V1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz réïn-ing[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Il[/N1] [V1]fait[/V1] [A1]chaud[/A1] / [A2]froid[/A2].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]heiß[/A1] / [A2]kalt[/A2].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]haïss[/A1] / [A2]kalt[/A2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1]'s [A1]hot[/A1] / [A2]cold[/A2].",
+              "prononciation_FR": "[N1]Its[/N1] [A1]hot[/A1] / [A2]kold[/A2]."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

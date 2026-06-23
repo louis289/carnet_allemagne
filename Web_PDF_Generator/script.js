@@ -1,16 +1,19 @@
 const jsonFiles = [
-    '../JSON/1_politesse_et_rencontres.json',
-    '../JSON/2_nourriture_et_repas.json',
-    '../JSON/3_organisation_et_concours.json',
-    '../JSON/4_orientation_et_deplacements.json',
-    '../JSON/5_drague_et_amities.json',
-    '../JSON/6_vie_de_camp.json',
-    '../JSON/7_voyage.json',
-    '../JSON/8_expressions_francaises.json',
-    '../JSON/9_expressions_anglaises.json',
-    '../JSON/10_expressions_allemandes.json',
-    '../JSON/11_citations.json',
-    '../JSON/12_urgences.json'
+    '../JSON/1_urgences.json',
+    '../JSON/2_salutations_et_politesse.json',
+    '../JSON/3_repas_et_vie_quotidienne.json',
+    '../JSON/4_au_camp.json',
+    '../JSON/5_activites_et_jeux.json',
+    '../JSON/6_chants.json',
+    '../JSON/7_nature_et_environnement.json',
+    '../JSON/8_valeurs_scoutes.json',
+    '../JSON/9_materiel_de_camping.json',
+    '../JSON/10_services_du_camp.json',
+    '../JSON/11_pleine_conscience.json',
+    '../JSON/12_forum_et_cercles_de_parole.json',
+    '../JSON/13_emotions_et_expressions.json',
+    '../JSON/14_vocabulaire_du_bula.json',
+    '../JSON/15_creer_du_lien.json'
 ];
 
 // Icône Micro/Dictaphone en émojis
@@ -371,6 +374,127 @@ async function loadAndBuild() {
 
         contentPage.innerHTML = html;
         app.appendChild(contentPage);
+    });
+
+    // Ajuster dynamiquement la mise en page pour éviter les débordements
+    adjustLayout();
+}
+
+function adjustLayout() {
+    // 1. Forcer l'affichage sur une seule ligne pour la prononciation phonétique et réduire la police si besoin
+    const prons = document.querySelectorAll('.prononciation');
+    prons.forEach(p => {
+        p.style.whiteSpace = 'nowrap';
+        p.style.overflow = 'hidden';
+        p.style.textOverflow = 'ellipsis';
+
+        const parentContent = p.closest('.content');
+        if (!parentContent) return;
+
+        let fontSizePt = 13; // Taille par défaut de style.css
+        p.style.fontSize = fontSizePt + 'pt';
+
+        let attempts = 0;
+        // On réduit la taille jusqu'à ce que la largeur réelle s'adapte à la largeur du parent
+        while (p.scrollWidth > parentContent.clientWidth && fontSizePt > 6 && attempts < 25) {
+            fontSizePt -= 0.5;
+            p.style.fontSize = fontSizePt + 'pt';
+            attempts++;
+        }
+    });
+
+    // 2. Ajuster verticalement les éléments de chaque page pour éviter les débordements hors de la zone d'impression
+    const pages = document.querySelectorAll('.page');
+    pages.forEach((page) => {
+        // Ignorer la page de garde ou les pages vides
+        if (page.classList.contains('page-cover') || (!page.querySelector('.page-content-wrapper') && !page.classList.contains('page-toc'))) return;
+
+        let scale = 1.0;
+
+        // Si c'est la table des matières (Sommaire)
+        if (page.classList.contains('page-toc')) {
+            let attempts = 0;
+            while (page.scrollHeight > page.clientHeight && scale > 0.6 && attempts < 15) {
+                scale -= 0.05;
+                const h2 = page.querySelector('h2');
+                if (h2) {
+                    h2.style.fontSize = (45 * scale) + 'pt';
+                    h2.style.marginBottom = (15 * scale) + 'mm';
+                }
+                const columns = page.querySelectorAll('.toc-columns');
+                columns.forEach(col => {
+                    col.style.fontSize = (16 * scale) + 'pt';
+                    col.style.gap = (15 * scale) + 'mm';
+                });
+                const cats = page.querySelectorAll('.toc-cat');
+                cats.forEach(cat => {
+                    cat.style.fontSize = (18 * scale) + 'pt';
+                    cat.style.marginTop = (6 * scale) + 'mm';
+                    cat.style.marginBottom = (3 * scale) + 'mm';
+                });
+                attempts++;
+            }
+            return;
+        }
+
+        const wrapper = page.querySelector('.page-content-wrapper');
+        let attempts = 0;
+
+        // Boucle d'échelle pour réduire la taille globale de la page si elle dépasse sa hauteur maximale de 210mm
+        while (page.scrollHeight > page.clientHeight && scale > 0.6 && attempts < 15) {
+            scale -= 0.05;
+
+            const cards = page.querySelectorAll('.expression-card');
+            cards.forEach(card => {
+                card.style.padding = (3 * scale) + 'mm ' + (4 * scale) + 'mm';
+
+                const fr = card.querySelector('.expression-fr');
+                if (fr) {
+                    fr.style.fontSize = (18 * scale) + 'pt';
+                    fr.style.marginBottom = (2 * scale) + 'mm';
+                }
+
+                const translations = card.querySelectorAll('.traduction');
+                translations.forEach(tr => {
+                    tr.style.marginBottom = (1.5 * scale) + 'mm';
+
+                    const lang = tr.querySelector('.lang');
+                    if (lang) lang.style.fontSize = (15 * scale) + 'pt';
+
+                    const texte = tr.querySelector('.texte');
+                    if (texte) {
+                        texte.style.fontSize = (15 * scale) + 'pt';
+                        texte.style.marginBottom = (1 * scale) + 'mm';
+                    }
+
+                    const pron = tr.querySelector('.prononciation');
+                    if (pron) {
+                        // Utilise la taille ajustée horizontalement comme base, et la réduit proportionnellement
+                        const currentSize = parseFloat(pron.style.fontSize) || 13;
+                        pron.style.fontSize = (currentSize * 0.95) + 'pt';
+                        pron.style.padding = (1.5 * scale) + 'mm ' + (3 * scale) + 'mm';
+                    }
+                });
+            });
+
+            if (wrapper) {
+                wrapper.style.gap = (8 * scale) + 'mm';
+                wrapper.style.marginTop = (15 * scale) + 'mm';
+            }
+
+            const casTitle = page.querySelector('.cas-title');
+            if (casTitle) {
+                casTitle.style.fontSize = (24 * scale) + 'pt';
+                casTitle.style.margin = '0 0 ' + (5 * scale) + 'mm 0';
+            }
+
+            const grid = page.querySelector('.cards-grid');
+            if (grid) {
+                grid.style.gap = (8 * scale) + 'mm';
+            }
+
+            attempts++;
+        }
     });
 }
 

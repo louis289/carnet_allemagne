@@ -1,0 +1,139 @@
+{
+  "carnet_scout": {
+    "categorie": "Créer du lien",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Faire connaissance / Kennenlernen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Tu[/N1] [V1]aimes[/V1] [N2]la musique[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Magst[/V1] [N1]du[/N1] [N2]Musik[/N2]?",
+              "prononciation_FR": "[V1]Magst[/V1] [N1]dou[/N1] [N2]mou-zik[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]like[/V2] [N2]music[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]laïk[/V2] [N2]miou-zik[/N2]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[A1]Quelle[/A1] [V1]est[/V1] [N1]ta chanson préférée[/N1] ?",
+            "allemand": {
+              "texte": "Was [V1]ist[/V1] [N1]dein Lieblingslied[/N1]?",
+              "prononciation_FR": "Vass [V1]ist[/V1] [N1]daïn lip-lings-lit[/N1]?"
+            },
+            "anglais": {
+              "texte": "What [V1]is[/V1] [N1]your favorite song[/N1]?",
+              "prononciation_FR": "Wot [V1]iz[/V1] [N1]your feï-vo-rit song[/N1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Tu[/N1] [V1]joues[/V1] d'[N2]un instrument[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Spielst[/V1] [N1]du[/N1] [N2]ein Instrument[/N2]?",
+              "prononciation_FR": "[V1]Chpilst[/V1] [N1]dou[/N1] [N2]aïn ine-strou-ment[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]play[/V2] [N2]an instrument[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]laïk[/V2] [N2]an ine-strou-ment[/N2]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[A1]Quel[/A1] [V1]est[/V1] [N1]ton animal préféré[/N1] ?",
+            "allemand": {
+              "texte": "Was [V1]ist[/V1] [N1]dein Lieblingstier[/N1]?",
+              "prononciation_FR": "Vass [V1]ist[/V1] [N1]daïn lip-lings-tir[/N1]?"
+            },
+            "anglais": {
+              "texte": "What [V1]is[/V1] [N1]your favorite animal[/N1]?",
+              "prononciation_FR": "Wot [V1]iz[/V1] [N1]your feï-vo-rit a-ni-meul[/N1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Tu[/N1] [V1]as[/V1] [N2]des frères et sœurs[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Hast[/V1] [N1]du[/N1] [N2]Geschwister[/N2]?",
+              "prononciation_FR": "[V1]Hast[/V1] [N1]dou[/N1] [N2]gué-chvis-teur[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]have[/V2] [N2]siblings[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]hav[/V2] [N2]sib-lingz[/N2]?"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]J'[/N1][V1]habite[/V1] près de [N2]la mer[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]wohne[/V1] in der Nähe des [N2]Meeres[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]vo-neu[/V1] ine dér né-eu déss [N2]mé-ress[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]live[/V1] near [N2]the sea[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]liv[/V1] nir [N2]ze si[/N2]."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]La Provence[/N1] [V1]est[/V1] [A1]belle[/A1] !",
+            "allemand": {
+              "texte": "[N1]Die Provence[/N1] [V1]ist[/V1] [A1]schön[/A1]!",
+              "prononciation_FR": "[N1]Di pro-vanss[/N1] [V1]ist[/V1] [A1]cheun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Provence[/N1] [V1]is[/V1] [A1]beautiful[/A1]!",
+              "prononciation_FR": "[N1]Pro-vanss[/N1] [V1]iz[/V1] [A1]biou-ti-foul[/A1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Garder contact / Kontakt halten",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]reste[/V1] [A1]amis[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Bleiben[/V1] [N1]wir[/N1] [A1]Freunde[/A1]?",
+              "prononciation_FR": "[V1]Bleï-beun[/V1] [N1]vir[/N1] [A1]froïn-deu[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]stay[/V2] [A1]friends[/A1]?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]stéï[/V2] [A1]frendz[/A1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [N2]s'[/N2][V1]échange[/V1] [N3]nos adresses[/N3] ?",
+            "allemand": {
+              "texte": "[V1]Tauschen[/V1] [N1]wir[/N1] [N3]unsere Adressen[/N3] [V2]aus[/V2]?",
+              "prononciation_FR": "[V1]Taou-cheun[/V1] [N1]vir[/N1] [N3]oun-zé-reu a-dré-seun[/N3] [V2]aouf[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Let's exchange[/V1] [N3]contacts[/N3]!",
+              "prononciation_FR": "[V1]Lets ex-tcheïndj[/V1] [N3]con-takts[/N3]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]C'[/N1][V1]était[/V1] [N2]une super semaine[/N2] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]war[/V1] [N2]eine tolle Woche[/N2]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]var[/V1] [N2]aï-neu to-le vok-eu[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]What an amazing week[/N1]!",
+              "prononciation_FR": "[N1]Ouot an e-meï-zing ouik[/N1]!"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

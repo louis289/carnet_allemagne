@@ -1,0 +1,199 @@
+{
+  "carnet_scout": {
+    "categorie": "Émotions & expressions",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Mes émotions / Meine Gefühle",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]heureux/heureuse[/A1] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]glücklich[/A1]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]glouk-lich[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]happy[/A1]!",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]ha-pi[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]triste[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]traurig[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]traou-rich[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]sad[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]sad[/A1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]peur[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]Angst[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]angst[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]scared[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]skèrd[/A1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]fatigué(e)[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]müde[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]mu-deu[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]tired[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]taï-eurd[/A1]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]stressé(e)[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]gestresst[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]gué-chtrést[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]stressed[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]chtrést[/A1]."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]Je[/N1] [N2]me[/N2] [V1]sens seul(e)[/V1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]fühle[/V1] [N2]mich[/N2] [A1]allein[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fu-leu[/V1] [N2]mich[/N2] [A1]al-aïn[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]feel[/V1] [A1]lonely[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]fil[/V1] [A1]loun-li[/A1]."
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]en colère[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]wütend[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]vu-tent[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]angry[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]ang-gri[/A1]."
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]fier/fière[/A1] de [N2]moi[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]stolz[/A1] auf [N2]mich[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]chtolts[/A1] auf [N2]mich[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]proud[/A1] of [N2]myself[/N2].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]praoud[/A1] ov [N2]maï-self[/N2]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]impatient(e)[/A1] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]aufgeregt[/A1]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]aouf-gué-rékt[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]excited[/A1]!",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]ek-saï-ted[/A1]!"
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]Je[/N1] [N2]me[/N2] [V1]sens bien[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]fühle[/V1] [N2]mich[/N2] [A1]hier[/A1] [V1]wohl[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fu-leu[/V1] [N2]mich[/N2] [A1]hir[/A1] [V1]vol[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]feel[/V1] [A1]good[/A1] here.",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]fil[/V1] [A1]goud[/A1] hir."
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[N1]J'[/N1][V1]ai besoin[/V1] d'[N2]un moment[/N2] seul(e).",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]brauche[/V1] [N2]einen Moment[/N2] für [N2]mich[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]braou-kheu[/V1] [N2]aï-neun mo-ment[/N2] fur [N2]mich[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a moment[/N2] [A1]alone[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu mo-ment[/N2] [A1]a-loun[/A1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Soutien et empathie / Unterstützung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Tout[/N1] [V1]va[/V1] [A1]bien[/A1] ?",
+            "allemand": {
+              "texte": "[N1]Alles[/N1] [A1]gut[/A1] bei dir?",
+              "prononciation_FR": "[N1]A-less[/N1] [A1]gout[/A1] baï dir?"
+            },
+            "anglais": {
+              "texte": "[V1]Are[/V1] [N1]you[/N1] [A1]okay[/A1]?",
+              "prononciation_FR": "[V1]Ar[/V1] [N1]you[/N1] [A1]o-kéï[/A1]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]la[/A1] pour [N2]toi[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] für [N2]dich[/N2] [A1]da[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] fur [N2]dich[/N2] [A1]da[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [A1]here[/A1] for [N2]you[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]hir[/A1] for [N2]you[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]On[/N1] en [V1]parle[/V1] [A1]ensemble[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Sollen[/V1] [N1]wir[/N1] darüber [V2]reden[/V2]?",
+              "prononciation_FR": "[V1]Zol-leun[/V1] [N1]vir[/N1] da-ru-beur [V2]ré-deun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]talk[/V2] about it?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]tok[/V2] a-baout it?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Ça[/N1] [V1]va[/V1] [V2]aller[/V2] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]wird[/V1] schon!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]virt[/V1] chonn!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1]'ll [V1]be[/V1] [A1]okay[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]bi[/V1] [A1]o-keï[/A1]!"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

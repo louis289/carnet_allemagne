@@ -1,0 +1,151 @@
+{
+  "carnet_scout": {
+    "categorie": "Repas & vie quotidienne",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "À table / Essen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]délicieux[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]lecker[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]lé-keur[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It'[/N1][V1]is[/V1] [A1]delicious[/A1]!",
+              "prononciation_FR": "[N1]Its[/N1] [A1]di-li-cheuss[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]l'heure de manger[/N2] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [N2]Essenszeit[/N2]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [N2]é-seuns-tsaït[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]It'[/N1][V1]is[/V1] [N2]time to eat[/N2]!",
+              "prononciation_FR": "[N1]Its[/N1] [N2]taïm tou it[/N2]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Bon appétit[/N1] !",
+            "allemand": {
+              "texte": "[N1]Guten Appetit[/N1]!",
+              "prononciation_FR": "[N1]Gou-teun a-pé-tit[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Enjoy[/V1] [N2]your meal[/N2]!",
+              "prononciation_FR": "[V1]En-djoï[/V1] [N2]yor mil[/N2]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Faim et soif / Hunger und Durst",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]faim[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]Hunger[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]houng-gueur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]hungry[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]heung-gri[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]soif[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]Durst[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]dourst[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [A1]thirsty[/A1].",
+              "prononciation_FR": "[N1]Aïm[/N1] [A1]therss-ti[/A1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [V1]peux[/V1] [V2]avoir[/V2] de [N2]l'eau[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Kann[/V1] [N1]ich[/N1] [N2]Wasser[/N2] [V2]bekommen[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]ich[/N1] [N2]vas-seur[/N2] [V2]bé-ko-meun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]I[/N1] [V2]have[/V2] some [N2]water[/N2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]aï[/N1] [V2]hav[/V2] seum [N2]wo-teur[/N2]?"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]vais[/V1] [V2]chercher[/V2] de [N2]l'eau[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]hole[/V1] [N2]Wasser[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ho-leu[/V1] [N2]vas-seur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'll[/N1] [V1]get[/V1] some [N2]water[/N2].",
+              "prononciation_FR": "[N1]Aïl[/N1] [V1]guét[/V1] seum [N2]wo-teur[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Préférences et régime / Vorlieben",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]suis[/V1] [N2]végétarien(ne)[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [N2]Vegetarier/in[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [N2]vé-gué-ta-ri-eure / in[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [N2]vegetarian[/N2].",
+              "prononciation_FR": "[N1]Aïm[/N1] [N2]vé-djé-té-ri-ann[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [N2]n'[/N2][V1]aime[/V1] [N2]pas[/N2] [N3]ça[/N3].",
+            "allemand": {
+              "texte": "[N3]Das[/N3] [V1]mag[/V1] [N1]ich[/N1] [N2]nicht[/N2].",
+              "prononciation_FR": "[N3]Dass[/N3] [V1]mak[/V1] [N1]ich[/N1] [N2]nicht[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [N2]don't[/N2] [V1]like[/V1] [N3]this[/N3].",
+              "prononciation_FR": "[N1]Aï[/N1] [N2]dont[/N2] [V1]laïk[/V1] [N3]ziss[/N3]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "Cuisine / Küche",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Où [V1]est[/V1] [N1]la cuisine[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]die Küche[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]di ku-kheu[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the kitchen[/N1]?",
+              "prononciation_FR": "Wér [V1]iz[/V1] [N1]ze kit-tchen[/N1]?"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

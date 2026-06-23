@@ -1,0 +1,151 @@
+{
+  "carnet_scout": {
+    "categorie": "Valeurs scoutes",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Loi et devise / Gesetz und Versprechen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[A1]Toujours[/A1] [V1]prêt(e)[/V1] !",
+            "allemand": {
+              "texte": "[A1]Allzeit[/A1] [V1]bereit[/V1]!",
+              "prononciation_FR": "[A1]Al-tsaït[/A1] [V1]bé-raït[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Be prepared[/V1]!",
+              "prononciation_FR": "[V1]Bi pri-pèrd[/V1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]tiens[/V1] [N2]ma parole[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]halte[/V1] [N2]mein Wort[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]hal-teu[/V1] [N2]maïn vort[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]keep[/V1] [N2]my word[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]kip[/V1] [N2]maï ouérd[/N2]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [V1]fais[/V1] de [N2]mon mieux[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]gebe[/V1] [N2]mein Bestes[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]gué-beu[/V1] [N2]maïn bés-tess[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]do[/V1] [N2]my best[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]dou[/N1] [N2]maï bést[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Scouts d'hier, citoyens de demain.[/N1]",
+            "allemand": {
+              "texte": "[N1]Pfadfinder von heute, Bürger von morgen.[/N1]",
+              "prononciation_FR": "[N1]Pfat-fin-deur fon hoï-teu, bur-gueur fon mor-gueun.[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]Scouts today, citizens tomorrow.[/N1]",
+              "prononciation_FR": "[N1]Skaouts tou-déï, si-ti-zenz tou-mo-ro.[/N1]"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Notre loi du cœur[/N1].",
+            "allemand": {
+              "texte": "[N1]Unser Herzensgesetz[/N1].",
+              "prononciation_FR": "[N1]Oun-zer hér-tsens-gué-zéts[/N1]."
+            },
+            "anglais": {
+              "texte": "[N1]Our law of the heart[/N1].",
+              "prononciation_FR": "[N1]Aou-eur lo ov ze hart[/N1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Vivre ensemble / Zusammenleben",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [N2]s'[/N2][V1]entraide[/V1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]helfen[/V1] [N2]uns gegenseitig[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]hel-feun[/V1] [N2]ouns gué-gueun-zaï-tich[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]help[/V1] [N2]each other[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]help[/V1] [N2]itch eu-zeur[/N2]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Le respect[/N1] [V1]est[/V1] [A1]important[/A1].",
+            "allemand": {
+              "texte": "[N1]Respekt[/N1] [V1]ist[/V1] [A1]wichtig[/A1].",
+              "prononciation_FR": "[N1]Res-pekt[/N1] [V1]ist[/V1] [A1]vich-tich[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]Respect[/N1] [V1]matters[/V1].",
+              "prononciation_FR": "[N1]Ri-spekt[/N1] [V1]ma-teurz[/V1]."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]On[/N1] [V1]prend soin[/V1] [N2]les uns des autres[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]kümmern uns[/V1] [N2]umeinander[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]ku-mern ouns[/V1] [N2]oum-aï-nan-deur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]take care of[/V1] [N2]each other[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]teïk kér ov[/V1] [N2]itch eu-zeur[/N2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[A1]Ensemble[/A1] [N1]on[/N1] [V1]est[/V1] [A2]plus forts[/A2].",
+            "allemand": {
+              "texte": "[A1]Zusammen[/A1] [V1]sind[/V1] [N1]wir[/N1] [A2]stärker[/A2].",
+              "prononciation_FR": "[A1]Tsou-za-meun[/A1] [V1]zind[/V1] [N1]vir[/N1] [A2]chter-keur[/A2]."
+            },
+            "anglais": {
+              "texte": "[A1]Together[/A1] [N1]we[/N1] [V1]are[/V1] [A2]stronger[/A2].",
+              "prononciation_FR": "[A1]Tou-gué-zeur[/A1] [N1]wi[/N1] [V1]ar[/V1] [A2]strong-gueur[/A2]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]accueille[/V1] [N2]les différences[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]nehmen[/V1] [N2]Unterschiede[/N2] an.",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]né-meun[/V1] [N2]oun-ter-chi-deu[/N2] ann."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]embrace[/V1] [N2]differences[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]im-breïss[/V1] [N2]di-fe-renn-siz[/N2]."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[N1]La paix[/N1] [V1]commence[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[N1]Der Frieden[/N1] [V1]beginnt[/V1] [A1]hier[/A1].",
+              "prononciation_FR": "[N1]Dér fri-deun[/N1] [V1]bé-guint[/V1] [A1]hir[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]Peace[/N1] [V1]starts[/V1] [A1]here[/A1].",
+              "prononciation_FR": "[N1]Piss[/N1] [V1]starts[/V1] [A1]hir[/A1]."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

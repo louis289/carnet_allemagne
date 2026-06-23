@@ -1,0 +1,199 @@
+{
+  "carnet_scout": {
+    "categorie": "Salutations & politesse",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Salutations / Begrüßung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Bonjour[/V1] !",
+            "allemand": {
+              "texte": "[V1]Hallo[/V1]! / [V2]Guten Tag[/V2]!",
+              "prononciation_FR": "[V1]Ha-lo[/V1]! / [V2]Gou-teun tag[/V2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Hello[/V1]!",
+              "prononciation_FR": "[V1]Hé-lo[/V1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Bonsoir[/V1] !",
+            "allemand": {
+              "texte": "[V1]Guten Abend[/V1]!",
+              "prononciation_FR": "[V1]Gou-teun a-beund[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Good evening[/V1]!",
+              "prononciation_FR": "[V1]Goud i-vning[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Bonne nuit[/N1] !",
+            "allemand": {
+              "texte": "[N1]Gute Nacht[/N1]!",
+              "prononciation_FR": "[N1]Gou-teu nakht[/N1]!"
+            },
+            "anglais": {
+              "texte": "[N1]Good night[/N1]!",
+              "prononciation_FR": "[N1]Goud naït[/N1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Se présenter / Sich vorstellen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Comment [N1]tu[/N1] [N2]t'[/N2][V1]appelles[/V1] ?",
+            "allemand": {
+              "texte": "Wie [V1]heißt[/V1] [N1]du[/N1]?",
+              "prononciation_FR": "Vi [V1]haïst[/V1] [N1]dou[/N1]?"
+            },
+            "anglais": {
+              "texte": "What [V1]is[/V1] [N2]your name[/N2]?",
+              "prononciation_FR": "Wot [V1]iz[/V1] [N2]your neïm[/N2]?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [N2]m'[/N2][V1]appelle[/V1]...",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]heiße[/V1]...",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]haï-sseu[/V1]..."
+            },
+            "anglais": {
+              "texte": "[N2]My name[/N2] [V1]is[/V1]...",
+              "prononciation_FR": "[N2]Maï neïm[/N2] [V1]iz[/V1]..."
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Enchanté(e)[/V1] !",
+            "allemand": {
+              "texte": "[V1]Freut mich[/V1]!",
+              "prononciation_FR": "[V1]Froït mich[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Nice to meet you[/V1]!",
+              "prononciation_FR": "[V1]Naïss tou mit you[/V1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Politesse / Höflichkeit",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[A1]S'il te plaît[/A1].",
+            "allemand": {
+              "texte": "[A1]Bitte[/A1].",
+              "prononciation_FR": "[A1]Bi-teu[/A1]."
+            },
+            "anglais": {
+              "texte": "[A1]Please[/A1].",
+              "prononciation_FR": "[A1]Pliz[/A1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Merci[/V1] [A1]beaucoup[/A1] !",
+            "allemand": {
+              "texte": "[V1]Danke[/V1] [A1]schön[/A1]!",
+              "prononciation_FR": "[V1]Dan-keu[/V1] [A1]cheun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Thank you[/V1]!",
+              "prononciation_FR": "[V1]Senk you[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]De rien[/V1].",
+            "allemand": {
+              "texte": "[V1]Gern geschehen[/V1].",
+              "prononciation_FR": "[V1]Guern gué-ché-heun[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]You're welcome[/V1].",
+              "prononciation_FR": "[V1]Yor wel-keum[/V1]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Pardon[/V1] / [V1]Excuse-moi[/V1].",
+            "allemand": {
+              "texte": "[V1]Entschuldigung[/V1].",
+              "prononciation_FR": "[V1]Enn-tchoul-di-goung[/V1]."
+            },
+            "anglais": {
+              "texte": "[V1]Excuse me[/V1].",
+              "prononciation_FR": "[V1]Ex-kiouz mi[/V1]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "Compréhension / Verständnis",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]comprends[/V1] [N2]pas[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]verstehe[/V1] [N2]nicht[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fer-chté-heu[/V1] [N2]nicht[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [N2]don't[/N2] [V1]understand[/V1].",
+              "prononciation_FR": "[N1]Aï[/N1] [N2]dont[/N2] [V1]eun-der-stannd[/V1]."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Tu[/N1] [V1]peux[/V1] [V2]répéter[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kannst[/V1] [N1]du[/N1] das [V2]wiederholen[/V2]?",
+              "prononciation_FR": "[V1]Kanst[/V1] [N1]dou[/N1] dass [V2]vi-deur-ho-leun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]repeat[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]ri-pit[/V2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[A1]Plus lentement[/A1], [A2]s'il te plaît[/A2].",
+            "allemand": {
+              "texte": "[A2]Bitte[/A2] [A1]langsamer[/A1].",
+              "prononciation_FR": "[A2]Bi-teu[/A2] [A1]lang-za-meur[/A1]."
+            },
+            "anglais": {
+              "texte": "[A1]Slower[/A1], [A2]please[/A2].",
+              "prononciation_FR": "[A1]Slo-weur[/A1], [A2]pliz[/A2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Tu[/N1] [V1]parles[/V1] [N2]français[/N2] ?",
+            "allemand": {
+              "texte": "[V1]Sprichst[/V1] [N1]du[/N1] [N2]Französisch[/N2]?",
+              "prononciation_FR": "[V1]Chprichst[/V1] [N1]dou[/N1] [N2]fran-tseu-zich[/N2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]speak[/V2] [N2]French[/N2]?",
+              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]spik[/V2] [N2]frentch[/N2]?"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

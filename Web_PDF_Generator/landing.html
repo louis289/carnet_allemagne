@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet Scout – Bundeslager 2026 | Générateur</title>
+    <meta name="description" content="Générateur de carnet de survie linguistique pour le Bundeslager 2026. Choisissez la version et le mode d'impression.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --edln-green: #114C2A;
+            --edln-red: #BF3030;
+            --edln-light-green: #16663A;
+            --edln-yellow: #EAB642;
+            --edln-blue: #19355E;
+            --bg-dark: #0a1628;
+            --bg-card: rgba(255,255,255,0.04);
+            --bg-card-hover: rgba(255,255,255,0.09);
+            --border: rgba(255,255,255,0.1);
+            --border-active: var(--edln-yellow);
+            --text: #f0f4f8;
+            --text-muted: #8a9bb5;
+            --glow-green: rgba(22, 102, 58, 0.5);
+            --glow-yellow: rgba(234, 182, 66, 0.4);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ─── Animated Background ─── */
+        .bg-canvas {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+        .bg-canvas::before {
+            content: '';
+            position: absolute;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(17,76,42,0.35) 0%, transparent 70%);
+            top: -200px; left: -200px;
+            animation: drift1 18s ease-in-out infinite alternate;
+        }
+        .bg-canvas::after {
+            content: '';
+            position: absolute;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(25,53,94,0.45) 0%, transparent 70%);
+            bottom: -100px; right: -100px;
+            animation: drift2 14s ease-in-out infinite alternate;
+        }
+        .blob3 {
+            position: absolute;
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(234,182,66,0.08) 0%, transparent 70%);
+            top: 40%; left: 50%;
+            transform: translate(-50%, -50%);
+            animation: drift3 20s ease-in-out infinite alternate;
+        }
+        @keyframes drift1 { to { transform: translate(80px, 120px); } }
+        @keyframes drift2 { to { transform: translate(-80px, -100px); } }
+        @keyframes drift3 { to { transform: translate(-50%, -50%) scale(1.4); } }
+
+        /* Grid lines */
+        .grid-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* ─── Layout ─── */
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        /* ─── Header ─── */
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease;
+        }
+        .logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 28px;
+        }
+        .logos img {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+        }
+        .logo-bula {
+            border-radius: 12px;
+        }
+        .logo-divider {
+            width: 2px;
+            height: 50px;
+            background: linear-gradient(to bottom, transparent, var(--edln-yellow), transparent);
+            opacity: 0.6;
+        }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--edln-green), var(--edln-light-green));
+            color: var(--edln-yellow);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 50px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(234,182,66,0.3);
+        }
+        .header h1 {
+            font-family: 'Cabin Sketch', cursive;
+            font-size: clamp(32px, 6vw, 58px);
+            color: var(--text);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+        .header h1 span { color: var(--edln-yellow); }
+        .header p {
+            color: var(--text-muted);
+            font-size: 16px;
+            font-weight: 300;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* ─── Section Titles ─── */
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        /* ─── Version Cards ─── */
+        .versions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 640px) { .versions-grid { grid-template-columns: 1fr; } }
+
+        .version-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            padding: 28px 22px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        .version-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(234,182,66,0.0) 0%, rgba(234,182,66,0.0) 100%);
+            transition: background 0.3s;
+        }
+        .version-card:hover {
+            border-color: rgba(234,182,66,0.4);
+            background: var(--bg-card-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(234,182,66,0.1);
+        }
+        .version-card.selected {
+            border-color: var(--edln-yellow);
+            background: rgba(234,182,66,0.07);
+            box-shadow: 0 0 0 1px var(--edln-yellow), 0 16px 48px rgba(234,182,66,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+        .version-card.selected::before {
+            background: linear-gradient(135deg, rgba(234,182,66,0.05) 0%, transparent 100%);
+        }
+        .version-card input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .v-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px; height: 48px;
+            border-radius: 14px;
+            font-family: 'Cabin Sketch', cursive;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: 2px solid;
+        }
+        .v-badge.v1 { color: #a0b4c8; border-color: rgba(160,180,200,0.3); background: rgba(160,180,200,0.08); }
+        .v-badge.v2 { color: var(--edln-light-green); border-color: rgba(22,102,58,0.4); background: rgba(22,102,58,0.1); }
+        .v-badge.v3 { color: var(--edln-yellow); border-color: rgba(234,182,66,0.4); background: rgba(234,182,66,0.1); }
+
+        .v-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+        .v-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        .v-check {
+            position: absolute;
+            top: 16px; right: 16px;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-size: 12px;
+        }
+        .version-card.selected .v-check {
+            background: var(--edln-yellow);
+            border-color: var(--edln-yellow);
+            color: #000;
+        }
+        .v-tags {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .v-tag {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 3px 8px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.05);
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+        }
+        .v-tag.highlight {
+            background: rgba(234,182,66,0.1);
+            color: var(--edln-yellow);
+            border-color: rgba(234,182,66,0.3);
+        }
+        .v-recommended {
+            position: absolute;
+            bottom: -1px; left: 50%;
+            transform: translateX(-50%);
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #000;
+            background: var(--edln-yellow);
+            padding: 3px 10px;
+            border-radius: 50px 50px 0 0;
+        }
+
+        /* ─── Print Mode Toggle ─── */
+        .print-section {
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+        .print-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        @media (max-width: 560px) { .print-options { grid-template-columns: 1fr; } }
+
+        .print-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: 22px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.3s;
+        }
+        .print-card:hover {
+            border-color: rgba(255,255,255,0.2);
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+        .print-card.selected {
+            border-color: var(--edln-yellow);
+            background: rgba(234,182,66,0.06);
+            box-shadow: 0 0 0 1px var(--edln-yellow), 0 8px 24px rgba(234,182,66,0.1);
+        }
+        .print-card input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .print-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+        .print-info .p-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .print-info .p-desc {
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        .print-check {
+            position: absolute;
+            top: 14px; right: 14px;
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            transition: all 0.2s;
+        }
+        .print-card.selected .print-check {
+            background: var(--edln-yellow);
+            border-color: var(--edln-yellow);
+            color: #000;
+        }
+
+        /* ─── Generate Button ─── */
+        .generate-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+        .btn-generate {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--edln-green) 0%, var(--edln-light-green) 100%);
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            padding: 18px 48px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 8px 32px rgba(17,76,42,0.5), 0 0 0 1px rgba(22,102,58,0.5);
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .btn-generate::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .btn-generate:hover {
+            transform: translateY(-3px) scale(1.03);
+            box-shadow: 0 16px 48px rgba(17,76,42,0.6), 0 0 0 1px rgba(234,182,66,0.4), 0 0 60px rgba(22,102,58,0.3);
+        }
+        .btn-generate:hover::before { opacity: 1; }
+        .btn-generate:active { transform: scale(0.98); }
+        .btn-generate .icon { font-size: 22px; }
+        .btn-generate .shimmer {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 50%, transparent 100%);
+            transform: translateX(-100%);
+            animation: shimmer 3s ease-in-out infinite 2s;
+        }
+        @keyframes shimmer { to { transform: translateX(100%); } }
+
+        .url-preview {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-family: 'Courier New', monospace;
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: all 0.3s;
+        }
+        .url-preview span { color: var(--edln-yellow); }
+
+        /* ─── Footer ─── */
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* ─── Animations ─── */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .versions-section { animation: fadeInUp 0.8s ease 0.1s both; }
+    </style>
+</head>
+<body>
+    <div class="bg-canvas"><div class="blob3"></div></div>
+    <div class="grid-overlay"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logos">
+                <img src="logo_edln.png" alt="Logo EDLN">
+                <div class="logo-divider"></div>
+                <img src="logo_bula.jpeg" alt="Logo Bundeslager" class="logo-bula">
+            </div>
+            <div class="badge">🏕️ EDLN · Bundeslager 2026</div>
+            <h1>Générateur de <span>Carnet Scout</span></h1>
+            <p>Choisissez la version et le mode d'affichage, puis générez votre carnet de survie linguistique.</p>
+        </header>
+
+        <!-- Version Selection -->
+        <section class="versions-section">
+            <div class="section-label">1 — Choisir la version</div>
+            <div class="versions-grid">
+                <!-- V1 -->
+                <label class="version-card" id="card-v1" onclick="selectVersion('1')">
+                    <input type="radio" name="version" value="1">
+                    <div class="v-check" id="check-v1"></div>
+                    <div class="v-badge v1">V1</div>
+                    <div class="v-name">Version Originale</div>
+                    <div class="v-desc">Le carnet de base. Catégories classiques, urgences en premier.</div>
+                    <div class="v-tags">
+                        <span class="v-tag">15 catégories</span>
+                        <span class="v-tag">Format A5</span>
+                    </div>
+                </label>
+
+                <!-- V2 -->
+                <label class="version-card" id="card-v2" onclick="selectVersion('2')">
+                    <input type="radio" name="version" value="2">
+                    <div class="v-check" id="check-v2"></div>
+                    <div class="v-badge v2">V2</div>
+                    <div class="v-name">Version Enrichie</div>
+                    <div class="v-desc">Nouvelles expressions extraites du PDF BuLa 2026 avec sous-catégories.</div>
+                    <div class="v-tags">
+                        <span class="v-tag">16 catégories</span>
+                        <span class="v-tag">Sous-catégories</span>
+                        <span class="v-tag highlight">+Contenu</span>
+                    </div>
+                </label>
+
+                <!-- V3 -->
+                <label class="version-card selected" id="card-v3" onclick="selectVersion('3')">
+                    <input type="radio" name="version" value="3" checked>
+                    <div class="v-check" id="check-v3">✓</div>
+                    <div class="v-badge v3">V3</div>
+                    <div class="v-name">Version Complète</div>
+                    <div class="v-desc">Fusion V1 + V2. Ordre V1, urgences à la fin pour accès rapide.</div>
+                    <div class="v-tags">
+                        <span class="v-tag">16 catégories</span>
+                        <span class="v-tag highlight">Recommandé</span>
+                        <span class="v-tag highlight">🏆 Complet</span>
+                    </div>
+                    <div class="v-recommended">Recommandé</div>
+                </label>
+            </div>
+        </section>
+
+        <!-- Print Mode -->
+        <section class="print-section">
+            <div class="section-label">2 — Mode d'affichage</div>
+            <div class="print-options">
+                <!-- Screen -->
+                <label class="print-card selected" id="card-screen" onclick="selectPrint('0')">
+                    <input type="radio" name="print" value="0" checked>
+                    <div class="print-check" id="check-screen">✓</div>
+                    <div class="print-icon">🖥️</div>
+                    <div class="print-info">
+                        <div class="p-name">Mode Aperçu</div>
+                        <div class="p-desc">Affichage à l'écran avec mise en page simulée. Idéal pour prévisualiser le carnet.</div>
+                    </div>
+                </label>
+
+                <!-- Print -->
+                <label class="print-card" id="card-print" onclick="selectPrint('1')">
+                    <input type="radio" name="print" value="1">
+                    <div class="print-check" id="check-print"></div>
+                    <div class="print-icon">🖨️</div>
+                    <div class="print-info">
+                        <div class="p-name">Mode Gabarit Impression</div>
+                        <div class="p-desc">Format optimisé A4 paysage pour impression directe. Marges, couleurs et tailles précises.</div>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <!-- Generate -->
+        <section class="generate-section">
+            <button class="btn-generate" onclick="generate()">
+                <span class="shimmer"></span>
+                <span class="icon">📚</span>
+                <span>Générer le Carnet</span>
+            </button>
+            <div class="url-preview" id="url-preview">
+                <span>localhost:9090</span>/Web_PDF_Generator/index.html?<span>v=3</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            EDLN · Équipe des langues · Bundeslager 2026<br>
+            Carnet de survie linguistique franco-germanique
+        </footer>
+    </div>
+
+    <script>
+        let selectedVersion = '3';
+        let selectedPrint = '0';
+
+        function selectVersion(v) {
+            selectedVersion = v;
+            ['1','2','3'].forEach(id => {
+                const card = document.getElementById('card-v' + id);
+                const check = document.getElementById('check-v' + id);
+                if (id === v) {
+                    card.classList.add('selected');
+                    check.textContent = '✓';
+                } else {
+                    card.classList.remove('selected');
+                    check.textContent = '';
+                }
+            });
+            updatePreview();
+        }
+
+        function selectPrint(p) {
+            selectedPrint = p;
+            const cards = { '0': 'screen', '1': 'print' };
+            Object.entries(cards).forEach(([val, name]) => {
+                const card = document.getElementById('card-' + name);
+                const check = document.getElementById('check-' + name);
+                if (val === p) {
+                    card.classList.add('selected');
+                    check.textContent = '✓';
+                } else {
+                    card.classList.remove('selected');
+                    check.textContent = '';
+                }
+            });
+            updatePreview();
+        }
+
+        function updatePreview() {
+            const params = [`v=${selectedVersion}`];
+            if (selectedPrint === '1') params.push('print=1');
+            const urlStr = `index.html?${params.join('&')}`;
+            const preview = document.getElementById('url-preview');
+            preview.innerHTML = `<span>localhost:9090</span>/Web_PDF_Generator/${urlStr.replace(/v=(\d)/, 'v=<span>$1</span>')}`;
+        }
+
+        function generate() {
+            const params = [`v=${selectedVersion}`];
+            if (selectedPrint === '1') params.push('print=1');
+            window.location.href = `index.html?${params.join('&')}`;
+        }
+
+        // Init
+        updatePreview();
+    </script>
+</body>
+</html>
