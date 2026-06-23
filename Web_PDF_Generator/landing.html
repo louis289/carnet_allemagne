@@ -300,6 +300,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 14px;
+            margin-bottom: 20px;
         }
         @media (max-width: 560px) { .print-options { grid-template-columns: 1fr; } }
 
@@ -362,6 +363,72 @@
             border-color: var(--edln-yellow);
             color: #000;
         }
+
+        /* Spiral side selector */
+        .spiral-section {
+            display: none;
+            animation: fadeInUp 0.4s ease;
+        }
+        .spiral-section.visible { display: block; }
+        .spiral-note {
+            font-size: 12px;
+            color: var(--text-muted);
+            background: rgba(191,48,48,0.08);
+            border: 1px solid rgba(191,48,48,0.25);
+            border-radius: 10px;
+            padding: 10px 14px;
+            margin-bottom: 14px;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+        .spiral-options {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        @media (max-width: 560px) { .spiral-options { grid-template-columns: repeat(2, 1fr); } }
+        .spiral-card {
+            position: relative;
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 12px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .spiral-card:hover {
+            border-color: rgba(191,48,48,0.4);
+            background: var(--bg-card-hover);
+        }
+        .spiral-card.selected {
+            border-color: #BF3030;
+            background: rgba(191,48,48,0.08);
+            box-shadow: 0 0 0 1px #BF3030;
+        }
+        .spiral-diagram {
+            width: 56px; height: 36px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 4px;
+            position: relative;
+            background: rgba(255,255,255,0.03);
+            flex-shrink: 0;
+        }
+        .spiral-diagram .dots {
+            position: absolute;
+            background: rgba(191,48,48,0.6);
+            border-radius: 50px;
+        }
+        .spiral-diagram.left .dots  { left: 4px; top: 50%; transform: translateY(-50%); width: 5px; height: 85%; }
+        .spiral-diagram.right .dots { right: 4px; top: 50%; transform: translateY(-50%); width: 5px; height: 85%; }
+        .spiral-diagram.top .dots   { top: 4px; left: 50%; transform: translateX(-50%); height: 5px; width: 85%; }
+        .spiral-name { font-size: 12px; font-weight: 600; color: var(--text); }
+        .spiral-sub  { font-size: 10px; color: var(--text-muted); }
 
         /* ─── Generate Button ─── */
         .generate-section {
@@ -478,10 +545,10 @@
                     <div class="v-check" id="check-v1"></div>
                     <div class="v-badge v1">V1</div>
                     <div class="v-name">Version Originale</div>
-                    <div class="v-desc">Le carnet de base. Catégories classiques, urgences en premier.</div>
+                    <div class="v-desc">Le carnet original. Politesse, repas, camp, drague, voyage, expressions et urgences.</div>
                     <div class="v-tags">
-                        <span class="v-tag">15 catégories</span>
-                        <span class="v-tag">Format A5</span>
+                        <span class="v-tag">12 catégories</span>
+                        <span class="v-tag">Origine</span>
                     </div>
                 </label>
 
@@ -491,10 +558,10 @@
                     <div class="v-check" id="check-v2"></div>
                     <div class="v-badge v2">V2</div>
                     <div class="v-name">Version Enrichie</div>
-                    <div class="v-desc">Nouvelles expressions extraites du PDF BuLa 2026 avec sous-catégories.</div>
+                    <div class="v-desc">Expressions extraites du PDF BuLa 2026 avec sous-catégories enrichies.</div>
                     <div class="v-tags">
-                        <span class="v-tag">16 catégories</span>
-                        <span class="v-tag">Sous-catégories</span>
+                        <span class="v-tag">15 catégories</span>
+                        <span class="v-tag">PDF BuLa</span>
                         <span class="v-tag highlight">+Contenu</span>
                     </div>
                 </label>
@@ -527,7 +594,7 @@
                     <div class="print-icon">🖥️</div>
                     <div class="print-info">
                         <div class="p-name">Mode Aperçu</div>
-                        <div class="p-desc">Affichage à l'écran avec mise en page simulée. Idéal pour prévisualiser le carnet.</div>
+                        <div class="p-desc">Prévisualisation à l'écran. Aucune marge de spirale appliquée.</div>
                     </div>
                 </label>
 
@@ -538,9 +605,43 @@
                     <div class="print-icon">🖨️</div>
                     <div class="print-info">
                         <div class="p-name">Mode Gabarit Impression</div>
-                        <div class="p-desc">Format optimisé A4 paysage pour impression directe. Marges, couleurs et tailles précises.</div>
+                        <div class="p-desc">Marge spirale de 22&nbsp;mm réservée + zone de danger visible. Prêt à imprimer.</div>
                     </div>
                 </label>
+            </div>
+
+            <!-- Spiral side selector (visible only in print mode) -->
+            <div class="spiral-section" id="spiral-section">
+                <div class="spiral-note">
+                    <span>🚨</span>
+                    <span>Choisissez le <strong>côté de la spirale</strong>. La marge de sécurité (22&nbsp;mm) sera appliquée de ce côté afin qu'aucun contenu ne passe sous les anneaux.</span>
+                </div>
+                <div class="spiral-options">
+                    <div class="spiral-card selected" id="spiral-left" onclick="selectSpiral('left')">
+                        <div class="spiral-diagram left"><div class="dots"></div></div>
+                        <div class="spiral-name">⇐ Gauche</div>
+                        <div class="spiral-sub">Carnet paysage standard</div>
+                    </div>
+                    <div class="spiral-card" id="spiral-right" onclick="selectSpiral('right')">
+                        <div class="spiral-diagram right"><div class="dots"></div></div>
+                        <div class="spiral-name">Droite ⇒</div>
+                        <div class="spiral-sub">Pages inversées</div>
+                    </div>
+                    <div class="spiral-card" id="spiral-top" onclick="selectSpiral('top')">
+                        <div class="spiral-diagram top"><div class="dots"></div></div>
+                        <div class="spiral-name">↑ Haut</div>
+                        <div class="spiral-sub">Carnet à la française</div>
+                    </div>
+                    <div class="spiral-card" id="spiral-alternating" onclick="selectSpiral('alternating')">
+                        <div class="spiral-diagram" style="display:flex;align-items:stretch;overflow:hidden;">
+                            <div style="width:5px;background:rgba(191,48,48,0.5);border-radius:3px 0 0 3px;margin:3px 0 3px 4px;"></div>
+                            <div style="flex:1;"></div>
+                            <div style="width:5px;background:rgba(191,48,48,0.3);border-radius:0 3px 3px 0;margin:3px 4px 3px 0;"></div>
+                        </div>
+                        <div class="spiral-name">⇄ Recto/Verso</div>
+                        <div class="spiral-sub">Impair=gauche, pair=droite</div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -565,6 +666,7 @@
     <script>
         let selectedVersion = '3';
         let selectedPrint = '0';
+        let selectedSpiral = 'left';
 
         function selectVersion(v) {
             selectedVersion = v;
@@ -596,20 +698,40 @@
                     check.textContent = '';
                 }
             });
+            // Afficher/cacher le sélecteur de spirale
+            const spiralSection = document.getElementById('spiral-section');
+            spiralSection.classList.toggle('visible', p === '1');
+            updatePreview();
+        }
+
+        function selectSpiral(side) {
+            selectedSpiral = side;
+            ['left','right','top','alternating'].forEach(s => {
+                const card = document.getElementById('spiral-' + s);
+                if (card) card.classList.toggle('selected', s === side);
+            });
             updatePreview();
         }
 
         function updatePreview() {
             const params = [`v=${selectedVersion}`];
-            if (selectedPrint === '1') params.push('print=1');
+            if (selectedPrint === '1') {
+                params.push('print=1');
+                params.push(`spiral=${selectedSpiral}`);
+            }
             const urlStr = `index.html?${params.join('&')}`;
             const preview = document.getElementById('url-preview');
-            preview.innerHTML = `<span>localhost:9090</span>/Web_PDF_Generator/${urlStr.replace(/v=(\d)/, 'v=<span>$1</span>')}`;
+            let html = `<span>localhost:9090</span>/Web_PDF_Generator/${urlStr}`;
+            html = html.replace(/v=(\d)/, 'v=<span>$1</span>');
+            preview.innerHTML = html;
         }
 
         function generate() {
             const params = [`v=${selectedVersion}`];
-            if (selectedPrint === '1') params.push('print=1');
+            if (selectedPrint === '1') {
+                params.push('print=1');
+                params.push(`spiral=${selectedSpiral}`);
+            }
             window.location.href = `index.html?${params.join('&')}`;
         }
 

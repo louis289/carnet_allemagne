@@ -9,9 +9,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* ─── Spiral side switcher ─── */
+        #spiral-switcher {
+            display: none;          /* caché par défaut, affiché par JS en print-mode */
+            align-items: center;
+            gap: 4px;
+            background: rgba(191,48,48,0.12);
+            border: 1px solid rgba(191,48,48,0.3);
+            border-radius: 50px;
+            padding: 3px 8px;
+        }
+        #spiral-switcher span {
+            font-size: 10px;
+            color: rgba(255,255,255,0.4);
+            margin-right: 4px;
+            white-space: nowrap;
+        }
+        .spiral-btn {
+            background: transparent;
+            border: 1px solid rgba(191,48,48,0.35);
+            border-radius: 50px;
+            color: rgba(255,255,255,0.6);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .spiral-btn:hover {
+            background: rgba(191,48,48,0.2);
+            color: #fff;
+        }
+        .spiral-btn.active {
+            background: #BF3030;
+            border-color: #BF3030;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
-    <!-- Bouton retour à la page d'accueil (masqué en impression) -->
+    <!-- Barre de navigation fixe (masquée en impression) -->
     <div id="nav-bar" style="
         display: none;
         position: fixed;
@@ -40,7 +80,18 @@
         " onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.8'">
             ← Accueil
         </a>
+
         <div style="color: rgba(255,255,255,0.5); font-size: 12px;" id="nav-info"></div>
+
+        <!-- Sélecteur de côté spirale (visible uniquement en mode gabarit) -->
+        <div id="spiral-switcher">
+            <span>🌀 Spirale :</span>
+            <button class="spiral-btn active" id="sbtn-left"        onclick="setSpiralSide('left')"        title="Spirale à gauche">← Gauche</button>
+            <button class="spiral-btn"        id="sbtn-right"       onclick="setSpiralSide('right')"       title="Spirale à droite">Droite →</button>
+            <button class="spiral-btn"        id="sbtn-top"         onclick="setSpiralSide('top')"         title="Spirale en haut">↑ Haut</button>
+            <button class="spiral-btn"        id="sbtn-alternating" onclick="setSpiralSide('alternating')" title="Recto/Verso : impair=gauche, pair=droite">⇄ Recto/Verso</button>
+        </div>
+
         <button onclick="window.print()" style="
             background: #114C2A;
             color: #EAB642;

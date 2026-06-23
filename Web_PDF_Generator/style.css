@@ -11,6 +11,10 @@
     --grammar-n: var(--edln-blue);
     --grammar-v: var(--edln-light-green);
     --grammar-a: var(--edln-red);
+
+    /* Zone de spirale : 0 par défaut, 22mm en mode gabarit */
+    --spiral-zone: 0mm;
+    --page-pad: 15mm;
 }
 
 @page {
@@ -57,11 +61,10 @@ h1, h2, h3, h4, .title-font {
     margin: 5mm auto;
     page-break-after: always;
     box-sizing: border-box;
-    padding: 15mm;
+    padding: var(--page-pad);  /* 15mm uniforme — la spirale est gérée par .spiral-* */
     position: relative;
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    /* Disposition pour accepter le plus de contenu possible */
     display: flex;
     flex-direction: column;
     gap: 6mm;
@@ -70,15 +73,195 @@ h1, h2, h3, h4, .title-font {
 @media print {
     body { 
         background: white; 
-        display: block; 
+        display: block;
+        padding-top: 0 !important;
+    }
+    #nav-bar {
+        display: none !important;
     }
     .page { 
         margin: 0; 
         box-shadow: none; 
         page-break-after: always;
     }
+    /* En impression, cacher l'indicateur visuel mais garder la marge */
+    .page::before {
+        display: none !important;
+    }
     #app { display: block; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   MODE GABARIT IMPRESSION — Zone de spirale directionnelle
+   La classe body.print-mode active la zone, body.spiral-* fixe
+   le côté. La marge est appliquée via padding CSS uniquement.
+   ═══════════════════════════════════════════════════════════════ */
+
+body.print-mode {
+    --spiral-zone: 22mm;
+}
+
+/* ── Marges selon le côté de la spirale ── */
+
+/* Gauche (défaut) : décale le contenu vers la droite */
+body.print-mode.spiral-left .page {
+    padding-left: calc(var(--page-pad) + var(--spiral-zone));
+}
+
+/* Droite : décale le contenu vers la gauche */
+body.print-mode.spiral-right .page {
+    padding-left:  var(--page-pad);
+    padding-right: calc(var(--page-pad) + var(--spiral-zone));
+}
+
+/* Haut : décale le contenu vers le bas */
+body.print-mode.spiral-top .page {
+    padding-top: calc(var(--page-pad) + var(--spiral-zone));
+}
+
+/* ── Indicateur visuel : hachures rouges (écran uniquement) ── */
+
+/* Masque par défaut la zone de surbrillance */
+body.print-mode .page::before,
+body.print-mode .page::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 10;
+    box-sizing: border-box;
+    /* Hachures diagonales rouges */
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(191, 48, 48, 0.07) 0px,
+        rgba(191, 48, 48, 0.07) 5px,
+        transparent 5px,
+        transparent 11px
+    );
+}
+
+/* Spirale GAUCHE */
+body.print-mode.spiral-left .page::before {
+    top: 0; left: 0;
+    width: var(--spiral-zone);
+    height: 100%;
+    border-right: 2px dashed rgba(191, 48, 48, 0.5);
+}
+body.print-mode.spiral-left .page::after {
+    background: radial-gradient(circle, rgba(191,48,48,0.4) 3px, transparent 3px);
+    background-size: 6px 18mm;
+    background-repeat: repeat-y;
+    background-position: center top 9mm;
+    top: 0; left: calc(var(--spiral-zone) / 2 - 3px);
+    width: 6px; height: 100%;
+}
+
+/* Spirale DROITE */
+body.print-mode.spiral-right .page::before {
+    top: 0; right: 0; left: auto;
+    width: var(--spiral-zone);
+    height: 100%;
+    border-left: 2px dashed rgba(191, 48, 48, 0.5);
+    border-right: none;
+}
+body.print-mode.spiral-right .page::after {
+    background: radial-gradient(circle, rgba(191,48,48,0.4) 3px, transparent 3px);
+    background-size: 6px 18mm;
+    background-repeat: repeat-y;
+    background-position: center top 9mm;
+    top: 0; right: calc(var(--spiral-zone) / 2 - 3px); left: auto;
+    width: 6px; height: 100%;
+}
+
+/* Spirale HAUT */
+body.print-mode.spiral-top .page::before {
+    top: 0; left: 0;
+    width: 100%;
+    height: var(--spiral-zone);
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(191, 48, 48, 0.07) 0px,
+        rgba(191, 48, 48, 0.07) 5px,
+        transparent 5px,
+        transparent 11px
+    );
+    border-bottom: 2px dashed rgba(191, 48, 48, 0.5);
+}
+body.print-mode.spiral-top .page::after {
+    background: radial-gradient(circle, rgba(191,48,48,0.4) 3px, transparent 3px);
+    background-size: 18mm 6px;
+    background-repeat: repeat-x;
+    background-position: left 9mm center;
+    left: 0; top: calc(var(--spiral-zone) / 2 - 3px);
+    width: 100%; height: 6px;
+}
+
+/* ── Spirale ALTERNÉE — impair=gauche, pair=droite (mode recto/verso) ── */
+
+/* Marges */
+body.print-mode.spiral-alternating #app .page:nth-child(odd) {
+    padding-left:  calc(var(--page-pad) + var(--spiral-zone));
+    padding-right: var(--page-pad);
+}
+body.print-mode.spiral-alternating #app .page:nth-child(even) {
+    padding-right: calc(var(--page-pad) + var(--spiral-zone));
+    padding-left:  var(--page-pad);
+}
+
+/* Visuel pages IMPAIRES (spirale gauche) */
+body.print-mode.spiral-alternating #app .page:nth-child(odd)::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: auto;
+    width: var(--spiral-zone); height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(191,48,48,0.07) 0px, rgba(191,48,48,0.07) 5px,
+        transparent 5px, transparent 11px
+    );
+    border-right: 2px dashed rgba(191,48,48,0.5);
+    pointer-events: none; z-index: 10; box-sizing: border-box;
+}
+body.print-mode.spiral-alternating #app .page:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle, rgba(191,48,48,0.4) 3px, transparent 3px);
+    background-size: 6px 18mm; background-repeat: repeat-y;
+    background-position: center top 9mm;
+    top: 0; left: calc(var(--spiral-zone) / 2 - 3px); right: auto;
+    width: 6px; height: 100%;
+    pointer-events: none; z-index: 11;
+}
+
+/* Visuel pages PAIRES (spirale droite) */
+body.print-mode.spiral-alternating #app .page:nth-child(even)::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; left: auto;
+    width: var(--spiral-zone); height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(191,48,48,0.07) 0px, rgba(191,48,48,0.07) 5px,
+        transparent 5px, transparent 11px
+    );
+    border-left: 2px dashed rgba(191,48,48,0.5);
+    pointer-events: none; z-index: 10; box-sizing: border-box;
+}
+body.print-mode.spiral-alternating #app .page:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    background: radial-gradient(circle, rgba(191,48,48,0.4) 3px, transparent 3px);
+    background-size: 6px 18mm; background-repeat: repeat-y;
+    background-position: center top 9mm;
+    top: 0; right: calc(var(--spiral-zone) / 2 - 3px); left: auto;
+    width: 6px; height: 100%;
+    pointer-events: none; z-index: 11;
+}
+
+/* Contour doré pour voir la limite de page */
+body.print-mode .page {
+    box-shadow: 0 0 0 2px var(--edln-yellow), 0 4px 16px rgba(0,0,0,0.35);
+}
+
 
 /* Header & Footer par page */
 .page-number {
