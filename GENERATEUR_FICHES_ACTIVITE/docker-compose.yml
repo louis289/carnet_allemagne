@@ -1,0 +1,72 @@
+services:
+
+  # ─────────────────────────────────────────────────────────
+  # SERVICE 1 : Ollama (LLM local, GPU AMD ROCm ou CPU)
+  # ─────────────────────────────────────────────────────────
+  ollama:
+    image: ollama/ollama:latest
+    container_name: edln_ollama
+    ports:
+      - "11434:11434"          # Accessible depuis l'app locale ou le conteneur generateur
+    volumes:
+      - ollama_data:/root/.ollama   # Modèles persistants entre redémarrages
+    environment:
+      - OLLAMA_ORIGINS=*             # Autorise les requêtes cross-origin
+    restart: unless-stopped
+    # Pour GPU AMD (ROCm) sur Linux, décommentez :
+    # devices:
+    #   - /dev/kfd
+    #   - /dev/dri
+    # Pour NVIDIA GPU, décommentez :
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+  # ─────────────────────────────────────────────────────────
+  # SERVICE 2 : Téléchargement automatique des modèles
+  # S'exécute une fois au démarrage pour pull les modèles.
+  # ─────────────────────────────────────────────────────────
+  ollama-pull:
+    image: ollama/ollama:latest
+    container_name: edln_ollama_pull
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    entrypoint: >
+      sh -c "
+        sleep 5 &&
+        ollama pull qwen2.5:1.5b &&
+        ollama pull mistral:latest &&
+        echo 'Modèles prêts !'
+      "
+    restart: no    # Ne s'exécute qu'une fois
+
+  # ─────────────────────────────────────────────────────────
+  # SERVICE 3 : Application GUI (mode X11 - Windows avec VcXsrv)
+  # Démarrez seulement si vous avez configuré un serveur X11.
+  # Sinon, lancez app.py localement avec Ollama pointant sur localhost:11434
+  # ─────────────────────────────────────────────────────────
+  generateur:
+    build: .
+    container_name: edln_generateur
+    depends_on:
+      - ollama
+    environment:
+      - DISPLAY=${DISPLAY:-host.docker.internal:0.0}  # X11 depuis Windows (VcXsrv)
+      - OLLAMA_HOST=http://ollama:11434
+    volumes:
+      - ./Fiches_Générées:/app/Fiches_Générées     # Fiches PDF exportées
+      - ./fiches_conçues.json:/app/fiches_conçues.json  # JSON courant
+      - ./Ressources:/app/Ressources                # Ressources / PPDB en live
+    network_mode: host    # Simplifie l'accès X11
+    profiles:
+      - gui    # Ne démarre que si : docker-compose --profile gui up
+
+volumes:
+  ollama_data:
+    name: edln_ollama_models
