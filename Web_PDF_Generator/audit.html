@@ -1968,7 +1968,7 @@ async function runVerification(frText, deText, enText) {
     async function translate(q, langpair) {
         if (!q) return null;
         try {
-            const url = `https://api.mymemory.translated.world/get?q=${encodeURIComponent(q)}&langpair=${langpair}`;
+            const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${langpair}`;
             const r   = await fetch(url);
             const d   = await r.json();
             if (d.responseStatus === 200) {
