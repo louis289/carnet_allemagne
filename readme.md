@@ -12,17 +12,18 @@ L'objectif est de leur fournir des bases solides pour communiquer avec les autre
 
 ## 📂 Architecture du Projet
 
-Le dépôt est composé de plusieurs modules indépendants et d'outils complémentaires :
+Le dépôt est composé de plusieurs modules intégrés autour d'un portail web unique :
 
 ```
 ├── JSON/                         # Base de données des expressions linguistiques (.json)
-├── Web_PDF_Generator/            # Générateur web statique pour imprimer le livret final
-├── GENERATEUR_FICHES_ACTIVITE/   # Application de bureau Python (CustomTkinter) pour fiches d'activité avec Ollama
-├── Fiches_activitees/            # Ressources et gabarits pour les fiches d'activité
-├── Fiches_Générées/              # Dossier de sortie des fiches d'activité générées
-├── audite/                       # Interface web Node.js pour réviser et corriger les JSON
-├── audit.js                      # Script Node de nettoyage automatique des tags grammaticales
-├── fix_json.js                   # Script Node de re-structuration et correction des JSON
+├── Web_PDF_Generator/            # Portail web unifié (Carnet + Éditeur interactif de fiches)
+├── GENERATEUR_FICHES_ACTIVITE/   # Application de bureau Python (CustomTkinter) de conception assistée par IA
+├── Fiches_activitees/            # Gabarits et scripts de compilation ReportLab pour les fiches
+│   ├── Fiches_Générées/          # Fiches PDF compilées en sortie
+│   └── fiches_conçues.json       # Fichier JSON contenant les fiches d'activités
+├── server.js                     # Serveur Node.js central servant le portail et les API
+├── audit.js                      # Script de nettoyage automatique des tags grammaticales
+├── fix_json.js                   # Script de correction structurelle des JSON
 └── readme.md                     # Cette documentation
 ```
 
@@ -39,39 +40,39 @@ Une **règle de formatage grammatical stricte** lie les mots équivalents d'une 
 
 Chaque traduction comporte le texte cible et sa prononciation francisée.
 
-### 2. Le Générateur de Livret Final (`/Web_PDF_Generator/`)
-C'est le composant principal de mise en page visuelle du carnet de survie au format A4 Paysage.
-- **Fonctionnement** : Il charge dynamiquement les fichiers JSON, les trie par ordre alphabétique, calcule une pagination intelligente (maximum 4 cartes d'expressions par page, ou moins pour les cartes longues), génère un sommaire indexé automatique et applique la charte graphique officielle EDLN (Couleurs HSL, polices Cabin Sketch & Open Sans, logos et cadre décoratif).
-- **Ajustement Automatique** : Intègre un script d'ajustement dynamique de mise en page qui force les prononciations sur une seule ligne (en réduisant leur taille de police si besoin) et redimensionne proportionnellement le texte et l'espacement des pages pour empêcher tout débordement lors de l'impression.
-- **Lancement** : 
-  1. Ouvrez le dossier dans VS Code.
-  2. Lancez `index.html` avec l'extension **Live Server** (requis pour le chargement des fichiers JSON via `fetch`).
-  3. Pour générer le PDF, utilisez la fonction d'impression du navigateur (`Ctrl + P` ou `Cmd + P`), configurez en **A4 Paysage**, marges à **Aucune** et activez les **Graphiques d'arrière-plan**.
+### 2. Le Portail Unique EDLN (`http://localhost:9090/`)
+Toutes les applications web du projet sont centralisées et servies via le script `server.js` racine.
 
-### 3. Générateur de Fiches d'Activité Scout (`/GENERATEUR_FICHES_ACTIVITE/`)
-Une application de bureau interactive moderne développée en Python (CustomTkinter) pour guider la conception de fiches d'activité selon les 5 temps pédagogiques EDLN (Sensibilisation, Règles, Déroulement, Dénouement, Bilan).
-- **Fonctionnalités** :
-  - Chat interactif avec un assistant virtuel (via Ollama local ou API Cloud compatible OpenAI/Mistral/Groq).
-  - Lecture automatique des documents PDF de branche (PPDB) pour injecter le contexte pédagogique officiel.
-  - Outil de mise au propre du bloc-note.
-  - Génération de fiche finale structurée au format JSON et compilation automatique en PDF via ReportLab.
-- **Lancement local** :
+* **Lancement du Portail Unique** :
+  À la racine du projet, lancez :
+  ```bash
+  node server.js
+  ```
+  Ouvrez ensuite `http://localhost:9090/` dans votre navigateur.
+
+* **📖 Générateur de Carnet Scout** :
+  * Accessible via l'onglet principal du portail.
+  * Il charge dynamiquement les expressions linguistiques du dossier `/JSON/`, applique la mise en page sous forme de cartes d'expression A4 Paysage, calcule un sommaire automatique et gère le gabarit pour la reliure spirale.
+  * Pour exporter en PDF : `Ctrl + P` (ou `Cmd + P`), configurez en **A4 Paysage**, marges à **Aucune** et activez les **Graphiques d'arrière-plan**.
+
+* **📋 Générateur & Éditeur Interactif de Fiches d'Activités** :
+  * Accessible via le second onglet du portail.
+  * Permet d'importer un fichier JSON contenant vos fiches d'activité, de les modifier de manière interactive via un formulaire (Titre, Imaginaire, Objectifs PPDB, Déroulement sous forme d'étapes, etc.), d'ajouter de nouvelles fiches ou de supprimer des fiches existantes.
+  * **Téléchargement JSON** : Exporte instantanément la configuration éditée.
+  * **Génération PDF** : Lance en arrière-plan la compilation ReportLab des fiches d'activité modifiées en appelant le script Python et affiche des boutons de téléchargement direct des PDFs générés.
+
+### 3. Concepteur Intelligent de Fiches d'Activité (`/GENERATEUR_FICHES_ACTIVITE/`)
+Une application de bureau interactive en Python (CustomTkinter) pour concevoir pas à pas ses fiches d'activité guidé par une IA locale (Ollama) ou distante (OpenAI, Groq, Mistral) qui intègre la lecture des PPDB officielles.
+* **Lancement local** :
   ```bash
   cd GENERATEUR_FICHES_ACTIVITE
   pip install -r requirements.txt
   python app.py
   ```
-- **Lancement Docker (Facultatif)** : Un `Dockerfile` et un `docker-compose.yml` sont fournis pour exécuter l'application dans un environnement isolé ou conteneurisé.
 
-### 4. Outil d'Audit et d'Édition (`/audite/`)
-Un mini-serveur local avec interface web pour réviser et modifier facilement les expressions directement dans les fichiers JSON.
-- **Lancement** :
-  ```bash
-  cd audite
-  node server.js
-  ```
-  Ouvrez ensuite `http://localhost:3000` dans votre navigateur.
+### 4. Outil d'Audit et d'Édition du Lexique
+* Le mode audit est accessible sur le portail unique à l'adresse `http://localhost:9090/Web_PDF_Generator/audit.html` (ou en cliquant sur le bouton 🔍 en haut à droite du portail). Il permet de relire et modifier directement les traductions et les balises grammaticales au sein des fichiers JSON de lexique.
 
 ### 5. Scripts de traitement (Racine)
-- `node audit.js` : Supprime les balises grammaticales abusives sur les expressions figées (ex: s'il te plaît, please, etc.) et insère la source littéraire des citations de cinéma/pop-culture dans le JSON.
-- `node fix_json.js` : Effectue des correctifs ciblés sur les structures JSON (renommage de sections, regroupement des citations par œuvre originale, correction de fautes ou expressions spécifiques).
+* `node audit.js` : Supprime les balises grammaticales abusives sur les expressions figées.
+* `node fix_json.js` : Effectue des correctifs structurels ciblés sur les fichiers JSON du lexique.

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carnet Scout – Bundeslager 2026 | Générateur</title>
-    <meta name="description" content="Générateur de carnet de survie linguistique pour le Bundeslager 2026. Choisissez la version et le mode d'impression.">
+    <title>Portail Scout EDLN – Bundeslager 2026</title>
+    <meta name="description" content="Portail unique pour le carnet de survie linguistique et la génération de fiches d'activités EDLN.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <style>
         :root {
             --edln-green: #114C2A;
@@ -15,22 +15,22 @@
             --edln-light-green: #16663A;
             --edln-yellow: #EAB642;
             --edln-blue: #19355E;
-            --bg-dark: #0a1628;
-            --bg-card: rgba(255,255,255,0.04);
-            --bg-card-hover: rgba(255,255,255,0.09);
-            --border: rgba(255,255,255,0.1);
-            --border-active: var(--edln-yellow);
-            --text: #f0f4f8;
-            --text-muted: #8a9bb5;
-            --glow-green: rgba(22, 102, 58, 0.5);
-            --glow-yellow: rgba(234, 182, 66, 0.4);
+            --bg-light: #F9F7F4;
+            --bg-card: #FFFFFF;
+            --bg-card-hover: #FFFFFF;
+            --border: rgba(17, 76, 42, 0.08);
+            --border-active: var(--edln-green);
+            --text: #114C2A;
+            --text-muted: #5c7063;
+            --glow-green: rgba(22, 102, 58, 0.1);
+            --glow-yellow: rgba(234, 182, 66, 0.08);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            font-family: 'Outfit', sans-serif;
-            background: var(--bg-dark);
+            font-family: 'Open Sans', sans-serif;
+            background: var(--bg-light);
             color: var(--text);
             min-height: 100vh;
             overflow-x: hidden;
@@ -47,7 +47,7 @@
             content: '';
             position: absolute;
             width: 800px; height: 800px;
-            background: radial-gradient(circle, rgba(17,76,42,0.35) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(17,76,42,0.06) 0%, transparent 70%);
             top: -200px; left: -200px;
             animation: drift1 18s ease-in-out infinite alternate;
         }
@@ -55,14 +55,14 @@
             content: '';
             position: absolute;
             width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(25,53,94,0.45) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(25,53,94,0.05) 0%, transparent 70%);
             bottom: -100px; right: -100px;
             animation: drift2 14s ease-in-out infinite alternate;
         }
         .blob3 {
             position: absolute;
             width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(234,182,66,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(234,182,66,0.05) 0%, transparent 70%);
             top: 40%; left: 50%;
             transform: translate(-50%, -50%);
             animation: drift3 20s ease-in-out infinite alternate;
@@ -71,14 +71,13 @@
         @keyframes drift2 { to { transform: translate(-80px, -100px); } }
         @keyframes drift3 { to { transform: translate(-50%, -50%) scale(1.4); } }
 
-        /* Grid lines */
         .grid-overlay {
             position: fixed;
             inset: 0;
             z-index: 0;
             background-image:
-                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+                linear-gradient(rgba(17,76,42,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(17,76,42,0.02) 1px, transparent 1px);
             background-size: 60px 60px;
         }
 
@@ -86,7 +85,7 @@
         .container {
             position: relative;
             z-index: 1;
-            max-width: 960px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 40px 20px 80px;
         }
@@ -94,7 +93,7 @@
         /* ─── Header ─── */
         .header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
             animation: fadeInDown 0.8s ease;
         }
         .logos {
@@ -102,20 +101,20 @@
             align-items: center;
             justify-content: center;
             gap: 24px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
         }
         .logos img {
-            height: 64px;
+            height: 56px;
             width: auto;
             object-fit: contain;
-            filter: drop-shadow(0 4px 16px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.15));
         }
         .logo-bula {
-            border-radius: 12px;
+            border-radius: 10px;
         }
         .logo-divider {
             width: 2px;
-            height: 50px;
+            height: 40px;
             background: linear-gradient(to bottom, transparent, var(--edln-yellow), transparent);
             opacity: 0.6;
         }
@@ -123,18 +122,18 @@
             display: inline-block;
             background: linear-gradient(135deg, var(--edln-green), var(--edln-light-green));
             color: var(--edln-yellow);
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 700;
             letter-spacing: 3px;
             text-transform: uppercase;
-            padding: 6px 18px;
+            padding: 6px 16px;
             border-radius: 50px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             border: 1px solid rgba(234,182,66,0.3);
         }
         .header h1 {
             font-family: 'Cabin Sketch', cursive;
-            font-size: clamp(32px, 6vw, 58px);
+            font-size: clamp(32px, 5vw, 52px);
             color: var(--text);
             line-height: 1.1;
             margin-bottom: 8px;
@@ -142,10 +141,59 @@
         .header h1 span { color: var(--edln-yellow); }
         .header p {
             color: var(--text-muted);
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 300;
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
+        }
+
+        /* ─── Tab Switcher ─── */
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease;
+        }
+        .tab-btn {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 12px 28px;
+            border-radius: 50px;
+            border: 2px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .tab-btn:hover {
+            border-color: var(--edln-light-green);
+            color: var(--text);
+            transform: translateY(-2px);
+        }
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--edln-green), var(--edln-light-green));
+            border-color: var(--edln-green);
+            color: white;
+            box-shadow: 0 8px 24px rgba(17, 76, 42, 0.15);
+        }
+
+        /* Tool Sections */
+        .tool-section {
+            display: none;
+            animation: fadeIn 0.4s ease;
+        }
+        .tool-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         /* ─── Section Titles ─── */
@@ -166,14 +214,15 @@
             background: var(--border);
         }
 
-        /* ─── Version Cards ─── */
+        /* ─── Section 1: Carnet Generator ─── */
         .versions-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 16px;
             margin-bottom: 40px;
         }
-        @media (max-width: 640px) { .versions-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .versions-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 560px) { .versions-grid { grid-template-columns: 1fr; } }
 
         .version-card {
             position: relative;
@@ -194,18 +243,18 @@
             transition: background 0.3s;
         }
         .version-card:hover {
-            border-color: rgba(234,182,66,0.4);
+            border-color: var(--edln-light-green);
             background: var(--bg-card-hover);
             transform: translateY(-4px);
-            box-shadow: 0 16px 48px rgba(0,0,0,0.4), 0 0 0 1px rgba(234,182,66,0.1);
+            box-shadow: 0 12px 32px rgba(17,76,42,0.06);
         }
         .version-card.selected {
-            border-color: var(--edln-yellow);
-            background: rgba(234,182,66,0.07);
-            box-shadow: 0 0 0 1px var(--edln-yellow), 0 16px 48px rgba(234,182,66,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+            border-color: var(--edln-green);
+            background: rgba(17,76,42,0.03);
+            box-shadow: 0 0 0 1px var(--edln-green), 0 12px 32px rgba(17,76,42,0.08);
         }
         .version-card.selected::before {
-            background: linear-gradient(135deg, rgba(234,182,66,0.05) 0%, transparent 100%);
+            background: linear-gradient(135deg, rgba(17,76,42,0.02) 0%, transparent 100%);
         }
         .version-card input[type="radio"] {
             position: absolute;
@@ -224,9 +273,10 @@
             margin-bottom: 16px;
             border: 2px solid;
         }
-        .v-badge.v1 { color: #a0b4c8; border-color: rgba(160,180,200,0.3); background: rgba(160,180,200,0.08); }
+        .v-badge.v1 { color: #5c7063; border-color: rgba(92,112,99,0.3); background: rgba(92,112,99,0.08); }
         .v-badge.v2 { color: var(--edln-light-green); border-color: rgba(22,102,58,0.4); background: rgba(22,102,58,0.1); }
-        .v-badge.v3 { color: var(--edln-yellow); border-color: rgba(234,182,66,0.4); background: rgba(234,182,66,0.1); }
+        .v-badge.v3 { color: #a16207; border-color: rgba(234,182,66,0.4); background: rgba(234,182,66,0.1); }
+        .v-badge.v4 { color: var(--edln-blue); border-color: rgba(25,53,94,0.4); background: rgba(25,53,94,0.1); }
 
         .v-name {
             font-size: 16px;
@@ -252,9 +302,9 @@
             font-size: 12px;
         }
         .version-card.selected .v-check {
-            background: var(--edln-yellow);
-            border-color: var(--edln-yellow);
-            color: #000;
+            background: var(--edln-green);
+            border-color: var(--edln-green);
+            color: #fff;
         }
         .v-tags {
             margin-top: 14px;
@@ -268,13 +318,13 @@
             letter-spacing: 0.5px;
             padding: 3px 8px;
             border-radius: 50px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(17,76,42,0.04);
             color: var(--text-muted);
             border: 1px solid var(--border);
         }
         .v-tag.highlight {
-            background: rgba(234,182,66,0.1);
-            color: var(--edln-yellow);
+            background: rgba(234,182,66,0.15);
+            color: #a16207;
             border-color: rgba(234,182,66,0.3);
         }
         .v-recommended {
@@ -285,17 +335,12 @@
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
-            color: #000;
-            background: var(--edln-yellow);
+            color: #fff;
+            background: var(--edln-green);
             padding: 3px 10px;
             border-radius: 50px 50px 0 0;
         }
 
-        /* ─── Print Mode Toggle ─── */
-        .print-section {
-            margin-bottom: 40px;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
         .print-options {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -317,14 +362,14 @@
             transition: all 0.3s;
         }
         .print-card:hover {
-            border-color: rgba(255,255,255,0.2);
+            border-color: rgba(17,76,42,0.3);
             background: var(--bg-card-hover);
             transform: translateY(-2px);
         }
         .print-card.selected {
-            border-color: var(--edln-yellow);
-            background: rgba(234,182,66,0.06);
-            box-shadow: 0 0 0 1px var(--edln-yellow), 0 8px 24px rgba(234,182,66,0.1);
+            border-color: var(--edln-green);
+            background: rgba(17,76,42,0.03);
+            box-shadow: 0 0 0 1px var(--edln-green), 0 8px 24px rgba(17,76,42,0.08);
         }
         .print-card input[type="radio"] {
             position: absolute;
@@ -359,12 +404,11 @@
             transition: all 0.2s;
         }
         .print-card.selected .print-check {
-            background: var(--edln-yellow);
-            border-color: var(--edln-yellow);
-            color: #000;
+            background: var(--edln-green);
+            border-color: var(--edln-green);
+            color: #fff;
         }
 
-        /* Spiral side selector */
         .spiral-section {
             display: none;
             animation: fadeInUp 0.4s ease;
@@ -373,8 +417,8 @@
         .spiral-note {
             font-size: 12px;
             color: var(--text-muted);
-            background: rgba(191,48,48,0.08);
-            border: 1px solid rgba(191,48,48,0.25);
+            background: rgba(191,48,48,0.05);
+            border: 1px solid rgba(191,48,48,0.15);
             border-radius: 10px;
             padding: 10px 14px;
             margin-bottom: 14px;
@@ -403,20 +447,20 @@
             text-align: center;
         }
         .spiral-card:hover {
-            border-color: rgba(191,48,48,0.4);
-            background: var(--bg-card-hover);
+            border-color: rgba(191,48,48,0.3);
+            background: rgba(191,48,48,0.02);
         }
         .spiral-card.selected {
             border-color: #BF3030;
-            background: rgba(191,48,48,0.08);
+            background: rgba(191,48,48,0.05);
             box-shadow: 0 0 0 1px #BF3030;
         }
         .spiral-diagram {
             width: 56px; height: 36px;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(17,76,42,0.15);
             border-radius: 4px;
             position: relative;
-            background: rgba(255,255,255,0.03);
+            background: rgba(17,76,42,0.02);
             flex-shrink: 0;
         }
         .spiral-diagram .dots {
@@ -430,13 +474,12 @@
         .spiral-name { font-size: 12px; font-weight: 600; color: var(--text); }
         .spiral-sub  { font-size: 10px; color: var(--text-muted); }
 
-        /* ─── Generate Button ─── */
         .generate-section {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 16px;
-            animation: fadeInUp 0.8s ease 0.4s both;
+            margin-top: 30px;
         }
         .btn-generate {
             position: relative;
@@ -445,7 +488,7 @@
             gap: 12px;
             background: linear-gradient(135deg, var(--edln-green) 0%, var(--edln-light-green) 100%);
             color: white;
-            font-family: 'Outfit', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-size: 17px;
             font-weight: 700;
             padding: 18px 48px;
@@ -453,7 +496,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 8px 32px rgba(17,76,42,0.5), 0 0 0 1px rgba(22,102,58,0.5);
+            box-shadow: 0 8px 32px rgba(17,76,42,0.4), 0 0 0 1px rgba(22,102,58,0.5);
             text-decoration: none;
             overflow: hidden;
         }
@@ -466,8 +509,8 @@
             transition: opacity 0.3s;
         }
         .btn-generate:hover {
-            transform: translateY(-3px) scale(1.03);
-            box-shadow: 0 16px 48px rgba(17,76,42,0.6), 0 0 0 1px rgba(234,182,66,0.4), 0 0 60px rgba(22,102,58,0.3);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 16px 48px rgba(17,76,42,0.5), 0 0 0 1px rgba(234,182,66,0.4);
         }
         .btn-generate:hover::before { opacity: 1; }
         .btn-generate:active { transform: scale(0.98); }
@@ -484,7 +527,7 @@
         .url-preview {
             font-size: 12px;
             color: var(--text-muted);
-            background: rgba(255,255,255,0.04);
+            background: #ffffff;
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 8px 16px;
@@ -493,9 +536,391 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(17,76,42,0.02);
         }
         .url-preview span { color: var(--edln-yellow); }
+
+        /* ─── Section 2: Fiches d'Activités (Éditeur Interactif) ─── */
+        .import-export-zone {
+            background: var(--bg-card);
+            border: 2px dashed rgba(17, 76, 42, 0.15);
+            border-radius: 20px;
+            padding: 24px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .import-export-zone.dragover {
+            border-color: var(--edln-green);
+            background: rgba(17,76,42,0.02);
+        }
+        .import-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-secondary {
+            background: white;
+            color: var(--text);
+            border: 1.5px solid var(--border);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-secondary:hover {
+            border-color: var(--edln-green);
+            background: rgba(17,76,42,0.02);
+            transform: translateY(-1px);
+        }
+
+        .editor-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 850px) {
+            .editor-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sidebar-fiches {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: 800px;
+            overflow-y: auto;
+            box-shadow: 0 4px 16px rgba(17,76,42,0.02);
+        }
+        .sidebar-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            padding-bottom: 10px;
+            border-bottom: 1.5px solid var(--border);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .fiches-list-container {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .fiche-item {
+            padding: 14px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1.5px solid transparent;
+            background: rgba(17,76,42,0.01);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: relative;
+        }
+        .fiche-item:hover {
+            background: rgba(17,76,42,0.03);
+            border-color: rgba(17,76,42,0.08);
+        }
+        .fiche-item.active {
+            background: rgba(17,76,42,0.05);
+            border-color: var(--edln-green);
+        }
+        .fiche-item-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--text);
+            padding-right: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .fiche-item-subtitle {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .btn-delete-fiche-list {
+            position: absolute;
+            top: 14px; right: 14px;
+            background: transparent;
+            border: none;
+            color: var(--edln-red);
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0.3;
+            transition: opacity 0.2s;
+        }
+        .fiche-item:hover .btn-delete-fiche-list {
+            opacity: 1;
+        }
+        .btn-add-fiche {
+            background: rgba(234,182,66,0.08);
+            color: #a16207;
+            border: 2px dashed rgba(234,182,66,0.3);
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .btn-add-fiche:hover {
+            background: rgba(234,182,66,0.15);
+            border-style: solid;
+            border-color: var(--edln-yellow);
+        }
+
+        .form-panel {
+            background: var(--bg-card);
+            border: 1.5px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 16px rgba(17,76,42,0.02);
+        }
+        .form-section-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--edln-yellow);
+            margin-bottom: 20px;
+            padding-bottom: 8px;
+            border-bottom: 1.5px solid var(--border);
+            font-weight: 700;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1.5px solid var(--border);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color: var(--text);
+            transition: all 0.2s;
+            background: white;
+        }
+        .form-control:focus {
+            border-color: var(--edln-green);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(17,76,42,0.06);
+        }
+        textarea.form-control {
+            min-height: 80px;
+            resize: vertical;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .elements-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        @media (max-width: 600px) {
+            .elements-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .element-cb-label {
+            position: relative;
+            border: 1.5px solid var(--border);
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 700;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            background: white;
+        }
+        .element-cb-label input {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .element-cb-label:hover {
+            border-color: rgba(17,76,42,0.2);
+            transform: translateY(-1px);
+        }
+        .element-cb-label.checked {
+            background: rgba(17,76,42,0.06);
+            border-color: var(--edln-green);
+            color: var(--edln-green);
+            box-shadow: 0 4px 12px rgba(17,76,42,0.04);
+        }
+        .element-icon { font-size: 18px; }
+
+        .dynamic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .dynamic-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .btn-delete-item {
+            background: rgba(191,48,48,0.08);
+            color: var(--edln-red);
+            border: none;
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+        .btn-delete-item:hover {
+            background: var(--edln-red);
+            color: white;
+        }
+        .btn-add-item {
+            background: rgba(17,76,42,0.04);
+            color: var(--edln-green);
+            border: 1.5px dashed rgba(17,76,42,0.2);
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            width: 100%;
+            margin-top: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn-add-item:hover {
+            background: rgba(17,76,42,0.08);
+            border-style: solid;
+            border-color: var(--edln-green);
+        }
+
+        .pdf-download-list {
+            margin-top: 30px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            animation: fadeInUp 0.5s ease;
+        }
+        .pdf-download-card {
+            background: white;
+            border: 1.5px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+        }
+        .pdf-download-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(17,76,42,0.04);
+            border-color: rgba(17,76,42,0.15);
+        }
+        .pdf-info {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .pdf-icon {
+            font-size: 26px;
+        }
+        .pdf-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--text);
+        }
+        .btn-download-pdf {
+            background: var(--edln-green);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 13px;
+            padding: 10px 22px;
+            border-radius: 50px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(17,76,42,0.15);
+        }
+        .btn-download-pdf:hover {
+            background: var(--edln-light-green);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(17,76,42,0.25);
+        }
+
+        .spinner-container {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 30px;
+            animation: fadeIn 0.3s ease;
+        }
+        .spinner {
+            width: 44px; height: 44px;
+            border: 4px solid rgba(17,76,42,0.1);
+            border-top: 4px solid var(--edln-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
 
         /* ─── Footer ─── */
         .footer {
@@ -506,16 +931,48 @@
             opacity: 0.6;
         }
 
-        /* ─── Animations ─── */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* ─── Mode Audit Button ─── */
+        .btn-audit {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1.5px solid var(--border);
+            border-radius: 50px;
+            padding: 8px 18px;
+            color: var(--text);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s;
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .btn-audit:hover {
+            background: white;
+            border-color: var(--edln-yellow);
+            box-shadow: 0 0 12px rgba(234, 182, 66, 0.15);
+            transform: translateY(-1px);
         }
-        .versions-section { animation: fadeInUp 0.8s ease 0.1s both; }
+        @media (max-width: 640px) {
+            .btn-audit {
+                position: static;
+                margin: 0 auto 20px;
+                display: flex;
+                width: max-content;
+            }
+        }
+
+        .no-fiche-placeholder {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -523,6 +980,9 @@
     <div class="grid-overlay"></div>
 
     <div class="container">
+        <a href="audit.html" class="btn-audit">
+            <span>🔍 Mode Audit / Correction</span>
+        </a>
         <!-- Header -->
         <header class="header">
             <div class="logos">
@@ -531,13 +991,24 @@
                 <img src="logo_bula.jpeg" alt="Logo Bundeslager" class="logo-bula">
             </div>
             <div class="badge">🏕️ EDLN · Bundeslager 2026</div>
-            <h1>Générateur de <span>Carnet Scout</span></h1>
-            <p>Choisissez la version et le mode d'affichage, puis générez votre carnet de survie linguistique.</p>
+            <h1>Portail Unique <span>EDLN</span></h1>
+            <p>Générez le carnet de survie linguistique scout ou concevez/modifiez vos fiches d'activités pédagogiques.</p>
         </header>
 
-        <!-- Version Selection -->
-        <section class="versions-section">
-            <div class="section-label">1 — Choisir la version</div>
+        <!-- Tab container -->
+        <div class="tab-container">
+            <button class="tab-btn active" id="tab-carnet" onclick="switchTab('carnet')">
+                <span>📖</span> Carnet de Survie Scout
+            </button>
+            <button class="tab-btn" id="tab-fiches" onclick="switchTab('fiches')">
+                <span>📋</span> Fiches d'Activités
+            </button>
+        </div>
+
+        <!-- ─── TOOL SECTION 1: CARNET SCOUT ─── -->
+        <section class="tool-section active" id="section-carnet">
+            <!-- Version Selection -->
+            <div class="section-label">1 — Choisir la version du carnet</div>
             <div class="versions-grid">
                 <!-- V1 -->
                 <label class="version-card" id="card-v1" onclick="selectVersion('1')">
@@ -580,11 +1051,22 @@
                     </div>
                     <div class="v-recommended">Recommandé</div>
                 </label>
-            </div>
-        </section>
 
-        <!-- Print Mode -->
-        <section class="print-section">
+                <!-- V4 -->
+                <label class="version-card" id="card-v4" onclick="selectVersion('4')">
+                    <input type="radio" name="version" value="4">
+                    <div class="v-check" id="check-v4"></div>
+                    <div class="v-badge v4">V4</div>
+                    <div class="v-name">Version Auditée</div>
+                    <div class="v-desc">Version V3 validée après audit (expressions supprimées filtrées et modifs intégrées).</div>
+                    <div class="v-tags">
+                        <span class="v-tag">Filtrée</span>
+                        <span class="v-tag highlight">🏆 Propre</span>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Print Mode -->
             <div class="section-label">2 — Mode d'affichage</div>
             <div class="print-options">
                 <!-- Screen -->
@@ -643,34 +1125,212 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Generate -->
-        <section class="generate-section">
-            <button class="btn-generate" onclick="generate()">
-                <span class="shimmer"></span>
-                <span class="icon">📚</span>
-                <span>Générer le Carnet</span>
-            </button>
-            <div class="url-preview" id="url-preview">
-                <span>localhost:9090</span>/Web_PDF_Generator/index.html?<span>v=3</span>
+            <!-- Generate -->
+            <div class="generate-section">
+                <button class="btn-generate" onclick="generate()">
+                    <span class="shimmer"></span>
+                    <span class="icon">📚</span>
+                    <span>Générer le Carnet</span>
+                </button>
+                <div class="url-preview" id="url-preview">
+                    <span>localhost:9090</span>/Web_PDF_Generator/index.html?<span>v=3</span>
+                </div>
             </div>
         </section>
 
+        <!-- ─── TOOL SECTION 2: FICHES D'ACTIVITÉS ─── -->
+        <section class="tool-section" id="section-fiches">
+            <div class="section-label">Fiches d'activités pédagogiques</div>
+            
+            <!-- Drag & Drop Zone for JSON -->
+            <div class="import-export-zone" id="drop-zone">
+                <p><strong>Glissez-déposez un fichier JSON de fiches ici</strong> ou utilisez les boutons ci-dessous.</p>
+                <div class="import-actions">
+                    <input type="file" id="json-file-input" accept="application/json" style="display:none;" onchange="handleFileSelect(event)">
+                    <button class="btn-secondary" onclick="document.getElementById('json-file-input').click()">
+                        📥 Importer un JSON
+                    </button>
+                    <button class="btn-secondary" onclick="exportJSON()">
+                        📤 Télécharger le JSON
+                    </button>
+                </div>
+            </div>
+
+            <div class="editor-layout">
+                <!-- Sidebar list -->
+                <aside class="sidebar-fiches">
+                    <div class="sidebar-title">Fiches Conçues</div>
+                    <div class="fiches-list-container" id="fiches-list">
+                        <!-- Items rendered dynamically -->
+                    </div>
+                    <button class="btn-add-fiche" onclick="addNewFiche()">
+                        ➕ Nouvelle Fiche
+                    </button>
+                </aside>
+
+                <!-- Form Panel -->
+                <main class="form-panel" id="form-panel">
+                    <div class="no-fiche-placeholder" id="empty-placeholder">
+                        Sélectionnez une fiche d'activité dans la barre latérale ou créez-en une nouvelle pour commencer l'édition.
+                    </div>
+                    <div id="editor-form" style="display: none;">
+                        <!-- Section: Identification -->
+                        <div class="form-section-title">1 — Identification de l'activité</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="f-titre">Titre de la fiche</label>
+                                <input type="text" id="f-titre" class="form-control" oninput="updateCurrentFicheField('titre', this.value)">
+                            </div>
+                            <div class="form-group">
+                                <label for="f-type">Type de jeu</label>
+                                <input type="text" id="f-type" class="form-control" placeholder="Grand jeu, Veillée..." oninput="updateCurrentFicheField('type_de_jeu', this.value)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="f-duree">Durée de l'activité</label>
+                                <input type="text" id="f-duree" class="form-control" placeholder="1h30" oninput="updateCurrentFicheField('duree', this.value)">
+                            </div>
+                            <div class="form-row" style="gap:10px;">
+                                <div class="form-group">
+                                    <label for="f-nb-enfants">Nb enfants</label>
+                                    <input type="text" id="f-nb-enfants" class="form-control" placeholder="12 à 24" oninput="updateCurrentFicheField('nombre_enfants', this.value)">
+                                </div>
+                                <div class="form-group">
+                                    <label for="f-nb-adultes">Nb adultes</label>
+                                    <input type="text" id="f-nb-adultes" class="form-control" placeholder="2 à 4" oninput="updateCurrentFicheField('nombre_adultes', this.value)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section: Elements checkboxes -->
+                        <div class="form-group">
+                            <label>Éléments / Pôles pédagogiques</label>
+                            <div class="elements-grid">
+                                <label class="element-cb-label" id="lbl-terre">
+                                    <input type="checkbox" id="cb-terre" onchange="toggleElement('terre')">
+                                    <span class="element-icon">🪵</span>
+                                    <span>Terre</span>
+                                </label>
+                                <label class="element-cb-label" id="lbl-eau">
+                                    <input type="checkbox" id="cb-eau" onchange="toggleElement('eau')">
+                                    <span class="element-icon">💧</span>
+                                    <span>Eau</span>
+                                </label>
+                                <label class="element-cb-label" id="lbl-air">
+                                    <input type="checkbox" id="cb-air" onchange="toggleElement('air')">
+                                    <span class="element-icon">💨</span>
+                                    <span>Air</span>
+                                </label>
+                                <label class="element-cb-label" id="lbl-feu">
+                                    <input type="checkbox" id="cb-feu" onchange="toggleElement('feu')">
+                                    <span class="element-icon">🔥</span>
+                                    <span>Feu</span>
+                                </label>
+                                <label class="element-cb-label" id="lbl-espace">
+                                    <input type="checkbox" id="cb-espace" onchange="toggleElement('espace')">
+                                    <span class="element-icon">🌌</span>
+                                    <span>Espace</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Section: Pédagogie & But -->
+                        <div class="form-section-title" style="margin-top:30px;">2 — Scénario & But du jeu</div>
+                        <div class="form-group">
+                            <label for="f-imaginaire">Imaginaire / Cadre symbolique</label>
+                            <textarea id="f-imaginaire" class="form-control" oninput="updateCurrentFicheField('imaginaire', this.value)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-but">But du jeu</label>
+                            <textarea id="f-but" class="form-control" oninput="updateCurrentFicheField('but_du_jeu', this.value)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-mecanique">Mécanique de récolte linguistique</label>
+                            <textarea id="f-mecanique" class="form-control" oninput="updateCurrentFicheField('mecanique_recolte_expressions', this.value)"></textarea>
+                        </div>
+
+                        <!-- Section: Objectifs PPDB (Dynamic list) -->
+                        <div class="form-group">
+                            <label>Objectifs Pédagogiques (PPDB)</label>
+                            <div class="dynamic-list" id="objectifs-container"></div>
+                            <button class="btn-add-item" onclick="addDynamicItem('objectifs_ppdb')">
+                                ➕ Ajouter un objectif PPDB
+                            </button>
+                        </div>
+
+                        <!-- Section: Déroulement (Dynamic list) -->
+                        <div class="form-group">
+                            <label>Déroulement de l'activité</label>
+                            <div class="dynamic-list" id="deroulement-container"></div>
+                            <button class="btn-add-item" onclick="addDynamicItem('deroulement')">
+                                ➕ Ajouter une étape de jeu
+                            </button>
+                        </div>
+
+                        <!-- Section: Logistique -->
+                        <div class="form-section-title" style="margin-top:30px;">3 — Logistique & Fin de l'activité</div>
+                        <div class="form-group">
+                            <label for="f-materiel">Matériel requis</label>
+                            <textarea id="f-materiel" class="form-control" placeholder="Foulards, stylos..." oninput="updateCurrentFicheField('materiel', this.value)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-fin">Fin du jeu / Conditions de victoire</label>
+                            <textarea id="f-fin" class="form-control" oninput="updateCurrentFicheField('fin_du_jeu', this.value)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-noter">À noter / Points d'attention</label>
+                            <textarea id="f-noter" class="form-control" placeholder="Sécurité, hydratation..." oninput="updateCurrentFicheField('a_noter', this.value)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="f-loin">Pour aller plus loin</label>
+                            <textarea id="f-loin" class="form-control" placeholder="Variantes de jeu..." oninput="updateCurrentFicheField('pour_aller_plus_loin', this.value)"></textarea>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <!-- PDF generation button -->
+            <div class="generate-section" style="border-top:1.5px solid var(--border); padding-top:40px;">
+                <button class="btn-generate" onclick="generateActivityPDFs()">
+                    <span class="shimmer"></span>
+                    <span class="icon">🚀</span>
+                    <span>Générer les Fiches PDF</span>
+                </button>
+                <p style="font-size:12px; color:var(--text-muted);">
+                    Le serveur compilera automatiquement les PDF de toutes les fiches modifiées via ReportLab.
+                </p>
+
+                <!-- Spinner -->
+                <div class="spinner-container" id="spinner-container">
+                    <div class="spinner"></div>
+                    <p style="font-size:13px; font-weight:700;">Compilation des fichiers PDF en cours...</p>
+                </div>
+
+                <!-- Download list -->
+                <div class="pdf-download-list" id="pdf-download-list">
+                    <!-- PDF download cards rendered dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
         <footer class="footer">
-            EDLN · Équipe des langues · Bundeslager 2026<br>
-            Carnet de survie linguistique franco-germanique
+            EDLN · Équipe des langues et pédagogie · Bundeslager 2026<br>
+            Création collaborative d'outils d'animation scoute
         </footer>
     </div>
 
     <script>
+        // ─── CARNET SCOUT ACTIONS ───
         let selectedVersion = '3';
         let selectedPrint = '0';
         let selectedSpiral = 'left';
 
         function selectVersion(v) {
             selectedVersion = v;
-            ['1','2','3'].forEach(id => {
+            ['1','2','3','4'].forEach(id => {
                 const card = document.getElementById('card-v' + id);
                 const check = document.getElementById('check-v' + id);
                 if (id === v) {
@@ -698,7 +1358,6 @@
                     check.textContent = '';
                 }
             });
-            // Afficher/cacher le sélecteur de spirale
             const spiralSection = document.getElementById('spiral-section');
             spiralSection.classList.toggle('visible', p === '1');
             updatePreview();
@@ -735,8 +1394,405 @@
             window.location.href = `index.html?${params.join('&')}`;
         }
 
-        // Init
-        updatePreview();
+
+        // ─── TAB SWITCHER ───
+        function switchTab(tab) {
+            const btnCarnet = document.getElementById('tab-carnet');
+            const btnFiches = document.getElementById('tab-fiches');
+            const secCarnet = document.getElementById('section-carnet');
+            const secFiches = document.getElementById('section-fiches');
+
+            if (tab === 'carnet') {
+                btnCarnet.classList.add('active');
+                btnFiches.classList.remove('active');
+                secCarnet.classList.add('active');
+                secFiches.classList.remove('active');
+            } else {
+                btnCarnet.classList.remove('active');
+                btnFiches.classList.add('active');
+                secCarnet.classList.remove('active');
+                secFiches.classList.add('active');
+            }
+        }
+
+
+        // ─── FICHES D'ACTIVITÉS INTERACTIVE ACTIONS ───
+        let currentFiches = [];
+        let selectedFicheIndex = -1;
+
+        // Auto-load on startup
+        window.addEventListener('load', async () => {
+            updatePreview();
+            try {
+                const res = await fetch('/Fiches_activitees/fiches_conçues.json');
+                if (res.ok) {
+                    const data = await res.json();
+                    if (Array.isArray(data) && data.length > 0) {
+                        currentFiches = data;
+                        renderFichesList();
+                        selectFiche(0);
+                    }
+                }
+            } catch (e) {
+                console.error("Impossible de charger fiches_conçues.json automatiquement :", e);
+            }
+        });
+
+        // Render Sidebar List
+        function renderFichesList() {
+            const list = document.getElementById('fiches-list');
+            list.innerHTML = '';
+            
+            if (currentFiches.length === 0) {
+                list.innerHTML = '<p style="font-size:12px; color:var(--text-muted); font-style:italic;">Aucune fiche.</p>';
+                return;
+            }
+
+            currentFiches.forEach((fiche, index) => {
+                const item = document.createElement('div');
+                item.className = `fiche-item ${index === selectedFicheIndex ? 'active' : ''}`;
+                item.onclick = (e) => {
+                    if (e.target.className !== 'btn-delete-fiche-list') {
+                        selectFiche(index);
+                    }
+                };
+
+                item.innerHTML = `
+                    <span class="fiche-item-title">${fiche.titre || 'Fiche sans titre'}</span>
+                    <span class="fiche-item-subtitle">${fiche.type_de_jeu || 'Type de jeu non spécifié'} (${fiche.duree || '?'})</span>
+                    <button class="btn-delete-fiche-list" onclick="deleteFiche(${index})">🗑️</button>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        // Select a Fiche
+        function selectFiche(index) {
+            selectedFicheIndex = index;
+            renderFichesList();
+
+            const placeholder = document.getElementById('empty-placeholder');
+            const form = document.getElementById('editor-form');
+
+            if (index < 0 || index >= currentFiches.length) {
+                placeholder.style.display = 'block';
+                form.style.display = 'none';
+                return;
+            }
+
+            placeholder.style.display = 'none';
+            form.style.display = 'block';
+
+            const fiche = currentFiches[index];
+
+            // Fill text fields
+            document.getElementById('f-titre').value = fiche.titre || '';
+            document.getElementById('f-type').value = fiche.type_de_jeu || '';
+            document.getElementById('f-duree').value = fiche.duree || '';
+            document.getElementById('f-nb-enfants').value = fiche.nombre_enfants || '';
+            document.getElementById('f-nb-adultes').value = fiche.nombre_adultes || '';
+            
+            document.getElementById('f-imaginaire').value = fiche.imaginaire || '';
+            document.getElementById('f-but').value = fiche.but_du_jeu || '';
+            document.getElementById('f-mecanique').value = fiche.mecanique_recolte_expressions || '';
+            document.getElementById('f-materiel').value = fiche.materiel || '';
+            document.getElementById('f-fin').value = fiche.fin_du_jeu || '';
+            document.getElementById('f-noter').value = fiche.a_noter || '';
+            document.getElementById('f-loin').value = fiche.pour_aller_plus_loin || '';
+
+            // Checkboxes Elements (Terre, Eau, Air, Feu, Espace)
+            ['terre', 'eau', 'air', 'feu', 'espace'].forEach(el => {
+                const cb = document.getElementById(`cb-${el}`);
+                const lbl = document.getElementById(`lbl-${el}`);
+                const isChecked = fiche[el] === '__';
+                cb.checked = isChecked;
+                lbl.classList.toggle('checked', isChecked);
+            });
+
+            // Dynamic lists
+            renderDynamicList('objectifs_ppdb', 'objectifs-container');
+            renderDynamicList('deroulement', 'deroulement-container');
+        }
+
+        // Update single field of active fiche
+        function updateCurrentFicheField(field, value) {
+            if (selectedFicheIndex >= 0 && selectedFicheIndex < currentFiches.length) {
+                currentFiches[selectedFicheIndex][field] = value;
+                if (field === 'titre' || field === 'type_de_jeu' || field === 'duree') {
+                    // Update item summary in sidebar list in real time
+                    const activeItem = document.querySelector('.fiche-item.active');
+                    if (activeItem) {
+                        activeItem.querySelector('.fiche-item-title').textContent = currentFiches[selectedFicheIndex].titre || 'Fiche sans titre';
+                        activeItem.querySelector('.fiche-item-subtitle').textContent = 
+                            `${currentFiches[selectedFicheIndex].type_de_jeu || 'Type non spécifié'} (${currentFiches[selectedFicheIndex].duree || '?'})`;
+                    }
+                }
+            }
+        }
+
+        // Toggle Element checkbox
+        function toggleElement(el) {
+            if (selectedFicheIndex >= 0 && selectedFicheIndex < currentFiches.length) {
+                const cb = document.getElementById(`cb-${el}`);
+                const lbl = document.getElementById(`lbl-${el}`);
+                const val = cb.checked ? '__' : '';
+                currentFiches[selectedFicheIndex][el] = val;
+                lbl.classList.toggle('checked', cb.checked);
+            }
+        }
+
+        // Render Dynamic Objectives / Steps
+        function renderDynamicList(field, containerId) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            
+            const fiche = currentFiches[selectedFicheIndex];
+            if (!fiche[field]) {
+                fiche[field] = [];
+            }
+
+            fiche[field].forEach((item, itemIdx) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.className = 'dynamic-item';
+                
+                let inputHtml = '';
+                if (field === 'deroulement') {
+                    inputHtml = `<textarea class="form-control" oninput="updateDynamicItemValue('${field}', ${itemIdx}, this.value)">${item}</textarea>`;
+                } else {
+                    inputHtml = `<input type="text" class="form-control" value="${item}" oninput="updateDynamicItemValue('${field}', ${itemIdx}, this.value)">`;
+                }
+
+                itemDiv.innerHTML = `
+                    ${inputHtml}
+                    <button class="btn-delete-item" onclick="deleteDynamicItem('${field}', ${itemIdx})">🗑️</button>
+                `;
+                container.appendChild(itemDiv);
+            });
+        }
+
+        // Update value of dynamic item
+        function updateDynamicItemValue(field, idx, val) {
+            if (selectedFicheIndex >= 0 && selectedFicheIndex < currentFiches.length) {
+                currentFiches[selectedFicheIndex][field][idx] = val;
+            }
+        }
+
+        // Add dynamic item
+        function addDynamicItem(field) {
+            if (selectedFicheIndex >= 0 && selectedFicheIndex < currentFiches.length) {
+                const fiche = currentFiches[selectedFicheIndex];
+                if (!fiche[field]) fiche[field] = [];
+                
+                if (field === 'deroulement') {
+                    // Pre-index stage numbers
+                    const nextNum = fiche[field].length + 1;
+                    fiche[field].push(`${nextNum}. Nouvelle étape`);
+                } else {
+                    fiche[field].push("Nouvel objectif");
+                }
+                
+                const containerId = field === 'deroulement' ? 'deroulement-container' : 'objectifs-container';
+                renderDynamicList(field, containerId);
+            }
+        }
+
+        // Delete dynamic item
+        function deleteDynamicItem(field, itemIdx) {
+            if (selectedFicheIndex >= 0 && selectedFicheIndex < currentFiches.length) {
+                currentFiches[selectedFicheIndex][field].splice(itemIdx, 1);
+                const containerId = field === 'deroulement' ? 'deroulement-container' : 'objectifs-container';
+                renderDynamicList(field, containerId);
+            }
+        }
+
+        // Add brand new fiche
+        function addNewFiche() {
+            const newF = {
+                "titre": "Nouvelle Fiche d'Activité",
+                "imaginaire": "",
+                "objectifs_ppdb": [],
+                "duree": "1h",
+                "materiel": "",
+                "but_du_jeu": "",
+                "mecanique_recolte_expressions": "",
+                "deroulement": [],
+                "nombre_enfants": "",
+                "nombre_adultes": "",
+                "pour_aller_plus_loin": "",
+                "fin_du_jeu": "",
+                "a_noter": "",
+                "type_de_jeu": "Jeu court",
+                "terre": "",
+                "eau": "",
+                "air": "",
+                "feu": "",
+                "espace": ""
+            };
+            currentFiches.push(newF);
+            renderFichesList();
+            selectFiche(currentFiches.length - 1);
+        }
+
+        // Delete whole fiche
+        function deleteFiche(index) {
+            if (confirm("Voulez-vous vraiment supprimer cette fiche d'activité ?")) {
+                currentFiches.splice(index, 1);
+                renderFichesList();
+                
+                if (currentFiches.length > 0) {
+                    selectFiche(Math.max(0, index - 1));
+                } else {
+                    selectFiche(-1);
+                }
+            }
+        }
+
+        // Export JSON download
+        function exportJSON() {
+            if (currentFiches.length === 0) {
+                alert("Aucune fiche à exporter.");
+                return;
+            }
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(currentFiches, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", "fiches_conçues.json");
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        // File upload parsing
+        function handleFileSelect(evt) {
+            const files = evt.target.files;
+            if (files.length === 0) return;
+            const file = files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const parsed = JSON.parse(e.target.result);
+                    if (Array.isArray(parsed)) {
+                        currentFiches = parsed;
+                        renderFichesList();
+                        selectFiche(0);
+                        alert(`JSON importé avec succès (${currentFiches.length} fiches chargées).`);
+                    } else {
+                        alert("Format invalide. Le fichier JSON doit être un tableau d'activités.");
+                    }
+                } catch (err) {
+                    alert("Erreur de lecture du JSON: " + err.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Drag & Drop event bindings
+        const dropZone = document.getElementById('drop-zone');
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('dragover');
+        });
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('dragover');
+        });
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const file = files[0];
+                if (file.type === "application/json" || file.name.endsWith('.json')) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        try {
+                            const parsed = JSON.parse(event.target.result);
+                            if (Array.isArray(parsed)) {
+                                currentFiches = parsed;
+                                renderFichesList();
+                                selectFiche(0);
+                                alert(`JSON importé avec succès (${currentFiches.length} fiches).`);
+                            } else {
+                                alert("Format invalide. Le JSON doit être un tableau.");
+                            }
+                        } catch(err) {
+                            alert("JSON invalide: " + err.message);
+                        }
+                    };
+                    reader.readAsText(file);
+                } else {
+                    alert("Seuls les fichiers JSON sont supportés.");
+                }
+            }
+        });
+
+        // POST /api/fiches/generate to compile PDFs
+        async function generateActivityPDFs() {
+            if (currentFiches.length === 0) {
+                alert("Aucune fiche d'activité à générer.");
+                return;
+            }
+
+            const spinner = document.getElementById('spinner-container');
+            const downloadList = document.getElementById('pdf-download-list');
+
+            spinner.style.display = 'flex';
+            downloadList.innerHTML = '';
+
+            try {
+                const response = await fetch('/api/fiches/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(currentFiches)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    if (result.success && Array.isArray(result.files)) {
+                        renderPDFDownloads(result.files);
+                    } else {
+                        alert("Erreur lors de la compilation des PDFs.");
+                    }
+                } else {
+                    const errRes = await response.json();
+                    alert("Erreur serveur : " + (errRes.details || errRes.error || "Inconnue"));
+                }
+            } catch (err) {
+                alert("Erreur réseau: " + err.message);
+            } finally {
+                spinner.style.display = 'none';
+            }
+        }
+
+        // Render PDF download links
+        function renderPDFDownloads(files) {
+            const list = document.getElementById('pdf-download-list');
+            list.innerHTML = '';
+            
+            if (files.length === 0) {
+                list.innerHTML = '<p style="text-align:center;font-size:13px;">Aucun fichier généré.</p>';
+                return;
+            }
+
+            const heading = document.createElement('h3');
+            heading.textContent = "Fichiers PDF compilés avec succès :";
+            heading.style.fontSize = "14px";
+            heading.style.marginBottom = "10px";
+            heading.style.fontWeight = "700";
+            list.appendChild(heading);
+
+            files.forEach(file => {
+                const card = document.createElement('div');
+                card.className = 'pdf-download-card';
+                card.innerHTML = `
+                    <div class="pdf-info">
+                        <span class="pdf-icon">📄</span>
+                        <span class="pdf-name">${file.name}</span>
+                    </div>
+                    <a href="${file.url}" class="btn-download-pdf" target="_blank">Ouvrir / Télécharger</a>
+                `;
+                list.appendChild(card);
+            });
+        }
     </script>
 </body>
 </html>

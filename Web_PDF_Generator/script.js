@@ -19,6 +19,7 @@ const VERSION_LABELS = {
     '1': 'Version Originale (V1)',
     '2': 'Version Enrichie (V2)',
     '3': 'Version Complète (V3)',
+    '4': 'Version Complète Auditée (V4)',
 };
 
 // ─── Dossiers JSON par version ────────────────────────────────
@@ -26,6 +27,7 @@ const VERSION_DIRS = {
     '1': '../JSON/Version1/',
     '2': '../JSON/Version2/',
     '3': '../JSON/Version3/',
+    '4': '../JSON/Version4/',
 };
 
 /**
@@ -161,6 +163,24 @@ async function resolveJsonFiles(version) {
             '../JSON/Version3/15_creer_du_lien.json',
             '../JSON/Version3/16_citations.json',
             '../JSON/Version3/1_urgences.json',
+        ],
+        '4': [
+            '../JSON/Version4/2_salutations_et_politesse.json',
+            '../JSON/Version4/3_repas_et_vie_quotidienne.json',
+            '../JSON/Version4/4_au_camp.json',
+            '../JSON/Version4/5_activites_et_jeux.json',
+            '../JSON/Version4/6_chants.json',
+            '../JSON/Version4/7_nature_et_environnement.json',
+            '../JSON/Version4/8_valeurs_scoutes.json',
+            '../JSON/Version4/9_materiel_de_camping.json',
+            '../JSON/Version4/10_services_du_camp.json',
+            '../JSON/Version4/11_pleine_conscience.json',
+            '../JSON/Version4/12_forum_et_cercles_de_parole.json',
+            '../JSON/Version4/13_emotions_et_expressions.json',
+            '../JSON/Version4/14_vocabulaire_du_bula.json',
+            '../JSON/Version4/15_creer_du_lien.json',
+            '../JSON/Version4/16_citations.json',
+            '../JSON/Version4/1_urgences.json',
         ],
     };
     return FALLBACK[version] || FALLBACK['1'];
@@ -305,8 +325,19 @@ async function loadAndBuild() {
 
     app.innerHTML = ''; // Clear loading
 
-    // ─── 0. TRI ALPHABÉTIQUE ──────────────────────────────────
+    // ─── 0. FILTRAGE D'AUDIT ET TRI ALPHABÉTIQUE ────────────────
     categories.forEach(cat => {
+        // Filtrer les expressions supprimées lors de l'audit
+        cat.cas.forEach(casItem => {
+            casItem.expressions = casItem.expressions.filter(expr => {
+                return !(expr.audit && expr.audit.status === 'deleted');
+            });
+        });
+
+        // Filtrer les cas devenus vides suite aux suppressions d'expressions
+        cat.cas = cat.cas.filter(casItem => casItem.expressions.length > 0);
+
+        // Trier alphabétiquement
         cat.cas.sort((a, b) => a.nom_du_cas.localeCompare(b.nom_du_cas, 'fr', { sensitivity: 'base' }));
         cat.cas.forEach(casItem => {
             casItem.expressions.sort((a, b) => {

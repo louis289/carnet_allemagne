@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Carnet Scout – EDLN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:       #F9F7F4;
+            --bg2:      #FFFFFF;
+            --bg3:      #F0EDE8;
+            --border:   rgba(17, 76, 42, 0.08);
+            --text:     #114C2A;
+            --muted:    #5c7063;
+            --green:    #114C2A;
+            --lgreen:   #16663A;
+            --yellow:   #EAB642;
+            --red:      #BF3030;
+            --blue:     #19355E;
+            --accept:   #16a34a;
+            --delete:   #dc2626;
+            --modify:   #2563eb;
+            --later:    #9333ea;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* ── HEADER ── */
+        #header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 10px 20px;
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+            flex-shrink: 0;
+            z-index: 100;
+        }
+        #header a {
+            color: var(--green);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        #header a:hover { opacity: 1; color: var(--lgreen); }
+        #header h1 {
+            font-family: 'Cabin Sketch', cursive;
+            font-size: 20px;
+            color: var(--text);
+            flex: 1;
+        }
+        #header h1 span { color: var(--lgreen); }
+
+        /* Version selector */
+        .version-tabs {
+            display: flex;
+            gap: 6px;
+        }
+        .vtab {
+            padding: 5px 14px;
+            border-radius: 50px;
+            border: 1.5px solid var(--border);
+            background: transparent;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.2s;
+        }
+        .vtab:hover { border-color: var(--green); color: var(--green); }
+        .vtab.active { background: var(--green); border-color: var(--green); color: #fff; }
+
+        /* Global progress bar */
+        #progress-bar-wrap {
+            flex: 1;
+            max-width: 200px;
+            background: rgba(17, 76, 42, 0.08);
+            border-radius: 50px;
+            height: 8px;
+            overflow: hidden;
+        }
+        #progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accept), var(--yellow));
+            border-radius: 50px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+        #progress-pct {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--green);
+            min-width: 40px;
+            text-align: right;
+        }
+
+        /* ── MAIN LAYOUT ── */
+        #main {
+            display: grid;
+            grid-template-columns: 240px 1fr 280px;
+            flex: 1;
+            overflow: hidden;
+            gap: 0;
+        }
+
+        /* ── LEFT: Category tree ── */
+        #cat-panel {
+            background: var(--bg2);
+            overflow-y: auto;
+            padding: 12px 0;
+        }
+        #cat-panel::-webkit-scrollbar { width: 4px; }
+        #cat-panel::-webkit-scrollbar-track { background: transparent; }
+        #cat-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        /* ── LOCK / CONCURRENCY STYLING ── */
+        .user-lock-badge {
+            font-size: 9px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 50px;
+            background: rgba(220, 38, 38, 0.15);
+            color: #dc2626;
+            margin-left: 4px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+            white-space: nowrap;
+        }
+
+        /* ── CAT/SUBCAT TREE ── */
+        .cat-container {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid rgba(17, 76, 42, 0.04);
+        }
+        .cat-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 14px;
+            gap: 10px;
+            cursor: pointer;
+            background: transparent;
+            transition: background 0.2s, border-left-color 0.2s;
+            border-left: 4px solid transparent;
+        }
+        .cat-item:hover {
+            background: rgba(17, 76, 42, 0.03);
+        }
+        .cat-item.active {
+            background: rgba(17, 76, 42, 0.06);
+            border-left-color: var(--green);
+            font-weight: 700;
+        }
+        .cat-name {
+            flex: 1;
+            font-size: 13px;
+            color: var(--text);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .cat-badge {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 20px;
+            background: rgba(17, 76, 42, 0.06);
+            color: var(--muted);
+            min-width: 32px;
+            text-align: center;
+        }
+        .cat-item.all-done .cat-badge {
+            background: rgba(22, 163, 74, 0.15);
+            color: var(--accept);
+        }
+        .cat-item.has-pending .cat-badge {
+            background: rgba(234, 182, 66, 0.15);
+            color: #a16207;
+        }
+        
+        /* Reorder and rename buttons */
+        .cat-reorder-btns {
+            display: flex;
+            gap: 2px;
+            opacity: 0.15;
+            transition: opacity 0.2s;
+        }
+        .cat-item:hover .cat-reorder-btns {
+            opacity: 1;
+        }
+        .cat-btn, .subcat-btn {
+            border: none;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 10px;
+            padding: 3px 5px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .cat-btn:hover, .subcat-btn:hover {
+            background: rgba(17, 76, 42, 0.1);
+            color: var(--green);
+        }
+
+        /* Subcategory List under expanded active category */
+        .subcat-list {
+            background: rgba(17, 76, 42, 0.015);
+            padding: 4px 0 8px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border-left: 4px solid rgba(17, 76, 42, 0.06);
+        }
+        .subcat-item {
+            display: flex;
+            align-items: center;
+            padding: 6px 12px 6px 8px;
+            gap: 8px;
+            cursor: pointer;
+            border-radius: 6px 0 0 6px;
+            transition: all 0.2s;
+        }
+        .subcat-item:hover {
+            background: rgba(17, 76, 42, 0.04);
+        }
+        .subcat-item.active {
+            background: rgba(17, 76, 42, 0.08);
+            font-weight: 600;
+        }
+        .subcat-item.active .subcat-name {
+            color: var(--green);
+        }
+        .subcat-name {
+            flex: 1;
+            font-size: 12px;
+            color: var(--muted);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .subcat-name small {
+            font-size: 10px;
+            opacity: 0.7;
+            font-weight: normal;
+        }
+        .subcat-actions {
+            display: flex;
+            gap: 2px;
+            opacity: 0.15;
+            transition: opacity 0.2s;
+        }
+        .subcat-item:hover .subcat-actions {
+            opacity: 1;
+        }
+
+
+        /* ── CENTER: Expression card ── */
+        #card-panel {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 20px;
+            gap: 14px;
+        }
+
+        #card-nav-top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        #expr-pos {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 500;
+        }
+        #expr-pos strong { color: var(--green); }
+        #cas-label {
+            font-size: 11px;
+            color: var(--muted);
+            margin-left: auto;
+            text-align: right;
+            max-width: 300px;
+        }
+        #cas-label .cat { color: var(--green); font-weight: 700; font-size: 12px; }
+
+        #card-wrap {
+            flex: 1;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #card-wrap::-webkit-scrollbar { width: 4px; }
+        #card-wrap::-webkit-scrollbar-track { background: transparent; }
+        #card-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        /* Status banner */
+        #status-banner {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        #status-banner.accepted  { background: rgba(22,163,74,0.15); border: 1px solid rgba(22,163,74,0.3); color: #4ade80; }
+        #status-banner.deleted   { background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.3); color: #f87171; }
+        #status-banner.modified  { background: rgba(37,99,235,0.15); border: 1px solid rgba(37,99,235,0.3); color: #60a5fa; }
+        #status-banner.later     { background: rgba(147,51,234,0.15); border: 1px solid rgba(147,51,234,0.3); color: #c084fc; }
+
+        /* Expression blocks */
+        .expr-block {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 20px;
+            transition: border-color 0.2s;
+        }
+        .expr-block.fr-block { border-color: rgba(22,102,58,0.35); }
+        .expr-block.de-block { border-color: rgba(25,53,94,0.35); }
+        .expr-block.en-block { border-color: rgba(17, 76, 42, 0.15); }
+
+        .block-lang {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .lang-flag { font-size: 18px; }
+        .lang-label { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+
+        .expr-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        .expr-pron {
+            font-size: 13px;
+            color: var(--muted);
+            font-style: italic;
+        }
+
+        /* Edit mode */
+        .expr-block textarea {
+            width: 100%;
+            background: rgba(17, 76, 42, 0.02);
+            border: 1px solid rgba(17, 76, 42, 0.12);
+            border-radius: 8px;
+            color: var(--text);
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            padding: 8px 12px;
+            resize: vertical;
+            min-height: 44px;
+            margin-top: 6px;
+        }
+        .expr-block textarea:focus { outline: none; border-color: var(--modify); }
+        .edit-label { font-size: 11px; color: var(--muted); margin-top: 10px; margin-bottom: 2px; font-weight: 600; letter-spacing: 0.5px; }
+
+        /* Grammar coloring (simplified for display) */
+        .gr-n { color: var(--blue); font-weight: 700; }
+        .gr-v { color: var(--lgreen); font-weight: 700; }
+        .gr-a { color: var(--red); font-weight: 700; }
+
+        /* Actions */
+        #actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .action-btn {
+            padding: 12px 8px;
+            border-radius: 12px;
+            border: 1.5px solid;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+        .action-btn .kbd {
+            font-size: 10px;
+            opacity: 0.5;
+            font-weight: 400;
+        }
+        .btn-accept  { background: rgba(22,163,74,0.06);   border-color: rgba(22,163,74,0.3);   color: #15803d; }
+        .btn-delete  { background: rgba(220,38,38,0.06);   border-color: rgba(220,38,38,0.3);   color: #b91c1c; }
+        .btn-modify  { background: rgba(37,99,235,0.06);   border-color: rgba(37,99,235,0.3);   color: #1d4ed8; }
+        .btn-later   { background: rgba(147,51,234,0.1);  border-color: rgba(147,51,234,0.4);  color: #c084fc; }
+        .action-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        .action-btn.current { transform: none; filter: none; }
+        .btn-accept.current  { background: rgba(22,163,74,0.3);  border-color: #16a34a; }
+        .btn-delete.current  { background: rgba(220,38,38,0.3);  border-color: #dc2626; }
+        .btn-modify.current  { background: rgba(37,99,235,0.3);  border-color: #2563eb; }
+        .btn-later.current   { background: rgba(147,51,234,0.3); border-color: #9333ea; }
+
+        /* Save edit button */
+        #save-edit-wrap {
+            display: none;
+            gap: 8px;
+        }
+        #save-edit-wrap button {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        #btn-save-edit { background: #2563eb; color: white; }
+        #btn-cancel-edit { background: rgba(255,255,255,0.07); color: var(--muted); }
+
+        /* Nav bottom */
+        #card-nav-bottom {
+            display: flex;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .nav-btn {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.04);
+            color: var(--muted);
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .nav-btn:hover { background: rgba(255,255,255,0.08); color: var(--text); }
+        #btn-next-pending {
+            flex: 0;
+            padding: 10px 16px;
+            background: rgba(234,182,66,0.1);
+            border-color: rgba(234,182,66,0.3);
+            color: var(--yellow);
+            white-space: nowrap;
+        }
+        #btn-next-pending:hover { background: rgba(234,182,66,0.2); }
+
+        /* ── RIGHT: Dashboard ── */
+        #dash-panel {
+            background: var(--bg2);
+            border-left: 1px solid var(--border);
+            overflow-y: auto;
+            padding: 20px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        #dash-panel::-webkit-scrollbar { width: 4px; }
+        #dash-panel::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .dash-title {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        /* Circular gauge */
+        .gauge-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 0;
+        }
+        .gauge {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+        .gauge svg { transform: rotate(-90deg); }
+        .gauge circle {
+            fill: none;
+            stroke-width: 10;
+            stroke-linecap: round;
+            cx: 50; cy: 50; r: 40;
+        }
+        .gauge .track { stroke: rgba(255,255,255,0.08); }
+        .gauge .fill  { stroke: var(--yellow); stroke-dasharray: 251; stroke-dashoffset: 251; transition: stroke-dashoffset 0.6s ease; }
+        .gauge-pct {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--yellow);
+        }
+        .gauge-pct span { font-size: 10px; color: var(--muted); font-weight: 400; }
+
+        /* Stat rows */
+        .stat-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+        .stat-icon { font-size: 18px; flex-shrink: 0; }
+        .stat-info { flex: 1; }
+        .stat-label { font-size: 11px; color: var(--muted); font-weight: 500; }
+        .stat-val { font-size: 18px; font-weight: 800; color: var(--text); }
+        .stat-pct { font-size: 11px; color: var(--muted); margin-left: 4px; }
+        .stat-bar-wrap {
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 2px;
+            margin-top: 4px;
+            overflow: hidden;
+        }
+        .stat-bar { height: 100%; border-radius: 2px; transition: width 0.4s; width: 0%; }
+        .bar-accept  { background: var(--accept); }
+        .bar-delete  { background: var(--delete); }
+        .bar-modify  { background: var(--modify); }
+        .bar-later   { background: var(--later); }
+        .bar-pending { background: rgba(255,255,255,0.15); }
+
+        /* Page estimate */
+        .pages-card {
+            background: rgba(234,182,66,0.07);
+            border: 1px solid rgba(234,182,66,0.2);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+        }
+        .pages-num {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--yellow);
+        }
+        .pages-label { font-size: 12px; color: var(--muted); }
+
+        /* Export button */
+        #btn-export {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background: linear-gradient(135deg, var(--green), var(--lgreen));
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(17,76,42,0.4);
+        }
+        #btn-export:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(17,76,42,0.5); }
+        #btn-export:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+        #btn-reset {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(220,38,38,0.3);
+            background: rgba(220,38,38,0.06);
+            color: #f87171;
+            font-family: 'Outfit', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        #btn-reset:hover { background: rgba(220,38,38,0.15); }
+
+        /* Kbd hints */
+        .kbd-hint {
+            font-size: 10px;
+            color: var(--muted);
+            text-align: center;
+            padding: 4px;
+        }
+        .kbd-hint code {
+            background: rgba(255,255,255,0.08);
+            border-radius: 4px;
+            padding: 1px 5px;
+            font-family: monospace;
+        }
+
+        /* ── TTS Audio buttons ── */
+        .tts-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 8px;
+            padding: 5px 12px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(17, 76, 42, 0.2);
+            background: rgba(17, 76, 42, 0.05);
+            color: var(--muted);
+            font-size: 11px;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+        .tts-btn:hover {
+            background: rgba(17, 76, 42, 0.12);
+            color: var(--green);
+            border-color: rgba(17, 76, 42, 0.4);
+            transform: translateY(-1px);
+        }
+        .tts-btn.speaking {
+            background: rgba(22, 163, 74, 0.15);
+            border-color: rgba(22, 163, 74, 0.5);
+            color: var(--accept);
+            animation: tts-pulse 1s ease-in-out infinite;
+        }
+        .tts-btn .tts-waves {
+            display: none;
+            gap: 2px;
+            align-items: flex-end;
+            height: 12px;
+        }
+        .tts-btn.speaking .tts-waves { display: flex; }
+        .tts-btn.speaking .tts-icon  { display: none; }
+        .tts-wave {
+            width: 2px;
+            background: var(--accept);
+            border-radius: 2px;
+            animation: tts-wave 0.8s ease-in-out infinite;
+        }
+        .tts-wave:nth-child(1) { height: 4px;  animation-delay: 0s; }
+        .tts-wave:nth-child(2) { height: 10px; animation-delay: 0.1s; }
+        .tts-wave:nth-child(3) { height: 6px;  animation-delay: 0.2s; }
+        .tts-wave:nth-child(4) { height: 8px;  animation-delay: 0.15s; }
+        .tts-wave:nth-child(5) { height: 3px;  animation-delay: 0.05s; }
+        @keyframes tts-wave {
+            0%, 100% { transform: scaleY(1); opacity: 0.7; }
+            50%       { transform: scaleY(1.7); opacity: 1; }
+        }
+        @keyframes tts-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.2); }
+            50%       { box-shadow: 0 0 0 4px rgba(22,163,74,0); }
+        }
+        .tts-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+        .tts-slow-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 10px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(234, 182, 66, 0.35);
+            background: rgba(234, 182, 66, 0.07);
+            color: #a16207;
+            font-size: 10px;
+            font-weight: 700;
+            font-family: 'Open Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+        .tts-slow-btn:hover {
+            background: rgba(234, 182, 66, 0.2);
+            border-color: rgba(234, 182, 66, 0.6);
+        }
+        .tts-slow-btn.active {
+            background: rgba(234, 182, 66, 0.25);
+            border-color: var(--yellow);
+            color: var(--yellow);
+        }
+
+        /* ── Vérification des traductions ── */
+        .verify-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 1.5px solid rgba(37, 99, 235, 0.25);
+            background: rgba(37, 99, 235, 0.06);
+            color: #1d4ed8;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: 'Open Sans', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+            justify-content: center;
+        }
+        .verify-btn:hover { background: rgba(37,99,235,0.14); transform: translateY(-1px); }
+        .verify-btn:disabled { opacity: 0.5; cursor: wait; transform: none; }
+        .verify-panel {
+            margin-top: 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            background: rgba(37, 99, 235, 0.04);
+            padding: 12px 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .verify-row {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .verify-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+        .verify-text {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            font-style: italic;
+        }
+        .verify-score {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 50px;
+        }
+        .score-good  { background: rgba(22,163,74,0.15);  color: var(--accept); border: 1px solid rgba(22,163,74,0.3); }
+        .score-ok    { background: rgba(234,182,66,0.15); color: #a16207;       border: 1px solid rgba(234,182,66,0.3); }
+        .score-bad   { background: rgba(220,38,38,0.12);  color: var(--red);    border: 1px solid rgba(220,38,38,0.25); }
+        .verify-spinner {
+            display: inline-block;
+            width: 14px; height: 14px;
+            border: 2px solid rgba(37,99,235,0.2);
+            border-top-color: #2563eb;
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+            vertical-align: middle;
+        }
+
+        /* Loading */
+        #loading-screen {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            z-index: 999;
+        }
+        #loading-screen.hidden { display: none; }
+        .spinner {
+            width: 40px; height: 40px;
+            border: 3px solid rgba(255,255,255,0.1);
+            border-top-color: var(--yellow);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #load-msg { font-size: 14px; color: var(--muted); }
+
+        /* Scrollbar global */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+
+        /* ── MODAL SYSTEM ── */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 76, 42, 0.4);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+        }
+        .modal-overlay.hidden {
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .modal-container {
+            background: var(--bg2);
+            border-radius: 16px;
+            width: 90%;
+            max-width: 480px;
+            max-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border);
+            animation: modalSlide 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes modalSlide {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .modal-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+        .modal-header h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .modal-close {
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            color: var(--muted);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .modal-close:hover {
+            color: var(--red);
+        }
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .modal-footer {
+            padding: 16px 20px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: flex-end;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        .modal-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .modal-btn.cancel {
+            background: transparent;
+            border: 1.5px solid var(--border);
+            color: var(--muted);
+        }
+        .modal-btn.cancel:hover {
+            background: var(--bg3);
+        }
+        .modal-btn.save {
+            background: var(--green);
+            border: 1.5px solid var(--green);
+            color: #fff;
+        }
+        .modal-btn.save:hover {
+            background: var(--lgreen);
+            border-color: var(--lgreen);
+        }
+        
+        /* ── REORDER LIST ── */
+        .reorder-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .reorder-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            background: var(--bg3);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .reorder-item:hover {
+            background: #eae6df;
+        }
+        .reorder-item-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .reorder-actions {
+            display: flex;
+            gap: 4px;
+        }
+        .reorder-arrow-btn {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 12px;
+            color: var(--text);
+            transition: all 0.1s;
+        }
+        .reorder-arrow-btn:hover:not(:disabled) {
+            background: var(--green);
+            color: #fff;
+            border-color: var(--green);
+        }
+        .reorder-arrow-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* ── GRAMMAR HELP BOX ── */
+        #grammar-help-zone {
+            margin-top: 10px;
+            flex-shrink: 0;
+        }
+        .grammar-help-box {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: left;
+        }
+        .grammar-help-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--green);
+            margin-bottom: 6px;
+        }
+        .grammar-help-intro {
+            font-size: 11.5px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .grammar-help-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        .grammar-help-col {
+            background: var(--bg2);
+            padding: 8px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(17, 76, 42, 0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .grammar-tag-badge {
+            font-size: 9.5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: fit-content;
+            padding: 1px 4px;
+            border-radius: 4px;
+        }
+        .grammar-tag-badge.gr-n {
+            background: rgba(25, 53, 94, 0.1);
+            color: var(--blue);
+        }
+        .grammar-tag-badge.gr-v {
+            background: rgba(22, 102, 58, 0.1);
+            color: var(--lgreen);
+        }
+        .grammar-tag-badge.gr-a {
+            background: rgba(191, 48, 48, 0.1);
+            color: var(--red);
+        }
+        .grammar-help-col code {
+            font-family: Consolas, Monaco, monospace;
+            font-size: 11px;
+            background: rgba(17, 76, 42, 0.05);
+            padding: 2px 4px;
+            border-radius: 4px;
+            width: fit-content;
+            color: var(--text);
+        }
+        .grammar-help-col p {
+            font-size: 10.5px;
+            color: var(--muted);
+            line-height: 1.3;
+        }
+        .grammar-help-col p code {
+            display: inline;
+            padding: 0px 2px;
+            background: none;
+            color: var(--text);
+        }
+        .grammar-help-note {
+            font-size: 11px;
+            color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding-top: 8px;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Loading overlay -->
+<div id="loading-screen">
+    <div class="spinner"></div>
+    <div id="load-msg">Chargement des expressions…</div>
+</div>
+
+<!-- Header -->
+<div id="header">
+    <a href="landing.html">← Accueil</a>
+    <h1>🔍 Audit <span>Carnet Scout</span></h1>
+    <div class="version-tabs">
+        <button class="vtab" id="vtab-1" onclick="switchVersion('1')">V1</button>
+        <button class="vtab" id="vtab-2" onclick="switchVersion('2')">V2</button>
+        <button class="vtab active" id="vtab-3" onclick="switchVersion('3')">V3</button>
+    </div>
+    <div class="user-control" style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--muted); border-left: 1px solid var(--border); padding-left: 12px; margin-left: 12px;">
+        <span>👤 <span id="user-display">—</span></span>
+        <button onclick="changeUsername()" style="background: transparent; border: none; cursor: pointer; color: var(--green); text-decoration: underline; font-size: 11px; font-family: inherit;">Changer</button>
+    </div>
+    <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
+    <div id="progress-pct">0%</div>
+</div>
+
+<!-- Main -->
+<div id="main">
+    <!-- Left: categories -->
+    <div id="left-sidebar" style="display: flex; flex-direction: column; background: var(--bg2); border-right: 1px solid var(--border); overflow: hidden;">
+        <div id="cat-panel" style="flex: 1; overflow-y: auto; padding: 12px 0;"></div>
+        <div style="padding: 10px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; background: var(--bg2); flex-shrink: 0;">
+            <button id="btn-reorder-sections" onclick="openReorderModal()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1.5px dashed var(--green); background: transparent; color: var(--green); font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                ↕️ Ordre des sections
+            </button>
+        </div>
+    </div>
+
+    <!-- Center: card -->
+    <div id="card-panel">
+        <div id="card-nav-top">
+            <div id="expr-pos">— / —</div>
+            <div id="cas-label"><div class="cat">Chargement…</div></div>
+        </div>
+        <div id="lock-banner" style="display: none; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 12px; font-size: 13px; font-weight: 600; background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.3); color: var(--red);">
+            🔒 Cette catégorie est en cours d'audit par <span id="lock-owner" style="text-decoration: underline;">—</span> (Lecture seule)
+        </div>
+        <div id="status-banner">— état —</div>
+        <div id="card-wrap">
+            <div id="block-fr" class="expr-block fr-block">
+                <div class="block-lang"><span class="lang-flag">🇫🇷</span><span class="lang-label">Français</span></div>
+                <div class="expr-text" id="fr-text">–</div>
+            </div>
+            <div id="block-de" class="expr-block de-block">
+                <div class="block-lang"><span class="lang-flag">🇩🇪</span><span class="lang-label">Deutsch</span></div>
+                <div class="expr-text" id="de-text">–</div>
+                <div class="expr-pron" id="de-pron">–</div>
+            </div>
+            <div id="block-en" class="expr-block en-block">
+                <div class="block-lang"><span class="lang-flag">🇬🇧</span><span class="lang-label">English</span></div>
+                <div class="expr-text" id="en-text">–</div>
+                <div class="expr-pron" id="en-pron">–</div>
+            </div>
+        </div>
+        <div id="save-edit-wrap" style="display:flex">
+            <button id="btn-cancel-edit" onclick="cancelEdit()">✕ Annuler</button>
+            <button id="btn-save-edit"   onclick="saveEdit()">✔ Valider la modification</button>
+        </div>
+        <div id="actions">
+            <button class="action-btn btn-accept" onclick="decide('accepted')">✅ Accepter<span class="kbd">A</span></button>
+            <button class="action-btn btn-delete" onclick="decide('deleted')">❌ Supprimer<span class="kbd">D</span></button>
+            <button class="action-btn btn-modify" onclick="decide('modified')">✏️ Modifier<span class="kbd">M</span></button>
+            <button class="action-btn btn-later"  onclick="decide('later')">👁️ Plus tard<span class="kbd">L</span></button>
+        </div>
+        <div id="card-nav-bottom">
+            <button class="nav-btn" onclick="navigate(-1)">← Précédente</button>
+            <button class="nav-btn" id="btn-next-pending" onclick="goNextPending()">⏭ Pas encore traitées</button>
+            <button class="nav-btn" onclick="navigate(1)">Suivante →</button>
+        </div>
+        <div class="kbd-hint">
+            Raccourcis : <code>A</code> Accepter &nbsp; <code>D</code> Supprimer &nbsp; <code>M</code> Modifier &nbsp; <code>L</code> Plus tard &nbsp; <code>←</code><code>→</code> Naviguer
+        </div>
+    </div>
+
+    <!-- Right: dashboard -->
+    <div id="dash-panel">
+        <div class="dash-title">📊 Progression</div>
+        <div class="gauge-wrap">
+            <div class="gauge">
+                <svg viewBox="0 0 100 100" width="100" height="100">
+                    <circle class="track"/>
+                    <circle class="fill" id="gauge-fill"/>
+                </svg>
+                <div class="gauge-pct"><span id="gauge-pct-num">0%</span><span>traité</span></div>
+            </div>
+        </div>
+
+        <div class="stat-row">
+            <span class="stat-icon">👁️</span>
+            <div class="stat-info">
+                <div class="stat-label">Vues</div>
+                <div><span class="stat-val" id="stat-seen">0</span><span class="stat-pct" id="stat-seen-pct">/ 0</span></div>
+                <div class="stat-bar-wrap"><div class="stat-bar bar-pending" id="bar-seen" style="width:0%"></div></div>
+            </div>
+        </div>
+        <div class="stat-row">
+            <span class="stat-icon">✅</span>
+            <div class="stat-info">
+                <div class="stat-label">Acceptées <small style="color:var(--muted)">(des vues)</small></div>
+                <div><span class="stat-val" id="stat-accepted">0</span><span class="stat-pct" id="stat-accepted-pct">0%</span></div>
+                <div class="stat-bar-wrap"><div class="stat-bar bar-accept" id="bar-accepted" style="width:0%"></div></div>
+            </div>
+        </div>
+        <div class="stat-row">
+            <span class="stat-icon">❌</span>
+            <div class="stat-info">
+                <div class="stat-label">Supprimées <small style="color:var(--muted)">(des vues)</small></div>
+                <div><span class="stat-val" id="stat-deleted">0</span><span class="stat-pct" id="stat-deleted-pct">0%</span></div>
+                <div class="stat-bar-wrap"><div class="stat-bar bar-delete" id="bar-deleted" style="width:0%"></div></div>
+            </div>
+        </div>
+        <div class="stat-row">
+            <span class="stat-icon">✏️</span>
+            <div class="stat-info">
+                <div class="stat-label">Modifiées <small style="color:var(--muted)">(des vues)</small></div>
+                <div><span class="stat-val" id="stat-modified">0</span><span class="stat-pct" id="stat-modified-pct">0%</span></div>
+                <div class="stat-bar-wrap"><div class="stat-bar bar-modify" id="bar-modified" style="width:0%"></div></div>
+            </div>
+        </div>
+        <div class="stat-row">
+            <span class="stat-icon">👁️</span>
+            <div class="stat-info">
+                <div class="stat-label">Plus tard</div>
+                <div><span class="stat-val" id="stat-later">0</span><span class="stat-pct" id="stat-later-pct">0%</span></div>
+                <div class="stat-bar-wrap"><div class="stat-bar bar-later" id="bar-later" style="width:0%"></div></div>
+            </div>
+        </div>
+
+        <div class="dash-title">📄 Estimation V4</div>
+        <div class="pages-card">
+            <div class="pages-num" id="est-pages">–</div>
+            <div class="pages-label">pages estimées</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;" id="est-exprs">– expressions gardées</div>
+        </div>
+
+        <button id="btn-export" onclick="exportV4()">💾 Télécharger V4</button>
+        <button id="btn-reset" onclick="resetSession()">🗑 Réinitialiser la session</button>
+    </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════
+//  AUDIT TOOL — Carnet Scout Bundeslager 2026
+// ═══════════════════════════════════════════════════
+
+const VERSION_DIRS = {
+    '1': '../JSON/Version1/',
+    '2': '../JSON/Version2/',
+    '3': '../JSON/Version4/', // L'audit de la V3 charge/sauvegarde dans Version4 (avec fallback V3 côté serveur)
+};
+
+// ── State ──────────────────────────────────────────
+let currentVersion = new URLSearchParams(window.location.search).get('v') || '3';
+let allFiles = [];        // [{filename, url}]
+let allData  = [];        // [{filename, data}] — raw JSON
+let flatExprs = [];       // flat array of {fileIdx, catIdx, casIdx, exprIdx, key, expr, cat, cas}
+let cursor = 0;           // current flat index
+let decisions = {};       // key -> {status, modifiedData}
+let editMode = false;
+
+// Concurrency locks state
+let auditUsername = '';
+let activeServerLocks = {}; // filename -> { user, expiresAt }
+let lockIntervalId = null;
+let currentLockedFile = ''; // current filename we hold lock on
+
+function setupUsername() {
+    auditUsername = localStorage.getItem('audit_username');
+    while (!auditUsername || !auditUsername.trim()) {
+        auditUsername = prompt("Entrez votre prénom ou pseudo pour réserver les catégories que vous auditez :");
+    }
+    auditUsername = auditUsername.trim();
+    localStorage.setItem('audit_username', auditUsername);
+    
+    const userEl = document.getElementById('user-display');
+    if (userEl) userEl.textContent = auditUsername;
+}
+
+function changeUsername() {
+    const newName = prompt("Changer de nom d'utilisateur (votre prénom/pseudo) :", auditUsername);
+    if (newName && newName.trim() && newName.trim() !== auditUsername) {
+        if (currentLockedFile) {
+            releaseLock(currentLockedFile);
+        }
+        auditUsername = newName.trim();
+        localStorage.setItem('audit_username', auditUsername);
+        
+        const userEl = document.getElementById('user-display');
+        if (userEl) userEl.textContent = auditUsername;
+        
+        if (flatExprs[cursor]?.filename) {
+            acquireLock(flatExprs[cursor].filename);
+        }
+    }
+}
+
+async function acquireLock(filename) {
+    if (!filename || !auditUsername) return;
+    try {
+        const res = await fetch('/api/audit/lock', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename, user: auditUsername })
+        });
+        const data = await res.json();
+        if (data.locks) {
+            activeServerLocks = data.locks;
+        }
+        if (res.ok) {
+            currentLockedFile = filename;
+        } else {
+            if (currentLockedFile === filename) {
+                currentLockedFile = '';
+            }
+        }
+        renderCatPanel();
+        renderCard();
+    } catch (e) {
+        console.error('Erreur acquisition verrou', e);
+    }
+}
+
+async function releaseLock(filename) {
+    if (!filename || !auditUsername) return;
+    try {
+        const res = await fetch('/api/audit/unlock', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ filename, user: auditUsername })
+        });
+        const data = await res.json();
+        if (data.locks) {
+            activeServerLocks = data.locks;
+        }
+        if (currentLockedFile === filename) {
+            currentLockedFile = '';
+        }
+        renderCatPanel();
+        renderCard();
+    } catch (e) {
+        console.error('Erreur libération verrou', e);
+    }
+}
+
+async function fetchLocks() {
+    try {
+        const res = await fetch('/api/audit/locks');
+        if (res.ok) {
+            const data = await res.json();
+            activeServerLocks = data.locks || {};
+            renderCatPanel();
+            renderCard();
+        }
+    } catch (e) {
+        console.error('Erreur lecture verrous', e);
+    }
+}
+
+function startLockHeartbeat() {
+    if (lockIntervalId) clearInterval(lockIntervalId);
+    
+    const activeFile = flatExprs[cursor]?.filename;
+    if (activeFile) {
+        acquireLock(activeFile);
+    } else {
+        fetchLocks();
+    }
+    
+    lockIntervalId = setInterval(async () => {
+        const fileToLock = flatExprs[cursor]?.filename;
+        if (fileToLock) {
+            await acquireLock(fileToLock);
+        } else {
+            await fetchLocks();
+        }
+    }, 10000);
+}
+
+// ── Section Reordering ────────────────────────────────
+let tempFilesOrder = []; // Temporary files order inside modal
+
+function openReorderModal() {
+    // Collect the filenames in order
+    tempFilesOrder = allData.map(d => ({
+        filename: d.filename,
+        category: d.data.categorie || d.filename
+    }));
+    
+    renderReorderList();
+    document.getElementById('reorder-modal').classList.remove('hidden');
+}
+
+function closeReorderModal() {
+    document.getElementById('reorder-modal').classList.add('hidden');
+}
+
+function renderReorderList() {
+    const listEl = document.getElementById('reorder-list');
+    if (!listEl) return;
+    listEl.innerHTML = tempFilesOrder.map((item, idx) => {
+        const isFirst = idx === 0;
+        const isLast = idx === tempFilesOrder.length - 1;
+        return `
+            <div class="reorder-item" data-filename="${item.filename}">
+                <span class="reorder-item-title">${idx + 1}. ${item.category}</span>
+                <div class="reorder-actions">
+                    <button class="reorder-arrow-btn" onclick="moveSection(${idx}, -1)" ${isFirst ? 'disabled' : ''} title="Monter">▲</button>
+                    <button class="reorder-arrow-btn" onclick="moveSection(${idx}, 1)" ${isLast ? 'disabled' : ''} title="Descendre">▼</button>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function moveSection(idx, dir) {
+    const targetIdx = idx + dir;
+    if (targetIdx < 0 || targetIdx >= tempFilesOrder.length) return;
+    
+    // Swap items
+    const temp = tempFilesOrder[idx];
+    tempFilesOrder[idx] = tempFilesOrder[targetIdx];
+    tempFilesOrder[targetIdx] = temp;
+    
+    renderReorderList();
+}
+
+async function saveReorder() {
+    const saveBtn = document.getElementById('reorder-save-btn');
+    const cancelBtn = document.getElementById('reorder-cancel-btn');
+    if (saveBtn) {
+        saveBtn.disabled = true;
+        saveBtn.textContent = 'Enregistrement...';
+    }
+    if (cancelBtn) cancelBtn.disabled = true;
+    
+    const filesOrder = tempFilesOrder.map(item => item.filename);
+    
+    try {
+        const res = await fetch('/api/audit/reorder-files', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                version: currentVersion,
+                filesOrder: filesOrder,
+                user: auditUsername
+            })
+        });
+        
+        if (res.status === 409) {
+            const data = await res.json();
+            alert(`⚠️ Impossible de réordonner : ${data.error}`);
+            closeReorderModal();
+            return;
+        }
+        
+        if (!res.ok) throw new Error('API save failed');
+        
+        console.log('Successfully reordered files on server');
+        
+        // Reload all data
+        showLoading(true);
+        closeReorderModal();
+        
+        allFiles = []; allData = []; flatExprs = []; cursor = 0;
+        await loadAllData();
+        buildFlatExprs();
+        
+        // Position cursor at first pending
+        const firstPendingIdx = flatExprs.findIndex(e => !e.expr.audit);
+        cursor = firstPendingIdx >= 0 ? firstPendingIdx : 0;
+        
+        startLockHeartbeat();
+        renderCatPanel();
+        renderCard();
+        updateDashboard();
+    } catch(e) {
+        console.error(e);
+        alert('Erreur lors de la sauvegarde du nouvel ordre des sections.');
+    } finally {
+        if (saveBtn) {
+            saveBtn.disabled = false;
+            saveBtn.textContent = 'Enregistrer';
+        }
+        if (cancelBtn) cancelBtn.disabled = false;
+        showLoading(false);
+    }
+}
+
+// ── Init ────────────────────────────────────────────
+async function init() {
+    setupUsername();
+    showLoading(true);
+    updateVersionTabs();
+    loadSession();
+    await loadAllData();
+    buildFlatExprs();
+    
+    // Positionner le curseur sur la première expression non traitée si curseur à 0
+    if (cursor === 0 || cursor >= flatExprs.length) {
+        const firstPendingIdx = flatExprs.findIndex(e => !e.expr.audit);
+        cursor = firstPendingIdx >= 0 ? firstPendingIdx : 0;
+    }
+    
+    startLockHeartbeat();
+    
+    renderCatPanel();
+    renderCard();
+    updateDashboard();
+    showLoading(false);
+}
+
+// ── Loading ──────────────────────────────────────────
+function showLoading(show) {
+    document.getElementById('loading-screen').classList.toggle('hidden', !show);
+}
+
+// ── Version switching ────────────────────────────────
+function switchVersion(v) {
+    if (currentLockedFile) {
+        releaseLock(currentLockedFile);
+    }
+    currentVersion = v;
+    // Update URL without reload
+    history.replaceState(null, '', `?v=${v}`);
+    updateVersionTabs();
+    loadSession();
+    showLoading(true);
+    allFiles = []; allData = []; flatExprs = []; cursor = 0;
+    loadAllData().then(() => {
+        buildFlatExprs();
+        
+        // Positionner le curseur sur la première expression non traitée si curseur à 0
+        if (cursor === 0 || cursor >= flatExprs.length) {
+            const firstPendingIdx = flatExprs.findIndex(e => !e.expr.audit);
+            cursor = firstPendingIdx >= 0 ? firstPendingIdx : 0;
+        }
+        
+        startLockHeartbeat();
+        
+        renderCatPanel();
+        renderCard();
+        updateDashboard();
+        showLoading(false);
+    });
+}
+
+function updateVersionTabs() {
+    ['1','2','3'].forEach(v => {
+        document.getElementById(`vtab-${v}`).classList.toggle('active', v === currentVersion);
+    });
+}
+
+// ── Data loading ─────────────────────────────────────
+async function listJsonFiles(dirUrl) {
+    try {
+        const r = await fetch(dirUrl);
+        if (!r.ok) return null;
+        const html = await r.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const links = [...doc.querySelectorAll('a[href]')]
+            .map(a => a.getAttribute('href'))
+            .filter(h => h && h.endsWith('.json') && !h.startsWith('http'));
+        return links.map(h => h.split('/').pop().replace(/^\.\//, ''));
+    } catch(e) { return null; }
+}
+
+function naturalKey(name) {
+    const m = name.match(/^(\d+)/);
+    return m ? parseInt(m[1]) : 999;
+}
+
+async function loadAllData() {
+    const dir = VERSION_DIRS[currentVersion];
+    const files = await listJsonFiles(dir);
+    if (!files) { console.error('Cannot list directory'); return; }
+    files.sort((a, b) => naturalKey(a) - naturalKey(b));
+
+    allData = [];
+    for (const f of files) {
+        try {
+            const r = await fetch(dir + f);
+            if (!r.ok) continue;
+            const json = await r.json();
+            if (json && json.carnet_scout) {
+                allData.push({ filename: f, data: json.carnet_scout });
+            }
+        } catch(e) { console.warn('Erreur', f, e); }
+    }
+}
+
+// ── Flatten expressions ───────────────────────────────
+function buildFlatExprs() {
+    flatExprs = [];
+    decisions = {}; // Clear previous decisions
+    allData.forEach((file, fi) => {
+        const cat = file.data.categorie;
+        (file.data.cas || []).forEach((cas, ci) => {
+            (cas.expressions || []).forEach((expr, ei) => {
+                const key = `${file.filename}::${cas.nom_du_cas}::${ei}`;
+                
+                // Restauration de la décision d'audit directement depuis le JSON du serveur
+                if (expr.audit && expr.audit.status) {
+                    decisions[key] = {
+                        status: expr.audit.status,
+                        modifiedData: expr.audit.status === 'modified' ? { ...expr } : null
+                    };
+                }
+                
+                flatExprs.push({ fi, ci, ei, key, expr, cat, cas: cas.nom_du_cas, filename: file.filename });
+            });
+        });
+    });
+}
+
+// ── Session persistence ───────────────────────────────
+function sessionKey() { return `audit_session_v${currentVersion}`; }
+
+function saveSession() {
+    localStorage.setItem(sessionKey(), JSON.stringify({
+        version: currentVersion,
+        cursor,
+        lastUpdated: new Date().toISOString()
+    }));
+}
+
+function loadSession() {
+    const raw = localStorage.getItem(sessionKey());
+    if (raw) {
+        const s = JSON.parse(raw);
+        cursor = s.cursor || 0;
+    } else {
+        cursor = 0;
+    }
+}
+
+async function resetSession() {
+    if (!confirm(`Réinitialiser la session V${currentVersion} ? Toutes les décisions enregistrées sur le serveur seront perdues.`)) return;
+    showLoading(true);
+    try {
+        const res = await fetch(`/api/audit/reset?v=${currentVersion}`, { method: 'POST' });
+        if (!res.ok) throw new Error('API reset failed');
+        localStorage.removeItem(sessionKey());
+        cursor = 0;
+        decisions = {};
+        await loadAllData();
+        buildFlatExprs();
+        renderCatPanel();
+        renderCard();
+        updateDashboard();
+    } catch (e) {
+        console.error(e);
+        alert('Erreur lors de la réinitialisation de la session sur le serveur.');
+    } finally {
+        showLoading(false);
+    }
+}
+
+// Envoi asynchrone du fichier JSON complet mis à jour vers le serveur
+async function saveFileToServer(fileIdx) {
+    const file = allData[fileIdx];
+    if (!file) return;
+    const filename = file.filename;
+    
+    const newJson = {
+        carnet_scout: file.data
+    };
+    
+    try {
+        const res = await fetch('/api/audit/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                version: currentVersion,
+                filename: filename,
+                content: newJson,
+                user: auditUsername
+            })
+        });
+        if (res.status === 409) {
+            const data = await res.json();
+            alert(`⚠️ Impossible de sauvegarder : ${data.error || 'Cette catégorie est verrouillée par un autre utilisateur.'}`);
+            // Force reload data to discard local modifications and match server state
+            await loadAllData();
+            buildFlatExprs();
+            renderCatPanel();
+            renderCard();
+            updateDashboard();
+            return;
+        }
+        if (!res.ok) throw new Error('API save failed');
+        console.log(`Saved ${filename} to server`);
+    } catch (e) {
+        console.error(`Error saving ${filename}:`, e);
+    }
+}
+
+// ── Render: category panel ─────────────────────────────
+function renderCatPanel() {
+    const panel = document.getElementById('cat-panel');
+    // Group by category
+    const cats = {};
+    flatExprs.forEach(e => {
+        if (!cats[e.cat]) cats[e.cat] = { total: 0, done: 0 };
+        cats[e.cat].total++;
+        if (decisions[e.key] && decisions[e.key].status !== 'later') cats[e.cat].done++;
+    });
+
+    const currentCat = flatExprs[cursor]?.cat;
+
+    panel.innerHTML = Object.entries(cats).map(([name, c]) => {
+        const pct = c.total > 0 ? Math.round(c.done / c.total * 100) : 0;
+        const allDone = pct === 100;
+        const hasPending = c.done < c.total;
+        return `<div class="cat-item ${allDone ? 'all-done' : ''} ${hasPending ? 'has-pending' : ''} ${name === currentCat ? 'active' : ''}"
+                     onclick="jumpToCategory('${escapeSQ(name)}')">
+            <span class="cat-name">${name}</span>
+            <span class="cat-badge">${pct}%</span>
+        </div>`;
+    }).join('');
+
+    // Scroll active into view
+    const active = panel.querySelector('.cat-item.active');
+    if (active) active.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+}
+
+function escapeSQ(s) { return s.replace(/'/g, "\\'"); }
+
+function jumpToCategory(catName) {
+    const idx = flatExprs.findIndex(e => e.cat === catName);
+    if (idx >= 0) { cursor = idx; renderCard(); renderCatPanel(); }
+}
+
+// ── Render: current card ───────────────────────────────
+function renderCard() {
+    if (flatExprs.length === 0) return;
+    cursor = Math.max(0, Math.min(cursor, flatExprs.length - 1));
+    const item = flatExprs[cursor];
+    const decision = decisions[item.key];
+    const status = decision?.status || 'pending';
+
+    // Position
+    document.getElementById('expr-pos').innerHTML =
+        `Expression <strong>${cursor + 1}</strong> / ${flatExprs.length}`;
+    document.getElementById('cas-label').innerHTML =
+        `<div class="cat">${item.cat}</div><div style="font-size:11px;color:var(--muted)">${item.cas}</div>`;
+
+    // Status banner
+    const banner = document.getElementById('status-banner');
+    if (status !== 'pending') {
+        const labels = { accepted: '✅ Acceptée', deleted: '❌ Supprimée', modified: '✏️ Modifiée', later: '👁️ À revoir' };
+        banner.textContent = labels[status];
+        banner.className = status;
+        banner.style.display = 'flex';
+    } else {
+        banner.style.display = 'none';
+    }
+
+    // Action buttons highlight
+    ['accepted','deleted','modified','later'].forEach(s => {
+        const btn = document.querySelector(`.btn-${s === 'accepted' ? 'accept' : s === 'deleted' ? 'delete' : s === 'modified' ? 'modify' : 'later'}`);
+        btn.classList.toggle('current', s === status);
+    });
+
+    // Data to display (modified or original)
+    const data = (status === 'modified' && decision?.modifiedData) ? decision.modifiedData : item.expr;
+
+    if (!editMode) {
+        renderViewMode(data);
+    } else {
+        renderEditMode(data);
+    }
+
+    // Update progress bar
+    const seen = Object.keys(decisions).length;
+    const total = flatExprs.length;
+    const pct = total > 0 ? Math.round(seen / total * 100) : 0;
+    document.getElementById('progress-bar').style.width = pct + '%';
+    document.getElementById('progress-pct').textContent = pct + '%';
+}
+
+function renderViewMode(data) {
+    editMode = false;
+    document.getElementById('save-edit-wrap').style.display = 'none';
+    document.getElementById('actions').style.display = 'grid';
+
+    // Remove grammar help box if active
+    const helpEl = document.getElementById('grammar-help-zone');
+    if (helpEl) helpEl.remove();
+
+    // Replace with view blocks
+    document.getElementById('block-fr').innerHTML = `
+        <div class="block-lang"><span class="lang-flag">🇫🇷</span><span class="lang-label">Français</span></div>
+        <div class="expr-text">${colorize(data.francais || '–')}</div>
+        ${data.francais ? ttsRow('fr', stripTags(data.francais), 'fr-FR') : ''}
+    `;
+    document.getElementById('block-de').innerHTML = `
+        <div class="block-lang"><span class="lang-flag">🇩🇪</span><span class="lang-label">Deutsch</span></div>
+        <div class="expr-text">${colorize(data.allemand?.texte || '–')}</div>
+        ${data.allemand?.prononciation_FR ? `<div class="expr-pron">${stripTags(data.allemand.prononciation_FR)}</div>` : ''}
+        ${data.allemand?.texte ? ttsRow('de', stripTags(data.allemand.texte), 'de-DE') : ''}
+    `;
+    document.getElementById('block-en').innerHTML = data.anglais ? `
+        <div class="block-lang"><span class="lang-flag">🇬🇧</span><span class="lang-label">English</span></div>
+        <div class="expr-text">${colorize(data.anglais.texte || '–')}</div>
+        ${data.anglais?.prononciation_FR ? `<div class="expr-pron">${stripTags(data.anglais.prononciation_FR)}</div>` : ''}
+        ${data.anglais?.texte ? ttsRow('en', stripTags(data.anglais.texte), 'en-GB') : ''}
+    ` : '';
+    document.getElementById('block-en').style.display = data.anglais ? '' : 'none';
+
+    // Bouton de vérification des traductions
+    const frText  = stripTags(data.francais || '');
+    const deText  = stripTags(data.allemand?.texte || '');
+    const enText  = stripTags(data.anglais?.texte || '');
+    const hasVerifiable = (deText || enText) && frText;
+
+    // Inject verify button after block-en (into card-wrap)
+    let verifyEl = document.getElementById('verify-zone');
+    if (!verifyEl) {
+        verifyEl = document.createElement('div');
+        verifyEl.id = 'verify-zone';
+        document.getElementById('card-wrap').appendChild(verifyEl);
+    }
+    verifyEl.innerHTML = '';
+    if (hasVerifiable) {
+        const btn = document.createElement('button');
+        btn.className = 'verify-btn';
+        btn.id = 'btn-verify';
+        btn.innerHTML = '🔍 Vérifier les traductions';
+        btn.onclick = () => runVerification(frText, deText, enText);
+        verifyEl.appendChild(btn);
+    }
+}
+
+function renderEditMode(data) {
+    editMode = true;
+    document.getElementById('save-edit-wrap').style.display = 'flex';
+    document.getElementById('actions').style.display = 'none';
+
+    const esc = (s) => (s||'').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+    document.getElementById('block-fr').innerHTML = `
+        <div class="block-lang"><span class="lang-flag">🇫🇷</span><span class="lang-label">Français</span></div>
+        <div class="edit-label">Texte FR</div>
+        <textarea id="edit-fr" rows="2">${esc(data.francais||'')}</textarea>
+    `;
+    document.getElementById('block-de').innerHTML = `
+        <div class="block-lang"><span class="lang-flag">🇩🇪</span><span class="lang-label">Deutsch</span></div>
+        <div class="edit-label">Texte DE</div>
+        <textarea id="edit-de-text" rows="2">${esc(data.allemand?.texte||'')}</textarea>
+        <div class="edit-label">Prononciation DE</div>
+        <textarea id="edit-de-pron" rows="2">${esc(data.allemand?.prononciation_FR||'')}</textarea>
+    `;
+    document.getElementById('block-en').innerHTML = `
+        <div class="block-lang"><span class="lang-flag">🇬🇧</span><span class="lang-label">English</span></div>
+        <div class="edit-label">Texte EN</div>
+        <textarea id="edit-en-text" rows="2">${esc(data.anglais?.texte||'')}</textarea>
+        <div class="edit-label">Prononciation EN</div>
+        <textarea id="edit-en-pron" rows="2">${esc(data.anglais?.prononciation_FR||'')}</textarea>
+    `;
+    document.getElementById('block-en').style.display = '';
+
+    // Injecter la boîte d'aide à la grammaire
+    let helpEl = document.getElementById('grammar-help-zone');
+    if (!helpEl) {
+        helpEl = document.createElement('div');
+        helpEl.id = 'grammar-help-zone';
+        document.getElementById('card-wrap').appendChild(helpEl);
+    }
+    helpEl.innerHTML = `
+        <div class="grammar-help-box">
+            <div class="grammar-help-title">💡 Guide du balisage grammatical (écriture syntaxique)</div>
+            <p class="grammar-help-intro">Associez visuellement les mots correspondants d'une langue à l'autre en les entourant des balises suivantes (avec un même index, ex: 1, 2, 3...) :</p>
+            <div class="grammar-help-grid">
+                <div class="grammar-help-col">
+                    <span class="grammar-tag-badge gr-n">Nom / Pronom</span>
+                    <code>[N1]texte[/N1]</code>
+                    <p>Couleur <strong>bleu</strong>. Ex: <code>[N1]je[/N1]</code> / <code>[N1]ich[/N1]</code></p>
+                </div>
+                <div class="grammar-help-col">
+                    <span class="grammar-tag-badge gr-v">Verbe</span>
+                    <code>[V1]texte[/V1]</code>
+                    <p>Couleur <strong>verte</strong>. Ex: <code>[V1]suis[/V1]</code> / <code>[V1]bin[/V1]</code></p>
+                </div>
+                <div class="grammar-help-col">
+                    <span class="grammar-tag-badge gr-a">Adj / Adv</span>
+                    <code>[A1]texte[/A1]</code>
+                    <p>Couleur <strong>rouge</strong>. Ex: <code>[A1]grand[/A1]</code> / <code>[A1]groß[/A1]</code></p>
+                </div>
+            </div>
+            <div class="grammar-help-note">
+                <strong>Attention :</strong> Veillez à bien fermer vos balises (ex: <code>[/N1]</code>) et à utiliser les mêmes indices d'une langue à l'autre pour conserver la cohérence visuelle.
+            </div>
+        </div>
+    `;
+}
+
+function colorize(text) {
+    if (!text) return '–';
+    return text
+        .replace(/\[N\d+\](.*?)\[\/N\d+\]/g, '<span class="gr-n">$1</span>')
+        .replace(/\[V\d+\](.*?)\[\/V\d+\]/g, '<span class="gr-v">$1</span>')
+        .replace(/\[A\d+\](.*?)\[\/A\d+\]/g, '<span class="gr-a">$1</span>');
+}
+
+function stripTags(text) {
+    if (!text) return '';
+    return text.replace(/\[\/?[NVA]\d*\]/g, '');
+}
+
+// ── TTS (Text-To-Speech) ──────────────────────────────
+let activeTtsBtn = null;  // button DOM element currently speaking
+let ttsSlowMode  = false; // vitesse ×½
+
+function ttsRow(lang, text, locale) {
+    const escaped = text.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    const labels  = { fr: 'Écouter', de: 'Écouter (DE)', en: 'Écouter (EN)' };
+    const label   = labels[lang] || 'Écouter';
+    const slowId  = `tts-slow-${lang}`;
+    return `<div class="tts-row">
+        <button class="tts-btn" id="tts-${lang}" onclick="speakText('${escaped}','${locale}','tts-${lang}')" title="${label}">
+            <span class="tts-icon">🔊</span>
+            <span class="tts-waves">
+                <span class="tts-wave"></span><span class="tts-wave"></span>
+                <span class="tts-wave"></span><span class="tts-wave"></span>
+                <span class="tts-wave"></span>
+            </span>
+            ${label}
+        </button>
+        <button class="tts-slow-btn ${ttsSlowMode ? 'active' : ''}" id="${slowId}" onclick="toggleSlowAndSpeak('${escaped}','${locale}','tts-${lang}','${slowId}')" title="Écouter lentement">
+            🐢 ×½ lent
+        </button>
+    </div>`;
+}
+
+// Keep old ttsBtn for backwards-compat
+function ttsBtn(lang, text, locale) { return ttsRow(lang, text, locale); }
+
+function speakText(text, locale, btnId, rate) {
+    const synth = window.speechSynthesis;
+    if (!synth) { alert('Synthèse vocale non supportée par ce navigateur.'); return; }
+    const speed = (rate !== undefined) ? rate : (ttsSlowMode ? 0.45 : 0.9);
+
+    // Toggle off if already speaking the same button at same speed
+    if (activeTtsBtn && activeTtsBtn.id === btnId && synth.speaking) {
+        synth.cancel();
+        setTtsBtnSpeaking(activeTtsBtn, false);
+        activeTtsBtn = null;
+        return;
+    }
+
+    // Stop any current speech
+    synth.cancel();
+    if (activeTtsBtn) { setTtsBtnSpeaking(activeTtsBtn, false); activeTtsBtn = null; }
+
+    const btn = document.getElementById(btnId);
+    if (!btn) return;
+
+    // Decode HTML entities
+    const decoded = new DOMParser().parseFromString(text, 'text/html').documentElement.textContent;
+
+    const utter = new SpeechSynthesisUtterance(decoded);
+    utter.lang = locale;
+    utter.rate = speed;
+
+    // Pick native voice
+    const voices = synth.getVoices();
+    const match  = voices.find(v => v.lang.startsWith(locale.split('-')[0]));
+    if (match) utter.voice = match;
+
+    setTtsBtnSpeaking(btn, true);
+    activeTtsBtn = btn;
+    utter.onend  = () => { setTtsBtnSpeaking(btn, false); activeTtsBtn = null; };
+    utter.onerror= () => { setTtsBtnSpeaking(btn, false); activeTtsBtn = null; };
+    synth.speak(utter);
+}
+
+function toggleSlowAndSpeak(text, locale, mainBtnId, slowBtnId) {
+    // Toggle slow mode
+    ttsSlowMode = !ttsSlowMode;
+    // Update all slow buttons
+    document.querySelectorAll('.tts-slow-btn').forEach(b => b.classList.toggle('active', ttsSlowMode));
+    // Speak at slow speed
+    speakText(text, locale, mainBtnId, ttsSlowMode ? 0.45 : 0.9);
+}
+
+function setTtsBtnSpeaking(btn, speaking) {
+    if (!btn) return;
+    btn.classList.toggle('speaking', speaking);
+}
+
+// Preload voices (some browsers load them async)
+if (window.speechSynthesis) {
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+}
+
+// ── Vérification des traductions (MyMemory API) ──────────
+function escAttr(s) { return (s||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/`/g,'&#96;'); }
+
+async function runVerification(frText, deText, enText) {
+    const btn = document.getElementById('btn-verify');
+    if (btn) { btn.disabled = true; btn.innerHTML = '<span class="verify-spinner"></span> Vérification en cours…'; }
+
+    const zone = document.getElementById('verify-zone');
+
+    async function translate(q, langpair) {
+        if (!q) return null;
+        try {
+            const url = `https://api.mymemory.translated.world/get?q=${encodeURIComponent(q)}&langpair=${langpair}`;
+            const r   = await fetch(url);
+            const d   = await r.json();
+            if (d.responseStatus === 200) {
+                return { text: d.responseData.translatedText, score: d.responseData.match };
+            }
+            return null;
+        } catch(e) { return null; }
+    }
+
+    function wordSimilarity(a, b) {
+        const norm  = s => s.toLowerCase().replace(/[^a-zà-ÿ0-9\s]/g,'').trim();
+        const words = s => new Set(norm(s).split(/\s+/).filter(Boolean));
+        const wa = words(a), wb = words(b);
+        const inter = [...wa].filter(w => wb.has(w)).length;
+        const union = new Set([...wa,...wb]).size;
+        return union === 0 ? 0 : inter / union;
+    }
+
+    function scoreBadge(sim) {
+        if (sim >= 0.55) return `<span class="verify-score score-good">✅ Correct (${Math.round(sim*100)}%)</span>`;
+        if (sim >= 0.25) return `<span class="verify-score score-ok">⚠️ Approximatif (${Math.round(sim*100)}%)</span>`;
+        return `<span class="verify-score score-bad">❌ Divergent (${Math.round(sim*100)}%)</span>`;
+    }
+
+    const [deRes, enRes] = await Promise.all([
+        translate(deText, 'de|fr'),
+        translate(enText, 'en|fr'),
+    ]);
+
+    let html = '<div class="verify-panel">';
+    html += `<div style="font-size:11px;font-weight:700;color:var(--muted);">Phrase française de référence :</div>`;
+    html += `<div style="font-size:13px;font-weight:600;color:var(--text);font-style:italic;">« ${frText} »</div>`;
+
+    if (deRes) {
+        const sim = wordSimilarity(frText, deRes.text);
+        html += `<div class="verify-row">`;
+        html += `<div class="verify-label">🇩🇪 All. traduit en français</div>`;
+        html += `<div class="verify-text">« ${deRes.text} »</div>`;
+        html += scoreBadge(sim);
+        html += `</div>`;
+    }
+    if (enRes) {
+        const sim = wordSimilarity(frText, enRes.text);
+        html += `<div class="verify-row">`;
+        html += `<div class="verify-label">🇬🇧 Angl. traduit en français</div>`;
+        html += `<div class="verify-text">« ${enRes.text} »</div>`;
+        html += scoreBadge(sim);
+        html += `</div>`;
+    }
+    if (!deRes && !enRes) {
+        html += `<div style="color:var(--red);font-size:12px">❌ Impossible de joindre l’API. Vérifiez votre connexion.</div>`;
+    }
+    html += '</div>';
+
+    // Re-add the verify button + panel
+    if (zone) {
+        zone.innerHTML = '';
+        const btn = document.createElement('button');
+        btn.className = 'verify-btn';
+        btn.id = 'btn-verify';
+        btn.innerHTML = '🔄 Ré-vérifier';
+        btn.onclick = () => runVerification(frText, deText, enText);
+        zone.appendChild(btn);
+
+        const container = document.createElement('div');
+        container.innerHTML = html;
+        zone.appendChild(container.firstElementChild || container);
+    }
+}
+
+// ── Decisions ─────────────────────────────────────────
+function decide(status) {
+    const item = flatExprs[cursor];
+    if (!item) return;
+
+    if (status === 'modified') {
+        // If already has modified data, enter edit mode with that data
+        const existing = decisions[item.key];
+        const data = (existing?.status === 'modified' && existing.modifiedData)
+            ? existing.modifiedData : item.expr;
+        editMode = true;
+        renderEditMode(data);
+        // Store pending modified (no data yet until save)
+        if (!decisions[item.key] || decisions[item.key].status !== 'modified') {
+            decisions[item.key] = { status: 'modified', modifiedData: null };
+        }
+        return;
+    }
+
+    decisions[item.key] = { status };
+    saveSession();
+    renderCard();
+    renderCatPanel();
+    updateDashboard();
+    
+    // Sauvegarde en temps réel sur le serveur
+    saveFileToServer(item.fi);
+
+    // Auto-advance if not "later"
+    if (status !== 'later' && cursor < flatExprs.length - 1) {
+        setTimeout(() => { navigate(1); }, 300);
+    }
+}
+
+function saveEdit() {
+    const item = flatExprs[cursor];
+    const fr = document.getElementById('edit-fr')?.value || item.expr.francais;
+    const deText = document.getElementById('edit-de-text')?.value || item.expr.allemand?.texte;
+    const dePron = document.getElementById('edit-de-pron')?.value || item.expr.allemand?.prononciation_FR;
+    const enText = document.getElementById('edit-en-text')?.value || item.expr.anglais?.texte;
+    const enPron = document.getElementById('edit-en-pron')?.value || item.expr.anglais?.prononciation_FR;
+
+    decisions[item.key] = {
+        status: 'modified',
+        modifiedData: {
+            ...item.expr,
+            francais: fr,
+            allemand: { texte: deText, prononciation_FR: dePron },
+            anglais: item.expr.anglais ? { texte: enText, prononciation_FR: enPron } : null
+        }
+    };
+    editMode = false;
+    saveSession();
+    renderCard();
+    renderCatPanel();
+    updateDashboard();
+    
+    // Sauvegarde en temps réel sur le serveur
+    saveFileToServer(item.fi);
+    
+    setTimeout(() => navigate(1), 300);
+}
+
+function cancelEdit() {
+    editMode = false;
+    // Remove pending modified if not saved
+    const item = flatExprs[cursor];
+    if (decisions[item.key]?.status === 'modified' && !decisions[item.key].modifiedData) {
+        delete decisions[item.key];
+    }
+    renderCard();
+}
+
+// ── Navigation ────────────────────────────────────────
+function navigate(dir) {
+    cursor = Math.max(0, Math.min(cursor + dir, flatExprs.length - 1));
+    editMode = false;
+    renderCard();
+    renderCatPanel();
+}
+
+function goNextPending() {
+    // Find next pending expression after cursor
+    for (let i = cursor + 1; i < flatExprs.length; i++) {
+        const d = decisions[flatExprs[i].key];
+        if (!d || d.status === 'later') { cursor = i; renderCard(); renderCatPanel(); return; }
+    }
+    // Wrap from start
+    for (let i = 0; i < cursor; i++) {
+        const d = decisions[flatExprs[i].key];
+        if (!d || d.status === 'later') { cursor = i; renderCard(); renderCatPanel(); return; }
+    }
+    alert('🎉 Toutes les expressions ont été traitées !');
+}
+
+// ── Dashboard ─────────────────────────────────────────
+function updateDashboard() {
+    const total = flatExprs.length;
+    const decs = Object.values(decisions);
+    const seen = decs.length;
+    const accepted = decs.filter(d => d.status === 'accepted').length;
+    const deleted  = decs.filter(d => d.status === 'deleted').length;
+    const modified = decs.filter(d => d.status === 'modified').length;
+    const later    = decs.filter(d => d.status === 'later').length;
+
+    const pctSeen     = total  > 0 ? Math.round(seen / total * 100) : 0;
+    const pctAccepted = seen   > 0 ? Math.round(accepted / seen * 100) : 0;
+    const pctDeleted  = seen   > 0 ? Math.round(deleted  / seen * 100) : 0;
+    const pctModified = seen   > 0 ? Math.round(modified / seen * 100) : 0;
+    const pctLater    = seen   > 0 ? Math.round(later    / seen * 100) : 0;
+
+    // Circular gauge
+    const offset = 251 - (251 * pctSeen / 100);
+    document.getElementById('gauge-fill').style.strokeDashoffset = offset;
+    document.getElementById('gauge-pct-num').textContent = pctSeen + '%';
+
+    setText('stat-seen',         seen);
+    setText('stat-seen-pct',     `/ ${total}`);
+    setText('stat-accepted',     accepted);
+    setText('stat-accepted-pct', `${pctAccepted}%`);
+    setText('stat-deleted',      deleted);
+    setText('stat-deleted-pct',  `${pctDeleted}%`);
+    setText('stat-modified',     modified);
+    setText('stat-modified-pct', `${pctModified}%`);
+    setText('stat-later',        later);
+    setText('stat-later-pct',    `${pctLater}%`);
+
+    setBar('bar-seen',     pctSeen);
+    setBar('bar-accepted', pctAccepted);
+    setBar('bar-deleted',  pctDeleted);
+    setBar('bar-modified', pctModified);
+    setBar('bar-later',    pctLater);
+
+    // Page estimate (accepted + modified expressions)
+    const keptExprs = flatExprs.filter(e => {
+        const d = decisions[e.key];
+        return !d || d.status === 'accepted' || d.status === 'modified' || d.status === 'later';
+    });
+    let pageSlots = 0;
+    keptExprs.forEach(e => {
+        const data = (decisions[e.key]?.status === 'modified' && decisions[e.key].modifiedData)
+            ? decisions[e.key].modifiedData : e.expr;
+        pageSlots += cardSlots(data);
+    });
+    const estPages = Math.ceil(pageSlots / 4) + 4; // +4 cover/blank/toc
+    setText('est-pages', estPages);
+    setText('est-exprs', `${keptExprs.length} expressions gardées`);
+}
+
+function cardSlots(expr) {
+    const clean = s => s ? s.replace(/\[\/?[NVA]\d*\]/g, '').trim() : '';
+    let maxLen = clean(expr.francais).length;
+    if (expr.allemand) maxLen = Math.max(maxLen, clean(expr.allemand.texte).length, clean(expr.allemand.prononciation_FR||'').length);
+    if (expr.anglais)  maxLen = Math.max(maxLen, clean(expr.anglais.texte).length,  clean(expr.anglais.prononciation_FR||'').length);
+    if (maxLen > 70) return 4;
+    if (maxLen > 38) return 2;
+    return 1;
+}
+
+function setText(id, val) { const el = document.getElementById(id); if (el) el.textContent = val; }
+function setBar(id, pct)  { const el = document.getElementById(id); if (el) el.style.width = pct + '%'; }
+
+// ── Export V4 ─────────────────────────────────────────
+function exportV4() {
+    // Group accepted/modified decisions by file
+    const fileDecisions = {}; // filename -> set of {casIdx, exprIdx, status, modifiedData}
+    flatExprs.forEach(e => {
+        const d = decisions[e.key];
+        if (d && d.status === 'deleted') {
+            if (!fileDecisions[e.filename]) fileDecisions[e.filename] = {};
+            if (!fileDecisions[e.filename][e.ci]) fileDecisions[e.filename][e.ci] = {};
+            fileDecisions[e.filename][e.ci][e.ei] = d;
+        } else if (d && d.status === 'modified') {
+            if (!fileDecisions[e.filename]) fileDecisions[e.filename] = {};
+            if (!fileDecisions[e.filename][e.ci]) fileDecisions[e.filename][e.ci] = {};
+            fileDecisions[e.filename][e.ci][e.ei] = d;
+        }
+    });
+
+    let count = 0;
+    allData.forEach(file => {
+        const newCas = file.data.cas.map((cas, ci) => {
+            const newExprs = cas.expressions.filter((expr, ei) => {
+                const d = fileDecisions[file.filename]?.[ci]?.[ei];
+                return !d || d.status !== 'deleted';
+            }).map((expr, ei) => {
+                // Find original index
+                const origEi = cas.expressions.indexOf(expr);
+                const d = fileDecisions[file.filename]?.[ci]?.[origEi];
+                if (d?.status === 'modified' && d.modifiedData) {
+                    return { ...expr, ...d.modifiedData };
+                }
+                return expr;
+            });
+            return { ...cas, expressions: newExprs };
+        }).filter(cas => cas.expressions.length > 0);
+
+        const newJson = {
+            carnet_scout: {
+                ...file.data,
+                cas: newCas
+            }
+        };
+
+        // Download
+        const blob = new Blob([JSON.stringify(newJson, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = file.filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        count++;
+    });
+
+    if (count > 0) {
+        setTimeout(() => alert(`✅ ${count} fichiers téléchargés !\n\nPlacez-les dans :\nJSON/Version4/\n\nLe générateur les détectera automatiquement.`), 500);
+    }
+}
+
+// ── Keyboard shortcuts ────────────────────────────────
+document.addEventListener('keydown', e => {
+    if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT') return;
+    const k = e.key.toLowerCase();
+    if (k === 'a') decide('accepted');
+    else if (k === 'd') decide('deleted');
+    else if (k === 'm') decide('modified');
+    else if (k === 'l') decide('later');
+    else if (k === 'arrowleft')  navigate(-1);
+    else if (k === 'arrowright') navigate(1);
+    else if (k === 'escape' && editMode) cancelEdit();
+});
+
+// ── Start ─────────────────────────────────────────────
+init();
+</script>
+<!-- Modal: Réordonner les sections -->
+<div id="reorder-modal" class="modal-overlay hidden">
+    <div class="modal-container">
+        <div class="modal-header">
+            <h3>↕️ Réordonner les sections</h3>
+            <button class="modal-close" onclick="closeReorderModal()">✕</button>
+        </div>
+        <div class="modal-body">
+            <p style="font-size: 12px; color: var(--muted); margin-bottom: 12px;">
+                Utilisez les flèches pour modifier l'ordre d'affichage des sections du carnet scout. L'ordre sera mis à jour en renommant les fichiers JSON sur le serveur.
+            </p>
+            <div id="reorder-list" class="reorder-list">
+                <!-- Dynamically populated -->
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button id="reorder-cancel-btn" class="modal-btn cancel" onclick="closeReorderModal()">Annuler</button>
+            <button id="reorder-save-btn" class="modal-btn save" onclick="saveReorder()">Enregistrer</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
