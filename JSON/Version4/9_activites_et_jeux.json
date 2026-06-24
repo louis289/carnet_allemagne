@@ -1,0 +1,732 @@
+{
+  "carnet_scout": {
+    "categorie": "Activités & jeux",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Jouer ensemble / Zusammen spielen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "À qui [N1]le tour[/N1] ?",
+            "allemand": {
+              "texte": "Wer [V1]ist[/V1] [N1]dran[/N1]?",
+              "prononciation_FR": "Vér [V1]ist[/V1] [N1]drann[/N1]?"
+            },
+            "anglais": {
+              "texte": "Whose [N1]turn[/N1] [V1]is[/V1] it?",
+              "prononciation_FR": "Houz [N1]teurn[/N1] [V1]iz[/V1] it?"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]On[/N1] [V1]joue[/V1] [A1]ensemble[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Spielen[/V1] [N1]wir[/N1] [A1]zusammen[/A1]?",
+              "prononciation_FR": "[V1]Chpi-leun[/V1] [N1]vir[/N1] [A1]tsou-za-meun[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]play[/V2] [A1]together[/A1]?",
+              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]plé[/V2] [A1]tou-gué-zeur[/A1]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[A1]Encore une fois[/A1] !",
+            "allemand": {
+              "texte": "[A1]Noch einmal[/A1]!",
+              "prononciation_FR": "[A1]Noch aïn-mal[/A1]!"
+            },
+            "anglais": {
+              "texte": "[A1]One more time[/A1]!",
+              "prononciation_FR": "[A1]Ouan mor taïm[/A1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [V1]veux[/V1] [V2]essayer[/V2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]möchte[/V1] es [V2]versuchen[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]meuch-teu[/V1] ess [V2]fer-zou-kheun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]want[/V1] [V2]to try[/V2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ouont[/V1] [V2]tou traï[/V2]."
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[V1]Attrape[/V1] [N1]le ballon[/N1] !",
+            "allemand": {
+              "texte": "[V1]Fang[/V1] [N1]den Ball[/N1]!",
+              "prononciation_FR": "[V1]Fang[/V1] [N1]déne bal[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Catch[/V1] [N1]the ball[/N1]!",
+              "prononciation_FR": "[V1]Katch[/V1] [N1]ze bol[/N1]!"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[V1]Cours[/V1] [A1]plus vite[/A1] !",
+            "allemand": {
+              "texte": "[V1]Lauf[/V1] [A1]schneller[/A1]!",
+              "prononciation_FR": "[V1]Laouf[/V1] [A1]chnè-leur[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Run[/V1] [A1]faster[/A1]!",
+              "prononciation_FR": "[V1]Reun[/V1] [A1]fas-teur[/A1]!"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]Tu[/N1] [V1]as[/V1] [V2]gagné[/V2] !",
+            "allemand": {
+              "texte": "[N1]Du[/N1] [V1]hast[/V1] [V2]gewonnen[/V2]!",
+              "prononciation_FR": "[N1]Dou[/N1] [V1]hast[/V1] [V2]gué-vo-neun[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]You[/N1] [V1]have[/V1] [V2]won[/V2]!",
+              "prononciation_FR": "[N1]You[/N1] [V1]hav[/V1] [V2]won[/V2]!"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[V1]Passes[/V1]-[N1]moi[/N1] [N2]la balle[/N2].",
+            "allemand": {
+              "texte": "[V1]Pass[/V1] [N1]mir[/N1] [N2]den Ball[/N2].",
+              "prononciation_FR": "[V1]Pass[/V1] [N1]mir[/N1] [N2]déne bal[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Pass[/V1] [N1]me[/N1] [N2]the ball[/N2].",
+              "prononciation_FR": "[V1]Pass[/V1] [N1]mi[/N1] [N2]ze bol[/N2]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]hors-jeu[/N2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [N2]Abseits[/N2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [N2]ap-zaïts[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]offside[/N2].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]off-saïd[/N2]."
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Règles et explications / Regeln",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [N2]ne[/N2] [V1]sais[/V1] [N2]pas[/N2] [V2]faire[/V2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]weiß[/V1] [N2]nicht[/N2] wie.",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]vaïss[/V1] [N2]nicht[/N2] vi."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [N2]don't[/N2] [V1]know[/V1] how.",
+              "prononciation_FR": "[N1]Aï[/N1] [N2]dont[/N2] [V1]no[/V1] haou."
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Tu[/N1] [V1]peux[/V1] [N2]m'[/N2][V2]expliquer[/V2] ?",
+            "allemand": {
+              "texte": "[V1]Kannst[/V1] [N1]du[/N1] [N2]mir[/N2] [V2]erklären[/V2]?",
+              "prononciation_FR": "[V1]Kanst[/V1] [N1]dou[/N1] [N2]mir[/N2] [V2]er-klé-reun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]explain[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]ex-pléïn[/V2]?"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]facile[/A1] / [A2]difficile[/A2].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]einfach[/A1] / [A2]schwer[/A2].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]aïn-fakh[/A1] / [A2]chvèr[/A2]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1]'s [A1]easy[/A1] / [A2]hard[/A2].",
+              "prononciation_FR": "[N1]Its[/N1] [A1]i-zi[/A1] / [A2]hard[/A2]."
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[A1]Quelles[/A1] [V1]sont[/V1] [N1]les règles[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Was[/A1] [V1]sind[/V1] [N1]die Regeln[/N1]?",
+              "prononciation_FR": "[A1]Vass[/A1] [V1]zind[/V1] [N1]di ré-gueuln[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [V1]are[/V1] [N1]the rules[/N1]?",
+              "prononciation_FR": "[A1]Wot[/A1] [V1]ar[/V1] [N1]ze roulz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]Je[/N1] [N2]n'[/N2][V1]ai[/V1] [A1]pas[/A1] [V2]compris[/V2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [A1]nicht[/A1] [V2]verstanden[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [A1]nicht[/A1] [V2]fèr-chtan-deun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]did[/V1] [A1]not[/A1] [V2]understand[/V2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]did[/V1] [A1]not[/A1] [V2]eun-der-stand[/V2]."
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "Où [V1]est[/V1] [N1]la base[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]die Basis[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]di ba-ziss[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the base[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze béïz[/N1]?"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]interdit[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]verboten[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]fèr-bo-teun[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]forbidden[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]for-bi-deun[/A1]!"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]On[/N1] [V1]doit[/V1] [V2]courir[/V2] [A1]vite[/A1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]müssen[/V1] [A1]schnell[/A1] [V2]rennen[/V2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]mu-sseun[/V1] [A1]chnèl[/A1] [V2]rè-neun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]must[/V1] [V2]run[/V2] [A1]fast[/A1].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]meust[/V1] [V2]reun[/V2] [A1]fast[/A1]."
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[A1]Quel[/A1] [V1]est[/V1] [N1]le score[/N1] ?",
+            "allemand": {
+              "texte": "[A1]Wie[/A1] [V1]ist[/V1] [N1]der Punktestand[/N1]?",
+              "prononciation_FR": "[A1]Vi[/A1] [V1]ist[/V1] [N1]dér pounk-teu-chtand[/N1]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [V1]is[/V1] [N1]the score[/N1]?",
+              "prononciation_FR": "[A1]Wot[/A1] [V1]iz[/V1] [N1]ze skor[/N1]?"
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]On[/N1] [V1]a[/V1] [N2]trois points[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]haben[/V1] [N2]drei Punkte[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]ha-beun[/V1] [N2]draï pounk-teu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]have[/V1] [N2]three points[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]hav[/V1] [N2]sri poïnts[/N2]."
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]une égalité[/A1].",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]Unentschieden[/A1].",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]ou-nèn-tchi-deun[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]a tie[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]eu taï[/A1]."
+            }
+          },
+          {
+            "id_expression": 12,
+            "francais": "[N1]Qui[/N1] [V1]a[/V1] [V2]gagné[/V2] ?",
+            "allemand": {
+              "texte": "[N1]Wer[/N1] [V1]hat[/V1] [V2]gewonnen[/V2]?",
+              "prononciation_FR": "[N1]Vér[/N1] [V1]hat[/V1] [V2]gué-vo-neun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[N1]Who[/N1] [V1]won[/V1]?",
+              "prononciation_FR": "[N1]Hou[/N1] [V1]won[/V1]?"
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[V1]Compte[/V1] [N1]les points[/N1].",
+            "allemand": {
+              "texte": "[V1]Zähl[/V1] [N1]die Punkte[/N1].",
+              "prononciation_FR": "[V1]Tsèl[/V1] [N1]di pounk-teu[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Count[/V1] [N1]the points[/N1].",
+              "prononciation_FR": "[V1]Kaount[/V1] [N1]ze poïnts[/N1]."
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[N1]Ils[/N1] [V1]trichent[/V1] !",
+            "allemand": {
+              "texte": "[N1]Sie[/N1] [V1]schummeln[/V1]!",
+              "prononciation_FR": "[N1]Zi[/N1] [V1]chou-meuln[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]They[/N1] [V1]are cheating[/V1]!",
+              "prononciation_FR": "[N1]Zèy[/N1] [V1]ar tchi-ting[/V1]!"
+            }
+          },
+          {
+            "id_expression": 15,
+            "francais": "[N1]Ce[/N1] [N2]n'[/N2][V1]est[/V1] [A1]pas juste[/A1].",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]nicht fair[/A1].",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]nicht fèr[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]not fair[/A1].",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]not fèr[/A1]."
+            }
+          },
+          {
+            "id_expression": 16,
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [V2]perdu[/V2] [N2]mon foulard[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]mein Halstuch[/N2] [V2]verloren[/V2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]maïn hals-toukh[/N2] [V2]fèr-lo-reun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]lost[/V1] [N2]my neckerchief[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]lost[/V1] [N2]maï né-keur-tchif[/N2]."
+            }
+          },
+          {
+            "id_expression": 17,
+            "francais": "[N1]L'arbitre[/N1] s'[V1]est[/V1] [V2]trompé[/V2].",
+            "allemand": {
+              "texte": "[N1]Der Schiedsrichter[/N1] [V1]hat[/V1] [N2]sich[/N2] [V2]geirrt[/V2].",
+              "prononciation_FR": "[N1]Dér chits-rich-teur[/N1] [V1]hat[/V1] [N2]zich[/N2] [V2]gué-irt[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]The referee[/N1] [V1]made[/V1] [N2]a mistake[/N2].",
+              "prononciation_FR": "[N1]Ze ré-fé-ri[/N1] [V1]méïd[/V1] [N2]eu mis-téïk[/N2]."
+            }
+          },
+          {
+            "id_expression": 18,
+            "francais": "[N1]Le jeu[/N1] [V1]est[/V1] [A1]bloqué[/A1].",
+            "allemand": {
+              "texte": "[N1]Das Spiel[/N1] [V1]steckt[/V1] [A1]fest[/A1].",
+              "prononciation_FR": "[N1]Dass chpil[/N1] [V1]chtekt[/V1] [A1]fèst[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]The game[/N1] [V1]is[/V1] [A1]stuck[/A1].",
+              "prononciation_FR": "[N1]Ze guéïm[/N1] [V1]iz[/V1] [A1]steuk[/A1]."
+            }
+          },
+          {
+            "id_expression": 19,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]le rassemblement[/N2] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [N2]Antreten[/N2]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [N2]an-tré-teun[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]assembly time[/N2]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]a-sem-bli taïm[/N2]!"
+            }
+          },
+          {
+            "id_expression": 20,
+            "francais": "[V1]Écoutez[/V1] [N1]le sifflet[/N1].",
+            "allemand": {
+              "texte": "[V1]Hört[/V1] auf [N1]die Pfeife[/N1].",
+              "prononciation_FR": "[V1]Heurt[/V1] aouf [N1]di pfaï-feu[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Listen[/V1] to [N1]the whistle[/N1].",
+              "prononciation_FR": "[V1]Li-seun[/V1] tou [N1]ze wi-sseul[/N1]."
+            }
+          },
+          {
+            "id_expression": 21,
+            "francais": "[N1]Silence[/N1], s'il vous plaît.",
+            "allemand": {
+              "texte": "[N1]Ruhe[/N1], bitte.",
+              "prononciation_FR": "[N1]Rou-heu[/N1], [A1]bi-teu[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]Silence[/N1], please.",
+              "prononciation_FR": "[N1]Saï-lenss[/N1], pliz."
+            }
+          },
+          {
+            "id_expression": 22,
+            "francais": "[V1]Regardez[/V1] [N1]le foulard[/N1].",
+            "allemand": {
+              "texte": "[V1]Schaut[/V1] auf [N1]das Halstuch[/N1].",
+              "prononciation_FR": "[V1]Chaout[/V1] aouf [N1]dass hals-toukh[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Look[/V1] at [N1]the neckerchief[/N1].",
+              "prononciation_FR": "[V1]Louk[/V1] at [N1]ze né-keur-tchif[/N1]."
+            }
+          },
+          {
+            "id_expression": 23,
+            "francais": "[A1]En ligne[/A1] !",
+            "allemand": {
+              "texte": "[A1]In einer Linie[/A1]!",
+              "prononciation_FR": "[A1]In aï-neur li-ni-eu[/A1]!"
+            },
+            "anglais": {
+              "texte": "[A1]In a line[/A1]!",
+              "prononciation_FR": "[A1]In eu laïn[/A1]!"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Célébration et encouragements / Feiern",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]super[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]toll[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]tol[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]That[/N1]'s [A1]great[/A1]!",
+              "prononciation_FR": "[N1]Zats[/N1] [A1]gréït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]J'[/N1][V1]ai gagné[/V1] !",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe gewonnen[/V1]!",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu gué-vo-neun[/V1]!"
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]won[/V1]!",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ouon[/V1]!"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Bravo[/V1] !",
+            "allemand": {
+              "texte": "[V1]Gut gemacht[/V1]! / [V2]Bravo[/V2]!",
+              "prononciation_FR": "[V1]Gout gué-makht[/V1]! / [V2]Bra-vo[/V2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Well done[/V1]!",
+              "prononciation_FR": "[V1]Ouel dann[/V1]!"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[V1]Allez[/V1] [N1]les gars[/N1] !",
+            "allemand": {
+              "texte": "[V1]Auf geht's[/V1] [N1]Jungs[/N1]!",
+              "prononciation_FR": "[V1]Aouf guéts[/V1] [N1]youngs[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Come on[/V1] [N1]guys[/N1]!",
+              "prononciation_FR": "[V1]Keum on[/V1] [N1]gaïz[/N1]!"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]va[/V1] [V2]gagner[/V2] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]werden[/V1] [V2]gewinnen[/V2]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]ver-deun[/V1] [V2]gué-vi-neun[/V2]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]will[/V1] [V2]win[/V2]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]wil[/V1] [V2]win[/V2]!"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[V1]Ne lâche[/V1] [A1]rien[/A1] !",
+            "allemand": {
+              "texte": "[V1]Gib[/V1] [A1]nicht[/A1] [V2]auf[/V2]!",
+              "prononciation_FR": "[V1]Guib[/V1] [A1]nicht[/A1] [V2]aouf[/V2]!"
+            },
+            "anglais": {
+              "texte": "[V1]Do[/V1] [A1]not[/A1] [V2]give up[/V2]!",
+              "prononciation_FR": "[V1]Dou[/V1] [A1]not[/A1] [V2]guiv eup[/V2]!"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[V1]Bravo[/V1], [N1]c'[/N1][V2]est[/V2] [A1]super[/A1] !",
+            "allemand": {
+              "texte": "[V1]Bravo[/V1], [N1]das[/N1] [V2]ist[/V2] [A1]super[/A1]!",
+              "prononciation_FR": "[V1]Bra-vo[/V1], [N1]dass[/N1] [V2]ist[/V2] [A1]zou-per[/A1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Well done[/V1], [N1]it[/N1] [V2]is[/V2] [A1]great[/A1]!",
+              "prononciation_FR": "[V1]Wel deun[/V1], [N1]it[/N1] [V2]iz[/V2] [A1]gréït[/A1]!"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]On[/N1] [V1]est[/V1] [N2]les meilleurs[/N2] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]sind[/V1] [N2]die Besten[/N2]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]zind[/V1] [N2]di bès-teun[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]are[/V1] [N2]the best[/N2]!",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]ar[/V1] [N2]ze best[/N2]!"
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]fini[/A1] !",
+            "allemand": {
+              "texte": "[N1]Es[/N1] [V1]ist[/V1] [A1]vobei[/A1]!",
+              "prononciation_FR": "[N1]Ess[/N1] [V1]ist[/V1] [A1]for-baï[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [A1]over[/A1]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]o-veur[/A1]!"
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]Tout le monde[/N1] au [N2]cercle[/N2].",
+            "allemand": {
+              "texte": "[N1]Alle[/N1] in [N2]den Kreis[/N2].",
+              "prononciation_FR": "[N1]A-leu[/N1] in [N2]déne kraïs[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]Everyone[/N1] to [N2]the circle[/N2].",
+              "prononciation_FR": "[N1]E-vri-weune[/N1] tou [N2]ze seur-keul[/N2]."
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[V1]Rangez[/V1] [N1]le terrain[/N1].",
+            "allemand": {
+              "texte": "[V1]Räumt[/V1] [N1]das Feld[/N1] [V2]auf[/V2].",
+              "prononciation_FR": "[V1]Roïmt[/V1] [N1]dass fêld[/N1] [V2]aouf[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Clean up[/V1] [N1]the field[/N1].",
+              "prononciation_FR": "[V1]Klin eup[/V1] [N1]ze fild[/N1]."
+            }
+          },
+          {
+            "id_expression": 12,
+            "francais": "[A1]Bon[/A1] [N1]jeu[/N1] !",
+            "allemand": {
+              "texte": "[A1]Gutes[/A1] [N1]Spiel[/N1]!",
+              "prononciation_FR": "[A1]Gou-tess[/A1] [N1]chpil[/N1]!"
+            },
+            "anglais": {
+              "texte": "[A1]Good[/A1] [N1]game[/N1]!",
+              "prononciation_FR": "[A1]Goud[/A1] [N1]guéïm[/N1]!"
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[N1]On[/N1] [V1]rentre[/V1] au [N2]camp[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]gehen[/V1] [N2]zum Lager[/N2] [A1]zurück[/A1].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]gué-heun[/V1] [N2]tsoum la-gueur[/N2] [A1]tsou-ruk[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]go back[/V1] to [N2]the camp[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]go bak[/V1] tou [N2]ze kamp[/N2]."
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Jeu",
+        "allemand": {
+          "texte": "Spiel",
+          "prononciation_FR": "Chpil"
+        },
+        "anglais": {
+          "texte": "Game",
+          "prononciation_FR": "Guéïm"
+        }
+      },
+      {
+        "francais": "Équipe",
+        "allemand": {
+          "texte": "Team (ou Gruppe)",
+          "prononciation_FR": "Tim (ou grou-peu)"
+        },
+        "anglais": {
+          "texte": "Team",
+          "prononciation_FR": "Tim"
+        }
+      },
+      {
+        "francais": "Chef",
+        "allemand": {
+          "texte": "Leiter",
+          "prononciation_FR": "Laï-teur"
+        },
+        "anglais": {
+          "texte": "Leader",
+          "prononciation_FR": "Li-deur"
+        }
+      },
+      {
+        "francais": "Règles",
+        "allemand": {
+          "texte": "Regeln",
+          "prononciation_FR": "Ré-gueuln"
+        },
+        "anglais": {
+          "texte": "Rules",
+          "prononciation_FR": "Roulz"
+        }
+      },
+      {
+        "francais": "Points",
+        "allemand": {
+          "texte": "Punkte",
+          "prononciation_FR": "Pounk-teu"
+        },
+        "anglais": {
+          "texte": "Points",
+          "prononciation_FR": "Poïnts"
+        }
+      },
+      {
+        "francais": "Gagner",
+        "allemand": {
+          "texte": "Gewinnen",
+          "prononciation_FR": "Gué-vi-neun"
+        },
+        "anglais": {
+          "texte": "Win",
+          "prononciation_FR": "Win"
+        }
+      },
+      {
+        "francais": "Perdre",
+        "allemand": {
+          "texte": "Verlieren",
+          "prononciation_FR": "Fèr-li-reun"
+        },
+        "anglais": {
+          "texte": "Lose",
+          "prononciation_FR": "Louz"
+        }
+      },
+      {
+        "francais": "Heure",
+        "allemand": {
+          "texte": "Uhr",
+          "prononciation_FR": "Our"
+        },
+        "anglais": {
+          "texte": "Time",
+          "prononciation_FR": "Taïm"
+        }
+      },
+      {
+        "francais": "Rassemblement",
+        "allemand": {
+          "texte": "Antreten",
+          "prononciation_FR": "An-tré-teun"
+        },
+        "anglais": {
+          "texte": "Assembly",
+          "prononciation_FR": "A-sem-bli"
+        }
+      },
+      {
+        "francais": "Cercle",
+        "allemand": {
+          "texte": "Kreis",
+          "prononciation_FR": "Kraïs"
+        },
+        "anglais": {
+          "texte": "Circle",
+          "prononciation_FR": "Seur-keul"
+        }
+      },
+      {
+        "francais": "Arbitre",
+        "allemand": {
+          "texte": "Schiedsrichter",
+          "prononciation_FR": "Chits-rich-teur"
+        },
+        "anglais": {
+          "texte": "Referee",
+          "prononciation_FR": "Ré-fé-ri"
+        }
+      },
+      {
+        "francais": "Sifflet",
+        "allemand": {
+          "texte": "Pfeife",
+          "prononciation_FR": "Pfaï-feu"
+        },
+        "anglais": {
+          "texte": "Whistle",
+          "prononciation_FR": "Wi-sseul"
+        }
+      },
+      {
+        "francais": "Ballon",
+        "allemand": {
+          "texte": "Ball",
+          "prononciation_FR": "Bal"
+        },
+        "anglais": {
+          "texte": "Ball",
+          "prononciation_FR": "Bol"
+        }
+      },
+      {
+        "francais": "Corde",
+        "allemand": {
+          "texte": "Seil",
+          "prononciation_FR": "Zaïl"
+        },
+        "anglais": {
+          "texte": "Rope",
+          "prononciation_FR": "Rop"
+        }
+      },
+      {
+        "francais": "Départ",
+        "allemand": {
+          "texte": "Start",
+          "prononciation_FR": "Chtart"
+        },
+        "anglais": {
+          "texte": "Start",
+          "prononciation_FR": "Start"
+        }
+      }
+    ]
+  }
+}

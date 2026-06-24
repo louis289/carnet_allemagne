@@ -1780,6 +1780,28 @@
             heading.style.fontWeight = "700";
             list.appendChild(heading);
 
+            if (files.length > 1) {
+                const btnAll = document.createElement('button');
+                btnAll.className = 'btn-download-all';
+                btnAll.innerHTML = '📥 Télécharger toutes les fiches PDF';
+                btnAll.style.cssText = 'width:100%; padding:12px; background:var(--edln-yellow); color:var(--text); border:none; border-radius:10px; font-weight:700; cursor:pointer; margin-bottom:14px; display:flex; align-items:center; justify-content:center; gap:8px; font-family:inherit; transition: all 0.2s;';
+                btnAll.onmouseover = () => btnAll.style.filter = 'brightness(1.1)';
+                btnAll.onmouseout = () => btnAll.style.filter = 'none';
+                btnAll.onclick = () => {
+                    files.forEach((file, index) => {
+                        setTimeout(() => {
+                            const a = document.createElement('a');
+                            a.href = file.url;
+                            a.download = file.name;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                        }, index * 300);
+                    });
+                };
+                list.appendChild(btnAll);
+            }
+
             files.forEach(file => {
                 const card = document.createElement('div');
                 card.className = 'pdf-download-card';

@@ -440,6 +440,7 @@
             transition: all 0.2s;
         }
         #btn-save-edit { background: #2563eb; color: white; }
+        #btn-auto-translate { background: var(--yellow); color: var(--text); }
         #btn-cancel-edit { background: rgba(255,255,255,0.07); color: var(--muted); }
 
         /* Nav bottom */
@@ -1049,6 +1050,114 @@
             margin-top: 4px;
             line-height: 1.4;
         }
+
+        /* ── RESPONSIVE TAB NAV ── */
+        #mobile-nav {
+            display: none;
+            background: var(--bg2);
+            border-bottom: 1px solid var(--border);
+            justify-content: space-around;
+            flex-shrink: 0;
+            z-index: 90;
+        }
+        .mobile-nav-tab {
+            flex: 1;
+            padding: 12px 6px;
+            border: none;
+            background: transparent;
+            font-family: 'Outfit', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--muted);
+            cursor: pointer;
+            text-align: center;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .mobile-nav-tab.active {
+            color: var(--green);
+            border-bottom-color: var(--green);
+            background: rgba(17, 76, 42, 0.02);
+        }
+
+        /* ── MEDIA QUERIES ── */
+        @media (max-width: 950px) {
+            #main {
+                grid-template-columns: 1fr !important;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+            }
+            #mobile-nav {
+                display: flex !important;
+            }
+
+            /* Responsive tabs display switching */
+            body:not(.tab-cats-active):not(.tab-card-active):not(.tab-dash-active) #left-sidebar { display: none !important; }
+            body:not(.tab-cats-active):not(.tab-card-active):not(.tab-dash-active) #card-panel { display: flex !important; }
+            body:not(.tab-cats-active):not(.tab-card-active):not(.tab-dash-active) #dash-panel { display: none !important; }
+
+            body:not(.tab-cats-active) #left-sidebar { display: none !important; }
+            body:not(.tab-card-active) #card-panel { display: none !important; }
+            body:not(.tab-dash-active) #dash-panel { display: none !important; }
+            
+            body.tab-cats-active #left-sidebar { display: flex !important; flex: 1; }
+            body.tab-card-active #card-panel { display: flex !important; flex: 1; }
+            body.tab-dash-active #dash-panel { display: flex !important; flex: 1; }
+            
+            #left-sidebar {
+                border-right: none !important;
+                height: 100%;
+            }
+            #dash-panel {
+                border-left: none !important;
+                height: 100%;
+            }
+            #card-panel {
+                height: 100%;
+                overflow-y: auto;
+            }
+            
+            /* Make edit wraps and actions wrap nicely on mobile */
+            #actions {
+                grid-template-columns: 1fr 1fr !important;
+                gap: 8px !important;
+            }
+            #save-edit-wrap {
+                flex-direction: column;
+                gap: 8px !important;
+            }
+            #save-edit-wrap button {
+                width: 100%;
+            }
+            #header {
+                padding: 10px !important;
+                gap: 8px !important;
+                flex-wrap: wrap;
+            }
+            #header h1 {
+                font-size: 16px !important;
+                width: 100%;
+                text-align: center;
+                order: -2;
+            }
+            .version-tabs {
+                order: -1;
+            }
+            .user-control {
+                margin-left: auto !important;
+                padding-left: 8px !important;
+            }
+            #progress-bar-wrap {
+                max-width: 100% !important;
+                width: 100%;
+                margin-top: 4px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1076,6 +1185,13 @@
     <div id="progress-pct">0%</div>
 </div>
 
+<!-- Mobile Navigation Tabs (visible only on mobile/tablet) -->
+<div id="mobile-nav">
+    <button class="mobile-nav-tab" id="mob-tab-cats" onclick="switchMobileTab('cats')">📁 Sections</button>
+    <button class="mobile-nav-tab active" id="mob-tab-card" onclick="switchMobileTab('card')">🔍 Expression</button>
+    <button class="mobile-nav-tab" id="mob-tab-dash" onclick="switchMobileTab('dash')">📊 Progression</button>
+</div>
+
 <!-- Main -->
 <div id="main">
     <!-- Left: categories -->
@@ -1084,6 +1200,9 @@
         <div style="padding: 10px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 8px; background: var(--bg2); flex-shrink: 0;">
             <button id="btn-reorder-sections" onclick="openReorderModal()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1.5px dashed var(--green); background: transparent; color: var(--green); font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;">
                 ↕️ Ordre des sections
+            </button>
+            <button id="btn-markup-help" onclick="openMarkupHelpModal()" style="width: 100%; padding: 10px; border-radius: 8px; border: 1.5px dashed var(--green); background: transparent; color: var(--green); font-family: inherit; font-size: 12px; font-weight: 700; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 6px;">
+                💡 Guide de balisage
             </button>
         </div>
     </div>
@@ -1116,6 +1235,7 @@
         </div>
         <div id="save-edit-wrap" style="display:flex">
             <button id="btn-cancel-edit" onclick="cancelEdit()">✕ Annuler</button>
+            <button id="btn-auto-translate" onclick="autoTranslateFields()">✨ Traduire FR → DE/EN</button>
             <button id="btn-save-edit"   onclick="saveEdit()">✔ Valider la modification</button>
         </div>
         <div id="actions">
@@ -1338,8 +1458,34 @@ function startLockHeartbeat() {
     }, 10000);
 }
 
+let currentMobileTab = 'card';
+
+function switchMobileTab(tab) {
+    currentMobileTab = tab;
+    // Remove active classes from body
+    document.body.classList.remove('tab-cats-active', 'tab-card-active', 'tab-dash-active');
+    
+    // Add active class matching tab to body
+    if (tab === 'cats') document.body.classList.add('tab-cats-active');
+    else if (tab === 'card') document.body.classList.add('tab-card-active');
+    else if (tab === 'dash') document.body.classList.add('tab-dash-active');
+    
+    // Toggle active class on tab buttons
+    document.querySelectorAll('.mobile-nav-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.id === `mob-tab-${tab}`);
+    });
+}
+
 // ── Section Reordering ────────────────────────────────
 let tempFilesOrder = []; // Temporary files order inside modal
+
+function openMarkupHelpModal() {
+    document.getElementById('markup-help-modal').classList.remove('hidden');
+}
+
+function closeMarkupHelpModal() {
+    document.getElementById('markup-help-modal').classList.add('hidden');
+}
 
 function openReorderModal() {
     // Collect the filenames in order
@@ -1451,6 +1597,7 @@ async function saveReorder() {
 // ── Init ────────────────────────────────────────────
 async function init() {
     setupUsername();
+    switchMobileTab('card');
     showLoading(true);
     updateVersionTabs();
     loadSession();
@@ -1689,7 +1836,14 @@ function escapeSQ(s) { return s.replace(/'/g, "\\'"); }
 
 function jumpToCategory(catName) {
     const idx = flatExprs.findIndex(e => e.cat === catName);
-    if (idx >= 0) { cursor = idx; renderCard(); renderCatPanel(); }
+    if (idx >= 0) { 
+        cursor = idx; 
+        renderCard(); 
+        renderCatPanel(); 
+        if (window.innerWidth <= 950) {
+            switchMobileTab('card');
+        }
+    }
 }
 
 // ── Render: current card ───────────────────────────────
@@ -1745,9 +1899,7 @@ function renderViewMode(data) {
     document.getElementById('save-edit-wrap').style.display = 'none';
     document.getElementById('actions').style.display = 'grid';
 
-    // Remove grammar help box if active
-    const helpEl = document.getElementById('grammar-help-zone');
-    if (helpEl) helpEl.remove();
+
 
     // Replace with view blocks
     document.getElementById('block-fr').innerHTML = `
@@ -1784,12 +1936,13 @@ function renderViewMode(data) {
     }
     verifyEl.innerHTML = '';
     if (hasVerifiable) {
-        const btn = document.createElement('button');
-        btn.className = 'verify-btn';
-        btn.id = 'btn-verify';
-        btn.innerHTML = '🔍 Vérifier les traductions';
-        btn.onclick = () => runVerification(frText, deText, enText);
-        verifyEl.appendChild(btn);
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'verify-loading';
+        loadingDiv.style.cssText = 'display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin-top:10px; padding:10px 14px; background:rgba(37, 99, 235, 0.04); border:1px solid rgba(37, 99, 235, 0.15); border-radius:12px;';
+        loadingDiv.innerHTML = '<span class="verify-spinner"></span> 🔍 Vérification automatique des traductions...';
+        verifyEl.appendChild(loadingDiv);
+
+        runVerification(frText, deText, enText);
     }
 }
 
@@ -1821,39 +1974,6 @@ function renderEditMode(data) {
     `;
     document.getElementById('block-en').style.display = '';
 
-    // Injecter la boîte d'aide à la grammaire
-    let helpEl = document.getElementById('grammar-help-zone');
-    if (!helpEl) {
-        helpEl = document.createElement('div');
-        helpEl.id = 'grammar-help-zone';
-        document.getElementById('card-wrap').appendChild(helpEl);
-    }
-    helpEl.innerHTML = `
-        <div class="grammar-help-box">
-            <div class="grammar-help-title">💡 Guide du balisage grammatical (écriture syntaxique)</div>
-            <p class="grammar-help-intro">Associez visuellement les mots correspondants d'une langue à l'autre en les entourant des balises suivantes (avec un même index, ex: 1, 2, 3...) :</p>
-            <div class="grammar-help-grid">
-                <div class="grammar-help-col">
-                    <span class="grammar-tag-badge gr-n">Nom / Pronom</span>
-                    <code>[N1]texte[/N1]</code>
-                    <p>Couleur <strong>bleu</strong>. Ex: <code>[N1]je[/N1]</code> / <code>[N1]ich[/N1]</code></p>
-                </div>
-                <div class="grammar-help-col">
-                    <span class="grammar-tag-badge gr-v">Verbe</span>
-                    <code>[V1]texte[/V1]</code>
-                    <p>Couleur <strong>verte</strong>. Ex: <code>[V1]suis[/V1]</code> / <code>[V1]bin[/V1]</code></p>
-                </div>
-                <div class="grammar-help-col">
-                    <span class="grammar-tag-badge gr-a">Adj / Adv</span>
-                    <code>[A1]texte[/A1]</code>
-                    <p>Couleur <strong>rouge</strong>. Ex: <code>[A1]grand[/A1]</code> / <code>[A1]groß[/A1]</code></p>
-                </div>
-            </div>
-            <div class="grammar-help-note">
-                <strong>Attention :</strong> Veillez à bien fermer vos balises (ex: <code>[/N1]</code>) et à utiliser les mêmes indices d'une langue à l'autre pour conserver la cohérence visuelle.
-            </div>
-        </div>
-    `;
 }
 
 function colorize(text) {
@@ -1960,9 +2080,6 @@ if (window.speechSynthesis) {
 function escAttr(s) { return (s||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/`/g,'&#96;'); }
 
 async function runVerification(frText, deText, enText) {
-    const btn = document.getElementById('btn-verify');
-    if (btn) { btn.disabled = true; btn.innerHTML = '<span class="verify-spinner"></span> Vérification en cours…'; }
-
     const zone = document.getElementById('verify-zone');
 
     async function translate(q, langpair) {
@@ -1999,8 +2116,11 @@ async function runVerification(frText, deText, enText) {
     ]);
 
     let html = '<div class="verify-panel">';
-    html += `<div style="font-size:11px;font-weight:700;color:var(--muted);">Phrase française de référence :</div>`;
-    html += `<div style="font-size:13px;font-weight:600;color:var(--text);font-style:italic;">« ${frText} »</div>`;
+    html += `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">`;
+    html += `  <div style="font-size:11px;font-weight:700;color:var(--muted);">Phrase française de référence :</div>`;
+    html += `  <button class="verify-refresh-btn" style="background:transparent; border:none; color:var(--modify); cursor:pointer; font-size:11px; font-weight:600; text-decoration:underline; font-family:inherit;">🔄 Ré-vérifier</button>`;
+    html += `</div>`;
+    html += `<div style="font-size:13px;font-weight:600;color:var(--text);font-style:italic;margin-bottom:8px;">« ${frText} »</div>`;
 
     if (deRes) {
         const sim = wordSimilarity(frText, deRes.text);
@@ -2023,19 +2143,20 @@ async function runVerification(frText, deText, enText) {
     }
     html += '</div>';
 
-    // Re-add the verify button + panel
     if (zone) {
         zone.innerHTML = '';
-        const btn = document.createElement('button');
-        btn.className = 'verify-btn';
-        btn.id = 'btn-verify';
-        btn.innerHTML = '🔄 Ré-vérifier';
-        btn.onclick = () => runVerification(frText, deText, enText);
-        zone.appendChild(btn);
-
         const container = document.createElement('div');
         container.innerHTML = html;
         zone.appendChild(container.firstElementChild || container);
+
+        // Bind refresh button click programmatically
+        const refreshBtn = zone.querySelector('.verify-refresh-btn');
+        if (refreshBtn) {
+            refreshBtn.onclick = () => {
+                zone.innerHTML = '<div class="verify-loading" style="display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin-top:10px; padding:10px 14px; background:rgba(37, 99, 235, 0.04); border:1px solid rgba(37, 99, 235, 0.15); border-radius:12px;"><span class="verify-spinner"></span> 🔍 Re-vérification des traductions...</div>';
+                runVerification(frText, deText, enText);
+            };
+        }
     }
 }
 
@@ -2070,6 +2191,65 @@ function decide(status) {
     // Auto-advance if not "later"
     if (status !== 'later' && cursor < flatExprs.length - 1) {
         setTimeout(() => { navigate(1); }, 300);
+    }
+}
+
+async function autoTranslateFields() {
+    const frInput = document.getElementById('edit-fr');
+    const deInput = document.getElementById('edit-de-text');
+    const enInput = document.getElementById('edit-en-text');
+    const btn = document.getElementById('btn-auto-translate');
+    
+    if (!frInput || !frInput.value.trim()) {
+        alert("Veuillez d'abord saisir un texte en français.");
+        return;
+    }
+    
+    const frText = stripTags(frInput.value.trim());
+    
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '⚡ Traduction en cours...';
+    }
+    
+    async function translate(q, langpair) {
+        try {
+            const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${langpair}`;
+            const r = await fetch(url);
+            const d = await r.json();
+            if (d.responseStatus === 200) {
+                return d.responseData.translatedText;
+            }
+            return null;
+        } catch(e) {
+            return null;
+        }
+    }
+    
+    try {
+        const [deTrans, enTrans] = await Promise.all([
+            translate(frText, 'fr|de'),
+            translate(frText, 'fr|en')
+        ]);
+        
+        if (deTrans && deInput) {
+            deInput.value = deTrans;
+        }
+        if (enTrans && enInput) {
+            enInput.value = enTrans;
+        }
+        
+        if (!deTrans && !enTrans) {
+            alert("Impossible de joindre l'API de traduction. Veuillez vérifier votre connexion.");
+        }
+    } catch(e) {
+        console.error(e);
+        alert("Erreur lors de la traduction automatique.");
+    } finally {
+        if (btn) {
+            btn.disabled = false;
+            btn.innerHTML = '✨ Traduire FR → DE/EN';
+        }
     }
 }
 
@@ -2295,6 +2475,63 @@ init();
         <div class="modal-footer">
             <button id="reorder-cancel-btn" class="modal-btn cancel" onclick="closeReorderModal()">Annuler</button>
             <button id="reorder-save-btn" class="modal-btn save" onclick="saveReorder()">Enregistrer</button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: Guide de balisage -->
+<div id="markup-help-modal" class="modal-overlay hidden">
+    <div class="modal-container" style="max-width: 520px;">
+        <div class="modal-header">
+            <h3>💡 Guide du balisage grammatical</h3>
+            <button class="modal-close" onclick="closeMarkupHelpModal()">✕</button>
+        </div>
+        <div class="modal-body">
+            <p style="font-size: 13px; color: var(--muted); margin-bottom: 16px; line-height: 1.5;">
+                Le carnet scout applique une coloration pédagogique pour relier les mots correspondants entre les langues. Entourez les mots correspondants avec ces balises (en utilisant le même index numérique) :
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="grammar-tag-badge gr-n">Nom / Pronom</span>
+                        <code style="font-family: monospace; font-size: 12px; background: var(--bg2); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border);">[N1]texte[/N1]</code>
+                    </div>
+                    <p style="font-size: 11px; color: var(--muted); line-height: 1.4;">
+                        Couleur <strong>bleu</strong>. Utilisé pour les noms, pronoms et groupes nominaux.
+                        <br>Exemple : <code>[N1]le chien[/N1]</code> ➔ <code>[N1]der Hund[/N1]</code>
+                    </p>
+                </div>
+
+                <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="grammar-tag-badge gr-v">Verbe</span>
+                        <code style="font-family: monospace; font-size: 12px; background: var(--bg2); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border);">[V1]texte[/V1]</code>
+                    </div>
+                    <p style="font-size: 11px; color: var(--muted); line-height: 1.4;">
+                        Couleur <strong>verte</strong>. Utilisé pour les verbes conjugués ou à l'infinitif.
+                        <br>Exemple : <code>[V1]mange[/V1]</code> ➔ <code>[V1]isst[/V1]</code>
+                    </p>
+                </div>
+
+                <div style="background: var(--bg3); border: 1px solid var(--border); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 6px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="grammar-tag-badge gr-a">Adjectif / Adverbe</span>
+                        <code style="font-family: monospace; font-size: 12px; background: var(--bg2); padding: 2px 6px; border-radius: 4px; border: 1px solid var(--border);">[A1]texte[/A1]</code>
+                    </div>
+                    <p style="font-size: 11px; color: var(--muted); line-height: 1.4;">
+                        Couleur <strong>rouge</strong>. Utilisé pour les adjectifs qualificatifs et adverbes significatifs.
+                        <br>Exemple : <code>[A1]très grand[/A1]</code> ➔ <code>[A1]sehr groß[/A1]</code>
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top: 16px; font-size: 12px; color: var(--text); border-top: 1px solid var(--border); padding-top: 12px; line-height: 1.5;">
+                ℹ️ <strong>Règle d'or :</strong> L'index (ex: 1, 2, 3...) permet à l'application d'associer les blocs de mots équivalents d'une langue à l'autre. Pensez à fermer correctement vos balises (avec le slash <code>/</code>) pour éviter tout bug d'affichage.
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="modal-btn save" onclick="closeMarkupHelpModal()">Compris</button>
         </div>
     </div>
 </div>
