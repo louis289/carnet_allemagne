@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [N2]your father[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]your fa-zeur[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "[N1]It's[/N1] [V1]a trap[/V1]!",
               "prononciation_FR": "[N1]Its[/N1] [V1]eu trap[/V1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +46,9 @@
             "anglais": {
               "texte": "May [N1]the force[/N1] [V1]be[/V1] with [N2]you[/N2].",
               "prononciation_FR": "Méï [N1]ze forss[/N1] [V1]bi[/V1] wiz [N2]you[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -52,6 +61,9 @@
             "anglais": {
               "texte": "To [N1]infinity[/N1] and [N2]beyond[/N2]!",
               "prononciation_FR": "Tou [N1]in-fi-ni-ti[/N1] and [N2]bi-yond[/N2]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -160,6 +172,10 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]will be back[/V1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]wil bi bak[/V1]."
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -172,6 +188,9 @@
             "anglais": {
               "texte": "[N1]Hasta la vista[/N1], [A1]baby[/A1]!",
               "prononciation_FR": "[N1]As-ta la vis-ta[/N1], [A1]béï-bi[/A1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -208,6 +227,10 @@
             "anglais": {
               "texte": "Yippee-ki-yay, [N1]my friend[/N1]!",
               "prononciation_FR": "Yi-pi-kaï-yéy, [N1]maï frend[/N1]!"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -220,6 +243,9 @@
             "anglais": {
               "texte": "[N1]You[/N1] [N2]don't[/N2] [V1]say[/V1].",
               "prononciation_FR": "[N1]You[/N1] [N2]dont[/N2] [V1]séy[/V1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -232,6 +258,9 @@
             "anglais": {
               "texte": "[A1]Just[/A1] [V1]do it[/V1]!",
               "prononciation_FR": "[A1]Djeust[/A1] [V1]dou it[/V1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -244,6 +273,9 @@
             "anglais": {
               "texte": "[N1]Mom[/N1], get [N2]the camera[/N2]!",
               "prononciation_FR": "[N1]Mom[/N1], guét [N2]ze ka-mé-ra[/N2]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -256,6 +288,10 @@
             "anglais": {
               "texte": "We're [V1]gonna need[/V1] [A1]a bigger boat[/A1].",
               "prononciation_FR": "Wir [V1]go-na nid[/V1] [A1]eu bi-gueur bot[/A1]."
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -268,6 +304,9 @@
             "anglais": {
               "texte": "[N1]Life[/N1] [V1]is like[/V1] [N2]a box of chocolates[/N2].",
               "prononciation_FR": "[N1]Laïf[/N1] [V1]iz laïk[/V1] [N2]eu boks ov tcho-ko-lêts[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -280,6 +319,10 @@
             "anglais": {
               "texte": "[V1]Run[/V1], [N1]Forrest[/N1], [V1]run[/V1]!",
               "prononciation_FR": "[V1]Reun[/V1], [N1]Fo-rêst[/N1], [V1]reun[/V1]!"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -292,6 +335,9 @@
             "anglais": {
               "texte": "Why [A1]so serious[/A1]?",
               "prononciation_FR": "Waï [A1]so si-ri-euss[/A1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -304,6 +350,10 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am the king of the world[/V1]!",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame ze king ov ze weurld[/V1]!"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           }
         ]

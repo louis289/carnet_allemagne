@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[V1]Hello[/V1]!",
               "prononciation_FR": "[V1]Hé-lo[/V1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "[V1]Good evening[/V1]!",
               "prononciation_FR": "[V1]Goud i-vning[/V1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +46,9 @@
             "anglais": {
               "texte": "[N1]Good night[/N1]!",
               "prononciation_FR": "[N1]Goud naït[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -52,6 +61,9 @@
             "anglais": {
               "texte": "[V1]Hello[/V1]!",
               "prononciation_FR": "[V1]Hé-lo[/V1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +76,9 @@
             "anglais": {
               "texte": "[V1]Goodbye[/V1]!",
               "prononciation_FR": "[V1]Goud-baï[/V1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -76,6 +91,9 @@
             "anglais": {
               "texte": "How [V1]are[/V1] [N1]you[/N1]?",
               "prononciation_FR": "Haou [V1]ar[/V1] [N1]you[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -88,6 +106,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]good[/A1]!",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]goud[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -100,6 +121,9 @@
             "anglais": {
               "texte": "[N1]Everything[/N1] [V1]is[/V1] [A1]great[/A1]!",
               "prononciation_FR": "[N1]E-vri-thing[/N1] [V1]iz[/V1] [A1]gréït[/A1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -112,6 +136,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]tired[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]taï-eurd[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -124,6 +151,9 @@
             "anglais": {
               "texte": "And [N1]you[/N1]?",
               "prononciation_FR": "End [N1]you[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -136,6 +166,9 @@
             "anglais": {
               "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]want[/V2] [V3]to stay[/V3]?",
               "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]wont[/V2] [V3]tou stéï[/V3]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -148,6 +181,9 @@
             "anglais": {
               "texte": "[N1]We[/N1] [V1]will see[/V1] [N2]each other[/N2] [A1]tonight[/A1]!",
               "prononciation_FR": "[N1]Wi[/N1] [V1]wil si[/V1] [N2]itch eu-zeur[/N2] [A1]tou-naït[/A1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -160,6 +196,9 @@
             "anglais": {
               "texte": "[V1]Bring[/V1] [N1]your guitar[/N1]!",
               "prononciation_FR": "[V1]Bring[/V1] [N1]your gui-tar[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -172,6 +211,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]is[/V1] [N2]time[/N2] for [N3]the campfire[/N3]!",
               "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]taïm[/N2] for [N3]ze kamp-faï-eur[/N3]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -184,6 +226,9 @@
             "anglais": {
               "texte": "[A1]See you tomorrow[/A1], [N1]my friend[/N1]!",
               "prononciation_FR": "[A1]Si you tou-mo-ro[/A1], [N1]maï frend[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           }
         ]
@@ -202,6 +247,9 @@
             "anglais": {
               "texte": "What [V1]is[/V1] [N2]your name[/N2]?",
               "prononciation_FR": "Wot [V1]iz[/V1] [N2]your neïm[/N2]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -214,6 +262,9 @@
             "anglais": {
               "texte": "[N2]My name[/N2] [V1]is[/V1]...",
               "prononciation_FR": "[N2]Maï neïm[/N2] [V1]iz[/V1]..."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -226,6 +277,9 @@
             "anglais": {
               "texte": "[V1]Nice to meet you[/V1]!",
               "prononciation_FR": "[V1]Naïss tou mit you[/V1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -238,6 +292,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [N2]French[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]Frentch[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -250,6 +307,9 @@
             "anglais": {
               "texte": "[N1]My name[/N1] [V1]is[/V1] [N3]Paul[/N3].",
               "prononciation_FR": "[N1]Maï neïm[/N1] [V1]iz[/V1] [N3]Paul[/N3]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -262,6 +322,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [N2]fifteen years old[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]fif-tine yirz old[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -274,6 +337,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]come[/V1] from [N2]France[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]keum[/V1] from [N2]Franss[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -286,6 +352,9 @@
             "anglais": {
               "texte": "[N1]My group[/N1] [V1]is[/V1] from [N2]Paris[/N2].",
               "prononciation_FR": "[N1]Maï group[/N1] [V1]iz[/V1] from [N2]Pa-ris[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -298,6 +367,9 @@
             "anglais": {
               "texte": "What [V1]is[/V1] [N2]your name[/N2]?",
               "prononciation_FR": "Wot [V1]iz[/V1] [N2]your neïm[/N2]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -310,6 +382,9 @@
             "anglais": {
               "texte": "[A1]How[/A1] old [V1]are[/V1] [N1]you[/N1]?",
               "prononciation_FR": "[A1]Haou[/A1] old [V1]ar[/V1] [N1]you[/N1]?"
+            },
+            "audit": {
+              "status": "deleted"
             }
           },
           {
@@ -322,6 +397,9 @@
             "anglais": {
               "texte": "Where [V1]are[/V1] [N1]you[/N1] from?",
               "prononciation_FR": "Wèr [V1]ar[/V1] [N1]you[/N1] from?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -334,6 +412,9 @@
             "anglais": {
               "texte": "[V1]Are[/V1] [N1]you[/N1] [A1]German[/A1]?",
               "prononciation_FR": "[V1]Ar[/V1] [N1]you[/N1] [A1]Djer-man[/A1]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -346,6 +427,9 @@
             "anglais": {
               "texte": "[A1]What[/A1] [V1]is[/V1] [N1]your group[/N1]?",
               "prononciation_FR": "[A1]Wot[/A1] [V1]iz[/V1] [N1]your group[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           }
         ]
@@ -364,6 +448,9 @@
             "anglais": {
               "texte": "[A1]Please[/A1].",
               "prononciation_FR": "[A1]Pliz[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -376,6 +463,9 @@
             "anglais": {
               "texte": "[V1]Thank you[/V1]!",
               "prononciation_FR": "[V1]Senk you[/V1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -388,6 +478,9 @@
             "anglais": {
               "texte": "[V1]You're welcome[/V1].",
               "prononciation_FR": "[V1]Yor wel-keum[/V1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -400,6 +493,9 @@
             "anglais": {
               "texte": "[V1]Excuse me[/V1].",
               "prononciation_FR": "[V1]Ex-kiouz mi[/V1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -412,6 +508,9 @@
             "anglais": {
               "texte": "[A1]Great[/A1] [N1]idea[/N1]!",
               "prononciation_FR": "[A1]Gréït[/A1] [N1]aï-di-a[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -424,6 +523,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]is[/V1] [A1]too good[/A1]!",
               "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]tou goud[/A1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -436,6 +538,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]happy[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]ha-pi[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -448,6 +553,9 @@
             "anglais": {
               "texte": "[V1]Have[/V1] a [A1]good[/A1] [N1]time[/N1]!",
               "prononciation_FR": "[V1]Hav[/V1] eu [A1]goud[/A1] [N1]taïm[/N1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -460,6 +568,9 @@
             "anglais": {
               "texte": "[N1]Sorry[/N1]!",
               "prononciation_FR": "[N1]So-ri[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -472,6 +583,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]is[/V1] [A1]not serious[/A1].",
               "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]not si-ri-euss[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -484,6 +598,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]sorry[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [A1]so-ri[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -496,6 +613,9 @@
             "anglais": {
               "texte": "[N1]No[/N1] [N2]problem[/N2]!",
               "prononciation_FR": "[N1]No[/N1] [N2]pro-blem[/N2]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -508,6 +628,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]did[/V1] [A1]not[/A1] [V2]understand[/V2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]did[/V1] [A1]not[/A1] [V2]eun-der-stand[/V2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {

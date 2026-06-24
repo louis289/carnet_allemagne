@@ -16,6 +16,10 @@
             "anglais": {
               "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]like[/V2] [N2]music[/N2]?",
               "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]laïk[/V2] [N2]miou-zik[/N2]?"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -28,6 +32,9 @@
             "anglais": {
               "texte": "What [V1]is[/V1] [N1]your favorite song[/N1]?",
               "prononciation_FR": "Wot [V1]iz[/V1] [N1]your feï-vo-rit song[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +47,10 @@
             "anglais": {
               "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]play[/V2] [N2]an instrument[/N2]?",
               "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]laïk[/V2] [N2]an ine-strou-ment[/N2]?"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -52,6 +63,9 @@
             "anglais": {
               "texte": "What [V1]is[/V1] [N1]your favorite animal[/N1]?",
               "prononciation_FR": "Wot [V1]iz[/V1] [N1]your feï-vo-rit a-ni-meul[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +78,10 @@
             "anglais": {
               "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]have[/V2] [N2]siblings[/N2]?",
               "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]hav[/V2] [N2]sib-lingz[/N2]?"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -76,6 +94,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]live[/V1] near [N2]the sea[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]liv[/V1] nir [N2]ze si[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -88,6 +109,9 @@
             "anglais": {
               "texte": "[N1]Provence[/N1] [V1]is[/V1] [A1]beautiful[/A1]!",
               "prononciation_FR": "[N1]Pro-vanss[/N1] [V1]iz[/V1] [A1]biou-ti-foul[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -100,6 +124,9 @@
             "anglais": {
               "texte": "[N1]Hello[/N1] [N2]Sir[/N2].",
               "prononciation_FR": "[N1]Hé-lo[/N1] [N2]Seur[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -136,6 +163,9 @@
             "anglais": {
               "texte": "Where [V1]is[/V1] [A1]the next[/A1] [N1]village[/N1]?",
               "prononciation_FR": "Wèr [V1]iz[/V1] [A1]ze nekst[/A1] [N1]vi-lidj[/N1]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -148,6 +178,9 @@
             "anglais": {
               "texte": "[N1]Thanks[/N1] for [N2]the help[/N2].",
               "prononciation_FR": "[N1]Sanks[/N1] for [N2]ze help[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -160,6 +193,9 @@
             "anglais": {
               "texte": "[V1]Hey[/V1], [N1]what's[/N1] [V2]up[/V2]?",
               "prononciation_FR": "[V1]Héy[/V1], [N1]wots[/N1] [V2]eup[/V2]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -172,6 +208,9 @@
             "anglais": {
               "texte": "[V1]Are[/V1] [N1]you[/N1] [A1]new[/A1] [A2]here[/A2]?",
               "prononciation_FR": "[V1]Ar[/V1] [N1]you[/N1] [A1]niou[/A1] [A2]hir[/A2]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -328,6 +367,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]is[/V1] [A1]great[/A1] to [V2]meet[/V2] you!",
               "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [A1]gréït[/A1] tou [V2]mit[/V2] you!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -340,6 +382,9 @@
             "anglais": {
               "texte": "[N1]No[/N1], [N2]thanks[/N2].",
               "prononciation_FR": "[N1]No[/N1], [N2]sanks[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -562,6 +607,9 @@
             "anglais": {
               "texte": "[V1]Give[/V1] [N1]me[/N1] your [A1]Insta[/A1].",
               "prononciation_FR": "[V1]Guiv[/V1] [N1]mi[/N1] your [A1]Inns-ta[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -574,6 +622,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]will add you[/V1] [A1]later[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]wil ad you[/V1] [A1]léï-teur[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {

@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[N1]I'm[/N1] [A1]happy[/A1]!",
               "prononciation_FR": "[N1]Aïm[/N1] [A1]ha-pi[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "[N1]I'm[/N1] [A1]sad[/A1].",
               "prononciation_FR": "[N1]Aïm[/N1] [A1]sad[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +46,9 @@
             "anglais": {
               "texte": "[N1]I'm[/N1] [A1]scared[/A1].",
               "prononciation_FR": "[N1]Aïm[/N1] [A1]skèrd[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -52,6 +61,9 @@
             "anglais": {
               "texte": "[N1]I'm[/N1] [A1]tired[/A1].",
               "prononciation_FR": "[N1]Aïm[/N1] [A1]taï-eurd[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +76,9 @@
             "anglais": {
               "texte": "[N1]I'm[/N1] [A1]stressed[/A1].",
               "prononciation_FR": "[N1]Aïm[/N1] [A1]chtrést[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -76,6 +91,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]feel[/V1] [A1]lonely[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]fil[/V1] [A1]loun-li[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -406,6 +424,9 @@
             "anglais": {
               "texte": "[V1]Give[/V1] [N1]his tongue[/N1] to the [N2]cat[/N2].",
               "prononciation_FR": "[V1]Guiv[/V1] [N1]hiz teung[/N1] tou ze [N2]kat[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -418,6 +439,9 @@
             "anglais": {
               "texte": "[V1]To put down[/V1] [N1]a rabbit[/N1].",
               "prononciation_FR": "[V1]Tou pout daoun[/V1] [N1]eu ra-bit[/N1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -490,6 +514,9 @@
             "anglais": {
               "texte": "[V1]To tell[/V1] [N1]salads[/N1].",
               "prononciation_FR": "[V1]Tou tèl[/V1] [N1]sa-ladz[/N1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -502,6 +529,10 @@
             "anglais": {
               "texte": "[V1]To break[/V1] [N1]the feet[/N1].",
               "prononciation_FR": "[V1]Tou bréïk[/V1] [N1]ze fit[/N1]."
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           }
         ]
@@ -520,6 +551,9 @@
             "anglais": {
               "texte": "[N1]A piece[/N1] of [N2]cake[/N2].",
               "prononciation_FR": "[N1]Eu piss[/N1] ov [N2]kéïk[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -532,6 +566,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]is raining[/V1] [N2]cats[/N2] and [N3]dogs[/N3].",
               "prononciation_FR": "[N1]It[/N1] [V1]iz réï-ning[/V1] [N2]kats[/N2] and [N3]dogz[/N3]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {

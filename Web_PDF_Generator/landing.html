@@ -1436,6 +1436,19 @@
             } catch (e) {
                 console.error("Impossible de charger fiches_conçues.json automatiquement :", e);
             }
+
+            // Load existing PDFs on startup
+            try {
+                const resPdf = await fetch('/api/fiches/list');
+                if (resPdf.ok) {
+                    const resultPdf = await resPdf.json();
+                    if (resultPdf.success && Array.isArray(resultPdf.files) && resultPdf.files.length > 0) {
+                        renderPDFDownloads(resultPdf.files);
+                    }
+                }
+            } catch (e) {
+                console.error("Impossible de charger la liste des PDFs existants :", e);
+            }
         });
 
         // Render Sidebar List

@@ -16,6 +16,10 @@
             "anglais": {
               "texte": "[N1]the Jamboree / BuLa[/N1]",
               "prononciation_FR": "[N1]ze djam-bo-ri / Bou-La[/N1]"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -28,6 +32,9 @@
             "anglais": {
               "texte": "[N1]the opening ceremony[/N1]",
               "prononciation_FR": "[N1]ze ou-peun-ing sé-ré-mo-ni[/N1]"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +47,10 @@
             "anglais": {
               "texte": "[N1]the closing ceremony[/N1]",
               "prononciation_FR": "[N1]ze clouz-ing sé-ré-mo-ni[/N1]"
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -52,6 +63,9 @@
             "anglais": {
               "texte": "[N1]the mixed team[/N1]",
               "prononciation_FR": "[N1]ze mikst tim[/N1]"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +78,9 @@
             "anglais": {
               "texte": "[N1]the camp charter[/N1]",
               "prononciation_FR": "[N1]ze camp tchar-teur[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -76,6 +93,9 @@
             "anglais": {
               "texte": "[N1]the scout promise[/N1]",
               "prononciation_FR": "[N1]ze skaout pro-miss[/N1]"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -88,6 +108,9 @@
             "anglais": {
               "texte": "[N1]the promise ceremony[/N1]",
               "prononciation_FR": "[N1]ze pro-miss sé-ré-mo-ni[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -100,6 +123,9 @@
             "anglais": {
               "texte": "[N1]badges and talents[/N1]",
               "prononciation_FR": "[N1]bad-jiz annd ta-lents[/N1]"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -754,6 +780,9 @@
             "anglais": {
               "texte": "[N1]We[/N1] [V1]leave[/V1] in [A1]ten minutes[/A1]!",
               "prononciation_FR": "[N1]Wi[/N1] [V1]liv[/V1] in [A1]tèn mi-neuts[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -766,6 +795,9 @@
             "anglais": {
               "texte": "[V1]Stretch[/V1] [N1]your[/N1] [N2]legs[/N2].",
               "prononciation_FR": "[V1]Stretcḥ[/V1] [N1]your[/N1] [N2]lègz[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {

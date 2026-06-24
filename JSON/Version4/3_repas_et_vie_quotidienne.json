@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[N1]It'[/N1][V1]is[/V1] [A1]delicious[/A1]!",
               "prononciation_FR": "[N1]Its[/N1] [A1]di-li-cheuss[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "[N1]It'[/N1][V1]is[/V1] [N2]time to eat[/N2]!",
               "prononciation_FR": "[N1]Its[/N1] [N2]taïm tou it[/N2]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {

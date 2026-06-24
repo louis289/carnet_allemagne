@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audit Carnet Scout – EDLN</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="logo_edln.png">
+    <link rel="icon" type="image/png" href="logo_edln.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -308,11 +313,41 @@
             overflow-y: auto;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 14px;
         }
         #card-wrap::-webkit-scrollbar { width: 4px; }
         #card-wrap::-webkit-scrollbar-track { background: transparent; }
         #card-wrap::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+        .expr-block-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 20px;
+            align-items: stretch;
+        }
+        .expr-block-main {
+            min-width: 0;
+        }
+        .expr-block-verify {
+            min-width: 0;
+            border-left: 1.5px solid var(--border);
+            padding-left: 20px;
+        }
+        @media (max-width: 950px) {
+            .expr-block-layout {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .expr-block-verify {
+                border-left: none;
+                border-top: 1.5px dashed var(--border);
+                padding-left: 0;
+                padding-top: 12px;
+            }
+            .fr-block .expr-block-verify {
+                display: none !important;
+            }
+        }
 
         /* Status banner */
         #status-banner {
@@ -625,6 +660,8 @@
         .tts-btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
+            min-width: 130px;
             gap: 5px;
             margin-top: 8px;
             padding: 5px 12px;
@@ -1051,6 +1088,55 @@
             line-height: 1.4;
         }
 
+        /* ── EDIT MOBILE TABS ── */
+        #edit-mobile-tabs {
+            display: none;
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .edit-mob-tab {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            background: transparent;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+        .edit-mob-tab:hover {
+            color: var(--green);
+        }
+        .edit-mob-tab.active {
+            background: rgba(17, 76, 42, 0.05);
+            color: var(--green);
+            border-bottom-color: var(--green);
+        }
+        @media (max-width: 950px) {
+            body.edit-mode-active #edit-mobile-tabs {
+                display: flex;
+            }
+        }
+
+        /* Tinder Story Bars */
+        .tinder-bar {
+            flex: 1;
+            height: 4px;
+            background: rgba(17, 76, 42, 0.1);
+            border-radius: 2px;
+            transition: background 0.15s ease;
+        }
+        .tinder-bar.active {
+            background: var(--green);
+        }
+
         /* ── RESPONSIVE TAB NAV ── */
         #mobile-nav {
             display: none;
@@ -1119,13 +1205,55 @@
             }
             #card-panel {
                 height: 100%;
+                overflow: hidden;
+            }
+            body:not(.edit-mode-active) #card-panel {
+                touch-action: none;
+            }
+            body.edit-mode-active #card-panel {
+                touch-action: auto;
                 overflow-y: auto;
             }
+            #card-wrap {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+                padding-bottom: 80px !important; /* Spacing for floating action buttons */
+            }
             
-            /* Make edit wraps and actions wrap nicely on mobile */
+            /* Hide keyboard hints and button texts on mobile */
+            .kbd-hint, .action-btn .kbd, .btn-txt {
+                display: none !important;
+            }
+            
+            /* Make action buttons small and round in a single line, floating over content */
             #actions {
-                grid-template-columns: 1fr 1fr !important;
-                gap: 8px !important;
+                position: fixed !important;
+                bottom: 65px !important; /* Float above mobile nav */
+                left: 0 !important;
+                right: 0 !important;
+                background: transparent !important;
+                z-index: 100 !important;
+                pointer-events: none !important;
+                display: flex !important;
+                flex-direction: row !important;
+                justify-content: center !important;
+                align-items: center !important;
+                gap: 20px !important;
+                padding: 10px !important;
+            }
+            .action-btn {
+                width: 48px !important;
+                height: 48px !important;
+                border-radius: 50% !important;
+                font-size: 20px !important;
+                padding: 0 !important;
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+                border: 1.5px solid !important;
+                flex-shrink: 0 !important;
+                pointer-events: auto !important;
             }
             #save-edit-wrap {
                 flex-direction: column;
@@ -1158,6 +1286,35 @@
                 margin-top: 4px;
             }
         }
+
+        /* ── LIST VIEW STYLING ── */
+        .status-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 12px;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .badge-pending { background: rgba(156, 163, 175, 0.1); border: 1px solid rgba(156, 163, 175, 0.3); color: #9ca3af; }
+        .badge-accepted { background: rgba(34, 197, 94, 0.15); border: 1px solid rgba(34, 197, 94, 0.3); color: #22c55e; }
+        .badge-modified { background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #3b82f6; }
+        .badge-later { background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); color: #eab308; }
+        .badge-deleted { background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #ef4444; }
+
+        .list-action-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        body.view-list-active #card-panel { display: none !important; }
+        body.view-list-active #list-panel { display: flex !important; flex-direction: column; }
+        
+        @media (max-width: 950px) {
+            body.tab-list-active #list-panel { display: flex !important; flex: 1; }
+            body:not(.tab-list-active) #list-panel { display: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -1166,6 +1323,17 @@
 <div id="loading-screen">
     <div class="spinner"></div>
     <div id="load-msg">Chargement des expressions…</div>
+</div>
+
+<!-- Login screen overlay -->
+<div id="login-screen" style="position: fixed; inset: 0; background: rgba(17, 76, 42, 0.45); backdrop-filter: blur(12px); display: none; align-items: center; justify-content: center; z-index: 2000; opacity: 1; transition: opacity 0.3s ease-in-out;">
+    <form onsubmit="event.preventDefault(); submitUsername();" style="background: var(--bg2); border-radius: 20px; width: 90%; max-width: 400px; padding: 30px; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid var(--border); display: flex; flex-direction: column; gap: 20px; text-align: center;">
+        <div style="font-size: 40px;">👤</div>
+        <h2 style="font-family: 'Cabin Sketch', cursive; font-size: 24px; color: var(--text);">Identification Audit</h2>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.5;">Pour réserver les sections que vous auditez et éviter les conflits d'édition, veuillez entrer votre prénom ou pseudo.</p>
+        <input type="text" id="login-username-input" placeholder="Votre prénom ou pseudo..." style="width: 100%; padding: 12px 16px; border-radius: 10px; border: 1.5px solid var(--border); font-family: inherit; font-size: 14px; font-weight: 600; text-align: center; color: var(--text); outline: none; transition: border-color 0.2s;">
+        <button type="submit" style="width: 100%; padding: 12px; border-radius: 10px; border: none; background: linear-gradient(135deg, var(--green), var(--lgreen)); color: white; font-family: inherit; font-size: 14px; font-weight: 700; cursor: pointer; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(17, 76, 42, 0.25);">Commencer</button>
+    </form>
 </div>
 
 <!-- Header -->
@@ -1177,9 +1345,15 @@
         <button class="vtab" id="vtab-2" onclick="switchVersion('2')">V2</button>
         <button class="vtab active" id="vtab-3" onclick="switchVersion('3')">V3</button>
     </div>
+    <!-- Desktop view mode toggles -->
+    <div class="view-tabs" style="display: flex; gap: 8px; margin-left: 15px; border-left: 1px solid var(--border); padding-left: 15px;">
+        <button class="vtab active" id="viewtab-card" onclick="setViewMode('card')">🗂️ Carte</button>
+        <button class="vtab" id="viewtab-list" onclick="setViewMode('list')">📋 Liste</button>
+    </div>
     <div class="user-control" style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--muted); border-left: 1px solid var(--border); padding-left: 12px; margin-left: 12px;">
-        <span>👤 <span id="user-display">—</span></span>
-        <button onclick="changeUsername()" style="background: transparent; border: none; cursor: pointer; color: var(--green); text-decoration: underline; font-size: 11px; font-family: inherit;">Changer</button>
+        <span style="background: rgba(17, 76, 42, 0.08); padding: 4px 12px; border-radius: 20px; color: var(--green); font-size: 11px; display: flex; align-items: center; gap: 4px; font-weight: 700;">🤝 Mode Collaboratif</span>
+        <button onclick="exportV4()" style="background: transparent; border: none; cursor: pointer; color: var(--green); font-size: 14px; margin-left: 8px; display: flex; align-items: center;" title="Télécharger V4">💾</button>
+        <button onclick="resetSession()" style="background: transparent; border: none; cursor: pointer; color: var(--red); font-size: 14px; margin-left: 8px; display: flex; align-items: center;" title="Réinitialiser la session">🗑️</button>
     </div>
     <div id="progress-bar-wrap"><div id="progress-bar"></div></div>
     <div id="progress-pct">0%</div>
@@ -1189,6 +1363,7 @@
 <div id="mobile-nav">
     <button class="mobile-nav-tab" id="mob-tab-cats" onclick="switchMobileTab('cats')">📁 Sections</button>
     <button class="mobile-nav-tab active" id="mob-tab-card" onclick="switchMobileTab('card')">🔍 Expression</button>
+    <button class="mobile-nav-tab" id="mob-tab-list" onclick="switchMobileTab('list')">📋 Liste</button>
     <button class="mobile-nav-tab" id="mob-tab-dash" onclick="switchMobileTab('dash')">📊 Progression</button>
 </div>
 
@@ -1218,31 +1393,51 @@
         </div>
         <div id="status-banner">— état —</div>
         <div id="card-wrap">
-            <div id="block-fr" class="expr-block fr-block">
-                <div class="block-lang"><span class="lang-flag">🇫🇷</span><span class="lang-label">Français</span></div>
-                <div class="expr-text" id="fr-text">–</div>
+            <!-- Mobile Edit Language Tabs -->
+            <div id="edit-mobile-tabs">
+                <button class="edit-mob-tab active" data-tab="fr" onclick="switchEditTab('fr')">🇫🇷 FR</button>
+                <button class="edit-mob-tab" data-tab="de" onclick="switchEditTab('de')">🇩🇪 DE</button>
+                <button class="edit-mob-tab" data-tab="en" onclick="switchEditTab('en')">🇬🇧 EN</button>
             </div>
-            <div id="block-de" class="expr-block de-block">
-                <div class="block-lang"><span class="lang-flag">🇩🇪</span><span class="lang-label">Deutsch</span></div>
-                <div class="expr-text" id="de-text">–</div>
-                <div class="expr-pron" id="de-pron">–</div>
-            </div>
-            <div id="block-en" class="expr-block en-block">
-                <div class="block-lang"><span class="lang-flag">🇬🇧</span><span class="lang-label">English</span></div>
-                <div class="expr-text" id="en-text">–</div>
-                <div class="expr-pron" id="en-pron">–</div>
+            <div id="lang-blocks-container" style="display: flex; flex-direction: column; gap: 10px;">
+                <!-- Tinder Stories Progress Bars -->
+                <div id="tinder-bars-wrap" style="display: none; gap: 6px; padding: 6px 10px; width: 100%; box-sizing: border-box;"></div>
+                
+                <!-- Mobile Reference French Text -->
+                <div id="mobile-fr-reference" style="display: none; padding: 10px 14px; background: rgba(17,76,42,0.04); border-bottom: 1.5px dashed var(--border); font-size: 12px; color: var(--muted); border-radius: 8px 8px 0 0; box-sizing: border-box;">
+                    <strong>🇫🇷 FR :</strong> <span id="mobile-fr-ref-text"></span>
+                </div>
+                <div id="block-fr" class="expr-block fr-block">
+                    <div class="block-lang"><span class="lang-flag">🇫🇷</span><span class="lang-label">Français</span></div>
+                    <div class="expr-text" id="fr-text">–</div>
+                </div>
+                <div id="block-de" class="expr-block de-block">
+                    <div class="block-lang"><span class="lang-flag">🇩🇪</span><span class="lang-label">Deutsch</span></div>
+                    <div class="expr-text" id="de-text">–</div>
+                    <div class="expr-pron" id="de-pron">–</div>
+                </div>
+                <div id="block-en" class="expr-block en-block">
+                    <div class="block-lang"><span class="lang-flag">🇬🇧</span><span class="lang-label">English</span></div>
+                    <div class="expr-text" id="en-text">–</div>
+                    <div class="expr-pron" id="en-pron">–</div>
+                </div>
             </div>
         </div>
-        <div id="save-edit-wrap" style="display:flex">
+        <div id="save-edit-wrap" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
             <button id="btn-cancel-edit" onclick="cancelEdit()">✕ Annuler</button>
             <button id="btn-auto-translate" onclick="autoTranslateFields()">✨ Traduire FR → DE/EN</button>
             <button id="btn-save-edit"   onclick="saveEdit()">✔ Valider la modification</button>
+            <div id="edit-auto-status" style="display:none; align-items:center; gap:6px; font-size:12px; color:var(--muted); font-weight:600;">
+                <span class="verify-spinner" style="width:12px; height:12px; border-width:1.5px;"></span>
+                <span id="edit-auto-status-text">Traduction et balisage auto...</span>
+            </div>
         </div>
+
         <div id="actions">
-            <button class="action-btn btn-accept" onclick="decide('accepted')">✅ Accepter<span class="kbd">A</span></button>
-            <button class="action-btn btn-delete" onclick="decide('deleted')">❌ Supprimer<span class="kbd">D</span></button>
-            <button class="action-btn btn-modify" onclick="decide('modified')">✏️ Modifier<span class="kbd">M</span></button>
-            <button class="action-btn btn-later"  onclick="decide('later')">👁️ Plus tard<span class="kbd">L</span></button>
+            <button class="action-btn btn-delete" onclick="decide('deleted')">❌ <span class="btn-txt">Supprimer</span><span class="kbd">D</span></button>
+            <button class="action-btn btn-modify" onclick="decide('modified')">✏️ <span class="btn-txt">Modifier</span><span class="kbd">M</span></button>
+            <button class="action-btn btn-later"  onclick="decide('later')">👁️ <span class="btn-txt">Plus tard</span><span class="kbd">L</span></button>
+            <button class="action-btn btn-accept" onclick="decide('accepted')">✅ <span class="btn-txt">Accepter</span><span class="kbd">A</span></button>
         </div>
         <div id="card-nav-bottom">
             <button class="nav-btn" onclick="navigate(-1)">← Précédente</button>
@@ -1250,7 +1445,49 @@
             <button class="nav-btn" onclick="navigate(1)">Suivante →</button>
         </div>
         <div class="kbd-hint">
-            Raccourcis : <code>A</code> Accepter &nbsp; <code>D</code> Supprimer &nbsp; <code>M</code> Modifier &nbsp; <code>L</code> Plus tard &nbsp; <code>←</code><code>→</code> Naviguer
+            Raccourcis : <code>D</code> Supprimer &nbsp; <code>M</code> Modifier &nbsp; <code>L</code> Plus tard &nbsp; <code>A</code> Accepter &nbsp; <code>←</code><code>→</code> Naviguer
+        </div>
+    </div>
+
+    <!-- Center: list (new) -->
+    <div id="list-panel" style="display: none; flex-direction: column; background: var(--bg); overflow: hidden; padding: 20px; height: 100%;">
+        <div class="list-header" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
+            <h2 style="font-family: 'Cabin Sketch', cursive; font-size: 24px; color: var(--text); margin: 0; display: flex; align-items: center; gap: 10px;">
+                📋 Liste Globale <span id="list-total-count" style="font-size: 13px; background: rgba(17,76,42,0.08); padding: 3px 10px; border-radius: 20px; color: var(--green); font-weight: 700;">0 expressions</span>
+            </h2>
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; flex: 1; justify-content: flex-end;">
+                <input type="text" id="list-search" oninput="filterList()" placeholder="Rechercher par mot (FR, DE, EN)..." style="padding: 10px 16px; border-radius: 10px; border: 1.5px solid var(--border); font-family: inherit; font-size: 13px; color: var(--text); outline: none; width: 100%; max-width: 320px; transition: border-color 0.2s;" />
+                <select id="list-status-filter" onchange="filterList()" style="padding: 9px 12px; border-radius: 10px; border: 1.5px solid var(--border); font-family: inherit; font-size: 13px; color: var(--text); background: var(--bg2); outline: none; cursor: pointer;">
+                    <option value="all">Tout afficher</option>
+                    <option value="pending">⏳ Non traitées</option>
+                    <option value="accepted">✅ Acceptées</option>
+                    <option value="modified">✏️ Modifiées</option>
+                    <option value="later">👁️ À revoir (Plus tard)</option>
+                    <option value="deleted">❌ Supprimées</option>
+                </select>
+            </div>
+        </div>
+        <div class="list-table-container" style="flex: 1; overflow-y: auto; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); overflow-x: auto;">
+            <table class="list-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; color: var(--text); min-width: 800px;">
+                <thead>
+                    <tr style="border-bottom: 2px solid var(--border); background: rgba(17,76,42,0.03); font-weight: 700; color: var(--text); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(8px);">
+                        <th style="padding: 12px 16px; width: 120px;">Section / Cas</th>
+                        <th style="padding: 12px 16px;">🇫🇷 Français</th>
+                        <th style="padding: 12px 16px;">🇩🇪 Allemand</th>
+                        <th style="padding: 12px 16px;">🇬🇧 Anglais</th>
+                        <th style="padding: 12px 16px; width: 100px;">État</th>
+                        <th style="padding: 12px 16px; width: 120px; text-align: center;">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="list-table-body">
+                    <!-- Rows loaded dynamically -->
+                </tbody>
+            </table>
+            <div id="list-empty-state" style="display: none; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; text-align: center; gap: 12px; color: var(--muted);">
+                <span style="font-size: 40px;">🔍</span>
+                <div style="font-weight: 700; font-size: 16px; color: var(--text);">Aucune expression trouvée</div>
+                <div style="font-size: 12px;">Essayez de modifier votre recherche ou vos filtres.</div>
+            </div>
         </div>
     </div>
 
@@ -1347,133 +1584,360 @@ let lockIntervalId = null;
 let currentLockedFile = ''; // current filename we hold lock on
 
 function setupUsername() {
-    auditUsername = localStorage.getItem('audit_username');
-    while (!auditUsername || !auditUsername.trim()) {
-        auditUsername = prompt("Entrez votre prénom ou pseudo pour réserver les catégories que vous auditez :");
-    }
-    auditUsername = auditUsername.trim();
-    localStorage.setItem('audit_username', auditUsername);
-    
+    auditUsername = 'Auditeur';
     const userEl = document.getElementById('user-display');
     if (userEl) userEl.textContent = auditUsername;
+    return true;
 }
 
-function changeUsername() {
-    const newName = prompt("Changer de nom d'utilisateur (votre prénom/pseudo) :", auditUsername);
-    if (newName && newName.trim() && newName.trim() !== auditUsername) {
-        if (currentLockedFile) {
-            releaseLock(currentLockedFile);
-        }
-        auditUsername = newName.trim();
-        localStorage.setItem('audit_username', auditUsername);
-        
-        const userEl = document.getElementById('user-display');
-        if (userEl) userEl.textContent = auditUsername;
-        
-        if (flatExprs[cursor]?.filename) {
-            acquireLock(flatExprs[cursor].filename);
-        }
+async function lockCurrentExpression() {
+    if (flatExprs.length === 0) return;
+    const item = flatExprs[cursor];
+    if (item && !item.expr.audit) {
+        item.expr.audit = { status: 'later' };
+        await saveFileToServer(item.fi);
     }
 }
 
-async function acquireLock(filename) {
-    if (!filename || !auditUsername) return;
-    try {
-        const res = await fetch('/api/audit/lock', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ filename, user: auditUsername })
+async function selectExpression(newCursor) {
+    if (flatExprs.length === 0) return;
+
+    // Unlock previous expression if it was automatically locked (later without manual skip)
+    const prevItem = flatExprs[cursor];
+    if (prevItem && prevItem.expr.audit && prevItem.expr.audit.status === 'later' && !prevItem.expr.audit.manual) {
+        delete prevItem.expr.audit;
+        await saveFileToServer(prevItem.fi);
+    }
+
+    cursor = Math.max(0, Math.min(newCursor, flatExprs.length - 1));
+
+    // Lock the new expression
+    await lockCurrentExpression();
+
+    renderCard();
+    renderCatPanel();
+}
+
+async function syncQueue() {
+    const { hasPending, hasLater } = buildFlatExprs();
+    if (!hasPending && hasLater) {
+        await checkAndResetLaterState();
+    }
+}
+
+async function checkAndResetLaterState() {
+    let hasLater = false;
+    let modifiedFiles = new Set();
+
+    allData.forEach((file, fi) => {
+        let fileChanged = false;
+        (file.data.cas || []).forEach(cas => {
+            (cas.expressions || []).forEach(expr => {
+                if (expr.audit && expr.audit.status === 'later') {
+                    delete expr.audit;
+                    hasLater = true;
+                    fileChanged = true;
+                }
+            });
         });
-        const data = await res.json();
-        if (data.locks) {
-            activeServerLocks = data.locks;
+        if (fileChanged) {
+            modifiedFiles.add(fi);
         }
-        if (res.ok) {
-            currentLockedFile = filename;
-        } else {
-            if (currentLockedFile === filename) {
-                currentLockedFile = '';
-            }
-        }
-        renderCatPanel();
-        renderCard();
-    } catch (e) {
-        console.error('Erreur acquisition verrou', e);
-    }
-}
+    });
 
-async function releaseLock(filename) {
-    if (!filename || !auditUsername) return;
-    try {
-        const res = await fetch('/api/audit/unlock', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ filename, user: auditUsername })
-        });
-        const data = await res.json();
-        if (data.locks) {
-            activeServerLocks = data.locks;
-        }
-        if (currentLockedFile === filename) {
-            currentLockedFile = '';
-        }
-        renderCatPanel();
-        renderCard();
-    } catch (e) {
-        console.error('Erreur libération verrou', e);
+    if (hasLater) {
+        console.log("No pending expressions left, resetting 'later' expressions to pending...");
+        const promises = Array.from(modifiedFiles).map(fi => saveFileToServer(fi));
+        await Promise.all(promises);
+        await loadAllData();
+        buildFlatExprs();
     }
-}
-
-async function fetchLocks() {
-    try {
-        const res = await fetch('/api/audit/locks');
-        if (res.ok) {
-            const data = await res.json();
-            activeServerLocks = data.locks || {};
-            renderCatPanel();
-            renderCard();
-        }
-    } catch (e) {
-        console.error('Erreur lecture verrous', e);
-    }
-}
-
-function startLockHeartbeat() {
-    if (lockIntervalId) clearInterval(lockIntervalId);
-    
-    const activeFile = flatExprs[cursor]?.filename;
-    if (activeFile) {
-        acquireLock(activeFile);
-    } else {
-        fetchLocks();
-    }
-    
-    lockIntervalId = setInterval(async () => {
-        const fileToLock = flatExprs[cursor]?.filename;
-        if (fileToLock) {
-            await acquireLock(fileToLock);
-        } else {
-            await fetchLocks();
-        }
-    }, 10000);
 }
 
 let currentMobileTab = 'card';
+let currentViewMode = 'card';
+let savedFlatExprs = [];
+let savedCursor = 0;
+let editingFromList = false;
+
+function setViewMode(mode) {
+    currentViewMode = mode;
+    
+    // Toggle active state on header buttons
+    const btnCard = document.getElementById('viewtab-card');
+    const btnList = document.getElementById('viewtab-list');
+    if (btnCard) btnCard.classList.toggle('active', mode === 'card');
+    if (btnList) btnList.classList.toggle('active', mode === 'list');
+    
+    // Toggle active state on mobile nav buttons
+    const mobTabCard = document.getElementById('mob-tab-card');
+    const mobTabList = document.getElementById('mob-tab-list');
+    if (mobTabCard) mobTabCard.classList.toggle('active', mode === 'card');
+    if (mobTabList) mobTabList.classList.toggle('active', mode === 'list');
+    
+    // Apply body classes and layouts
+    if (mode === 'list') {
+        document.body.classList.add('view-list-active');
+        document.body.classList.remove('view-card-active');
+        
+        // Hide sidebar and dashboard on desktop for list full width
+        if (window.innerWidth > 950) {
+            document.getElementById('left-sidebar').style.display = 'none';
+            document.getElementById('dash-panel').style.display = 'none';
+            document.getElementById('main').style.gridTemplateColumns = '1fr';
+        }
+        
+        document.getElementById('card-panel').style.display = 'none';
+        document.getElementById('list-panel').style.display = 'flex';
+        
+        renderList();
+    } else {
+        document.body.classList.remove('view-list-active');
+        document.body.classList.add('view-card-active');
+        
+        // Restore sidebar and dashboard on desktop
+        if (window.innerWidth > 950) {
+            document.getElementById('left-sidebar').style.display = 'flex';
+            document.getElementById('dash-panel').style.display = 'block';
+            document.getElementById('main').style.gridTemplateColumns = '240px 1fr 280px';
+            document.getElementById('card-panel').style.display = 'flex';
+            document.getElementById('list-panel').style.display = 'none';
+        } else {
+            // Restore mobile active panels
+            document.getElementById('left-sidebar').style.display = currentMobileTab === 'cats' ? 'flex' : 'none';
+            document.getElementById('card-panel').style.display = currentMobileTab === 'card' ? 'flex' : 'none';
+            document.getElementById('dash-panel').style.display = currentMobileTab === 'dash' ? 'flex' : 'none';
+            document.getElementById('list-panel').style.display = 'none';
+        }
+        
+        renderCard();
+        renderCatPanel();
+    }
+}
 
 function switchMobileTab(tab) {
     currentMobileTab = tab;
     // Remove active classes from body
-    document.body.classList.remove('tab-cats-active', 'tab-card-active', 'tab-dash-active');
+    document.body.classList.remove('tab-cats-active', 'tab-card-active', 'tab-dash-active', 'tab-list-active');
     
     // Add active class matching tab to body
-    if (tab === 'cats') document.body.classList.add('tab-cats-active');
-    else if (tab === 'card') document.body.classList.add('tab-card-active');
-    else if (tab === 'dash') document.body.classList.add('tab-dash-active');
+    if (tab === 'cats') {
+        document.body.classList.add('tab-cats-active');
+        document.getElementById('left-sidebar').style.display = 'flex';
+        document.getElementById('card-panel').style.display = 'none';
+        document.getElementById('list-panel').style.display = 'none';
+        document.getElementById('dash-panel').style.display = 'none';
+        document.body.classList.remove('view-list-active');
+    }
+    else if (tab === 'card') {
+        document.body.classList.add('tab-card-active');
+        setViewMode('card');
+    }
+    else if (tab === 'list') {
+        document.body.classList.add('tab-list-active');
+        setViewMode('list');
+    }
+    else if (tab === 'dash') {
+        document.body.classList.add('tab-dash-active');
+        document.getElementById('left-sidebar').style.display = 'none';
+        document.getElementById('card-panel').style.display = 'none';
+        document.getElementById('list-panel').style.display = 'none';
+        document.getElementById('dash-panel').style.display = 'flex';
+        document.getElementById('dash-panel').style.flex = '1';
+        document.body.classList.remove('view-list-active');
+    }
     
     // Toggle active class on tab buttons
     document.querySelectorAll('.mobile-nav-tab').forEach(btn => {
         btn.classList.toggle('active', btn.id === `mob-tab-${tab}`);
     });
+}
+
+function getAllExpressions() {
+    const list = [];
+    allData.forEach((file, fi) => {
+        const cat = file.data.categorie || file.filename;
+        (file.data.cas || []).forEach((cas, ci) => {
+            (cas.expressions || []).forEach((expr, ei) => {
+                const key = `${file.filename}::${cas.nom_du_cas}::${ei}`;
+                list.push({
+                    fi, ci, ei, key, expr, cat, cas: cas.nom_du_cas, filename: file.filename
+                });
+            });
+        });
+    });
+    return list;
+}
+
+function renderList() {
+    const listBody = document.getElementById('list-table-body');
+    const emptyState = document.getElementById('list-empty-state');
+    if (!listBody) return;
+
+    const allExprs = getAllExpressions();
+    const query = document.getElementById('list-search')?.value.toLowerCase().trim() || '';
+    const statusFilter = document.getElementById('list-status-filter')?.value || 'all';
+
+    let filtered = allExprs.filter(item => {
+        // Status filter
+        const status = item.expr.audit ? item.expr.audit.status : 'pending';
+        if (statusFilter !== 'all' && status !== statusFilter) {
+            return false;
+        }
+
+        // Search query
+        if (query) {
+            const frText = (item.expr.francais || '').toLowerCase();
+            const deText = (item.expr.allemand?.texte || '').toLowerCase();
+            const dePron = (item.expr.allemand?.prononciation_FR || '').toLowerCase();
+            const enText = (item.expr.anglais?.texte || '').toLowerCase();
+            const enPron = (item.expr.anglais?.prononciation_FR || '').toLowerCase();
+            const catText = (item.cat || '').toLowerCase();
+            const casText = (item.cas || '').toLowerCase();
+
+            return frText.includes(query) || 
+                   deText.includes(query) || 
+                   dePron.includes(query) || 
+                   enText.includes(query) || 
+                   enPron.includes(query) ||
+                   catText.includes(query) ||
+                   casText.includes(query);
+        }
+
+        return true;
+    });
+
+    // Update list count
+    const countEl = document.getElementById('list-total-count');
+    if (countEl) {
+        countEl.textContent = `${filtered.length} expression${filtered.length > 1 ? 's' : ''}`;
+    }
+
+    if (filtered.length === 0) {
+        listBody.innerHTML = '';
+        if (emptyState) emptyState.style.display = 'flex';
+        return;
+    }
+
+    if (emptyState) emptyState.style.display = 'none';
+
+    listBody.innerHTML = filtered.map((item) => {
+        const status = item.expr.audit ? item.expr.audit.status : 'pending';
+        
+        let badgeClass = 'badge-pending';
+        let badgeLabel = '⏳ Non traitée';
+        if (status === 'accepted') { badgeClass = 'badge-accepted'; badgeLabel = '✅ Acceptée'; }
+        else if (status === 'modified') { badgeClass = 'badge-modified'; badgeLabel = '✏️ Modifiée'; }
+        else if (status === 'later') { badgeClass = 'badge-later'; badgeLabel = '👁️ Plus tard'; }
+        else if (status === 'deleted') { badgeClass = 'badge-deleted'; badgeLabel = '❌ Supprimée'; }
+
+        // Clean tags from texts for presentation
+        const cleanTags = s => s ? s.replace(/\[\/?[NVA]\d*\]/g, '') : '';
+        const frHtml = cleanTags(item.expr.francais);
+        const deHtml = item.expr.allemand ? `${cleanTags(item.expr.allemand.texte)}<br><small style="color:var(--muted)">🗣️ ${cleanTags(item.expr.allemand.prononciation_FR||'')}</small>` : '—';
+        const enHtml = item.expr.anglais ? `${cleanTags(item.expr.anglais.texte)}<br><small style="color:var(--muted)">🗣️ ${cleanTags(item.expr.anglais.prononciation_FR||'')}</small>` : '—';
+
+        // Metadata serialization for passing to buttons
+        const metaStr = escAttr(JSON.stringify({ fi: item.fi, ci: item.ci, ei: item.ei, key: item.key, cat: item.cat, cas: item.cas, filename: item.filename }));
+
+        return `
+            <tr style="border-bottom: 1px solid var(--border); transition: background 0.15s;">
+                <td style="padding: 10px 16px; font-weight:600; color:var(--text-muted); font-size:11px;">
+                    <div style="color:var(--green); font-weight:700;">${item.cat}</div>
+                    <div style="font-size:10px;">${item.cas}</div>
+                </td>
+                <td style="padding: 10px 16px; font-weight:600;">${frHtml}</td>
+                <td style="padding: 10px 16px;">${deHtml}</td>
+                <td style="padding: 10px 16px;">${enHtml}</td>
+                <td style="padding: 10px 16px;">
+                    <span class="status-badge ${badgeClass}">
+                        ${badgeLabel}
+                    </span>
+                </td>
+                <td style="padding: 10px 16px; text-align: center;">
+                    <div style="display: flex; gap: 6px; justify-content: center; align-items: center;">
+                        <button class="list-action-btn" onclick="editFromList('${metaStr}')" title="Modifier" style="background: rgba(37,99,235,0.08); border: 1.5px solid rgba(37,99,235,0.15); color: #2563eb; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12px; transition: all 0.2s;">✏️</button>
+                        \${status !== 'deleted' ? \`
+                            <button class="list-action-btn" onclick="deleteFromList('\${metaStr}')" title="Supprimer" style="background: rgba(220,38,38,0.08); border: 1.5px solid rgba(220,38,38,0.15); color: #dc2626; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12px; transition: all 0.2s;">❌</button>
+                        \` : \`
+                            <button class="list-action-btn" onclick="restoreFromList('\${metaStr}')" title="Restaurer (rendre non traitée)" style="background: rgba(34,197,94,0.08); border: 1.5px solid rgba(34,197,94,0.15); color: #22c55e; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 12px; transition: all 0.2s;">🔄</button>
+                        \`}
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
+
+    // Style row hover on table dynamically
+    const rows = listBody.querySelectorAll('tr');
+    rows.forEach(r => {
+        r.addEventListener('mouseenter', () => { r.style.background = 'rgba(17,76,42,0.02)'; });
+        r.addEventListener('mouseleave', () => { r.style.background = 'transparent'; });
+    });
+}
+
+function filterList() {
+    renderList();
+}
+
+function editFromList(metaStr) {
+    const meta = JSON.parse(metaStr);
+    // Find the item in allData
+    const file = allData[meta.fi];
+    const cas = file.data.cas[meta.ci];
+    const expr = cas.expressions[meta.ei];
+    const item = { fi: meta.fi, ci: meta.ci, ei: meta.ei, key: meta.key, expr, cat: meta.cat, cas: cas.nom_du_cas, filename: meta.filename };
+
+    // Save states
+    savedFlatExprs = [...flatExprs];
+    savedCursor = cursor;
+    editingFromList = true;
+
+    // Inject temporary single-item queue
+    flatExprs = [item];
+    cursor = 0;
+
+    // Open edit mode
+    setViewMode('card');
+    renderEditMode(expr);
+}
+
+async function deleteFromList(metaStr) {
+    const meta = JSON.parse(metaStr);
+    const file = allData[meta.fi];
+    const cas = file.data.cas[meta.ci];
+    const expr = cas.expressions[meta.ei];
+
+    expr.audit = { status: 'deleted' };
+    
+    // Save to server
+    await saveFileToServer(meta.fi);
+    
+    // Refresh
+    renderList();
+    updateDashboard();
+    
+    // Rebuild flat expressions queue to keep it synced
+    buildFlatExprs();
+}
+
+async function restoreFromList(metaStr) {
+    const meta = JSON.parse(metaStr);
+    const file = allData[meta.fi];
+    const cas = file.data.cas[meta.ci];
+    const expr = cas.expressions[meta.ei];
+
+    delete expr.audit;
+    
+    // Save to server
+    await saveFileToServer(meta.fi);
+    
+    // Refresh
+    renderList();
+    updateDashboard();
+    
+    // Rebuild flat expressions queue to keep it synced
+    buildFlatExprs();
 }
 
 // ── Section Reordering ────────────────────────────────
@@ -1594,27 +2058,160 @@ async function saveReorder() {
     }
 }
 
+function setupSwipeGestures() {
+    const panel = document.getElementById('card-panel');
+    const card = document.getElementById('lang-blocks-container');
+    if (!panel || !card) return;
+
+    let startX = 0;
+    let startY = 0;
+    let deltaX = 0;
+    let deltaY = 0;
+    let isSwiping = false;
+
+    // Create Tinder overlay indicators
+    let swipeIndicator = document.getElementById('swipe-indicator');
+    if (!swipeIndicator) {
+        swipeIndicator = document.createElement('div');
+        swipeIndicator.id = 'swipe-indicator';
+        swipeIndicator.style.cssText = 'position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 50; opacity: 0; font-family: inherit; font-size: 24px; font-weight: 800; border-radius: 16px; transition: opacity 0.1s ease-out;';
+        card.style.position = 'relative';
+        card.appendChild(swipeIndicator);
+    }
+
+    panel.addEventListener('touchstart', (e) => {
+        if (window.innerWidth > 950 || editMode) return;
+        if (e.target.closest('button') || e.target.closest('textarea') || e.target.closest('input') || e.target.closest('.tts-row') || e.target.closest('.version-tabs') || e.target.closest('#mobile-nav') || e.target.closest('#header')) return;
+
+        const touch = e.touches[0];
+        startX = touch.clientX;
+        startY = touch.clientY;
+        deltaX = 0;
+        deltaY = 0;
+        isSwiping = true;
+        card.style.transition = 'none';
+    }, { passive: true });
+
+    panel.addEventListener('touchmove', (e) => {
+        if (!isSwiping) return;
+
+        const touch = e.touches[0];
+        deltaX = touch.clientX - startX;
+        deltaY = touch.clientY - startY;
+
+        const rotation = deltaX * 0.08;
+        card.style.transform = `translate(${deltaX}px, ${deltaY}px) rotate(${rotation}deg)`;
+
+        swipeIndicator.style.opacity = Math.min(Math.max(Math.abs(deltaX), Math.abs(deltaY)) / 100, 0.85);
+        
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            if (deltaX > 0) {
+                swipeIndicator.textContent = '✅ ACCEPTER';
+                swipeIndicator.style.backgroundColor = 'rgba(22, 163, 74, 0.85)';
+                swipeIndicator.style.color = '#fff';
+            } else {
+                swipeIndicator.textContent = '❌ SUPPRIMER';
+                swipeIndicator.style.backgroundColor = 'rgba(220, 38, 38, 0.85)';
+                swipeIndicator.style.color = '#fff';
+            }
+        } else {
+            if (deltaY < -30) {
+                swipeIndicator.textContent = '👁️ À REVOIR';
+                swipeIndicator.style.backgroundColor = 'rgba(147, 51, 234, 0.85)';
+                swipeIndicator.style.color = '#fff';
+            } else {
+                swipeIndicator.style.opacity = 0;
+            }
+        }
+    }, { passive: true });
+
+    panel.addEventListener('touchend', (e) => {
+        if (!isSwiping) return;
+        isSwiping = false;
+
+        const threshold = 100;
+        card.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        swipeIndicator.style.opacity = 0;
+
+        // Check if it was a simple tap (very small movement)
+        if (Math.abs(deltaX) < 15 && Math.abs(deltaY) < 15) {
+            // Restore card transform
+            card.style.transform = 'none';
+
+            // Tap handling for slides
+            const panelWidth = panel.offsetWidth;
+            const tapX = startX - panel.getBoundingClientRect().left;
+            const item = flatExprs[cursor];
+            if (!item) return;
+            const totalSlides = item.expr.anglais ? 3 : 2;
+
+            if (tapX < panelWidth * 0.40) {
+                // Tap on left 40% -> go back slide
+                if (activeMobileSlide > 0) {
+                    activeMobileSlide--;
+                    updateMobileSlides(item.expr);
+                } else {
+                    // Navigate to previous expression
+                    navigate(-1);
+                }
+            } else {
+                // Tap on right 60% -> go forward slide
+                if (activeMobileSlide < totalSlides - 1) {
+                    activeMobileSlide++;
+                    updateMobileSlides(item.expr);
+                } else {
+                    // Navigate to next expression
+                    navigate(1);
+                }
+            }
+            return;
+        }
+
+        if (deltaX > threshold) {
+            card.style.transform = 'translate(600px, 0px) rotate(30deg)';
+            setTimeout(() => {
+                decide('accepted');
+                card.style.transition = 'none';
+                card.style.transform = 'none';
+            }, 250);
+        } else if (deltaX < -threshold) {
+            card.style.transform = 'translate(-600px, 0px) rotate(-30deg)';
+            setTimeout(() => {
+                decide('deleted');
+                card.style.transition = 'none';
+                card.style.transform = 'none';
+            }, 250);
+        } else if (deltaY < -threshold) {
+            card.style.transform = 'translate(0px, -600px)';
+            setTimeout(() => {
+                decide('later');
+                card.style.transition = 'none';
+                card.style.transform = 'none';
+            }, 250);
+        } else {
+            card.style.transform = 'none';
+        }
+    });
+}
+
 // ── Init ────────────────────────────────────────────
 async function init() {
-    setupUsername();
     switchMobileTab('card');
     showLoading(true);
     updateVersionTabs();
-    loadSession();
+    
+    cursor = 0;
+    setupUsername();
+    
     await loadAllData();
-    buildFlatExprs();
+    await syncQueue();
     
-    // Positionner le curseur sur la première expression non traitée si curseur à 0
-    if (cursor === 0 || cursor >= flatExprs.length) {
-        const firstPendingIdx = flatExprs.findIndex(e => !e.expr.audit);
-        cursor = firstPendingIdx >= 0 ? firstPendingIdx : 0;
-    }
-    
-    startLockHeartbeat();
-    
+    await lockCurrentExpression();
     renderCatPanel();
     renderCard();
     updateDashboard();
+    
+    setupSwipeGestures();
     showLoading(false);
 }
 
@@ -1700,25 +2297,34 @@ async function loadAllData() {
 // ── Flatten expressions ───────────────────────────────
 function buildFlatExprs() {
     flatExprs = [];
-    decisions = {}; // Clear previous decisions
+    decisions = {};
+    let hasPending = false;
+    let hasLater = false;
+    
     allData.forEach((file, fi) => {
         const cat = file.data.categorie;
         (file.data.cas || []).forEach((cas, ci) => {
             (cas.expressions || []).forEach((expr, ei) => {
                 const key = `${file.filename}::${cas.nom_du_cas}::${ei}`;
                 
-                // Restauration de la décision d'audit directement depuis le JSON du serveur
-                if (expr.audit && expr.audit.status) {
-                    decisions[key] = {
-                        status: expr.audit.status,
-                        modifiedData: expr.audit.status === 'modified' ? { ...expr } : null
-                    };
+                if (expr.audit) {
+                    if (expr.audit.status === 'later') {
+                        hasLater = true;
+                    } else {
+                        decisions[key] = {
+                            status: expr.audit.status,
+                            modifiedData: expr.audit.status === 'modified' ? { ...expr } : null
+                        };
+                    }
+                } else {
+                    hasPending = true;
+                    flatExprs.push({ fi, ci, ei, key, expr, cat, cas: cas.nom_du_cas, filename: file.filename });
                 }
-                
-                flatExprs.push({ fi, ci, ei, key, expr, cat, cas: cas.nom_du_cas, filename: file.filename });
             });
         });
     });
+    
+    return { hasPending, hasLater };
 }
 
 // ── Session persistence ───────────────────────────────
@@ -1782,20 +2388,9 @@ async function saveFileToServer(fileIdx) {
                 version: currentVersion,
                 filename: filename,
                 content: newJson,
-                user: auditUsername
+                user: 'system'
             })
         });
-        if (res.status === 409) {
-            const data = await res.json();
-            alert(`⚠️ Impossible de sauvegarder : ${data.error || 'Cette catégorie est verrouillée par un autre utilisateur.'}`);
-            // Force reload data to discard local modifications and match server state
-            await loadAllData();
-            buildFlatExprs();
-            renderCatPanel();
-            renderCard();
-            updateDashboard();
-            return;
-        }
         if (!res.ok) throw new Error('API save failed');
         console.log(`Saved ${filename} to server`);
     } catch (e) {
@@ -1834,12 +2429,10 @@ function renderCatPanel() {
 
 function escapeSQ(s) { return s.replace(/'/g, "\\'"); }
 
-function jumpToCategory(catName) {
+async function jumpToCategory(catName) {
     const idx = flatExprs.findIndex(e => e.cat === catName);
     if (idx >= 0) { 
-        cursor = idx; 
-        renderCard(); 
-        renderCatPanel(); 
+        await selectExpression(idx);
         if (window.innerWidth <= 950) {
             switchMobileTab('card');
         }
@@ -1848,22 +2441,53 @@ function jumpToCategory(catName) {
 
 // ── Render: current card ───────────────────────────────
 function renderCard() {
-    if (flatExprs.length === 0) return;
+    if (flatExprs.length === 0) {
+        document.getElementById('expr-pos').innerHTML = `Expression <strong>0</strong> / 0`;
+        document.getElementById('cas-label').innerHTML = `<div class="cat">Terminé</div>`;
+        document.getElementById('status-banner').style.display = 'none';
+        
+        document.getElementById('block-fr').innerHTML = `
+            <div style="text-align: center; padding: 40px; font-size: 16px; color: var(--text); font-weight: 700;">
+                🎉 Toutes les expressions ont été traitées et enregistrées sur le serveur !
+            </div>
+        `;
+        document.getElementById('block-de').innerHTML = '';
+        document.getElementById('block-en').innerHTML = '';
+        document.getElementById('block-en').style.display = 'none';
+        document.getElementById('actions').style.display = 'none';
+        document.getElementById('save-edit-wrap').style.display = 'none';
+        return;
+    }
     cursor = Math.max(0, Math.min(cursor, flatExprs.length - 1));
     const item = flatExprs[cursor];
-    const decision = decisions[item.key];
-    const status = decision?.status || 'pending';
+    const status = item.expr.audit?.status || 'pending';
+
+    // Reset active mobile slide for new card
+    activeMobileSlide = 0;
 
     // Position
+    let absoluteTotal = 0;
+    let currentAbsIdx = 0;
+    allData.forEach((file, fi) => {
+        (file.data.cas || []).forEach((cas, ci) => {
+            (cas.expressions || []).forEach((expr, ei) => {
+                absoluteTotal++;
+                if (item && item.fi === fi && item.ci === ci && item.ei === ei) {
+                    currentAbsIdx = absoluteTotal;
+                }
+            });
+        });
+    });
+
     document.getElementById('expr-pos').innerHTML =
-        `Expression <strong>${cursor + 1}</strong> / ${flatExprs.length}`;
+        `Expression <strong>${currentAbsIdx}</strong> / ${absoluteTotal}`;
     document.getElementById('cas-label').innerHTML =
         `<div class="cat">${item.cat}</div><div style="font-size:11px;color:var(--muted)">${item.cas}</div>`;
 
-    // Status banner
+    // Status banner (ignore 'later' status in UI, as it's an under-the-hood lock)
     const banner = document.getElementById('status-banner');
-    if (status !== 'pending') {
-        const labels = { accepted: '✅ Acceptée', deleted: '❌ Supprimée', modified: '✏️ Modifiée', later: '👁️ À revoir' };
+    if (status !== 'pending' && status !== 'later') {
+        const labels = { accepted: '✅ Acceptée', deleted: '❌ Supprimée', modified: '✏️ Modifiée' };
         banner.textContent = labels[status];
         banner.className = status;
         banner.style.display = 'flex';
@@ -1871,10 +2495,10 @@ function renderCard() {
         banner.style.display = 'none';
     }
 
-    // Action buttons highlight
+    // Action buttons highlight (ignore 'later' status highlight in UI)
     ['accepted','deleted','modified','later'].forEach(s => {
         const btn = document.querySelector(`.btn-${s === 'accepted' ? 'accept' : s === 'deleted' ? 'delete' : s === 'modified' ? 'modify' : 'later'}`);
-        btn.classList.toggle('current', s === status);
+        btn.classList.toggle('current', s === status && s !== 'later');
     });
 
     // Data to display (modified or original)
@@ -1886,68 +2510,164 @@ function renderCard() {
         renderEditMode(data);
     }
 
-    // Update progress bar
-    const seen = Object.keys(decisions).length;
-    const total = flatExprs.length;
-    const pct = total > 0 ? Math.round(seen / total * 100) : 0;
+    // Update progress bar (absolute progress)
+    let absolute_total = 0;
+    let absolute_seen = 0;
+    allData.forEach(file => {
+        (file.data.cas || []).forEach(cas => {
+            (cas.expressions || []).forEach(expr => {
+                absolute_total++;
+                if (expr.audit && expr.audit.status !== 'later') {
+                    absolute_seen++;
+                }
+            });
+        });
+    });
+    const pct = absolute_total > 0 ? Math.round(absolute_seen / absolute_total * 100) : 0;
     document.getElementById('progress-bar').style.width = pct + '%';
-    document.getElementById('progress-pct').textContent = pct + '%';
+    document.getElementById('progress-pct').textContent = `${pct}% (${absolute_seen}/${absolute_total})`;
+}
+
+let activeMobileSlide = 0;
+function updateMobileSlides(data) {
+    if (window.innerWidth > 950 || editMode) {
+        // Reset display for desktop or edit mode
+        document.getElementById('block-fr').style.display = 'block';
+        document.getElementById('block-de').style.display = 'block';
+        document.getElementById('block-en').style.display = data.anglais ? 'block' : 'none';
+        
+        const barsContainer = document.getElementById('tinder-bars-wrap');
+        if (barsContainer) barsContainer.style.display = 'none';
+        const refContainer = document.getElementById('mobile-fr-reference');
+        if (refContainer) refContainer.style.display = 'none';
+        return;
+    }
+
+    const totalSlides = data.anglais ? 3 : 2;
+    activeMobileSlide = Math.max(0, Math.min(activeMobileSlide, totalSlides - 1));
+
+    // Show/hide blocks
+    document.getElementById('block-fr').style.display = activeMobileSlide === 0 ? 'block' : 'none';
+    document.getElementById('block-de').style.display = activeMobileSlide === 1 ? 'block' : 'none';
+    document.getElementById('block-en').style.display = (activeMobileSlide === 2 && data.anglais) ? 'block' : 'none';
+
+    // Show reference header if on slide 1 or 2
+    const refContainer = document.getElementById('mobile-fr-reference');
+    if (refContainer) {
+        refContainer.style.display = activeMobileSlide > 0 ? 'block' : 'none';
+        const refText = document.getElementById('mobile-fr-ref-text');
+        if (refText) refText.innerHTML = colorize(data.francais || '');
+    }
+
+    // Render bars
+    const barsContainer = document.getElementById('tinder-bars-wrap');
+    if (barsContainer) {
+        barsContainer.style.display = 'flex';
+        barsContainer.innerHTML = Array.from({ length: totalSlides }).map((_, i) => `
+            <div class="tinder-bar ${i === activeMobileSlide ? 'active' : ''}"></div>
+        `).join('');
+    }
 }
 
 function renderViewMode(data) {
     editMode = false;
+    document.body.classList.remove('edit-mode-active');
+    
+    // Ensure all blocks are displayed in view mode (updated inside updateMobileSlides)
+    const cw = document.getElementById('card-wrap');
+    if (cw) cw.classList.remove('edit-active');
     document.getElementById('save-edit-wrap').style.display = 'none';
     document.getElementById('actions').style.display = 'grid';
-
-
 
     // Replace with view blocks
     document.getElementById('block-fr').innerHTML = `
         <div class="block-lang"><span class="lang-flag">🇫🇷</span><span class="lang-label">Français</span></div>
-        <div class="expr-text">${colorize(data.francais || '–')}</div>
-        ${data.francais ? ttsRow('fr', stripTags(data.francais), 'fr-FR') : ''}
+        <div class="expr-block-layout">
+            <div class="expr-block-main" style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:200px;">
+                    <div class="expr-text">${colorize(data.francais || '–')}</div>
+                </div>
+                ${data.francais ? `<div style="align-self:flex-start;">${ttsRow('fr', stripTags(data.francais), 'fr-FR')}</div>` : ''}
+            </div>
+            <div class="expr-block-verify" style="border-left:none; padding-left:0;"></div>
+        </div>
     `;
+    
     document.getElementById('block-de').innerHTML = `
         <div class="block-lang"><span class="lang-flag">🇩🇪</span><span class="lang-label">Deutsch</span></div>
-        <div class="expr-text">${colorize(data.allemand?.texte || '–')}</div>
-        ${data.allemand?.prononciation_FR ? `<div class="expr-pron">${stripTags(data.allemand.prononciation_FR)}</div>` : ''}
-        ${data.allemand?.texte ? ttsRow('de', stripTags(data.allemand.texte), 'de-DE') : ''}
+        <div class="expr-block-layout">
+            <div class="expr-block-main" style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:200px;">
+                    <div class="expr-text">${colorize(data.allemand?.texte || '–')}</div>
+                    ${data.allemand?.prononciation_FR ? `<div class="expr-pron">${stripTags(data.allemand.prononciation_FR)}</div>` : ''}
+                </div>
+                ${data.allemand?.texte ? `<div style="align-self:flex-start;">${ttsRow('de', stripTags(data.allemand.texte), 'de-DE')}</div>` : ''}
+            </div>
+            <div id="verify-de-zone" class="expr-block-verify">
+                <div class="verify-loading" style="display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted);"><span class="verify-spinner"></span> 🔍 Vérification automatique...</div>
+            </div>
+        </div>
     `;
+    
     document.getElementById('block-en').innerHTML = data.anglais ? `
         <div class="block-lang"><span class="lang-flag">🇬🇧</span><span class="lang-label">English</span></div>
-        <div class="expr-text">${colorize(data.anglais.texte || '–')}</div>
-        ${data.anglais?.prononciation_FR ? `<div class="expr-pron">${stripTags(data.anglais.prononciation_FR)}</div>` : ''}
-        ${data.anglais?.texte ? ttsRow('en', stripTags(data.anglais.texte), 'en-GB') : ''}
+        <div class="expr-block-layout">
+            <div class="expr-block-main" style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap;">
+                <div style="flex:1; min-width:200px;">
+                    <div class="expr-text">${colorize(data.anglais.texte || '–')}</div>
+                    ${data.anglais?.prononciation_FR ? `<div class="expr-pron">${stripTags(data.anglais.prononciation_FR)}</div>` : ''}
+                </div>
+                ${data.anglais?.texte ? `<div style="align-self:flex-start;">${ttsRow('en', stripTags(data.anglais.texte), 'en-GB')}</div>` : ''}
+            </div>
+            <div id="verify-en-zone" class="expr-block-verify">
+                <div class="verify-loading" style="display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted);"><span class="verify-spinner"></span> 🔍 Vérification automatique...</div>
+            </div>
+        </div>
     ` : '';
     document.getElementById('block-en').style.display = data.anglais ? '' : 'none';
 
-    // Bouton de vérification des traductions
-    const frText  = stripTags(data.francais || '');
-    const deText  = stripTags(data.allemand?.texte || '');
-    const enText  = stripTags(data.anglais?.texte || '');
-    const hasVerifiable = (deText || enText) && frText;
+    // Update slides visibility on mobile
+    updateMobileSlides(data);
 
-    // Inject verify button after block-en (into card-wrap)
-    let verifyEl = document.getElementById('verify-zone');
-    if (!verifyEl) {
-        verifyEl = document.createElement('div');
-        verifyEl.id = 'verify-zone';
-        document.getElementById('card-wrap').appendChild(verifyEl);
-    }
-    verifyEl.innerHTML = '';
-    if (hasVerifiable) {
-        const loadingDiv = document.createElement('div');
-        loadingDiv.className = 'verify-loading';
-        loadingDiv.style.cssText = 'display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin-top:10px; padding:10px 14px; background:rgba(37, 99, 235, 0.04); border:1px solid rgba(37, 99, 235, 0.15); border-radius:12px;';
-        loadingDiv.innerHTML = '<span class="verify-spinner"></span> 🔍 Vérification automatique des traductions...';
-        verifyEl.appendChild(loadingDiv);
+    // Start verification
+    const frText = stripTags(data.francais || '');
+    const deText = stripTags(data.allemand?.texte || '');
+    const enText = stripTags(data.anglais?.texte || '');
+    
+    runVerification(frText, deText, enText);
+}
 
-        runVerification(frText, deText, enText);
+let currentEditTab = 'fr';
+function switchEditTab(tab) {
+    currentEditTab = tab;
+    
+    // Toggle active class on tab buttons
+    document.querySelectorAll('.edit-mob-tab').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === tab);
+    });
+    
+    // In mobile view only, toggle display of blocks
+    if (window.innerWidth <= 950) {
+        document.getElementById('block-fr').style.display = tab === 'fr' ? 'block' : 'none';
+        document.getElementById('block-de').style.display = tab === 'de' ? 'block' : 'none';
+        
+        const item = flatExprs[cursor];
+        document.getElementById('block-en').style.display = (tab === 'en' && item.expr.anglais) ? 'block' : 'none';
+    } else {
+        // On desktop, all are displayed
+        document.getElementById('block-fr').style.display = 'block';
+        document.getElementById('block-de').style.display = 'block';
+        const item = flatExprs[cursor];
+        document.getElementById('block-en').style.display = item.expr.anglais ? 'block' : 'none';
     }
 }
 
 function renderEditMode(data) {
     editMode = true;
+    document.body.classList.add('edit-mode-active');
+    
+    const cw = document.getElementById('card-wrap');
+    if (cw) cw.classList.add('edit-active');
     document.getElementById('save-edit-wrap').style.display = 'flex';
     document.getElementById('actions').style.display = 'none';
 
@@ -1972,8 +2692,19 @@ function renderEditMode(data) {
         <div class="edit-label">Prononciation EN</div>
         <textarea id="edit-en-pron" rows="2">${esc(data.anglais?.prononciation_FR||'')}</textarea>
     `;
-    document.getElementById('block-en').style.display = '';
 
+    // English tab hide/show based on whether it is defined
+    const item = flatExprs[cursor];
+    const enTabBtn = document.querySelector('.edit-mob-tab[data-tab="en"]');
+    if (enTabBtn) {
+        enTabBtn.style.display = item.expr.anglais ? 'block' : 'none';
+    }
+
+    switchEditTab('fr');
+
+    // Set up automatic translation and tag alignment handlers
+    setupEditAutoTranslate();
+    autoAlignExistingTags();
 }
 
 function colorize(text) {
@@ -2080,19 +2811,15 @@ if (window.speechSynthesis) {
 function escAttr(s) { return (s||'').replace(/"/g,'&quot;').replace(/'/g,'&#39;').replace(/`/g,'&#96;'); }
 
 async function runVerification(frText, deText, enText) {
-    const zone = document.getElementById('verify-zone');
+    const deZone = document.getElementById('verify-de-zone');
+    const enZone = document.getElementById('verify-en-zone');
 
     async function translate(q, langpair) {
-        if (!q) return null;
-        try {
-            const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${langpair}`;
-            const r   = await fetch(url);
-            const d   = await r.json();
-            if (d.responseStatus === 200) {
-                return { text: d.responseData.translatedText, score: d.responseData.match };
-            }
-            return null;
-        } catch(e) { return null; }
+        const res = await fetchTranslationWithRetry(q, langpair);
+        if (res) {
+            return { text: res.translatedText, score: res.match };
+        }
+        return null;
     }
 
     function wordSimilarity(a, b) {
@@ -2105,155 +2832,473 @@ async function runVerification(frText, deText, enText) {
     }
 
     function scoreBadge(sim) {
-        if (sim >= 0.55) return `<span class="verify-score score-good">✅ Correct (${Math.round(sim*100)}%)</span>`;
-        if (sim >= 0.25) return `<span class="verify-score score-ok">⚠️ Approximatif (${Math.round(sim*100)}%)</span>`;
-        return `<span class="verify-score score-bad">❌ Divergent (${Math.round(sim*100)}%)</span>`;
+        if (sim >= 0.55) return `<span class="verify-score score-good" style="margin-top: 6px;">✅ Correct (${Math.round(sim*100)}%)</span>`;
+        if (sim >= 0.25) return `<span class="verify-score score-ok" style="margin-top: 6px;">⚠️ Approximatif (${Math.round(sim*100)}%)</span>`;
+        return `<span class="verify-score score-bad" style="margin-top: 6px;">❌ Divergent (${Math.round(sim*100)}%)</span>`;
     }
 
-    const [deRes, enRes] = await Promise.all([
-        translate(deText, 'de|fr'),
-        translate(enText, 'en|fr'),
-    ]);
-
-    let html = '<div class="verify-panel">';
-    html += `<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">`;
-    html += `  <div style="font-size:11px;font-weight:700;color:var(--muted);">Phrase française de référence :</div>`;
-    html += `  <button class="verify-refresh-btn" style="background:transparent; border:none; color:var(--modify); cursor:pointer; font-size:11px; font-weight:600; text-decoration:underline; font-family:inherit;">🔄 Ré-vérifier</button>`;
-    html += `</div>`;
-    html += `<div style="font-size:13px;font-weight:600;color:var(--text);font-style:italic;margin-bottom:8px;">« ${frText} »</div>`;
-
-    if (deRes) {
-        const sim = wordSimilarity(frText, deRes.text);
-        html += `<div class="verify-row">`;
-        html += `<div class="verify-label">🇩🇪 All. traduit en français</div>`;
-        html += `<div class="verify-text">« ${deRes.text} »</div>`;
-        html += scoreBadge(sim);
-        html += `</div>`;
+    // German Verification
+    if (deText && deZone) {
+        translate(deText, 'de|fr').then(deRes => {
+            if (deRes) {
+                const sim = wordSimilarity(frText, deRes.text);
+                deZone.innerHTML = `
+                    <div class="verify-panel" style="margin-top:0; border:none; background:transparent; padding:0;">
+                        <div class="verify-row">
+                            <div class="verify-label">🇩🇪 All. traduit en français</div>
+                            <div class="verify-text" style="font-size: 12px; margin: 4px 0 6px 0;">« ${deRes.text} »</div>
+                            ${scoreBadge(sim)}
+                        </div>
+                    </div>
+                `;
+            } else {
+                deZone.innerHTML = `<div style="color:var(--red);font-size:11px">❌ Erreur API</div>`;
+            }
+        });
+    } else if (deZone) {
+        deZone.style.display = 'none';
     }
-    if (enRes) {
-        const sim = wordSimilarity(frText, enRes.text);
-        html += `<div class="verify-row">`;
-        html += `<div class="verify-label">🇬🇧 Angl. traduit en français</div>`;
-        html += `<div class="verify-text">« ${enRes.text} »</div>`;
-        html += scoreBadge(sim);
-        html += `</div>`;
-    }
-    if (!deRes && !enRes) {
-        html += `<div style="color:var(--red);font-size:12px">❌ Impossible de joindre l’API. Vérifiez votre connexion.</div>`;
-    }
-    html += '</div>';
 
-    if (zone) {
-        zone.innerHTML = '';
-        const container = document.createElement('div');
-        container.innerHTML = html;
-        zone.appendChild(container.firstElementChild || container);
-
-        // Bind refresh button click programmatically
-        const refreshBtn = zone.querySelector('.verify-refresh-btn');
-        if (refreshBtn) {
-            refreshBtn.onclick = () => {
-                zone.innerHTML = '<div class="verify-loading" style="display:flex; align-items:center; gap:8px; font-size:12px; color:var(--muted); margin-top:10px; padding:10px 14px; background:rgba(37, 99, 235, 0.04); border:1px solid rgba(37, 99, 235, 0.15); border-radius:12px;"><span class="verify-spinner"></span> 🔍 Re-vérification des traductions...</div>';
-                runVerification(frText, deText, enText);
-            };
-        }
+    // English Verification
+    if (enText && enZone) {
+        translate(enText, 'en|fr').then(enRes => {
+            if (enRes) {
+                const sim = wordSimilarity(frText, enRes.text);
+                enZone.innerHTML = `
+                    <div class="verify-panel" style="margin-top:0; border:none; background:transparent; padding:0;">
+                        <div class="verify-row">
+                            <div class="verify-label">🇬🇧 Angl. traduit en français</div>
+                            <div class="verify-text" style="font-size: 12px; margin: 4px 0 6px 0;">« ${enRes.text} »</div>
+                            ${scoreBadge(sim)}
+                        </div>
+                    </div>
+                `;
+            } else {
+                enZone.innerHTML = `<div style="color:var(--red);font-size:11px">❌ Erreur API</div>`;
+            }
+        });
+    } else if (enZone) {
+        enZone.style.display = 'none';
     }
 }
 
 // ── Decisions ─────────────────────────────────────────
-function decide(status) {
+async function decide(status) {
     const item = flatExprs[cursor];
     if (!item) return;
 
     if (status === 'modified') {
-        // If already has modified data, enter edit mode with that data
-        const existing = decisions[item.key];
+        const existing = item.expr.audit;
         const data = (existing?.status === 'modified' && existing.modifiedData)
             ? existing.modifiedData : item.expr;
         editMode = true;
         renderEditMode(data);
-        // Store pending modified (no data yet until save)
-        if (!decisions[item.key] || decisions[item.key].status !== 'modified') {
-            decisions[item.key] = { status: 'modified', modifiedData: null };
-        }
         return;
     }
 
-    decisions[item.key] = { status };
-    saveSession();
+    // Set decision status
+    item.expr.audit = { status };
+    if (status === 'later') {
+        item.expr.audit.manual = true; // Mark as manually skipped
+    }
+
+    // Save to server silently in background
+    saveFileToServer(item.fi);
+
+    // Remove the current expression from flatExprs locally so we can advance immediately!
+    flatExprs.splice(cursor, 1);
+    
+    // Reset cursor or advance
+    if (cursor >= flatExprs.length) {
+        cursor = 0;
+    }
+
+    // Lock the new current expression in background
+    lockCurrentExpression();
+
+    // Render immediately (smooth transition!)
     renderCard();
     renderCatPanel();
     updateDashboard();
-    
-    // Sauvegarde en temps réel sur le serveur
-    saveFileToServer(item.fi);
 
-    // Auto-advance if not "later"
-    if (status !== 'later' && cursor < flatExprs.length - 1) {
-        setTimeout(() => { navigate(1); }, 300);
-    }
+    // In the background, fetch the latest queue state from the server to stay in sync
+    loadAllData().then(() => {
+        syncQueue().then(() => {
+            renderCatPanel();
+            updateDashboard();
+        });
+    });
 }
 
-async function autoTranslateFields() {
+// MyMemory translation API email rotation and robust fetching
+const MYMEMORY_EMAILS = [
+    'bula2026.edln.audit1@gmail.com',
+    'bula2026.edln.audit2@gmail.com',
+    'bula2026.edln.audit3@gmail.com',
+    'bula2026.edln.audit4@gmail.com',
+    'bula2026.edln.audit5@gmail.com',
+    'scout.edln.bula.trad1@gmail.com',
+    'scout.edln.bula.trad2@gmail.com',
+    'scout.edln.bula.trad3@gmail.com',
+    'scout.edln.bula.trad4@gmail.com'
+];
+
+function getMyMemoryEmail() {
+    let idx = parseInt(localStorage.getItem('mymemory_email_idx') || '0', 10);
+    if (isNaN(idx) || idx < 0 || idx >= MYMEMORY_EMAILS.length) {
+        idx = 0;
+    }
+    return MYMEMORY_EMAILS[idx];
+}
+
+function rotateMyMemoryEmail() {
+    let idx = parseInt(localStorage.getItem('mymemory_email_idx') || '0', 10);
+    idx = (idx + 1) % MYMEMORY_EMAILS.length;
+    localStorage.setItem('mymemory_email_idx', idx);
+    console.log(`[MyMemory] Rate limit or quota hit. Rotated to fallback email: ${MYMEMORY_EMAILS[idx]}`);
+}
+
+async function fetchTranslationWithRetry(q, langpair, retries = 3) {
+    if (!q) return null;
+    for (let i = 0; i < retries; i++) {
+        const email = getMyMemoryEmail();
+        const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${langpair}&de=${encodeURIComponent(email)}`;
+        try {
+            const r = await fetch(url);
+            
+            // Check HTTP status for rate limiting
+            if (r.status === 429) {
+                console.warn(`[MyMemory] HTTP 429 on email ${email}. Rotating...`);
+                rotateMyMemoryEmail();
+                continue;
+            }
+            
+            const d = await r.json();
+            
+            // Check JSON status or quota warnings in text
+            const status = d.responseStatus;
+            const text = d.responseData?.translatedText || '';
+            const isWarning = text.includes('MYMEMORY WARNING') || text.includes('QUOTA EXCEEDED') || text.includes('YOU USED ALL AVAILABLE FREE');
+            
+            if (status === 429 || status === 403 || isWarning) {
+                console.warn(`[MyMemory] Quota warning or status ${status} on email ${email}. Rotating...`);
+                rotateMyMemoryEmail();
+                continue;
+            }
+            
+            if (status === 200 && d.responseData) {
+                return d.responseData;
+            }
+        } catch (e) {
+            console.error('[MyMemory Fetch Error]', e);
+        }
+    }
+    return null;
+}
+
+// Global translation helper
+async function translateQ(q, langpair) {
+    const res = await fetchTranslationWithRetry(q, langpair);
+    return res ? res.translatedText : null;
+}
+
+// Global tag wrapping helper
+function wrapTextWithTag(fullText, phrase, tagOpen, tagClose) {
+    if (!fullText || !phrase) return fullText;
+    
+    const escapedPhrase = phrase.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+    
+    // 1. Exact word boundary match
+    const exactRegex = new RegExp(`\\b${escapedPhrase}\\b`, 'i');
+    if (exactRegex.test(fullText)) {
+        return fullText.replace(exactRegex, (m) => `${tagOpen}${m}${tagClose}`);
+    }
+    
+    // 2. Substring match
+    const subRegex = new RegExp(escapedPhrase, 'i');
+    if (subRegex.test(fullText)) {
+        return fullText.replace(subRegex, (m) => `${tagOpen}${m}${tagClose}`);
+    }
+    
+    // 3. Fuzzy clean match
+    const words = fullText.split(/\s+/);
+    let bestWord = null;
+    const norm = s => s.toLowerCase().replace(/[^a-zà-ÿ0-9]/g, '');
+    const normPhrase = norm(phrase);
+    
+    for (const w of words) {
+        const cleanW = norm(w);
+        if (!cleanW || cleanW.length < 2) continue;
+        if (cleanW.includes(normPhrase) || normPhrase.includes(cleanW)) {
+            bestWord = w;
+            break;
+        }
+    }
+    
+    if (bestWord) {
+        const idx = fullText.indexOf(bestWord);
+        if (idx >= 0) {
+            return fullText.substring(0, idx) + `${tagOpen}${bestWord}${tagClose}` + fullText.substring(idx + bestWord.length);
+        }
+    }
+    
+    return fullText;
+}
+
+let autoTranslateTimeout = null;
+let lastAutoTranslateFr = '';
+
+async function runAutoTranslateAndTag(isManual = false) {
     const frInput = document.getElementById('edit-fr');
     const deInput = document.getElementById('edit-de-text');
     const enInput = document.getElementById('edit-en-text');
+    const statusEl = document.getElementById('edit-auto-status');
+    const statusTextEl = document.getElementById('edit-auto-status-text');
     const btn = document.getElementById('btn-auto-translate');
     
-    if (!frInput || !frInput.value.trim()) {
-        alert("Veuillez d'abord saisir un texte en français.");
-        return;
-    }
+    if (!frInput) return;
+    const frRaw = frInput.value.trim();
+    if (!frRaw) return;
     
-    const frText = stripTags(frInput.value.trim());
+    lastAutoTranslateFr = frRaw;
+    const frText = stripTags(frRaw);
     
-    if (btn) {
-        btn.disabled = true;
-        btn.innerHTML = '⚡ Traduction en cours...';
+    // Show status indicator
+    if (statusEl && statusTextEl) {
+        statusEl.style.display = 'flex';
+        statusTextEl.textContent = 'Traduction automatique...';
+        const spinner = statusEl.querySelector('.verify-spinner');
+        if (spinner) spinner.style.display = 'inline-block';
     }
-    
-    async function translate(q, langpair) {
-        try {
-            const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(q)}&langpair=${langpair}`;
-            const r = await fetch(url);
-            const d = await r.json();
-            if (d.responseStatus === 200) {
-                return d.responseData.translatedText;
-            }
-            return null;
-        } catch(e) {
-            return null;
-        }
-    }
+    if (btn) btn.disabled = true;
     
     try {
         const [deTrans, enTrans] = await Promise.all([
-            translate(frText, 'fr|de'),
-            translate(frText, 'fr|en')
+            translateQ(frText, 'fr|de'),
+            translateQ(frText, 'fr|en')
         ]);
         
-        if (deTrans && deInput) {
-            deInput.value = deTrans;
-        }
-        if (enTrans && enInput) {
-            enInput.value = enTrans;
+        let finalDe = deTrans;
+        let finalEn = enTrans;
+        
+        const tagRegex = /\[([NVA])(\d+)\](.*?)\[\/\1\2\]/g;
+        let match;
+        const tags = [];
+        while ((match = tagRegex.exec(frRaw)) !== null) {
+            tags.push({
+                type: match[1],
+                idx: match[2],
+                text: match[3].trim()
+            });
         }
         
-        if (!deTrans && !enTrans) {
+        if (tags.length > 0 && (deTrans || enTrans)) {
+            if (statusTextEl) statusTextEl.textContent = 'Balisage automatique...';
+            
+            const tagTranslations = await Promise.all(tags.map(async (t) => {
+                const [deVal, enVal] = await Promise.all([
+                    translateQ(t.text, 'fr|de'),
+                    translateQ(t.text, 'fr|en')
+                ]);
+                return { tag: t, de: deVal, en: enVal };
+            }));
+            
+            if (deTrans) {
+                let tempDe = deTrans;
+                for (const item of tagTranslations) {
+                    tempDe = wrapTextWithTag(tempDe, item.de, `[${item.tag.type}${item.tag.idx}]`, `[/${item.tag.type}${item.tag.idx}]`);
+                }
+                finalDe = tempDe;
+            }
+            
+            if (enTrans) {
+                let tempEn = enTrans;
+                for (const item of tagTranslations) {
+                    tempEn = wrapTextWithTag(tempEn, item.en, `[${item.tag.type}${item.tag.idx}]`, `[/${item.tag.type}${item.tag.idx}]`);
+                }
+                finalEn = tempEn;
+            }
+        }
+        
+        if (finalDe && deInput) {
+            deInput.value = finalDe;
+        }
+        if (finalEn && enInput) {
+            enInput.value = finalEn;
+        }
+        
+        if (statusEl && statusTextEl) {
+            const spinner = statusEl.querySelector('.verify-spinner');
+            if (spinner) spinner.style.display = 'none';
+            if (deTrans || enTrans) {
+                statusTextEl.textContent = '✨ Traduction et balisage auto terminés';
+                setTimeout(() => {
+                    if (statusTextEl.textContent === '✨ Traduction et balisage auto terminés') {
+                        statusEl.style.display = 'none';
+                    }
+                }, 4000);
+            } else {
+                statusTextEl.textContent = '⚠️ Erreur de traduction auto (API)';
+            }
+        }
+        
+        if (!deTrans && !enTrans && isManual) {
             alert("Impossible de joindre l'API de traduction. Veuillez vérifier votre connexion.");
         }
     } catch(e) {
         console.error(e);
-        alert("Erreur lors de la traduction automatique.");
+        if (statusEl && statusTextEl) {
+            const spinner = statusEl.querySelector('.verify-spinner');
+            if (spinner) spinner.style.display = 'none';
+            statusTextEl.textContent = '❌ Erreur de traduction auto';
+        }
+        if (isManual) {
+            alert("Erreur lors de la traduction automatique.");
+        }
     } finally {
-        if (btn) {
-            btn.disabled = false;
-            btn.innerHTML = '✨ Traduire FR → DE/EN';
+        if (btn) btn.disabled = false;
+    }
+}
+
+function autoTranslateFields() {
+    runAutoTranslateAndTag(true);
+}
+
+function setupEditAutoTranslate() {
+    const frInput = document.getElementById('edit-fr');
+    const deInput = document.getElementById('edit-de-text');
+    const enInput = document.getElementById('edit-en-text');
+    if (!frInput) return;
+    
+    lastAutoTranslateFr = frInput.value.trim();
+    
+    // Auto-translate on opening edit mode if German or English are empty
+    const deVal = deInput ? deInput.value.trim() : '';
+    const enVal = enInput ? enInput.value.trim() : '';
+    if (lastAutoTranslateFr && (!deVal || !enVal)) {
+        runAutoTranslateAndTag();
+    }
+    
+    frInput.addEventListener('input', () => {
+        if (autoTranslateTimeout) clearTimeout(autoTranslateTimeout);
+        
+        const frVal = frInput.value.trim();
+        if (frVal === lastAutoTranslateFr) return;
+        
+        autoTranslateTimeout = setTimeout(() => {
+            runAutoTranslateAndTag();
+        }, 1000); // 1.0 second debounce
+    });
+
+    // Automate tag alignment while editing translations
+    let tagAlignTimeout = null;
+    const triggerTagAlign = () => {
+        if (tagAlignTimeout) clearTimeout(tagAlignTimeout);
+        tagAlignTimeout = setTimeout(() => {
+            autoAlignExistingTags();
+        }, 1000); // 1.0 second debounce
+    };
+
+    if (deInput) {
+        deInput.addEventListener('input', triggerTagAlign);
+    }
+    if (enInput) {
+        enInput.addEventListener('input', triggerTagAlign);
+    }
+}
+
+async function autoAlignExistingTags() {
+    const frInput = document.getElementById('edit-fr');
+    const deInput = document.getElementById('edit-de-text');
+    const enInput = document.getElementById('edit-en-text');
+    const statusEl = document.getElementById('edit-auto-status');
+    const statusTextEl = document.getElementById('edit-auto-status-text');
+    
+    if (!frInput) return;
+    const frRaw = frInput.value.trim();
+    const deRaw = deInput ? deInput.value.trim() : '';
+    const enRaw = enInput ? enInput.value.trim() : '';
+    
+    // Parse tags from French
+    const tagRegex = /\[([NVA])(\d+)\](.*?)\[\/\1\2\]/g;
+    let match;
+    const tags = [];
+    while ((match = tagRegex.exec(frRaw)) !== null) {
+        tags.push({
+            type: match[1],
+            idx: match[2],
+            text: match[3].trim()
+        });
+    }
+    
+    if (tags.length === 0) return;
+    
+    // Check if DE and EN are missing tags
+    const deNeedsTags = deRaw && !deRaw.includes('[/') && !deRaw.includes('[');
+    const enNeedsTags = enRaw && !enRaw.includes('[/') && !enRaw.includes('[');
+    
+    if (!deNeedsTags && !enNeedsTags) {
+        // No auto-alignment needed
+        return;
+    }
+    
+    if (statusEl && statusTextEl) {
+        statusEl.style.display = 'flex';
+        statusTextEl.textContent = 'Alignement automatique des balises...';
+        const spinner = statusEl.querySelector('.verify-spinner');
+        if (spinner) spinner.style.display = 'inline-block';
+    }
+    
+    try {
+        const tagTranslations = await Promise.all(tags.map(async (t) => {
+            const [deVal, enVal] = await Promise.all([
+                deNeedsTags ? translateQ(t.text, 'fr|de') : Promise.resolve(null),
+                enNeedsTags ? translateQ(t.text, 'fr|en') : Promise.resolve(null)
+            ]);
+            return { tag: t, de: deVal, en: enVal };
+        }));
+        
+        if (deNeedsTags && deInput) {
+            let tempDe = deRaw;
+            for (const item of tagTranslations) {
+                if (item.de) {
+                    tempDe = wrapTextWithTag(tempDe, item.de, `[${item.tag.type}${item.tag.idx}]`, `[/${item.tag.type}${item.tag.idx}]`);
+                }
+            }
+            deInput.value = tempDe;
+        }
+        
+        if (enNeedsTags && enInput) {
+            let tempEn = enRaw;
+            for (const item of tagTranslations) {
+                if (item.en) {
+                    tempEn = wrapTextWithTag(tempEn, item.en, `[${item.tag.type}${item.tag.idx}]`, `[/${item.tag.type}${item.tag.idx}]`);
+                }
+            }
+            enInput.value = tempEn;
+        }
+        
+        if (statusEl && statusTextEl) {
+            const spinner = statusEl.querySelector('.verify-spinner');
+            if (spinner) spinner.style.display = 'none';
+            statusTextEl.textContent = '✨ Balises alignées';
+            setTimeout(() => {
+                if (statusTextEl.textContent === '✨ Balises alignées') {
+                    statusEl.style.display = 'none';
+                }
+            }, 3000);
+        }
+    } catch(e) {
+        console.error("Error auto-aligning tags", e);
+        if (statusEl && statusTextEl) {
+            const spinner = statusEl.querySelector('.verify-spinner');
+            if (spinner) spinner.style.display = 'none';
+            statusTextEl.textContent = '⚠️ Alignement balises échoué';
         }
     }
 }
 
-function saveEdit() {
+async function saveEdit() {
     const item = flatExprs[cursor];
     const fr = document.getElementById('edit-fr')?.value || item.expr.francais;
     const deText = document.getElementById('edit-de-text')?.value || item.expr.allemand?.texte;
@@ -2261,69 +3306,105 @@ function saveEdit() {
     const enText = document.getElementById('edit-en-text')?.value || item.expr.anglais?.texte;
     const enPron = document.getElementById('edit-en-pron')?.value || item.expr.anglais?.prononciation_FR;
 
-    decisions[item.key] = {
-        status: 'modified',
-        modifiedData: {
-            ...item.expr,
-            francais: fr,
-            allemand: { texte: deText, prononciation_FR: dePron },
-            anglais: item.expr.anglais ? { texte: enText, prononciation_FR: enPron } : null
-        }
-    };
+    // Modify in-place
+    item.expr.francais = fr;
+    if (item.expr.allemand) {
+        item.expr.allemand.texte = deText;
+        item.expr.allemand.prononciation_FR = dePron;
+    }
+    if (item.expr.anglais) {
+        item.expr.anglais.texte = enText;
+        item.expr.anglais.prononciation_FR = enPron;
+    }
+
+    item.expr.audit = { status: 'modified' };
     editMode = false;
-    saveSession();
+
+    // Save to server silently in background
+    saveFileToServer(item.fi);
+
+    if (editingFromList) {
+        flatExprs = savedFlatExprs;
+        cursor = savedCursor;
+        editingFromList = false;
+        
+        buildFlatExprs();
+        setViewMode('list');
+        updateDashboard();
+        return;
+    }
+
+    // Remove from flatExprs locally since it is now audited
+    flatExprs.splice(cursor, 1);
+
+    if (cursor >= flatExprs.length) {
+        cursor = 0;
+    }
+
+    // Lock new current expression in background
+    lockCurrentExpression();
+
     renderCard();
     renderCatPanel();
     updateDashboard();
-    
-    // Sauvegarde en temps réel sur le serveur
-    saveFileToServer(item.fi);
-    
-    setTimeout(() => navigate(1), 300);
+
+    // In the background, fetch latest queue state to stay in sync
+    loadAllData().then(() => {
+        syncQueue().then(() => {
+            renderCatPanel();
+            updateDashboard();
+        });
+    });
 }
 
 function cancelEdit() {
     editMode = false;
-    // Remove pending modified if not saved
-    const item = flatExprs[cursor];
-    if (decisions[item.key]?.status === 'modified' && !decisions[item.key].modifiedData) {
-        delete decisions[item.key];
+    if (editingFromList) {
+        flatExprs = savedFlatExprs;
+        cursor = savedCursor;
+        editingFromList = false;
+        setViewMode('list');
+        return;
     }
     renderCard();
 }
 
 // ── Navigation ────────────────────────────────────────
-function navigate(dir) {
-    cursor = Math.max(0, Math.min(cursor + dir, flatExprs.length - 1));
+async function navigate(dir) {
     editMode = false;
-    renderCard();
-    renderCatPanel();
+    await selectExpression(cursor + dir);
 }
 
-function goNextPending() {
-    // Find next pending expression after cursor
-    for (let i = cursor + 1; i < flatExprs.length; i++) {
-        const d = decisions[flatExprs[i].key];
-        if (!d || d.status === 'later') { cursor = i; renderCard(); renderCatPanel(); return; }
+async function goNextPending() {
+    if (flatExprs.length > 0) {
+        const nextIdx = (cursor + 1) % flatExprs.length;
+        await selectExpression(nextIdx);
     }
-    // Wrap from start
-    for (let i = 0; i < cursor; i++) {
-        const d = decisions[flatExprs[i].key];
-        if (!d || d.status === 'later') { cursor = i; renderCard(); renderCatPanel(); return; }
-    }
-    alert('🎉 Toutes les expressions ont été traitées !');
 }
 
 // ── Dashboard ─────────────────────────────────────────
 function updateDashboard() {
-    const total = flatExprs.length;
-    const decs = Object.values(decisions);
-    const seen = decs.length;
-    const accepted = decs.filter(d => d.status === 'accepted').length;
-    const deleted  = decs.filter(d => d.status === 'deleted').length;
-    const modified = decs.filter(d => d.status === 'modified').length;
-    const later    = decs.filter(d => d.status === 'later').length;
+    let total = 0;
+    let accepted = 0;
+    let deleted = 0;
+    let modified = 0;
+    let later = 0;
 
+    allData.forEach(file => {
+        (file.data.cas || []).forEach(cas => {
+            (cas.expressions || []).forEach(expr => {
+                total++;
+                if (expr.audit) {
+                    if (expr.audit.status === 'accepted') accepted++;
+                    else if (expr.audit.status === 'deleted') deleted++;
+                    else if (expr.audit.status === 'modified') modified++;
+                    else if (expr.audit.status === 'later') later++;
+                }
+            });
+        });
+    });
+
+    const seen = accepted + deleted + modified + later;
     const pctSeen     = total  > 0 ? Math.round(seen / total * 100) : 0;
     const pctAccepted = seen   > 0 ? Math.round(accepted / seen * 100) : 0;
     const pctDeleted  = seen   > 0 ? Math.round(deleted  / seen * 100) : 0;
@@ -2352,16 +3433,20 @@ function updateDashboard() {
     setBar('bar-modified', pctModified);
     setBar('bar-later',    pctLater);
 
-    // Page estimate (accepted + modified expressions)
-    const keptExprs = flatExprs.filter(e => {
-        const d = decisions[e.key];
-        return !d || d.status === 'accepted' || d.status === 'modified' || d.status === 'later';
+    // Page estimate (only accepted + modified expressions)
+    const keptExprs = [];
+    allData.forEach(file => {
+        (file.data.cas || []).forEach(cas => {
+            (cas.expressions || []).forEach(expr => {
+                if (expr.audit && (expr.audit.status === 'accepted' || expr.audit.status === 'modified')) {
+                    keptExprs.push(expr);
+                }
+            });
+        });
     });
     let pageSlots = 0;
-    keptExprs.forEach(e => {
-        const data = (decisions[e.key]?.status === 'modified' && decisions[e.key].modifiedData)
-            ? decisions[e.key].modifiedData : e.expr;
-        pageSlots += cardSlots(data);
+    keptExprs.forEach(expr => {
+        pageSlots += cardSlots(expr);
     });
     const estPages = Math.ceil(pageSlots / 4) + 4; // +4 cover/blank/toc
     setText('est-pages', estPages);
@@ -2383,35 +3468,15 @@ function setBar(id, pct)  { const el = document.getElementById(id); if (el) el.s
 
 // ── Export V4 ─────────────────────────────────────────
 function exportV4() {
-    // Group accepted/modified decisions by file
-    const fileDecisions = {}; // filename -> set of {casIdx, exprIdx, status, modifiedData}
-    flatExprs.forEach(e => {
-        const d = decisions[e.key];
-        if (d && d.status === 'deleted') {
-            if (!fileDecisions[e.filename]) fileDecisions[e.filename] = {};
-            if (!fileDecisions[e.filename][e.ci]) fileDecisions[e.filename][e.ci] = {};
-            fileDecisions[e.filename][e.ci][e.ei] = d;
-        } else if (d && d.status === 'modified') {
-            if (!fileDecisions[e.filename]) fileDecisions[e.filename] = {};
-            if (!fileDecisions[e.filename][e.ci]) fileDecisions[e.filename][e.ci] = {};
-            fileDecisions[e.filename][e.ci][e.ei] = d;
-        }
-    });
-
     let count = 0;
     allData.forEach(file => {
-        const newCas = file.data.cas.map((cas, ci) => {
-            const newExprs = cas.expressions.filter((expr, ei) => {
-                const d = fileDecisions[file.filename]?.[ci]?.[ei];
-                return !d || d.status !== 'deleted';
-            }).map((expr, ei) => {
-                // Find original index
-                const origEi = cas.expressions.indexOf(expr);
-                const d = fileDecisions[file.filename]?.[ci]?.[origEi];
-                if (d?.status === 'modified' && d.modifiedData) {
-                    return { ...expr, ...d.modifiedData };
-                }
-                return expr;
+        const newCas = file.data.cas.map(cas => {
+            const newExprs = cas.expressions.filter(expr => {
+                return expr.audit && (expr.audit.status === 'accepted' || expr.audit.status === 'modified');
+            }).map(expr => {
+                const cleanExpr = { ...expr };
+                delete cleanExpr.audit;
+                return cleanExpr;
             });
             return { ...cas, expressions: newExprs };
         }).filter(cas => cas.expressions.length > 0);

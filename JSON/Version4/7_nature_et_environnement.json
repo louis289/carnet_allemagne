@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[V1]Look at[/V1] [N1]this tree[/N1]!",
               "prononciation_FR": "[V1]Louk at[/V1] [N1]ziss tri[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "What [N2]bird[/N2] [V1]is[/V1] [N1]that[/N1]?",
               "prononciation_FR": "Wot [N2]beurd[/N2] [V1]iz[/V1] [N1]zat[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +46,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]see[/V1] [N2]a shooting star[/N2]!",
               "prononciation_FR": "[N1]Aï[/N1] [V1]si[/V1] [N2]eu chou-ting star[/N2]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -52,6 +61,9 @@
             "anglais": {
               "texte": "[N1]The forest[/N1] [V1]is[/V1] [A1]beautiful[/A1].",
               "prononciation_FR": "[N1]Ze fo-rest[/N1] [V1]iz[/V1] [A1]biou-ti-foul[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +76,9 @@
             "anglais": {
               "texte": "[N1]The river[/N1] [V1]is[/V1] [A1]cold[/A1]!",
               "prononciation_FR": "[N1]Ze ri-veur[/N1] [V1]iz[/V1] [A1]kold[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -76,6 +91,9 @@
             "anglais": {
               "texte": "[V1]Look at[/V1] [N1]that sunset[/N1]!",
               "prononciation_FR": "[V1]Louk at[/V1] [N1]zat sann-zet[/N1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -88,6 +106,9 @@
             "anglais": {
               "texte": "[N1]That[/N1]'s [N2]a medicinal plant[/N2].",
               "prononciation_FR": "[N1]Zats[/N1] [N2]eu mé-di-si-nal plant[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -100,6 +121,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]know[/V1] [N2]this mushroom[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]no[/V1] [N2]ziss mach-roum[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           }
         ]

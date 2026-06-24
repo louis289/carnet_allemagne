@@ -1,0 +1,20 @@
+{
+  "name": "Audit Carnet Scout",
+  "short_name": "Audit Scout",
+  "start_url": "audit.html",
+  "display": "standalone",
+  "background_color": "#F9F7F4",
+  "theme_color": "#114C2A",
+  "icons": [
+    {
+      "src": "logo_edln.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo_edln.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

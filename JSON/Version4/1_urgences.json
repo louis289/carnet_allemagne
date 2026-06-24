@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[V1]Help[/V1]!",
               "prononciation_FR": "[V1]Help[/V1]!"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "[V1]Call[/V1] [N1]an ambulance[/N1]!",
               "prononciation_FR": "[V1]Kol[/V1] [N1]an am-biou-lanss[/N1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +46,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a doctor[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu dok-teur[/N2]."
+            },
+            "audit": {
+              "status": "deleted"
             }
           },
           {
@@ -52,6 +61,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]injured[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]in-djourd[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +76,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]hurts[/V1] [A1]here[/A1].",
               "prononciation_FR": "[N1]It[/N1] [V1]hurts[/V1] [A1]here[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -76,6 +91,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]allergic[/A1] to...",
               "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]a-leur-djik[/A1] tou..."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -88,6 +106,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am[/V1] [A1]lost[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]am[/V1] [A1]lost[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -100,6 +121,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]cut[/V1] [N2]my finger[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]keut[/V1] [N2]maï fin-gueur[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -112,6 +136,9 @@
             "anglais": {
               "texte": "[N1]It[/N1] [V1]is bleeding[/V1] [A1]a lot[/A1].",
               "prononciation_FR": "[N1]It[/N1] [V1]iz bli-ding[/V1] [A1]eu lot[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -124,6 +151,9 @@
             "anglais": {
               "texte": "Where [V1]are[/V1] [N1]the plasters[/N1]?",
               "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze plas-teurz[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -136,6 +166,9 @@
             "anglais": {
               "texte": "[N1]We[/N1] [V1]must disinfect[/V1] [N2]the wound[/N2].",
               "prononciation_FR": "[N1]Wi[/N1] [V1]meust di-zin-fekt[/V1] [N2]ze wound[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -148,6 +181,9 @@
             "anglais": {
               "texte": "[V1]Do not touch[/V1], [N1]it[/N1] [V2]is[/V2] [A1]dirty[/A1].",
               "prononciation_FR": "[V1]Dou not teutch[/V1], [N1]it[/N1] [V2]iz[/V2] [A1]deur-ti[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -160,6 +196,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]do not feel well[/V1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]dou not fil wèl[/V1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -172,6 +211,9 @@
             "anglais": {
               "texte": "[N1]My[/N1] head [V1]is spinning[/V1].",
               "prononciation_FR": "[N1]Maï[/N1] héd [V1]iz spi-ning[/V1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -184,6 +226,9 @@
             "anglais": {
               "texte": "[N1]He[/N1] [V1]fainted[/V1].",
               "prononciation_FR": "[N1]Hi[/N1] [V1]féïn-téd[/V1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -196,6 +241,9 @@
             "anglais": {
               "texte": "[V1]Lay[/V1] [N1]him[/N1] [V1]down[/V1] and [V2]raise[/V2] [N2]his legs[/N2].",
               "prononciation_FR": "[V1]Léï[/V1] [N1]him[/N1] [V1]daoun[/V1] annd [V2]réïz[/V2] [N2]hiz lẹgz[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -208,6 +256,9 @@
             "anglais": {
               "texte": "[V1]Give[/V1] [N1]him[/N1] [N2]some sugar[/N2].",
               "prononciation_FR": "[V1]Guiv[/V1] [N1]him[/N1] [N2]seum chou-gueur[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -220,6 +271,9 @@
             "anglais": {
               "texte": "[V1]Is[/V1] [N1]he[/N1] [V1]breathing[/V1]?",
               "prononciation_FR": "[V1]Iz[/V1] [N1]hi[/N1] [V1]bri-zing[/V1]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -232,6 +286,9 @@
             "anglais": {
               "texte": "[V1]Put[/V1] [N1]him[/N1] in the [N2]recovery position[/N2].",
               "prononciation_FR": "[V1]Pout[/V1] [N1]him[/N1] ine ze [N2]ri-ko-veur-i po-zi-cheun[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -244,6 +301,10 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]will get[/V1] [N2]the first aid kit[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]wil guét[/V1] [N2]ze feurst éïd kit[/N2]."
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -256,6 +317,9 @@
             "anglais": {
               "texte": "[V1]Do not move[/V1] [N1]him[/N1]!",
               "prononciation_FR": "[V1]Dou not mouv[/V1] [N1]him[/N1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -268,6 +332,10 @@
             "anglais": {
               "texte": "[V1]Press[/V1] [A1]hard[/A1] on [N1]the wound[/N1].",
               "prononciation_FR": "[V1]Press[/V1] [A1]hard[/A1] on [N1]ze wound[/N1]."
+            },
+            "audit": {
+              "status": "later",
+              "manual": true
             }
           },
           {
@@ -280,6 +348,9 @@
             "anglais": {
               "texte": "[V1]Call[/V1] [N1]an ambulance[/N1], [A1]quick[/A1]!",
               "prononciation_FR": "[V1]Kol[/V1] [N1]an am-biou-lanss[/N1], [A1]kwik[/A1]!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -292,6 +363,9 @@
             "anglais": {
               "texte": "[A1]What[/A1] [V1]is[/V1] [N1]the emergency number[/N1]?",
               "prononciation_FR": "[A1]Wot[/A1] [V1]iz[/V1] [N1]zi i-meur-djen-si neum-beur[/N1]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -304,6 +378,9 @@
             "anglais": {
               "texte": "[N1]There[/N1] [V1]is[/V1] [N2]an emergency[/N2] here!",
               "prononciation_FR": "[N1]Zèr[/N1] [V1]iz[/V1] [N2]an i-meur-djen-si[/N2] hir!"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -316,6 +393,9 @@
             "anglais": {
               "texte": "Where [V1]is[/V1] [N1]the nearest hospital[/N1]?",
               "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze ni-rest hos-pi-tal[/N1]?"
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -328,6 +408,9 @@
             "anglais": {
               "texte": "[N1]We[/N1] [V1]need[/V1] [N2]a doctor[/N2].",
               "prononciation_FR": "[N1]Wi[/N1] [V1]nid[/V1] [N2]eu dok-teur[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -340,6 +423,9 @@
             "anglais": {
               "texte": "Where [V1]is[/V1] [N1]the first aid kit[/N1]?",
               "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze feurst éïd kit[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -352,6 +438,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]am bleeding[/V1] [A1]a little[/A1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]am bli-ding[/V1] [A1]eu li-teul[/A1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -364,6 +453,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]need[/V1] [N2]a plaster[/N2].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]nid[/V1] [N2]eu plas-teur[/N2]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -376,6 +468,9 @@
             "anglais": {
               "texte": "[V1]Call[/V1] [N1]the leader[/N1].",
               "prononciation_FR": "[V1]Kol[/V1] [N1]ze li-deur[/N1]."
+            },
+            "audit": {
+              "status": "later"
             }
           }
         ]
@@ -394,6 +489,9 @@
             "anglais": {
               "texte": "Where [V1]are[/V1] [N1]the toilets[/N1]?",
               "prononciation_FR": "Wér [V1]ar[/V1] [N1]ze toï-lets[/N1]?"
+            },
+            "audit": {
+              "status": "later"
             }
           }
         ]
@@ -412,6 +510,9 @@
             "anglais": {
               "texte": "[N2]My name[/N2] [V1]is[/V1]... and [N1]I[/N1] [V2]am[/V2] from [N3]France[/N3].",
               "prononciation_FR": "[N2]Maï neïm[/N2] [V1]iz[/V1]... annd [N1]aïm[/N1] from [N3]Franss[/N3]."
+            },
+            "audit": {
+              "status": "later"
             }
           }
         ]

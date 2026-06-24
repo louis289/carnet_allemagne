@@ -19,11 +19,6 @@ function cleanExpiredLocks() {
 }
 
 function isFileLockedByOther(filename, user) {
-    cleanExpiredLocks();
-    const lock = activeLocks[filename];
-    if (lock && lock.user !== user) {
-        return lock.user;
-    }
     return null;
 }
 
@@ -166,6 +161,29 @@ const server = http.createServer((req, res) => {
         cleanExpiredLocks();
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ locks: activeLocks }));
+        return;
+    }
+
+    // API: Get list of generated PDF fiches
+    if (req.method === 'GET' && pathname === '/api/fiches/list') {
+        try {
+            const outputDir = path.join(ROOT_DIR, 'Fiches_activitees', 'Fiches_Générées');
+            let pdfFiles = [];
+            if (fs.existsSync(outputDir)) {
+                pdfFiles = fs.readdirSync(outputDir)
+                    .filter(file => file.toLowerCase().endsWith('.pdf'))
+                    .map(file => ({
+                        name: file,
+                        url: `/Fiches_activitees/Fiches_Générées/${encodeURIComponent(file)}`
+                    }));
+            }
+            res.writeHead(200, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ success: true, files: pdfFiles }));
+        } catch (err) {
+            console.error('[API Fiches List Error]', err);
+            res.writeHead(500, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify({ error: err.message }));
+        }
         return;
     }
 
@@ -460,6 +478,24 @@ const server = http.createServer((req, res) => {
     stream.pipe(res);
 });
 
-server.listen(PORT, () => {
-    console.log(`Custom Web App Server running at http://localhost:${PORT}/`);
+const os = require('os');
+function getLocalIpAddress() {
+    const interfaces = os.networkInterfaces();
+    for (const name of Object.keys(interfaces)) {
+        for (const iface of interfaces[name]) {
+            if (iface.family === 'IPv4' && !iface.internal) {
+                return iface.address;
+            }
+        }
+    }
+    return 'localhost';
+}
+
+server.listen(PORT, '0.0.0.0', () => {
+    const localIp = getLocalIpAddress();
+    console.log(`===========================================================`);
+    console.log(`Custom Web App Server running at:`);
+    console.log(`  - Local:            http://localhost:${PORT}/`);
+    console.log(`  - Local Network IP: http://${localIp}:${PORT}/`);
+    console.log(`===========================================================`);
 });

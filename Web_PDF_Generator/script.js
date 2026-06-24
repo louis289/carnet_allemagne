@@ -327,14 +327,20 @@ async function loadAndBuild() {
 
     // ─── 0. FILTRAGE D'AUDIT ET TRI ALPHABÉTIQUE ────────────────
     categories.forEach(cat => {
-        // Filtrer les expressions supprimées lors de l'audit
+        // Filtrer les expressions selon la version
         cat.cas.forEach(casItem => {
             casItem.expressions = casItem.expressions.filter(expr => {
-                return !(expr.audit && expr.audit.status === 'deleted');
+                if (selectedVersion === '4') {
+                    // Pour V4, on ne garde QUE les expressions validées (accepted ou modified)
+                    return expr.audit && (expr.audit.status === 'accepted' || expr.audit.status === 'modified');
+                } else {
+                    // Pour les autres versions, on filtre seulement les expressions supprimées lors de l'audit
+                    return !(expr.audit && expr.audit.status === 'deleted');
+                }
             });
         });
 
-        // Filtrer les cas devenus vides suite aux suppressions d'expressions
+        // Filtrer les cas devenus vides suite aux suppressions/filtrages d'expressions
         cat.cas = cat.cas.filter(casItem => casItem.expressions.length > 0);
 
         // Trier alphabétiquement
@@ -347,6 +353,9 @@ async function loadAndBuild() {
             });
         });
     });
+
+    // Filtrer les catégories devenues vides suite au filtrage
+    categories = categories.filter(cat => cat.cas.length > 0);
 
     // ─── 1. PRÉPARATION DES PAGES (pagination au niveau expressions)
     const contentPages = [];

@@ -16,6 +16,9 @@
             "anglais": {
               "texte": "[V1]Let's form[/V1] [N2]a circle[/N2].",
               "prononciation_FR": "[V1]Lets form[/V1] [N2]eu seur-keul[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -28,6 +31,9 @@
             "anglais": {
               "texte": "[N1]Everyone[/N1] [V1]gets to speak[/V1].",
               "prononciation_FR": "[N1]E-vri-ouann[/N1] [V1]guéts tou spik[/V1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -40,6 +46,9 @@
             "anglais": {
               "texte": "[N1]We[/N1] [V1]listen[/V1] without [V2]interrupting[/V2].",
               "prononciation_FR": "[N1]Wi[/N1] [V1]liss-eun[/V1] oui-zaout [V2]ine-teur-eup-ting[/V2]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -52,6 +61,9 @@
             "anglais": {
               "texte": "Who [V1]wants[/V1] [V2]to start[/V2]?",
               "prononciation_FR": "Hou [V1]ouonts[/V1] [V2]tou start?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -64,6 +76,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]pass[/V1] [N2]the word[/N2] on.",
               "prononciation_FR": "[N1]Aï[/N1] [V1]pass[/V1] [N2]ze ouérd[/N2] onn."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -76,6 +91,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]have[/V1] [A1]nothing[/A1] [V2]to say[/V2] for now.",
               "prononciation_FR": "[N1]Aï[/N1] [V1]hav[/V1] [A1]na-thing[/A1] [V2]tou séï[/V2] for naou."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
@@ -88,6 +106,9 @@
             "anglais": {
               "texte": "What's [V1]said[/V1] [A1]here[/A1] [V2]stays[/V2] [A1]here[/A1].",
               "prononciation_FR": "Ouots [V1]séd[/V1] [A1]hir[/A1] [V2]steïz[/V2] [A1]hir[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
             }
           },
           {
@@ -100,6 +121,9 @@
             "anglais": {
               "texte": "[N1]I[/N1] [V1]feel heard[/V1].",
               "prononciation_FR": "[N1]Aï[/N1] [V1]fil heurd[/V1]."
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
