@@ -643,6 +643,9 @@
             "anglais": {
               "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]help[/V2] [N2]me[/N2]?",
               "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]help[/V2] [N2]mi[/N2]?"
+            },
+            "audit": {
+              "status": "later"
             }
           },
           {
