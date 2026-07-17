@@ -233,28 +233,6 @@
     ],
     "vocabulaire": [
       {
-        "francais": "Couteau",
-        "allemand": {
-          "texte": "Messer",
-          "prononciation_FR": "Mè-sseur"
-        },
-        "anglais": {
-          "texte": "Knife",
-          "prononciation_FR": "Naïf"
-        }
-      },
-      {
-        "francais": "Tente",
-        "allemand": {
-          "texte": "Zelt",
-          "prononciation_FR": "Tsèlt"
-        },
-        "anglais": {
-          "texte": "Tent",
-          "prononciation_FR": "Tênt"
-        }
-      },
-      {
         "francais": "Piquet",
         "allemand": {
           "texte": "Hering",

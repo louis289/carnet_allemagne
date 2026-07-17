@@ -52,21 +52,6 @@
             }
           },
           {
-            "id_expression": 4,
-            "francais": "[A1]Quand[/A1] [V1]commence[/V1] [N1]le jeu[/N1] ?",
-            "allemand": {
-              "texte": "[A1]Wann[/A1] [V1]beginnt[/V1] [N1]das Spiel[/N1]?",
-              "prononciation_FR": "[A1]Van[/A1] [V1]bé-guint[/V1] [N1]dass chpil[/N1]?"
-            },
-            "anglais": {
-              "texte": "[A1]When[/A1] [V1]does[/V1] [N1]the game[/N1] [V2]start[/V2]?",
-              "prononciation_FR": "[A1]Wène[/A1] [V1]deuz[/V1] [N1]ze guéïm[/N1] [V2]start[/V2]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
             "id_expression": 5,
             "francais": "[N1]On[/N1] [V1]part[/V1] à [N2]quelle heure[/N2] ?",
             "allemand": {
@@ -112,21 +97,6 @@
             }
           },
           {
-            "id_expression": 8,
-            "francais": "Où [V1]sont[/V1] [N1]les toilettes[/N1] ?",
-            "allemand": {
-              "texte": "Wo [V1]sind[/V1] [N1]die Toiletten[/N1]?",
-              "prononciation_FR": "Vo [V1]zind[/V1] [N1]di to-a-lèt-teun[/N1]?"
-            },
-            "anglais": {
-              "texte": "Where [V1]are[/V1] [N1]the toilets[/N1]?",
-              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]ze toï-lets[/N1]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
             "id_expression": 9,
             "francais": "[V1]Peux[/V1]-[N1]tu[/N1] [N2]me[/N2] [V2]montrer[/V2] ?",
             "allemand": {
@@ -143,29 +113,14 @@
           },
           {
             "id_expression": 10,
-            "francais": "[V1]C'est[/V1] [A1]tout droit[/A1].",
+            "francais": "[V1]C'est[/V1] tout droit / à droite / à gauche.",
             "allemand": {
-              "texte": "[V1]Geh[/V1] [A1]geradeaus[/A1].",
-              "prononciation_FR": "[V1]Gué[/V1] [A1]gué-ra-deu-aous[/A1]."
+              "texte": "[V1]Es geht[/V1] geradeaus / nach rechts / nach links.",
+              "prononciation_FR": "[V1]Ess guét[/V1] gué-ra-deu-aous / nakh rèchts / nakh links."
             },
             "anglais": {
-              "texte": "[V1]Go[/V1] [A1]straight ahead[/A1].",
-              "prononciation_FR": "[V1]Go[/V1] [A1]stréït e-hed[/A1]."
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 11,
-            "francais": "[V1]Tourne[/V1] à [N1]droite[/N1].",
-            "allemand": {
-              "texte": "[V1]Bieg[/V1] nach [N1]rechts[/N1] [V2]ab[/V2].",
-              "prononciation_FR": "[V1]Bik[/V1] nakh [N1]rèchts[/N1] [V2]ap[/V2]."
-            },
-            "anglais": {
-              "texte": "[V1]Turn[/V1] [N1]right[/N1].",
-              "prononciation_FR": "[V1]Teurn[/V1] [N1]raït[/N1]."
+              "texte": "[V1]Go[/V1] straight ahead / right / left.",
+              "prononciation_FR": "[V1]Go[/V1] stréït e-hed / raït / left."
             },
             "audit": {
               "status": "accepted"
@@ -319,36 +274,6 @@
             }
           },
           {
-            "id_expression": 3,
-            "francais": "Où [V1]est[/V1] [N1]la corde[/N1] ?",
-            "allemand": {
-              "texte": "Wo [V1]ist[/V1] [N1]das Seil[/N1]?",
-              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass zaïl[/N1]?"
-            },
-            "anglais": {
-              "texte": "Where [V1]is[/V1] [N1]the rope[/N1]?",
-              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze rop[/N1]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 4,
-            "francais": "[V1]Donnez[/V1]-[N1]moi[/N1] [N2]les ballons[/N2].",
-            "allemand": {
-              "texte": "[V1]Gebt[/V1] [N1]mir[/N1] [N2]die Bälle[/N2].",
-              "prononciation_FR": "[V1]Guépt[/V1] [N1]mir[/N1] [N2]di bè-leu[/N2]."
-            },
-            "anglais": {
-              "texte": "[V1]Give[/V1] [N1]me[/N1] [N2]the balls[/N2].",
-              "prononciation_FR": "[V1]Guiv[/V1] [N1]mi[/N1] [N2]ze bolz[/N2]."
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
             "id_expression": 5,
             "francais": "[N1]Il[/N1] [V1]manque[/V1] [A1]une[/A1] [N2]boussole[/N2].",
             "allemand": {
@@ -461,6 +386,149 @@
         "anglais": {
           "texte": "Left",
           "prononciation_FR": "Left"
+        }
+      },
+      {
+        "francais": "Le groupe",
+        "allemand": {
+          "texte": "Die Gruppe",
+          "prononciation_FR": "Di grou-peu"
+        },
+        "anglais": {
+          "texte": "The group",
+          "prononciation_FR": "Ze group"
+        }
+      },
+      {
+        "francais": "Les toilettes",
+        "allemand": {
+          "texte": "Die Toiletten",
+          "prononciation_FR": "Di to-a-lèt-teun"
+        },
+        "anglais": {
+          "texte": "The toilets",
+          "prononciation_FR": "Ze toï-lets"
+        }
+      },
+      {
+        "francais": "Le camp",
+        "allemand": {
+          "texte": "Das Lager",
+          "prononciation_FR": "Dass la-gueur"
+        },
+        "anglais": {
+          "texte": "The camp",
+          "prononciation_FR": "Ze kamp"
+        }
+      },
+      {
+        "francais": "Le rassemblement",
+        "allemand": {
+          "texte": "Das Antreten",
+          "prononciation_FR": "Dass an-tré-teun"
+        },
+        "anglais": {
+          "texte": "The assembly",
+          "prononciation_FR": "Ze a-sem-bli"
+        }
+      },
+      {
+        "francais": "La lampe",
+        "allemand": {
+          "texte": "Die Taschenlampe",
+          "prononciation_FR": "Di tach-eun-lam-peu"
+        },
+        "anglais": {
+          "texte": "The torch",
+          "prononciation_FR": "Ze tortch"
+        }
+      },
+      {
+        "francais": "La corde",
+        "allemand": {
+          "texte": "Das Seil",
+          "prononciation_FR": "Dass zaïl"
+        },
+        "anglais": {
+          "texte": "The rope",
+          "prononciation_FR": "Ze rop"
+        }
+      },
+      {
+        "francais": "la boussole",
+        "allemand": {
+          "texte": "der Kompass",
+          "prononciation_FR": "dér kom-pass"
+        },
+        "anglais": {
+          "texte": "the compass",
+          "prononciation_FR": "ze kom-pass"
+        }
+      },
+      {
+        "francais": "la carte",
+        "allemand": {
+          "texte": "die Karte",
+          "prononciation_FR": "di kar-teu"
+        },
+        "anglais": {
+          "texte": "the map",
+          "prononciation_FR": "ze map"
+        }
+      },
+      {
+        "francais": "la tente",
+        "allemand": {
+          "texte": "das Zelt",
+          "prononciation_FR": "dass tselt"
+        },
+        "anglais": {
+          "texte": "the tent",
+          "prononciation_FR": "ze tent"
+        }
+      },
+      {
+        "francais": "le bidon d'eau",
+        "allemand": {
+          "texte": "der Wasserkanister",
+          "prononciation_FR": "dér vas-seur-ka-nis-teur"
+        },
+        "anglais": {
+          "texte": "the jerrycan",
+          "prononciation_FR": "ze djé-ri-kann"
+        }
+      },
+      {
+        "francais": "le sac à dos",
+        "allemand": {
+          "texte": "der Rucksack",
+          "prononciation_FR": "dér rouk-zak"
+        },
+        "anglais": {
+          "texte": "the backpack",
+          "prononciation_FR": "ze bak-pak"
+        }
+      },
+      {
+        "francais": "le sac de couchage",
+        "allemand": {
+          "texte": "der Schlafsack",
+          "prononciation_FR": "dér chlaf-zak"
+        },
+        "anglais": {
+          "texte": "the sleeping bag",
+          "prononciation_FR": "ze sli-ping bag"
+        }
+      },
+      {
+        "francais": "le tapis de sol",
+        "allemand": {
+          "texte": "die Isomatte",
+          "prononciation_FR": "di i-zo-ma-teu"
+        },
+        "anglais": {
+          "texte": "the sleeping mat",
+          "prononciation_FR": "ze sli-ping mat"
         }
       }
     ]
