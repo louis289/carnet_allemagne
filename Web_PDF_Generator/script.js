@@ -169,7 +169,6 @@ async function resolveJsonFiles(version) {
             '../JSON/Version4/3_repas_et_vie_quotidienne.json',
             '../JSON/Version4/4_au_camp.json',
             '../JSON/Version4/5_activites_et_jeux.json',
-            '../JSON/Version4/6_chants.json',
             '../JSON/Version4/7_nature_et_environnement.json',
             '../JSON/Version4/8_valeurs_scoutes.json',
             '../JSON/Version4/9_materiel_de_camping.json',
@@ -179,7 +178,6 @@ async function resolveJsonFiles(version) {
             '../JSON/Version4/13_emotions_et_expressions.json',
             '../JSON/Version4/14_vocabulaire_du_bula.json',
             '../JSON/Version4/15_creer_du_lien.json',
-            '../JSON/Version4/16_citations.json',
             '../JSON/Version4/1_urgences.json',
         ],
     };
@@ -325,6 +323,20 @@ async function loadAndBuild() {
 
     app.innerHTML = ''; // Clear loading
 
+    const getCardSize = (expr) => {
+        const cleanStr = (str) => str ? str.replace(/\[\/?[NVA](\d+)?\]/g, '').trim() : '';
+        let maxLen = cleanStr(expr.francais).length;
+        if (expr.allemand) {
+            maxLen = Math.max(maxLen, cleanStr(expr.allemand.texte).length, cleanStr(expr.allemand.prononciation_FR || '').length);
+        }
+        if (expr.anglais) {
+            maxLen = Math.max(maxLen, cleanStr(expr.anglais.texte).length, cleanStr(expr.anglais.prononciation_FR || '').length);
+        }
+        if (maxLen > 90) return 4;
+        if (maxLen > 38) return 2;
+        return 1;
+    };
+
     // ─── 0. FILTRAGE D'AUDIT ET TRI ALPHABÉTIQUE ────────────────
     categories.forEach(cat => {
         // Filtrer les expressions selon la version
@@ -343,10 +355,15 @@ async function loadAndBuild() {
         // Filtrer les cas devenus vides suite aux suppressions/filtrages d'expressions
         cat.cas = cat.cas.filter(casItem => casItem.expressions.length > 0);
 
-        // Trier alphabétiquement
+        // Trier par taille décroissante (4, puis 2, puis 1), puis par ordre alphabétique
         cat.cas.sort((a, b) => a.nom_du_cas.localeCompare(b.nom_du_cas, 'fr', { sensitivity: 'base' }));
         cat.cas.forEach(casItem => {
             casItem.expressions.sort((a, b) => {
+                const sizeA = getCardSize(a);
+                const sizeB = getCardSize(b);
+                if (sizeA !== sizeB) {
+                    return sizeB - sizeA;
+                }
                 const frA = a.francais.replace(/\[\/?[NVA](\d+)?\]/g, '').trim();
                 const frB = b.francais.replace(/\[\/?[NVA](\d+)?\]/g, '').trim();
                 return frA.localeCompare(frB, 'fr', { sensitivity: 'base' });
@@ -376,19 +393,6 @@ async function loadAndBuild() {
         }
     };
 
-    const getCardSize = (expr) => {
-        const cleanStr = (str) => str ? str.replace(/\[\/?[NVA](\d+)?\]/g, '').trim() : '';
-        let maxLen = cleanStr(expr.francais).length;
-        if (expr.allemand) {
-            maxLen = Math.max(maxLen, cleanStr(expr.allemand.texte).length, cleanStr(expr.allemand.prononciation_FR || '').length);
-        }
-        if (expr.anglais) {
-            maxLen = Math.max(maxLen, cleanStr(expr.anglais.texte).length, cleanStr(expr.anglais.prononciation_FR || '').length);
-        }
-        if (maxLen > 70) return 4;
-        if (maxLen > 38) return 2;
-        return 1;
-    };
 
     categories.forEach(cat => {
         cat.cas.forEach(casItem => {

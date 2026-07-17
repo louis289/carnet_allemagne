@@ -1,0 +1,298 @@
+{
+  "carnet_scout": {
+    "categorie": "Services du camp",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Cuisine et vaisselle / Küche und Abwasch",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [N2]notre tour de service[/N2] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]haben[/V1] heute [N2]Dienst[/N2]!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]ha-beun[/V1] hoï-teu [N2]dinst[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1] [V1]is[/V1] [N2]our turn for duty[/N2]!",
+              "prononciation_FR": "[N1]It[/N1] [V1]iz[/V1] [N2]aou-eur teurn for diou-ti[/N2]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "Qui [V1]fait la cuisine[/V1] [A1]aujourd'hui[/A1] ?",
+            "allemand": {
+              "texte": "Wer [V1]kocht[/V1] [A1]heute[/A1]?",
+              "prononciation_FR": "Vér [V1]kokht[/V1] [A1]hoï-teu[/A1]?"
+            },
+            "anglais": {
+              "texte": "Who's [V1]cooking[/V1] [A1]today[/A1]?",
+              "prononciation_FR": "Houz [V1]kou-king[/V1] [A1]tou-déï[/A1]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Je[/N1] [V1]coupe[/V1] [N2]les légumes[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]schneide[/V1] [N2]das Gemüse[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]chnaï-deu[/V1] [N2]dass gué-mu-zeu[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'm[/N1] [V1]cutting[/V1] [N2]the vegetables[/N2].",
+              "prononciation_FR": "[N1]Aïm[/N1] [V1]ka-ting[/V1] [N2]ze védj-te-beulz[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Le repas[/N1] [V1]est[/V1] [A1]prêt[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das Essen[/N1] [V1]ist[/V1] [A1]fertig[/A1]!",
+              "prononciation_FR": "[N1]Dass é-seun[/N1] [V1]ist[/V1] [A1]fér-tich[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]The meal[/N1] [V1]is[/V1] [A1]ready[/A1]!",
+              "prononciation_FR": "[N1]Ze mil[/N1] [V1]iz[/V1] [A1]ré-di[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 5,
+            "francais": "[N1]On[/N1] [V1]fait la vaisselle[/V1] !",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]spülen[/V1] ab!",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]chpu-leun[/V1] ap!"
+            },
+            "anglais": {
+              "texte": "[V1]Let's do[/V1] [N2]the dishes[/N2]!",
+              "prononciation_FR": "[V1]Lets dou[/V1] [N2]ze di-chiz[/N2]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 6,
+            "francais": "[V1]Passe[/V1]-[N1]moi[/N1] [N2]l'éponge[/N2].",
+            "allemand": {
+              "texte": "[V1]Gib[/V1] [N1]mir[/N1] [N2]den Schwamm[/N2].",
+              "prononciation_FR": "[V1]Guip[/V1] [N1]mir[/N1] [N2]dén chvam[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Pass[/V1] [N1]me[/N1] [N2]the sponge[/N2].",
+              "prononciation_FR": "[V1]Pass[/V1] [N1]mi[/N1] [N2]ze speundj[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]propre[/A1] !",
+            "allemand": {
+              "texte": "[N1]Das[/N1] [V1]ist[/V1] [A1]sauber[/A1]!",
+              "prononciation_FR": "[N1]Dass[/N1] [V1]ist[/V1] [A1]zaou-beur[/A1]!"
+            },
+            "anglais": {
+              "texte": "[N1]It[/N1]'s [A1]clean[/A1]!",
+              "prononciation_FR": "[N1]Its[/N1] [A1]klin[/A1]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Eau / Wasser holen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]Je[/N1] [V1]vais[/V1] [V2]chercher[/V2] de [N2]l'eau[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]hole[/V1] [N2]Wasser[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ho-leu[/V1] [N2]vas-seur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I'll[/N1] [V1]fetch[/V1] [N2]water[/N2].",
+              "prononciation_FR": "[N1]Aïl[/N1] [V1]fétch[/V1] [N2]wo-teur[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Feu / Feuer machen",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]entretient[/V1] [N2]le feu[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]pflegen[/V1] [N2]das Feuer[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]pflé-gueun[/V1] [N2]dass foï-eur[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]tend[/V1] [N2]the fire[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]tennd[/V1] [N2]ze faï-eur[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Rapporte[/V1] [N1]du bois[/N1] !",
+            "allemand": {
+              "texte": "[V1]Hol[/V1] [N1]Holz[/N1]!",
+              "prononciation_FR": "[V1]Hol[/V1] [N1]holts[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Fetch[/V1] some [N1]wood[/N1]!",
+              "prononciation_FR": "[V1]Fétch[/V1] seum [N1]ououd[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Souffle[/V1] sur [N1]les braises[/N1].",
+            "allemand": {
+              "texte": "[V1]Blase[/V1] auf [N1]die Glut[/N1].",
+              "prononciation_FR": "[V1]Bla-zeu[/V1] aouf [N1]di glout[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Blow[/V1] on [N1]the embers[/N1].",
+              "prononciation_FR": "[V1]Blo[/V1] onn [N1]zi em-beurz[/N1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 4,
+        "nom_du_cas": "Rangement et propreté / Ordnung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]On[/N1] [V1]range[/V1] [N2]le matériel[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]räumen[/V1] [N2]das Material[/N2] auf.",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]roï-meun[/V1] [N2]dass ma-té-rial[/N2] aouf."
+            },
+            "anglais": {
+              "texte": "[V1]Let's tidy up[/V1] [N2]the gear[/N2].",
+              "prononciation_FR": "[V1]Lets taï-di eup[/V1] [N2]ze gui-eur[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Chaque chose[/N1] à [N2]sa place[/N2] !",
+            "allemand": {
+              "texte": "[N1]Alles[/N1] an [N2]seinen Platz[/N2]!",
+              "prononciation_FR": "[N1]A-less[/N1] ann [N2]zaï-neun plats[/N2]!"
+            },
+            "anglais": {
+              "texte": "[N1]Everything[/N1] in [N2]its place[/N2]!",
+              "prononciation_FR": "[N1]E-vri-thing[/N1] in [N2]its pleïss[/N2]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Le camp[/N1] [V1]doit[/V1] [V2]rester[/V2] [A1]propre[/A1].",
+            "allemand": {
+              "texte": "[N1]Das Lager[/N1] [V1]muss[/V1] [A1]sauber[/A1] [V2]bleiben[/V2].",
+              "prononciation_FR": "[N1]Dass la-gueur[/N1] [V1]mouss[/V1] [A1]zaou-beur[/A1] [V2]blaï-beun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]The camp[/N1] [V1]must[/V1] [V2]stay[/V2] [A1]clean[/A1].",
+              "prononciation_FR": "[N1]Ze kamp[/N1] [V1]moust[/V1] [V2]stéï[/V2] [A1]klin[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": [
+      {
+        "francais": "Tente",
+        "allemand": {
+          "texte": "Zelt",
+          "prononciation_FR": "Tsèlt"
+        },
+        "anglais": {
+          "texte": "Tent",
+          "prononciation_FR": "Tênt"
+        }
+      },
+      {
+        "francais": "Piquet",
+        "allemand": {
+          "texte": "Hering",
+          "prononciation_FR": "Hé-ring"
+        },
+        "anglais": {
+          "texte": "Peg",
+          "prononciation_FR": "Pég"
+        }
+      },
+      {
+        "francais": "Mât",
+        "allemand": {
+          "texte": "Stange",
+          "prononciation_FR": "Chtan-gueu"
+        },
+        "anglais": {
+          "texte": "Pole",
+          "prononciation_FR": "Pol"
+        }
+      },
+      {
+        "francais": "Bois",
+        "allemand": {
+          "texte": "Holz",
+          "prononciation_FR": "Holts"
+        },
+        "anglais": {
+          "texte": "Wood",
+          "prononciation_FR": "Woud"
+        }
+      },
+      {
+        "francais": "Corde",
+        "allemand": {
+          "texte": "Seil",
+          "prononciation_FR": "Zaïl"
+        },
+        "anglais": {
+          "texte": "Rope",
+          "prononciation_FR": "Rop"
+        }
+      }
+    ]
+  }
+}

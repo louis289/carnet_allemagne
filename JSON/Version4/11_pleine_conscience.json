@@ -1,0 +1,110 @@
+{
+  "carnet_scout": {
+    "categorie": "Pleine conscience",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Méditation / Meditation",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[V1]Ferme[/V1] [N1]les yeux[/N1].",
+            "allemand": {
+              "texte": "[V1]Schließ[/V1] deine [N1]Augen[/N1].",
+              "prononciation_FR": "[V1]Chliss[/V1] daï-neu [N1]aou-gueun[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Close[/V1] your [N1]eyes[/N1].",
+              "prononciation_FR": "[V1]Clouz[/V1] yor [N1]aïz[/N1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[V1]Respire[/V1] [A1]profondément[/A1].",
+            "allemand": {
+              "texte": "[V1]Atme[/V1] [A1]tief[/A1] ein.",
+              "prononciation_FR": "[V1]At-meu[/V1] [A1]tif[/A1] aïn."
+            },
+            "anglais": {
+              "texte": "[V1]Breathe[/V1] [A1]deeply[/A1].",
+              "prononciation_FR": "[V1]Briss[/V1] [A1]dip-li[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Ressenti et bienveillance / Gefühle und Achtsamkeit",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "Qu'est-ce que [N1]tu[/N1] [V1]ressens[/V1] ?",
+            "allemand": {
+              "texte": "Was [V1]fühlst[/V1] [N1]du[/N1] gerade?",
+              "prononciation_FR": "Vass [V1]foulst[/V1] [N1]dou[/N1] gué-ra-deu?"
+            },
+            "anglais": {
+              "texte": "What do [N1]you[/N1] [V1]feel[/V1] right now?",
+              "prononciation_FR": "Wot dou [N1]you[/N1] [V1]fil[/V1] raït naou?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Tu[/N1] [V1]es[/V1] en [N2]sécurité[/N2] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[N1]Du[/N1] [V1]bist[/V1] hier [A1]sicher[/A1].",
+              "prononciation_FR": "[N1]Dou[/N1] [V1]bist[/V1] hir [A1]zi-kheur[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]You[/N1] [V1]are[/V1] [A1]safe[/A1] here.",
+              "prononciation_FR": "[N1]You[/N1] [V1]ar[/V1] [A1]seïf[/A1] hir."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[V1]Sois[/V1] dans [N1]le moment présent[/N1].",
+            "allemand": {
+              "texte": "[V1]Sei[/V1] im [N1]gegenwärtigen Moment[/N1].",
+              "prononciation_FR": "[V1]Zaï[/V1] im [N1]gué-gueun-vair-ti-gueun mo-ment[/N1]."
+            },
+            "anglais": {
+              "texte": "[V1]Be[/V1] in [N1]the present moment[/N1].",
+              "prononciation_FR": "[V1]Bi[/V1] in [N1]ze pré-zent mo-ment[/N1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "Comment [N1]tu[/N1] [N2]te[/N2] [V1]sens[/V1] [A1]maintenant[/A1] ?",
+            "allemand": {
+              "texte": "Wie [V1]fühlst[/V1] [N1]du[/N1] [N2]dich[/N2] [A1]jetzt[/A1]?",
+              "prononciation_FR": "Vi [V1]foulst[/V1] [N1]dou[/N1] [N2]dich[/N2] [A1]yetst[/A1]?"
+            },
+            "anglais": {
+              "texte": "How do [N1]you[/N1] [V1]feel[/V1] [A1]now[/A1]?",
+              "prononciation_FR": "Haou dou [N1]you[/N1] [V1]fil[/V1] [A1]naou[/A1]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": []
+  }
+}

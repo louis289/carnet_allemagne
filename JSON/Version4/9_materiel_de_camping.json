@@ -1,0 +1,140 @@
+{
+  "carnet_scout": {
+    "categorie": "Matériel de camping",
+    "cas": [
+      {
+        "id_cas": 1,
+        "nom_du_cas": "Matériel individuel / Persönliche Ausrüstung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]le sac de couchage[/N1]",
+            "allemand": {
+              "texte": "[N1]der Schlafsack[/N1]",
+              "prononciation_FR": "[N1]dér chlaf-zak[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the sleeping bag[/N1]",
+              "prononciation_FR": "[N1]ze sli-ping bag[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]le tapis de sol[/N1]",
+            "allemand": {
+              "texte": "[N1]die Isomatte[/N1]",
+              "prononciation_FR": "[N1]di i-zo-ma-teu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the sleeping mat[/N1]",
+              "prononciation_FR": "[N1]ze sli-ping mat[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]le sac à dos[/N1]",
+            "allemand": {
+              "texte": "[N1]der Rucksack[/N1]",
+              "prononciation_FR": "[N1]dér rouk-zak[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the backpack[/N1]",
+              "prononciation_FR": "[N1]ze bak-pak[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "[N1]la tente[/N1]",
+            "allemand": {
+              "texte": "[N1]das Zelt[/N1]",
+              "prononciation_FR": "[N1]dass tselt[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the tent[/N1]",
+              "prononciation_FR": "[N1]ze tent[/N1]"
+            },
+            "id_expression": 4,
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 2,
+        "nom_du_cas": "Matériel de camp / Lagerausrüstung",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[N1]la tente[/N1]",
+            "allemand": {
+              "texte": "[N1]das Zelt[/N1]",
+              "prononciation_FR": "[N1]dass tselt[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the tent[/N1]",
+              "prononciation_FR": "[N1]ze tent[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]la boussole[/N1]",
+            "allemand": {
+              "texte": "[N1]der Kompass[/N1]",
+              "prononciation_FR": "[N1]dér kom-pass[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the compass[/N1]",
+              "prononciation_FR": "[N1]ze kom-pass[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]la carte[/N1]",
+            "allemand": {
+              "texte": "[N1]die Karte[/N1]",
+              "prononciation_FR": "[N1]di kar-teu[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the map[/N1]",
+              "prononciation_FR": "[N1]ze map[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]le bidon d'eau[/N1]",
+            "allemand": {
+              "texte": "[N1]der Wasserkanister[/N1]",
+              "prononciation_FR": "[N1]dér vas-seur-ka-nis-teur[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the jerrycan[/N1]",
+              "prononciation_FR": "[N1]ze djé-ri-kann[/N1]"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      }
+    ],
+    "vocabulaire": []
+  }
+}

@@ -4074,7 +4074,7 @@
             let maxLen = clean(expr.francais).length;
             if (expr.allemand) maxLen = Math.max(maxLen, clean(expr.allemand.texte).length, clean(expr.allemand.prononciation_FR || '').length);
             if (expr.anglais) maxLen = Math.max(maxLen, clean(expr.anglais.texte).length, clean(expr.anglais.prononciation_FR || '').length);
-            if (maxLen > 70) return 4;
+            if (maxLen > 90) return 4;
             if (maxLen > 38) return 2;
             return 1;
         }

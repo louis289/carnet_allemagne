@@ -406,6 +406,15 @@ const server = http.createServer((req, res) => {
         }
     }
 
+    // Fallback: If requesting a file at root that doesn't exist, check Web_PDF_Generator
+    if (!fs.existsSync(filePath) && !pathname.startsWith('/Web_PDF_Generator/')) {
+        const generatorPath = path.join(ROOT_DIR, 'Web_PDF_Generator', pathname);
+        if (fs.existsSync(generatorPath)) {
+            filePath = generatorPath;
+            console.log(`[Fallback] Serving ${pathname} from Web_PDF_Generator`);
+        }
+    }
+
     // Check if path exists or if it's the virtual Version4 directory
     let stat;
     let isDir = false;
