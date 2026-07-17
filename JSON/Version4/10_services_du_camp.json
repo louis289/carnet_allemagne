@@ -239,6 +239,17 @@
     ],
     "vocabulaire": [
       {
+        "francais": "Couteau",
+        "allemand": {
+          "texte": "Messer",
+          "prononciation_FR": "Mè-sseur"
+        },
+        "anglais": {
+          "texte": "Knife",
+          "prononciation_FR": "Naïf"
+        }
+      },
+      {
         "francais": "Tente",
         "allemand": {
           "texte": "Zelt",
@@ -280,17 +291,6 @@
         "anglais": {
           "texte": "Wood",
           "prononciation_FR": "Woud"
-        }
-      },
-      {
-        "francais": "Corde",
-        "allemand": {
-          "texte": "Seil",
-          "prononciation_FR": "Zaïl"
-        },
-        "anglais": {
-          "texte": "Rope",
-          "prononciation_FR": "Rop"
         }
       }
     ]

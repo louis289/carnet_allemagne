@@ -245,6 +245,28 @@
     ],
     "vocabulaire": [
       {
+        "francais": "Tomate",
+        "allemand": {
+          "texte": "Tomate",
+          "prononciation_FR": "To-ma-teu"
+        },
+        "anglais": {
+          "texte": "Tomato",
+          "prononciation_FR": "To-méï-to"
+        }
+      },
+      {
+        "francais": "Haricot",
+        "allemand": {
+          "texte": "Bohne",
+          "prononciation_FR": "Bo-neu"
+        },
+        "anglais": {
+          "texte": "Bean",
+          "prononciation_FR": "Bin"
+        }
+      },
+      {
         "francais": "Bière",
         "allemand": {
           "texte": "Bier",
@@ -264,28 +286,6 @@
         "anglais": {
           "texte": "Cookie",
           "prononciation_FR": "Kou-ki"
-        }
-      },
-      {
-        "francais": "Tomate",
-        "allemand": {
-          "texte": "Tomate",
-          "prononciation_FR": "To-ma-teu"
-        },
-        "anglais": {
-          "texte": "Tomato",
-          "prononciation_FR": "To-méï-to"
-        }
-      },
-      {
-        "francais": "Pouce",
-        "allemand": {
-          "texte": "Daumen",
-          "prononciation_FR": "Daou-mên"
-        },
-        "anglais": {
-          "texte": "Thumb",
-          "prononciation_FR": "Seumb"
         }
       }
     ]

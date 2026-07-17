@@ -121,6 +121,28 @@
     ],
     "vocabulaire": [
       {
+        "francais": "Hôpital",
+        "allemand": {
+          "texte": "Krankenhaus",
+          "prononciation_FR": "Kran-keun-haous"
+        },
+        "anglais": {
+          "texte": "Hospital",
+          "prononciation_FR": "Hos-pi-tal"
+        }
+      },
+      {
+        "francais": "Médecin",
+        "allemand": {
+          "texte": "Arzt",
+          "prononciation_FR": "Artst"
+        },
+        "anglais": {
+          "texte": "Doctor",
+          "prononciation_FR": "Dok-teur"
+        }
+      },
+      {
         "francais": "Sang",
         "allemand": {
           "texte": "Blut",
@@ -129,28 +151,6 @@
         "anglais": {
           "texte": "Blood",
           "prononciation_FR": "Bleud"
-        }
-      },
-      {
-        "francais": "Doigt",
-        "allemand": {
-          "texte": "Finger",
-          "prononciation_FR": "Fin-gueur"
-        },
-        "anglais": {
-          "texte": "Finger",
-          "prononciation_FR": "Fin-gueur"
-        }
-      },
-      {
-        "francais": "Tête",
-        "allemand": {
-          "texte": "Kopf",
-          "prononciation_FR": "Kopf"
-        },
-        "anglais": {
-          "texte": "Head",
-          "prononciation_FR": "Héd"
         }
       }
     ]

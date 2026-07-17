@@ -1,10 +1,10 @@
 {
   "carnet_scout": {
-    "categorie": "Pleine conscience",
+    "categorie": "Vie Spirituelle & Forum",
     "cas": [
       {
         "id_cas": 1,
-        "nom_du_cas": "Méditation / Meditation",
+        "nom_du_cas": "Vie Spirituelle & Forum / Spirituelles Leben & Forum",
         "expressions": [
           {
             "id_expression": 1,
@@ -35,15 +35,9 @@
             "audit": {
               "status": "accepted"
             }
-          }
-        ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "Ressenti et bienveillance / Gefühle und Achtsamkeit",
-        "expressions": [
+          },
           {
-            "id_expression": 1,
+            "id_expression": 3,
             "francais": "Qu'est-ce que [N1]tu[/N1] [V1]ressens[/V1] ?",
             "allemand": {
               "texte": "Was [V1]fühlst[/V1] [N1]du[/N1] gerade?",
@@ -58,7 +52,7 @@
             }
           },
           {
-            "id_expression": 2,
+            "id_expression": 4,
             "francais": "[N1]Tu[/N1] [V1]es[/V1] en [N2]sécurité[/N2] [A1]ici[/A1].",
             "allemand": {
               "texte": "[N1]Du[/N1] [V1]bist[/V1] hier [A1]sicher[/A1].",
@@ -73,7 +67,7 @@
             }
           },
           {
-            "id_expression": 3,
+            "id_expression": 5,
             "francais": "[V1]Sois[/V1] dans [N1]le moment présent[/N1].",
             "allemand": {
               "texte": "[V1]Sei[/V1] im [N1]gegenwärtigen Moment[/N1].",
@@ -88,7 +82,7 @@
             }
           },
           {
-            "id_expression": 4,
+            "id_expression": 6,
             "francais": "Comment [N1]tu[/N1] [N2]te[/N2] [V1]sens[/V1] [A1]maintenant[/A1] ?",
             "allemand": {
               "texte": "Wie [V1]fühlst[/V1] [N1]du[/N1] [N2]dich[/N2] [A1]jetzt[/A1]?",
@@ -97,6 +91,81 @@
             "anglais": {
               "texte": "How do [N1]you[/N1] [V1]feel[/V1] [A1]now[/A1]?",
               "prononciation_FR": "Haou dou [N1]you[/N1] [V1]fil[/V1] [A1]naou[/A1]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[N1]On[/N1] [V1]forme[/V1] [N2]un cercle[/N2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]bilden[/V1] [N2]einen Kreis[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]bil-deun[/V1] [N2]aï-neun kraïss[/N2]."
+            },
+            "anglais": {
+              "texte": "[V1]Let's form[/V1] [N2]a circle[/N2].",
+              "prononciation_FR": "[V1]Lets form[/V1] [N2]eu seur-keul[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]Chacun[/N1] [V1]a[/V1] [N2]la parole[/N2].",
+            "allemand": {
+              "texte": "[N1]Jeder[/N1] [V1]kommt[/V1] zu [N2]Wort[/N2].",
+              "prononciation_FR": "[N1]Yé-deur[/N1] [V1]komt[/V1] tsou [N2]vort[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]Everyone[/N1] [V1]gets to speak[/V1].",
+              "prononciation_FR": "[N1]E-vri-ouann[/N1] [V1]guéts tou spik[/V1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[N1]On[/N1] [V1]écoute[/V1] sans [V2]interrompre[/V2].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]hören zu[/V1], ohne zu [V2]unterbrechen[/V2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]heu-reun tsou[/V1], o-neu tsou [V2]oun-ter-bré-kheun[/V2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]listen[/V1] without [V2]interrupting[/V2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]liss-eun[/V1] oui-zaout [V2]ine-teur-eup-ting[/V2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 10,
+            "francais": "[N1]Je[/N1] [N2]me[/N2] [V1]suis senti(e) bien[/V1] [A1]aujourd'hui[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]mich[/N2] [A1]heute[/A1] [V1]wohlgefühlt[/V1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]ha-beu[/V1] [N2]mich[/N2] [A1]hoï-teu[/A1] [V1]vol-gué-fult[/V1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]felt[/V1] [A1]good[/A1] [A2]today[/A2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]félt[/V1] [A1]goud[/A1] [A2]tou-déï[/A2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[N1]J'[/N1][V1]ai trouvé[/V1] [N2]ça[/N2] [A1]difficile[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]fand[/V1] [N2]das[/N2] [A1]schwierig[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fannt[/V1] [N2]dass[/N2] [A1]chvi-rich[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]found[/V1] [N2]that[/N2] [A1]difficult[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]faound[/V1] [N2]zat[/N2] [A1]di-fi-keult[/A1]."
             },
             "audit": {
               "status": "accepted"

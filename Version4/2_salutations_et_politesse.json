@@ -329,6 +329,28 @@
     ],
     "vocabulaire": [
       {
+        "francais": "Oui",
+        "allemand": {
+          "texte": "Ja",
+          "prononciation_FR": "Ya"
+        },
+        "anglais": {
+          "texte": "Yes",
+          "prononciation_FR": "Yess"
+        }
+      },
+      {
+        "francais": "Non",
+        "allemand": {
+          "texte": "Nein",
+          "prononciation_FR": "Naïn"
+        },
+        "anglais": {
+          "texte": "No",
+          "prononciation_FR": "No"
+        }
+      },
+      {
         "francais": "Bonjour",
         "allemand": {
           "texte": "Guten Tag",
@@ -359,28 +381,6 @@
         "anglais": {
           "texte": "Goodbye",
           "prononciation_FR": "Goud-baï"
-        }
-      },
-      {
-        "francais": "Merci",
-        "allemand": {
-          "texte": "Danke",
-          "prononciation_FR": "Dan-keu"
-        },
-        "anglais": {
-          "texte": "Thanks",
-          "prononciation_FR": "Sanks"
-        }
-      },
-      {
-        "francais": "S'il te plaît",
-        "allemand": {
-          "texte": "Bitte",
-          "prononciation_FR": "Bi-teu"
-        },
-        "anglais": {
-          "texte": "Please",
-          "prononciation_FR": "Pliz"
         }
       }
     ]

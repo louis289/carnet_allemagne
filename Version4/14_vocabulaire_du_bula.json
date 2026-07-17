@@ -314,21 +314,6 @@
           },
           {
             "id_expression": 17,
-            "francais": "[A1]Quel[/A1] [N1]quai[/N1] ?",
-            "allemand": {
-              "texte": "[A1]Welches[/A1] [N1]Gleis[/N1]?",
-              "prononciation_FR": "[A1]Vêl-chess[/A1] [N1]glaïs[/N1]?"
-            },
-            "anglais": {
-              "texte": "[A1]Which[/A1] [N1]platform[/N1]?",
-              "prononciation_FR": "[A1]Witch[/A1] [N1]plat-form[/N1]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 18,
             "francais": "[V1]Dépêchez[/V1]-[N1]vous[/N1] !",
             "allemand": {
               "texte": "[V1]Beeilt[/V1] [N1]euch[/N1]!",
@@ -369,14 +354,14 @@
         }
       },
       {
-        "francais": "Quai",
+        "francais": "Départ",
         "allemand": {
-          "texte": "Gleis",
-          "prononciation_FR": "Glaïs"
+          "texte": "Abfahrt",
+          "prononciation_FR": "Ap-fart"
         },
         "anglais": {
-          "texte": "Platform",
-          "prononciation_FR": "Plat-form"
+          "texte": "Departure",
+          "prononciation_FR": "Di-par-tchour"
         }
       }
     ]

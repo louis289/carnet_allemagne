@@ -4,7 +4,7 @@
     "cas": [
       {
         "id_cas": 1,
-        "nom_du_cas": "Observation de la nature / Naturbeobachtung",
+        "nom_du_cas": "Nature & environnement / Natur & Umwelt",
         "expressions": [
           {
             "id_expression": 1,
@@ -35,15 +35,9 @@
             "audit": {
               "status": "accepted"
             }
-          }
-        ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "Écologie et respect / Umweltschutz",
-        "expressions": [
+          },
           {
-            "id_expression": 1,
+            "id_expression": 3,
             "francais": "[N1]Il[/N1] [N2]ne faut pas[/N2] [V1]laisser[/V1] de [N3]déchets[/N3].",
             "allemand": {
               "texte": "[N1]Wir[/N1] [V2]dürfen[/V2] [N2]keinen[/N2] [N3]Müll[/N3] [V1]hinterlassen[/V1].",

@@ -4,7 +4,7 @@
     "cas": [
       {
         "id_cas": 1,
-        "nom_du_cas": "Loi et devise / Gesetz und Versprechen",
+        "nom_du_cas": "Valeurs scoutes / Pfadfinderwerte",
         "expressions": [
           {
             "id_expression": 1,
@@ -35,15 +35,9 @@
             "audit": {
               "status": "accepted"
             }
-          }
-        ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "Vivre ensemble / Zusammenleben",
-        "expressions": [
+          },
           {
-            "id_expression": 1,
+            "id_expression": 3,
             "francais": "[N1]On[/N1] [N2]s'[/N2][V1]entraide[/V1].",
             "allemand": {
               "texte": "[N1]Wir[/N1] [V1]helfen[/V1] [N2]uns gegenseitig[/N2].",
@@ -58,7 +52,7 @@
             }
           },
           {
-            "id_expression": 2,
+            "id_expression": 4,
             "francais": "[N1]Le respect[/N1] [V1]est[/V1] [A1]important[/A1].",
             "allemand": {
               "texte": "[N1]Respekt[/N1] [V1]ist[/V1] [A1]wichtig[/A1].",

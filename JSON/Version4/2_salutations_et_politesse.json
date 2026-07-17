@@ -242,6 +242,21 @@
             "audit": {
               "status": "accepted"
             }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[V1]Passe[/V1] de [A1]bons[/A1] [N1]moments[/N1] !",
+            "allemand": {
+              "texte": "[V1]Hab[/V1] [A1]gute[/A1] [N1]Zeiten[/N1]!",
+              "prononciation_FR": "[V1]Hab[/V1] [A1]gou-teu[/A1] [N1]tsaï-teun[/N1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Have[/V1] a [A1]good[/A1] [N1]time[/N1]!",
+              "prononciation_FR": "[V1]Hav[/V1] eu [A1]goud[/A1] [N1]taïm[/N1]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
           }
         ]
       },
@@ -314,6 +329,28 @@
     ],
     "vocabulaire": [
       {
+        "francais": "Oui",
+        "allemand": {
+          "texte": "Ja",
+          "prononciation_FR": "Ya"
+        },
+        "anglais": {
+          "texte": "Yes",
+          "prononciation_FR": "Yess"
+        }
+      },
+      {
+        "francais": "Non",
+        "allemand": {
+          "texte": "Nein",
+          "prononciation_FR": "Naïn"
+        },
+        "anglais": {
+          "texte": "No",
+          "prononciation_FR": "No"
+        }
+      },
+      {
         "francais": "Bonjour",
         "allemand": {
           "texte": "Guten Tag",
@@ -344,28 +381,6 @@
         "anglais": {
           "texte": "Goodbye",
           "prononciation_FR": "Goud-baï"
-        }
-      },
-      {
-        "francais": "Merci",
-        "allemand": {
-          "texte": "Danke",
-          "prononciation_FR": "Dan-keu"
-        },
-        "anglais": {
-          "texte": "Thanks",
-          "prononciation_FR": "Sanks"
-        }
-      },
-      {
-        "francais": "S'il te plaît",
-        "allemand": {
-          "texte": "Bitte",
-          "prononciation_FR": "Bi-teu"
-        },
-        "anglais": {
-          "texte": "Please",
-          "prononciation_FR": "Pliz"
         }
       }
     ]

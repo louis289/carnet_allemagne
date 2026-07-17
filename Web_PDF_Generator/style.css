@@ -566,3 +566,39 @@ body.print-mode.spiral-alternating #app .page:nth-child(even) {
     border-bottom-color: var(--grammar-a);
 }
 .grammar-A .index { color: var(--grammar-a); }
+
+/* Lexique (Vocabulaire Centralisé) */
+.page-lexicon {
+    display: flex;
+    flex-direction: column;
+}
+.lexique-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 8mm;
+    row-gap: 4mm;
+    width: 100%;
+}
+.lexique-item {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border-left: 5px solid var(--edln-red);
+    padding: 1.5mm 2.5mm;
+    border-radius: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.lexique-fr {
+    font-weight: bold;
+    color: var(--edln-blue);
+    font-size: 13pt;
+    margin-bottom: 0.8mm;
+}
+.lexique-trans {
+    font-size: 10pt;
+    color: var(--edln-green);
+    line-height: 1.25;
+}
+.lexique-trans strong {
+    color: var(--edln-red);
+}

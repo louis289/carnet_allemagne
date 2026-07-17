@@ -4,7 +4,7 @@
     "cas": [
       {
         "id_cas": 1,
-        "nom_du_cas": "Matériel individuel / Persönliche Ausrüstung",
+        "nom_du_cas": "Matériel de camping / Campingausrüstung",
         "expressions": [
           {
             "id_expression": 1,
@@ -65,30 +65,9 @@
             "audit": {
               "status": "accepted"
             }
-          }
-        ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "Matériel de camp / Lagerausrüstung",
-        "expressions": [
-          {
-            "id_expression": 1,
-            "francais": "[N1]la tente[/N1]",
-            "allemand": {
-              "texte": "[N1]das Zelt[/N1]",
-              "prononciation_FR": "[N1]dass tselt[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the tent[/N1]",
-              "prononciation_FR": "[N1]ze tent[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
           },
           {
-            "id_expression": 2,
+            "id_expression": 5,
             "francais": "[N1]la boussole[/N1]",
             "allemand": {
               "texte": "[N1]der Kompass[/N1]",
@@ -103,7 +82,7 @@
             }
           },
           {
-            "id_expression": 3,
+            "id_expression": 6,
             "francais": "[N1]la carte[/N1]",
             "allemand": {
               "texte": "[N1]die Karte[/N1]",
@@ -118,7 +97,7 @@
             }
           },
           {
-            "id_expression": 4,
+            "id_expression": 7,
             "francais": "[N1]le bidon d'eau[/N1]",
             "allemand": {
               "texte": "[N1]der Wasserkanister[/N1]",

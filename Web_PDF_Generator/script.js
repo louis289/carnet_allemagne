@@ -173,8 +173,7 @@ async function resolveJsonFiles(version) {
             '../JSON/Version4/8_valeurs_scoutes.json',
             '../JSON/Version4/9_materiel_de_camping.json',
             '../JSON/Version4/10_services_du_camp.json',
-            '../JSON/Version4/11_pleine_conscience.json',
-            '../JSON/Version4/12_forum_et_cercles_de_parole.json',
+            '../JSON/Version4/11_vie_spirituelle_et_forum.json',
             '../JSON/Version4/13_emotions_et_expressions.json',
             '../JSON/Version4/14_vocabulaire_du_bula.json',
             '../JSON/Version4/15_creer_du_lien.json',
@@ -323,6 +322,22 @@ async function loadAndBuild() {
 
     app.innerHTML = ''; // Clear loading
 
+    // Extraire, dédoublonner et trier le vocabulaire centralisé
+    const allVocab = [];
+    const seenVocab = new Set();
+    categories.forEach(cat => {
+        if (cat.vocabulaire) {
+            cat.vocabulaire.forEach(item => {
+                const normFr = item.francais.trim().toLowerCase();
+                if (!seenVocab.has(normFr)) {
+                    seenVocab.add(normFr);
+                    allVocab.push(item);
+                }
+            });
+        }
+    });
+    allVocab.sort((a, b) => a.francais.localeCompare(b.francais, 'fr', { sensitivity: 'base' }));
+
     const getCardSize = (expr) => {
         const cleanStr = (str) => str ? str.replace(/\[\/?[NVA](\d+)?\]/g, '').trim() : '';
         let maxLen = cleanStr(expr.francais).length;
@@ -435,6 +450,10 @@ async function loadAndBuild() {
             tocEntries.push({ type: 'cas', title: casItem.nom_du_cas, refCategory: cat.categorie });
         });
     });
+    if (allVocab.length > 0) {
+        tocEntries.push({ type: 'cat', title: "Lexique" });
+        tocEntries.push({ type: 'lexique', title: "Lexique / Lexikon", refCategory: "Lexique" });
+    }
 
     const MAX_TOC_LINES = 14;
     const tocPagesArray = [];
@@ -458,7 +477,10 @@ async function loadAndBuild() {
     const tocStartPage = 3;
     const contentStartPage = tocStartPage + tocPagesArray.length;
 
-    const getPageForCas = (categoryName, casTitle) => {
+    const getPageForCas = (categoryName, casTitle, type) => {
+        if (type === 'lexique') {
+            return contentStartPage + contentPages.length;
+        }
         const index = contentPages.findIndex(p => p.categorie.includes(categoryName) && p.blocks.some(c => c.nom_du_cas.startsWith(casTitle)));
         return contentStartPage + index;
     };
@@ -502,34 +524,34 @@ async function loadAndBuild() {
                 html += `<div class="toc-cat">${entries[i].title}</div>`;
                 i++;
                 let casItems = [];
-                while (i < entries.length && entries[i].type === 'cas') { casItems.push(entries[i]); i++; }
+                while (i < entries.length && (entries[i].type === 'cas' || entries[i].type === 'lexique')) { casItems.push(entries[i]); i++; }
                 if (casItems.length > 0) {
                     const half = Math.ceil(casItems.length / 2);
                     html += `<div class="toc-columns"><div class="toc-col">`;
                     casItems.slice(0, half).forEach(entry => {
-                        const pageNum = getPageForCas(entry.refCategory, entry.title);
+                        const pageNum = getPageForCas(entry.refCategory, entry.title, entry.type);
                         html += `<div class="toc-cas"><span>${entry.title}</span> <span class="dots"></span> <span style="font-weight:bold">${pageNum}</span></div>`;
                     });
                     html += `</div><div class="toc-col">`;
                     casItems.slice(half).forEach(entry => {
-                        const pageNum = getPageForCas(entry.refCategory, entry.title);
+                        const pageNum = getPageForCas(entry.refCategory, entry.title, entry.type);
                         html += `<div class="toc-cas"><span>${entry.title}</span> <span class="dots"></span> <span style="font-weight:bold">${pageNum}</span></div>`;
                     });
                     html += `</div></div>`;
                 }
             } else {
                 let casItems = [];
-                while (i < entries.length && entries[i].type === 'cas') { casItems.push(entries[i]); i++; }
+                while (i < entries.length && (entries[i].type === 'cas' || entries[i].type === 'lexique')) { casItems.push(entries[i]); i++; }
                 if (casItems.length > 0) {
                     const half = Math.ceil(casItems.length / 2);
                     html += `<div class="toc-columns" style="margin-top:3mm;"><div class="toc-col">`;
                     casItems.slice(0, half).forEach(entry => {
-                        const pageNum = getPageForCas(entry.refCategory, entry.title);
+                        const pageNum = getPageForCas(entry.refCategory, entry.title, entry.type);
                         html += `<div class="toc-cas"><span>${entry.title}</span> <span class="dots"></span> <span style="font-weight:bold">${pageNum}</span></div>`;
                     });
                     html += `</div><div class="toc-col">`;
                     casItems.slice(half).forEach(entry => {
-                        const pageNum = getPageForCas(entry.refCategory, entry.title);
+                        const pageNum = getPageForCas(entry.refCategory, entry.title, entry.type);
                         html += `<div class="toc-cas"><span>${entry.title}</span> <span class="dots"></span> <span style="font-weight:bold">${pageNum}</span></div>`;
                     });
                     html += `</div></div>`;
@@ -600,6 +622,48 @@ async function loadAndBuild() {
         html += `</div>`;
         contentPage.innerHTML = html;
         app.appendChild(contentPage);
+    });
+
+    // ── Pages de Lexique ──
+    const itemsPerPage = 21;
+    const lexiconPages = [];
+    for (let i = 0; i < allVocab.length; i += itemsPerPage) {
+        lexiconPages.push(allVocab.slice(i, i + itemsPerPage));
+    }
+
+    lexiconPages.forEach((vocabSlice, idx) => {
+        const lexiconPageNum = contentStartPage + contentPages.length + idx;
+        const pageEl = createPageElement();
+        pageEl.classList.add('page', 'page-lexicon');
+
+        let html = `
+            <div class="page-category-label">Lexique / Lexikon</div>
+            <div class="page-number">${lexiconPageNum}</div>
+            <div class="page-content-wrapper" style="margin-top: 15mm; gap: 5mm;">
+                <h2 class="cas-title" style="margin-bottom: 5mm;">Lexique / Lexikon (${idx + 1}/${lexiconPages.length})</h2>
+                <div class="lexique-grid">
+        `;
+
+        vocabSlice.forEach(item => {
+            html += `
+                <div class="lexique-item">
+                    <div class="lexique-fr">${parseGrammar(item.francais)}</div>
+                    <div class="lexique-trans">
+                        <strong>DE:</strong> ${parseGrammar(item.allemand.texte)} <span style="font-size:10pt; opacity:0.8;">(${parseGrammar(item.allemand.prononciation_FR || '')})</span>
+                    </div>
+                    <div class="lexique-trans" style="margin-top:0.5mm;">
+                        <strong>EN:</strong> ${parseGrammar(item.anglais.texte)} <span style="font-size:10pt; opacity:0.8;">(${parseGrammar(item.anglais.prononciation_FR || '')})</span>
+                    </div>
+                </div>
+            `;
+        });
+
+        html += `
+                </div>
+            </div>
+        `;
+        pageEl.innerHTML = html;
+        app.appendChild(pageEl);
     });
 
     // Ajustement dynamique de la mise en page

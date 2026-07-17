@@ -236,7 +236,7 @@
             },
             "anglais": {
               "texte": "[N1]I[/N1] [V1]must[/V1] [V2]eat[/V2] [A1]gluten-free[/A1].",
-              "prononciation_FR": "[N1]I[/N1] [V1]meust[/V1] [V2]it[/V2] [A1]glou-teun fri[/A1]."
+              "prononciation_FR": "[N1]Aï[/N1] [V1]meust[/V1] [V2]it[/V2] [A1]glou-teun fri[/A1]."
             },
             "id_expression": 4,
             "audit": {
@@ -248,6 +248,50 @@
     ],
     "vocabulaire": [
       {
+        "francais": "Assiette",
+        "allemand": {
+          "texte": "Teller",
+          "prononciation_FR": "Tè-leur"
+        },
+        "anglais": {
+          "texte": "Plate",
+          "prononciation_FR": "Pléït"
+        }
+      },
+      {
+        "francais": "Fourchette",
+        "allemand": {
+          "texte": "Gabel",
+          "prononciation_FR": "Ga-beul"
+        },
+        "anglais": {
+          "texte": "Fork",
+          "prononciation_FR": "Fork"
+        }
+      },
+      {
+        "francais": "Couteau",
+        "allemand": {
+          "texte": "Messer",
+          "prononciation_FR": "Mè-sseur"
+        },
+        "anglais": {
+          "texte": "Knife",
+          "prononciation_FR": "Naïf"
+        }
+      },
+      {
+        "francais": "Cuillère",
+        "allemand": {
+          "texte": "Löffel",
+          "prononciation_FR": "Leu-feul"
+        },
+        "anglais": {
+          "texte": "Spoon",
+          "prononciation_FR": "Spoune"
+        }
+      },
+      {
         "francais": "Faim",
         "allemand": {
           "texte": "Hunger",
@@ -256,50 +300,6 @@
         "anglais": {
           "texte": "Hunger",
           "prononciation_FR": "Heung-gueur"
-        }
-      },
-      {
-        "francais": "Soif",
-        "allemand": {
-          "texte": "Durst",
-          "prononciation_FR": "Dourst"
-        },
-        "anglais": {
-          "texte": "Thirst",
-          "prononciation_FR": "Seurzt"
-        }
-      },
-      {
-        "francais": "Eau",
-        "allemand": {
-          "texte": "Wasser",
-          "prononciation_FR": "Va-sseur"
-        },
-        "anglais": {
-          "texte": "Water",
-          "prononciation_FR": "Wo-teur"
-        }
-      },
-      {
-        "francais": "Boire",
-        "allemand": {
-          "texte": "Trinken",
-          "prononciation_FR": "Trin-keun"
-        },
-        "anglais": {
-          "texte": "Drink",
-          "prononciation_FR": "Drink"
-        }
-      },
-      {
-        "francais": "Manger",
-        "allemand": {
-          "texte": "Essen",
-          "prononciation_FR": "È-sseun"
-        },
-        "anglais": {
-          "texte": "Eat",
-          "prononciation_FR": "It"
         }
       }
     ]

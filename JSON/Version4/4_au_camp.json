@@ -413,17 +413,6 @@
     ],
     "vocabulaire": [
       {
-        "francais": "Plan",
-        "allemand": {
-          "texte": "Plan",
-          "prononciation_FR": "Plan"
-        },
-        "anglais": {
-          "texte": "Map",
-          "prononciation_FR": "Map"
-        }
-      },
-      {
         "francais": "Nord",
         "allemand": {
           "texte": "Norden",
@@ -465,6 +454,28 @@
         "anglais": {
           "texte": "West",
           "prononciation_FR": "West"
+        }
+      },
+      {
+        "francais": "Droite",
+        "allemand": {
+          "texte": "Rechts",
+          "prononciation_FR": "Rèchts"
+        },
+        "anglais": {
+          "texte": "Right",
+          "prononciation_FR": "Raït"
+        }
+      },
+      {
+        "francais": "Gauche",
+        "allemand": {
+          "texte": "Links",
+          "prononciation_FR": "Links"
+        },
+        "anglais": {
+          "texte": "Left",
+          "prononciation_FR": "Left"
         }
       }
     ]
