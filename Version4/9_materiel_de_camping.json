@@ -114,6 +114,84 @@
         ]
       }
     ],
-    "vocabulaire": []
+    "vocabulaire": [
+      {
+        "francais": "la boussole",
+        "allemand": {
+          "texte": "der Kompass",
+          "prononciation_FR": "dér kom-pass"
+        },
+        "anglais": {
+          "texte": "the compass",
+          "prononciation_FR": "ze kom-pass"
+        }
+      },
+      {
+        "francais": "la carte",
+        "allemand": {
+          "texte": "die Karte",
+          "prononciation_FR": "di kar-teu"
+        },
+        "anglais": {
+          "texte": "the map",
+          "prononciation_FR": "ze map"
+        }
+      },
+      {
+        "francais": "la tente",
+        "allemand": {
+          "texte": "das Zelt",
+          "prononciation_FR": "dass tselt"
+        },
+        "anglais": {
+          "texte": "the tent",
+          "prononciation_FR": "ze tent"
+        }
+      },
+      {
+        "francais": "le bidon d'eau",
+        "allemand": {
+          "texte": "der Wasserkanister",
+          "prononciation_FR": "dér vas-seur-ka-nis-teur"
+        },
+        "anglais": {
+          "texte": "the jerrycan",
+          "prononciation_FR": "ze djé-ri-kann"
+        }
+      },
+      {
+        "francais": "le sac à dos",
+        "allemand": {
+          "texte": "der Rucksack",
+          "prononciation_FR": "dér rouk-zak"
+        },
+        "anglais": {
+          "texte": "the backpack",
+          "prononciation_FR": "ze bak-pak"
+        }
+      },
+      {
+        "francais": "le sac de couchage",
+        "allemand": {
+          "texte": "der Schlafsack",
+          "prononciation_FR": "dér chlaf-zak"
+        },
+        "anglais": {
+          "texte": "the sleeping bag",
+          "prononciation_FR": "ze sli-ping bag"
+        }
+      },
+      {
+        "francais": "le tapis de sol",
+        "allemand": {
+          "texte": "die Isomatte",
+          "prononciation_FR": "di i-zo-ma-teu"
+        },
+        "anglais": {
+          "texte": "the sleeping mat",
+          "prononciation_FR": "ze sli-ping mat"
+        }
+      }
+    ]
   }
 }

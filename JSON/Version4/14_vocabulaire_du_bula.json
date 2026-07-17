@@ -8,14 +8,14 @@
         "expressions": [
           {
             "id_expression": 1,
-            "francais": "[N1]le Jamboree / le BuLa[/N1]",
+            "francais": "[N1]la charte du camp[/N1]",
             "allemand": {
-              "texte": "[N1]das Bundeslager / BuLa[/N1]",
-              "prononciation_FR": "[N1]dass boun-deuss-la-gueur / Bou-La[/N1]"
+              "texte": "[N1]die Lagercharta[/N1]",
+              "prononciation_FR": "[N1]di la-gueur-kar-ta[/N1]"
             },
             "anglais": {
-              "texte": "[N1]the Jamboree / BuLa[/N1]",
-              "prononciation_FR": "[N1]ze djam-bo-ri / Bou-La[/N1]"
+              "texte": "[N1]the camp charter[/N1]",
+              "prononciation_FR": "[N1]ze camp tchar-teur[/N1]"
             },
             "audit": {
               "status": "accepted"
@@ -23,45 +23,30 @@
           },
           {
             "id_expression": 2,
-            "francais": "[N1]la cérémonie d'ouverture[/N1]",
+            "francais": "[N1]la promesse scoute[/N1]",
             "allemand": {
-              "texte": "[N1]die Eröffnungsfeier[/N1]",
-              "prononciation_FR": "[N1]di ér-euf-noungs-faï-eur[/N1]"
+              "texte": "[N1]das Pfadfinderversprechen[/N1]",
+              "prononciation_FR": "[N1]dass pfat-fin-deur-fer-chprè-kheun[/N1]"
             },
             "anglais": {
-              "texte": "[N1]the opening ceremony[/N1]",
-              "prononciation_FR": "[N1]ze ou-peun-ing sé-ré-mo-ni[/N1]"
+              "texte": "[N1]the scout promise[/N1]",
+              "prononciation_FR": "[N1]ze skaout pro-miss[/N1]"
             },
             "audit": {
               "status": "accepted"
             }
           },
           {
+            "francais": "[N1]la cérémonie d'ouverture / de fermeture[/N1]",
+            "allemand": {
+              "texte": "[N1]die Eröffnungsfeier / Abschlussfeier[/N1]",
+              "prononciation_FR": "[N1]di ér-euf-noungs-faï-eur / ap-chlouss-faï-eur[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the opening / closing ceremony[/N1]",
+              "prononciation_FR": "[N1]ze ou-peun-ing / clouz-ing sé-ré-mo-ni[/N1]"
+            },
             "id_expression": 3,
-            "francais": "[N1]la cérémonie de fermeture[/N1]",
-            "allemand": {
-              "texte": "[N1]die Abschlussfeier[/N1]",
-              "prononciation_FR": "[N1]di ap-chlouss-faï-eur[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the closing ceremony[/N1]",
-              "prononciation_FR": "[N1]ze clouz-ing sé-ré-mo-ni[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 4,
-            "francais": "[N1]la cordée[/N1]",
-            "allemand": {
-              "texte": "[N1]die Seilschaft[/N1]",
-              "prononciation_FR": "[N1]di zaïl-chaft[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the mixed team[/N1]",
-              "prononciation_FR": "[N1]ze mikst tim[/N1]"
-            },
             "audit": {
               "status": "accepted"
             }
@@ -89,21 +74,6 @@
           },
           {
             "id_expression": 2,
-            "francais": "[N1]le body scan[/N1]",
-            "allemand": {
-              "texte": "[N1]der Body-Scan[/N1]",
-              "prononciation_FR": "[N1]dér bo-di skann[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the body scan[/N1]",
-              "prononciation_FR": "[N1]ze bo-di skann[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 3,
             "francais": "[N1]le rondin de bois[/N1]",
             "allemand": {
               "texte": "[N1]das Holzscheit[/N1]",
@@ -118,7 +88,7 @@
             }
           },
           {
-            "id_expression": 4,
+            "id_expression": 3,
             "francais": "[N1]les mots gentils[/N1]",
             "allemand": {
               "texte": "[N1]die netten Worte[/N1]",
@@ -133,7 +103,7 @@
             }
           },
           {
-            "id_expression": 5,
+            "id_expression": 4,
             "francais": "[N1]la communication non-violente[/N1]",
             "allemand": {
               "texte": "[N1]die gewaltfreie Kommunikation[/N1]",
@@ -148,7 +118,7 @@
             }
           },
           {
-            "id_expression": 6,
+            "id_expression": 5,
             "francais": "[N1]le débat mouvant[/N1]",
             "allemand": {
               "texte": "[N1]die Positionsdebatte[/N1]",
@@ -163,37 +133,7 @@
             }
           },
           {
-            "id_expression": 7,
-            "francais": "[N1]le concours de cuisine[/N1]",
-            "allemand": {
-              "texte": "[N1]der Kochwettbewerb[/N1]",
-              "prononciation_FR": "[N1]dér kokh-vet-bé-vérp[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the cooking contest[/N1]",
-              "prononciation_FR": "[N1]ze kou-king kon-tést[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 8,
-            "francais": "[N1]le concours de chants[/N1]",
-            "allemand": {
-              "texte": "[N1]der Gesangswettbewerb[/N1]",
-              "prononciation_FR": "[N1]dér gué-zangs-vet-bé-vérp[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the singing contest[/N1]",
-              "prononciation_FR": "[N1]ze sing-ing kon-tést[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 9,
+            "id_expression": 6,
             "francais": "[N1]le jeu de l'île[/N1]",
             "allemand": {
               "texte": "[N1]das Inselspiel[/N1]",
@@ -208,37 +148,7 @@
             }
           },
           {
-            "id_expression": 10,
-            "francais": "[N1]le loup-garou[/N1]",
-            "allemand": {
-              "texte": "[N1]der Werwolf[/N1]",
-              "prononciation_FR": "[N1]dér vér-volf[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the werewolf game[/N1]",
-              "prononciation_FR": "[N1]ze ouér-ouolf guéïm[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 11,
-            "francais": "[N1]la randonnée[/N1]",
-            "allemand": {
-              "texte": "[N1]die Wanderung[/N1]",
-              "prononciation_FR": "[N1]di van-deu-roung[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the hike[/N1]",
-              "prononciation_FR": "[N1]ze haïk[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 12,
+            "id_expression": 7,
             "francais": "[N1]le safari écologie[/N1]",
             "allemand": {
               "texte": "[N1]die Öko-Safari[/N1]",
@@ -253,7 +163,7 @@
             }
           },
           {
-            "id_expression": 13,
+            "id_expression": 8,
             "francais": "[N1]le tri sélectif[/N1]",
             "allemand": {
               "texte": "[N1]die Mülltrennung[/N1]",
@@ -268,7 +178,7 @@
             }
           },
           {
-            "id_expression": 14,
+            "id_expression": 9,
             "francais": "[N1]l'alimentation végétarienne[/N1]",
             "allemand": {
               "texte": "[N1]die vegetarische Ernährung[/N1]",
@@ -283,7 +193,7 @@
             }
           },
           {
-            "id_expression": 15,
+            "id_expression": 10,
             "francais": "[N1]l'empreinte carbone[/N1]",
             "allemand": {
               "texte": "[N1]der CO₂-Fußabdruck[/N1]",
@@ -298,7 +208,7 @@
             }
           },
           {
-            "id_expression": 16,
+            "id_expression": 11,
             "francais": "[N1]la désinstallation du camp[/N1]",
             "allemand": {
               "texte": "[N1]der Lagerabbau[/N1]",
@@ -313,7 +223,7 @@
             }
           },
           {
-            "id_expression": 17,
+            "id_expression": 12,
             "francais": "[V1]Dépêchez[/V1]-[N1]vous[/N1] !",
             "allemand": {
               "texte": "[V1]Beeilt[/V1] [N1]euch[/N1]!",
@@ -322,6 +232,117 @@
             "anglais": {
               "texte": "[V1]Hurry up[/V1]!",
               "prononciation_FR": "[V1]Heu-ri eup[/V1]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 13,
+            "francais": "[N1]Ma place[/N1] [V1]est[/V1] [A1]ici[/A1].",
+            "allemand": {
+              "texte": "[N1]Mein Platz[/N1] [V1]ist[/V1] [A1]hier[/A1].",
+              "prononciation_FR": "[N1]Maïn plats[/N1] [V1]ist[/V1] [A1]hir[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]My seat[/N1] [V1]is[/V1] [A1]here[/A1].",
+              "prononciation_FR": "[N1]Maï sit[/N1] [V1]iz[/V1] [A1]hir[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[N1]Le sac[/N1] en [N2]soute[/N2].",
+            "allemand": {
+              "texte": "[N1]Die Tasche[/N1] in [N2]den Kofferraum[/N2].",
+              "prononciation_FR": "[N1]Di ta-cheu[/N1] in [N2]déne ko-fèr-raoum[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]The bag[/N1] in [N2]the trunk[/N2].",
+              "prononciation_FR": "[N1]Ze bag[/N1] in [N2]ze treunk[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "[N1]le concours de chants / de cuisine[/N1]",
+            "allemand": {
+              "texte": "[N1]der Gesangswettbewerb / Kochwettbewerb[/N1]",
+              "prononciation_FR": "[N1]dér gué-zangs-vet-bé-vérp / kokh-vet-bé-vérp[/N1]"
+            },
+            "anglais": {
+              "texte": "[N1]the singing / cooking contest[/N1]",
+              "prononciation_FR": "[N1]ze sing-ing / kou-king kon-tést[/N1]"
+            },
+            "id_expression": 16,
+            "audit": {
+              "status": "accepted"
+            }
+          }
+        ]
+      },
+      {
+        "id_cas": 3,
+        "nom_du_cas": "Valeurs scoutes / Pfadfinderwerte",
+        "expressions": [
+          {
+            "id_expression": 1,
+            "francais": "[A1]Toujours[/A1] [V1]prêt(e)[/V1] !",
+            "allemand": {
+              "texte": "[A1]Allzeit[/A1] [V1]bereit[/V1]!",
+              "prononciation_FR": "[A1]Al-tsaït[/A1] [V1]bé-raït[/V1]!"
+            },
+            "anglais": {
+              "texte": "[V1]Be prepared[/V1]!",
+              "prononciation_FR": "[V1]Bi pri-pèrd[/V1]!"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 2,
+            "francais": "[N1]Je[/N1] [V1]tiens[/V1] [N2]ma parole[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]halte[/V1] [N2]mein Wort[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]hal-teu[/V1] [N2]maïn vort[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]keep[/V1] [N2]my word[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]kip[/V1] [N2]maï ouérd[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]On[/N1] [N2]s'[/N2][V1]entraide[/V1].",
+            "allemand": {
+              "texte": "[N1]Wir[/N1] [V1]helfen[/V1] [N2]uns gegenseitig[/N2].",
+              "prononciation_FR": "[N1]Vir[/N1] [V1]hel-feun[/V1] [N2]ouns gué-gueun-zaï-tich[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]We[/N1] [V1]help[/V1] [N2]each other[/N2].",
+              "prononciation_FR": "[N1]Wi[/N1] [V1]help[/V1] [N2]itch eu-zeur[/N2]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Le respect[/N1] [V1]est[/V1] [A1]important[/A1].",
+            "allemand": {
+              "texte": "[N1]Respekt[/N1] [V1]ist[/V1] [A1]wichtig[/A1].",
+              "prononciation_FR": "[N1]Res-pekt[/N1] [V1]ist[/V1] [A1]vich-tich[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]Respect[/N1] [V1]matters[/V1].",
+              "prononciation_FR": "[N1]Ri-spekt[/N1] [V1]ma-teurz[/V1]."
             },
             "audit": {
               "status": "accepted"
@@ -362,6 +383,50 @@
         "anglais": {
           "texte": "Departure",
           "prononciation_FR": "Di-par-tchour"
+        }
+      },
+      {
+        "francais": "La cordée",
+        "allemand": {
+          "texte": "die Seilschaft",
+          "prononciation_FR": "di zaïl-chaft"
+        },
+        "anglais": {
+          "texte": "the mixed team",
+          "prononciation_FR": "ze mikst tim"
+        }
+      },
+      {
+        "francais": "Le Jamboree / le BuLa",
+        "allemand": {
+          "texte": "das Bundeslager / BuLa",
+          "prononciation_FR": "dass boun-deuss-la-gueur / Bou-La"
+        },
+        "anglais": {
+          "texte": "the Jamboree / BuLa",
+          "prononciation_FR": "ze djam-bo-ri / Bou-La"
+        }
+      },
+      {
+        "francais": "La randonnée",
+        "allemand": {
+          "texte": "die Wanderung",
+          "prononciation_FR": "di van-deu-roung"
+        },
+        "anglais": {
+          "texte": "the hike",
+          "prononciation_FR": "ze haïk"
+        }
+      },
+      {
+        "francais": "Le loup-garou",
+        "allemand": {
+          "texte": "der Werwolf",
+          "prononciation_FR": "dér vêr-volf"
+        },
+        "anglais": {
+          "texte": "the werewolf game",
+          "prononciation_FR": "ze wêr-ouolf guêm"
         }
       }
     ]

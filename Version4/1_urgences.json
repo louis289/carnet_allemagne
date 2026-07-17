@@ -112,11 +112,6 @@
             }
           }
         ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "S'orienter / Orientierung",
-        "expressions": []
       }
     ],
     "vocabulaire": [

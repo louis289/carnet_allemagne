@@ -110,15 +110,8 @@
             "audit": {
               "status": "accepted"
             }
-          }
-        ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "Eau / Wasser holen",
-        "expressions": [
+          },
           {
-            "id_expression": 1,
             "francais": "[N1]Je[/N1] [V1]vais[/V1] [V2]chercher[/V2] de [N2]l'eau[/N2].",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]hole[/V1] [N2]Wasser[/N2].",
@@ -128,6 +121,7 @@
               "texte": "[N1]I'll[/N1] [V1]fetch[/V1] [N2]water[/N2].",
               "prononciation_FR": "[N1]Aïl[/N1] [V1]fétch[/V1] [N2]wo-teur[/N2]."
             },
+            "id_expression": 8,
             "audit": {
               "status": "accepted"
             }
@@ -135,7 +129,7 @@
         ]
       },
       {
-        "id_cas": 3,
+        "id_cas": 2,
         "nom_du_cas": "Feu / Feuer machen",
         "expressions": [
           {
@@ -186,7 +180,7 @@
         ]
       },
       {
-        "id_cas": 4,
+        "id_cas": 3,
         "nom_du_cas": "Rangement et propreté / Ordnung",
         "expressions": [
           {

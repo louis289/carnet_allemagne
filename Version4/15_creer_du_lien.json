@@ -8,36 +8,96 @@
         "expressions": [
           {
             "id_expression": 1,
-            "francais": "[N1]Tu[/N1] [V1]aimes[/V1] [N2]la musique[/N2] ?",
+            "francais": "Comment [N1]tu[/N1] [N2]t'[/N2][V1]appelles[/V1] ?",
             "allemand": {
-              "texte": "[V1]Magst[/V1] [N1]du[/N1] [N2]Musik[/N2]?",
-              "prononciation_FR": "[V1]Magst[/V1] [N1]dou[/N1] [N2]mou-zik[/N2]?"
+              "texte": "Wie [V1]heißt[/V1] [N1]du[/N1]?",
+              "prononciation_FR": "Vi [V1]haïst[/V1] [N1]dou[/N1]?"
             },
             "anglais": {
-              "texte": "[V1]Do[/V1] [N1]you[/N1] [V2]like[/V2] [N2]music[/N2]?",
-              "prononciation_FR": "[V1]Dou[/V1] [N1]you[/N1] [V2]laïk[/V2] [N2]miou-zik[/N2]?"
+              "texte": "What [V1]is[/V1] [N2]your name[/N2]?",
+              "prononciation_FR": "Wot [V1]iz[/V1] [N2]your neïm[/N2]?"
             },
             "audit": {
               "status": "accepted"
             }
           },
           {
+            "francais": "[V1]Enchanté(e)[/V1], [N1]je[/N1] [N2]m'[/N2][V2]appelle[/V2] Pierre et [N1]je[/N1] [V3]viens[/V3] de [N3]France[/N3].",
+            "allemand": {
+              "texte": "[V1]Freut mich[/V1]! [N1]Ich[/N1] [V2]heiße[/V2] Pierre und [V3]komme[/V3] aus [N3]Frankreich[/N3].",
+              "prononciation_FR": "[V1]Froït mich[/V1]! [N1]Ich[/N1] [V2]haï-sseu[/V2] Pi-èr ount [V3]ko-meu[/V3] aous [N3]frank-raïch[/N3]."
+            },
+            "anglais": {
+              "texte": "[V1]Nice to meet you[/V1]! [N2]My name[/N2] [V2]is[/V2] Pierre and [N1]I'm[/N1] from [N3]France[/N3].",
+              "prononciation_FR": "[V1]Naïss tou mit you[/V1]! [N2]Maï neïm[/N2] [V2]iz[/V2] Pi-èr annd [N1]aïm[/N1] from [N3]Franss[/N3]."
+            },
             "id_expression": 2,
-            "francais": "[A1]Quelle[/A1] [V1]est[/V1] [N1]ta chanson préférée[/N1] ?",
-            "allemand": {
-              "texte": "Was [V1]ist[/V1] [N1]dein Lieblingslied[/N1]?",
-              "prononciation_FR": "Vass [V1]ist[/V1] [N1]daïn lip-lings-lit[/N1]?"
-            },
-            "anglais": {
-              "texte": "What [V1]is[/V1] [N1]your favorite song[/N1]?",
-              "prononciation_FR": "Wot [V1]iz[/V1] [N1]your feï-vo-rit song[/N1]?"
-            },
             "audit": {
               "status": "accepted"
             }
           },
           {
+            "francais": "D'où [V1]viens[/V1]-[N1]tu[/N1] ?",
+            "allemand": {
+              "texte": "Woher [V1]kommst[/V1] [N1]du[/N1]?",
+              "prononciation_FR": "Vo-hèr [V1]komst[/V1] [N1]dou[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]are[/V1] [N1]you[/N1] from?",
+              "prononciation_FR": "Wèr [V1]ar[/V1] [N1]you[/N1] from?"
+            },
             "id_expression": 3,
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "[N1]Tu[/N1] [V1]as[/V1] [A1]quel âge[/A1] ?",
+            "allemand": {
+              "texte": "Wie [A1]alt[/A1] [V1]bist[/V1] [N1]du[/N1]?",
+              "prononciation_FR": "Vi [A1]alt[/A1] [V1]bist[/V1] [N1]dou[/N1]?"
+            },
+            "anglais": {
+              "texte": "How [A1]old[/A1] [V1]are[/V1] [N1]you[/N1]?",
+              "prononciation_FR": "Haou [A1]old[/A1] [V1]ar[/V1] [N1]you[/N1]?"
+            },
+            "id_expression": 4,
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]quinze ans[/N2].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [N2]fünfzehn Jahre alt[/N2].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]bine[/V1] [N2]funf-tséne ya-reu alt[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]am[/V1] [N2]fifteen years old[/N2].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]ame[/V1] [N2]fif-tine yirz old[/N2]."
+            },
+            "id_expression": 5,
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "[N1]C'[/N1][V1]est[/V1] [A1]quand[/A1] [N2]ton anniv[/N2] ?",
+            "allemand": {
+              "texte": "Wann [V1]ist[/V1] [N2]dein Geburtstag[/N2]?",
+              "prononciation_FR": "Vann [V1]ist[/V1] [N2]daïn gué-bourts-tak[/N2]?"
+            },
+            "anglais": {
+              "texte": "When [V1]is[/V1] [N2]your birthday[/N2]?",
+              "prononciation_FR": "Wène [V1]iz[/V1] [N2]your beurs-déï[/N2]?"
+            },
+            "id_expression": 6,
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 7,
             "francais": "[N1]Tu[/N1] [V1]joues[/V1] d'[N2]un instrument[/N2] ?",
             "allemand": {
               "texte": "[V1]Spielst[/V1] [N1]du[/N1] [N2]ein Instrument[/N2]?",
@@ -52,7 +112,7 @@
             }
           },
           {
-            "id_expression": 4,
+            "id_expression": 8,
             "francais": "[A1]Quel[/A1] [V1]est[/V1] [N1]ton animal préféré[/N1] ?",
             "allemand": {
               "texte": "Was [V1]ist[/V1] [N1]dein Lieblingstier[/N1]?",
@@ -67,7 +127,7 @@
             }
           },
           {
-            "id_expression": 5,
+            "id_expression": 9,
             "francais": "[N1]Tu[/N1] [V1]as[/V1] [N2]des frères et sœurs[/N2] ?",
             "allemand": {
               "texte": "[V1]Hast[/V1] [N1]du[/N1] [N2]Geschwister[/N2]?",
@@ -82,7 +142,7 @@
             }
           },
           {
-            "id_expression": 6,
+            "id_expression": 10,
             "francais": "[N1]J'[/N1][V1]habite[/V1] près de [N2]la mer[/N2].",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]wohne[/V1] in der Nähe des [N2]Meeres[/N2].",
@@ -97,7 +157,7 @@
             }
           },
           {
-            "id_expression": 7,
+            "id_expression": 11,
             "francais": "[N1]La Provence[/N1] [V1]est[/V1] [A1]belle[/A1] !",
             "allemand": {
               "texte": "[N1]Die Provence[/N1] [V1]ist[/V1] [A1]schön[/A1]!",
@@ -112,22 +172,7 @@
             }
           },
           {
-            "id_expression": 8,
-            "francais": "[N1]Bonjour[/N1] [N2]Monsieur[/N2].",
-            "allemand": {
-              "texte": "[N1]Guten Tag[/N1] [N2]mein Herr[/N2].",
-              "prononciation_FR": "[N1]Gou-teun tag[/N1] [N2]maïn hér[/N2]."
-            },
-            "anglais": {
-              "texte": "[N1]Hello[/N1] [N2]Sir[/N2].",
-              "prononciation_FR": "[N1]Hé-lo[/N1] [N2]Seur[/N2]."
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 9,
+            "id_expression": 12,
             "francais": "[V1]Pouvez[/V1]-[N1]vous[/N1] [N2]nous[/N2] [V2]aider[/V2] ?",
             "allemand": {
               "texte": "[V1]Können[/V1] [N1]Sie[/N1] [N2]uns[/N2] [V2]helfen[/V2]?",
@@ -142,16 +187,46 @@
             }
           },
           {
-            "id_expression": 10,
-            "francais": "[N1]Nous[/N1] [V1]sommes[/V1] [N2]des scouts[/N2].",
+            "id_expression": 13,
+            "francais": "[N1]Merci[/N1] pour [N2]l'aide[/N2].",
             "allemand": {
-              "texte": "[N1]Wir[/N1] [V1]sind[/V1] [N2]Pfadfinder[/N2].",
-              "prononciation_FR": "[N1]Vir[/N1] [V1]zind[/V1] [N2]pfat-fin-deur[/N2]."
+              "texte": "[N1]Danke[/N1] für [N2]die Hilfe[/N2].",
+              "prononciation_FR": "[N1]Dan-keu[/N1] fur [N2]di hil-feu[/N2]."
             },
             "anglais": {
-              "texte": "[N1]We[/N1] [V1]are[/V1] [N2]scouts[/N2].",
-              "prononciation_FR": "[N1]Wi[/N1] [V1]ar[/V1] [N2]skaouts[/N2]."
+              "texte": "[N1]Thanks[/N1] for [N2]the help[/N2].",
+              "prononciation_FR": "[N1]Sanks[/N1] for [N2]ze help[/N2]."
             },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 14,
+            "francais": "[N1]Je[/N1] [V1]peux[/V1] [V2]m'asseoir[/V2] [A1]avec toi[/A1] ?",
+            "allemand": {
+              "texte": "[V1]Kann[/V1] [N1]ich[/N1] mich [A1]zu dir[/A1] [V2]setzen[/V2]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]ich[/N1] mich [A1]tsou dir[/A1] [V2]zèt-tseun[/V2]?"
+            },
+            "anglais": {
+              "texte": "[V1]Can[/V1] [N1]I[/N1] [V2]sit[/V2] [A1]with you[/A1]?",
+              "prononciation_FR": "[V1]Kan[/V1] [N1]Aï[/N1] [V2]sit[/V2] [A1]wiz you[/A1]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "[N1]Tu[/N1] [V1]aimes[/V1] [N2]la musique[/N2] ? [A1]Quelle[/A1] [V2]est[/V2] [N3]ta chanson préférée[/N3] ?",
+            "allemand": {
+              "texte": "[V1]Magst[/V1] [N1]du[/N1] [N2]Musik[/N2]? Was [V2]ist[/V2] [N3]dein Lieblingslied[/N3]?",
+              "prononciation_FR": "[V1]Magst[/V1] [N1]dou[/N1] [N2]mou-zik[/N2]? Vass [V2]ist[/V2] [N3]daïn lip-lings-lit[/N3]?"
+            },
+            "anglais": {
+              "texte": "[V1]Do you like[/V1] [N2]music[/N2]? What [V2]is[/V2] [N3]your favorite song[/N3]?",
+              "prononciation_FR": "[V1]Dou you laïk[/V1] [N2]miou-zik[/N2]? Wot [V2]iz[/V2] [N3]your feï-vo-rit song[/N3]?"
+            },
+            "id_expression": 15,
             "audit": {
               "status": "accepted"
             }
@@ -178,37 +253,22 @@
             }
           },
           {
-            "id_expression": 2,
-            "francais": "[N1]On[/N1] [V1]échange[/V1] [N2]nos foulards[/N2] ?",
+            "francais": "[N1]On[/N1] [V1]échange[/V1] [N2]nos foulards[/N2] ou [N3]nos adresses[/N3] ?",
             "allemand": {
-              "texte": "[V1]Tauschen[/V1] [N1]wir[/N1] [N2]unsere Halstücher[/N2]?",
-              "prononciation_FR": "[V1]Taou-cheun[/V1] [N1]vir[/N1] [N2]oun-zé-reu hals-tu-cheur[/N2]?"
+              "texte": "[V1]Tauschen[/V1] [N1]wir[/N1] [N2]unsere Halstücher[/N2] oder [N3]Adressen[/N3] [V1]aus[/V1]?",
+              "prononciation_FR": "[V1]Taou-cheun[/V1] [N1]vir[/N1] [N2]oun-zé-reu hals-tu-cheur[/N2] o-deur [N3]a-dré-seun[/N3] [V1]aous[/V1]?"
             },
             "anglais": {
-              "texte": "[V1]Shall[/V1] [N1]we[/N1] [V2]swap[/V2] [N2]our neckerchiefs[/N2]?",
-              "prononciation_FR": "[V1]Chal[/V1] [N1]wi[/N1] [V2]swop[/V2] [N2]aou-eur né-keur-tchifs[/N2]?"
+              "texte": "Shall [N1]we[/N1] [V1]swap[/V1] [N2]our neckerchiefs[/N2] or [V2]exchange[/V2] [N3]addresses[/N3]?",
+              "prononciation_FR": "Chal [N1]wi[/N1] [V1]swop[/V1] [N2]aou-eur né-keur-tchifs[/N2] o-r [V2]ex-tcheïndj[/V2] [N3]a-dré-siz[/N3]?"
             },
+            "id_expression": 2,
             "audit": {
               "status": "accepted"
             }
           },
           {
             "id_expression": 3,
-            "francais": "[N1]On[/N1] [N2]s'[/N2][V1]échange[/V1] [N3]nos adresses[/N3] ?",
-            "allemand": {
-              "texte": "[V1]Tauschen[/V1] [N1]wir[/N1] [N3]unsere Adressen[/N3] [V2]aus[/V2]?",
-              "prononciation_FR": "[V1]Taou-cheun[/V1] [N1]vir[/N1] [N3]oun-zé-reu a-dré-seun[/N3] [V2]aouf[/V2]?"
-            },
-            "anglais": {
-              "texte": "[V1]Let's exchange[/V1] [N3]contacts[/N3]!",
-              "prononciation_FR": "[V1]Lets ex-tcheïndj[/V1] [N3]con-takts[/N3]!"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 4,
             "francais": "[N1]C'[/N1][V1]était[/V1] [N2]une super semaine[/N2] !",
             "allemand": {
               "texte": "[N1]Das[/N1] [V1]war[/V1] [N2]eine tolle Woche[/N2]!",
@@ -223,7 +283,7 @@
             }
           },
           {
-            "id_expression": 5,
+            "id_expression": 4,
             "francais": "[V1]Tu veux[/V1] [N1]mon écusson[/N1] ?",
             "allemand": {
               "texte": "[V1]Möchtest du[/V1] [N1]meinen Aufnäher[/N1]?",
@@ -238,7 +298,7 @@
             }
           },
           {
-            "id_expression": 6,
+            "id_expression": 5,
             "francais": "[N1]Je[/N1] [V1]te donne[/V1] [A1]ça[/A1].",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]gebe dir[/V1] [A1]das[/A1].",
@@ -253,7 +313,7 @@
             }
           },
           {
-            "id_expression": 7,
+            "id_expression": 6,
             "francais": "[N1]Garde[/N1]-[V1]le[/V1] [A1]bien[/A1] !",
             "allemand": {
               "texte": "[V1]Behalt[/V1] [N1]es[/N1] [A1]gut[/A1]!",
@@ -268,7 +328,7 @@
             }
           },
           {
-            "id_expression": 8,
+            "id_expression": 7,
             "francais": "[N1]On[/N1] [V1]se revoit[/V1] [A1]demain[/A1] ?",
             "allemand": {
               "texte": "[V1]Sehen[/V1] [N1]wir[/N1] uns [A1]morgen wieder[/A1]?",
@@ -277,6 +337,36 @@
             "anglais": {
               "texte": "[V1]Will[/V1] [N1]we[/N1] [V2]see each other[/V2] [A1]tomorrow[/A1]?",
               "prononciation_FR": "[V1]Wil[/V1] [N1]wi[/N1] [V2]si itch e-zeur[/V2] [A1]tou-mo-ro[/A1]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]Je[/N1] [V1]viendrai[/V1] [A1]te voir[/A1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]werde[/V1] [A1]dich besuchen[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]vèr-deu[/V1] [A1]dich bé-zou-kheun[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]will come[/V1] [A1]see you[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]wil keum[/V1] [A1]si you[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 9,
+            "francais": "[V1]Tu es[/V1] [A1]libre[/A1] [N1]ce soir[/N1] ?",
+            "allemand": {
+              "texte": "[V1]Hast du[/V1] [N1]heute Abend[/N1] [A1]Zeit[/A1]?",
+              "prononciation_FR": "[V1]Hast dou[/V1] [N1]hoï-teu a-beund[/A1] [A1]tsaït[/A1]?"
+            },
+            "anglais": {
+              "texte": "[V1]Are you[/V1] [A1]free[/A1] [N1]tonight[/N1]?",
+              "prononciation_FR": "[V1]Ar you[/V1] [A1]fri[/A1] [N1]tou-naït[/N1]?"
             },
             "audit": {
               "status": "accepted"

@@ -395,16 +395,7 @@ const server = http.createServer((req, res) => {
 
     let filePath = path.join(ROOT_DIR, pathname);
 
-    // Fallback: If requesting a file in JSON/Version4 and it doesn't exist, fallback to Version3
-    if (pathname.includes('/JSON/Version4/') && pathname.endsWith('.json')) {
-        if (!fs.existsSync(filePath)) {
-            const fallbackPath = filePath.replace('Version4', 'Version3');
-            if (fs.existsSync(fallbackPath)) {
-                filePath = fallbackPath;
-                console.log(`[Fallback] Serving ${pathname} from Version3`);
-            }
-        }
-    }
+
 
     // Fallback: If requesting a file at root that doesn't exist, check Web_PDF_Generator
     if (!fs.existsSync(filePath) && !pathname.startsWith('/Web_PDF_Generator/')) {
@@ -440,21 +431,7 @@ const server = http.createServer((req, res) => {
         }
 
         let files = [];
-        // For Version4, list the union of Version3 and Version4 files so the UI discovers all of them
-        if (pathname.includes('/JSON/Version4/')) {
-            const v4Dir = filePath;
-            const v3Dir = filePath.replace('Version4', 'Version3');
-            const fileSet = new Set();
-            if (fs.existsSync(v3Dir)) {
-                fs.readdirSync(v3Dir).forEach(f => fileSet.add(f));
-            }
-            if (fs.existsSync(v4Dir)) {
-                fs.readdirSync(v4Dir).forEach(f => fileSet.add(f));
-            }
-            files = Array.from(fileSet);
-        } else {
-            files = fs.readdirSync(filePath);
-        }
+        files = fs.readdirSync(filePath);
 
         // Sort files to preserve natural/alphabetical listing order
         files.sort();

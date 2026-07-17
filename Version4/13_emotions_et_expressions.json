@@ -8,21 +8,6 @@
         "expressions": [
           {
             "id_expression": 1,
-            "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]heureux/heureuse[/A1] !",
-            "allemand": {
-              "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]glücklich[/A1]!",
-              "prononciation_FR": "[N1]Ich[/N1] [V1]bin[/V1] [A1]glouk-lich[/A1]!"
-            },
-            "anglais": {
-              "texte": "[N1]I'm[/N1] [A1]happy[/A1]!",
-              "prononciation_FR": "[N1]Aïm[/N1] [A1]ha-pi[/A1]!"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 2,
             "francais": "[N1]J'[/N1][V1]ai[/V1] [N2]peur[/N2].",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]habe[/V1] [N2]Angst[/N2].",
@@ -37,7 +22,7 @@
             }
           },
           {
-            "id_expression": 3,
+            "id_expression": 2,
             "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]fatigué(e)[/A1].",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]müde[/A1].",
@@ -52,7 +37,7 @@
             }
           },
           {
-            "id_expression": 4,
+            "id_expression": 3,
             "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]stressé(e)[/A1].",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]bin[/V1] [A1]gestresst[/A1].",
@@ -61,6 +46,21 @@
             "anglais": {
               "texte": "[N1]I'm[/N1] [A1]stressed[/A1].",
               "prononciation_FR": "[N1]Aïm[/N1] [A1]chtrést[/A1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 4,
+            "francais": "[N1]Je[/N1] [N2]me[/N2] [V1]sens seul(e)[/V1].",
+            "allemand": {
+              "texte": "[N1]Ich[/N1] [V1]fühle[/V1] [N2]mich[/N2] [A1]allein[/A1].",
+              "prononciation_FR": "[N1]Ich[/N1] [V1]fu-leu[/V1] [N2]mich[/N2] [A1]al-aïn[/A1]."
+            },
+            "anglais": {
+              "texte": "[N1]I[/N1] [V1]feel[/V1] [A1]lonely[/A1].",
+              "prononciation_FR": "[N1]Aï[/N1] [V1]fil[/V1] [A1]loun-li[/A1]."
             },
             "audit": {
               "status": "accepted"
@@ -197,21 +197,6 @@
         "expressions": [
           {
             "id_expression": 1,
-            "francais": "[N1]Un morceau[/N1] de [N2]gâteau[/N2]. (C'est très facile / C'est du gâteau)",
-            "allemand": {
-              "texte": "[N1]Ein Stück[/N1] [N2]Kuchen[/N2].",
-              "prononciation_FR": "[N1]Aïn chtuk[/N1] [N2]kou-kheun[/N2]."
-            },
-            "anglais": {
-              "texte": "[N1]A piece[/N1] of [N2]cake[/N2].",
-              "prononciation_FR": "[N1]Eu piss[/N1] ov [N2]kéïk[/N2]."
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 2,
             "francais": "[N1]Il[/N1] [V1]pleut[/V1] [N2]des chats[/N2] et [N3]des chiens[/N3]. (Il pleut des cordes)",
             "allemand": {
               "texte": "[N1]Es[/N1] [V1]regnet[/V1] [N2]Katzen[/N2] und [N3]Hunde[/N3].",
@@ -226,7 +211,7 @@
             }
           },
           {
-            "id_expression": 3,
+            "id_expression": 2,
             "francais": "[V1]Renverser[/V1] [N1]les haricots[/N1]. (Vendre la mèche / Cracher le morceau)",
             "allemand": {
               "texte": "[N1]Die Bohnen[/N1] [V1]verschütten[/V1].",
@@ -235,6 +220,21 @@
             "anglais": {
               "texte": "[V1]To spill[/V1] [N1]the beans[/N1].",
               "prononciation_FR": "[V1]Tou spil[/V1] [N1]ze binz[/N1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 3,
+            "francais": "[N1]Une patate[/N1] de [N2]canapé[/N2]. (Quelqu'un de très paresseux / Une loque)",
+            "allemand": {
+              "texte": "[N1]Eine Kartoffel[/N1] von [N2]Sofa[/N2].",
+              "prononciation_FR": "[N1]Aï-neu kar-to-feul[/N1] fone [N2]zo-fa[/N2]."
+            },
+            "anglais": {
+              "texte": "[N1]A potato[/N1] of [N2]couch[/N2].",
+              "prononciation_FR": "[N1]Eu po-téï-to[/N1] ov [N2]kaoutch[/N2]."
             },
             "audit": {
               "status": "accepted"

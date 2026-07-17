@@ -170,7 +170,6 @@ async function resolveJsonFiles(version) {
             '../JSON/Version4/4_au_camp.json',
             '../JSON/Version4/5_activites_et_jeux.json',
             '../JSON/Version4/7_nature_et_environnement.json',
-            '../JSON/Version4/8_valeurs_scoutes.json',
             '../JSON/Version4/9_materiel_de_camping.json',
             '../JSON/Version4/10_services_du_camp.json',
             '../JSON/Version4/11_vie_spirituelle_et_forum.json',
@@ -181,6 +180,27 @@ async function resolveJsonFiles(version) {
         ],
     };
     return FALLBACK[version] || FALLBACK['1'];
+}
+
+function getCategoryLabel(categoryName) {
+    const mapping = {
+        "urgences": "Urgences / Notfälle",
+        "salutations & politesse": "Salutations & politesse / Begrüßung & Höflichkeit",
+        "repas & vie quotidienne": "Repas & vie quotidienne / Mahlzeiten & Alltag",
+        "au camp": "Au camp / Im Lager",
+        "activités & jeux": "Activités & jeux / Aktivitäten & Spiele",
+        "nature & environnement": "Nature & environnement / Natur & Umwelt",
+        "valeurs scoutes": "Valeurs scoutes / Pfadfinderwerte",
+        "matériel de camping": "Matériel de camping / Campingausrüstung",
+        "services du camp": "Services du camp / Lagerdienste",
+        "vie spirituelle & forum": "Vie Spirituelle & Forum / Spirituelles Leben & Forum",
+        "émotions & expressions": "Émotions & expressions / Emotionen & Ausdrücke",
+        "vocabulaire du bula": "Vocabulaire du BuLa / BuLa-Vokabular",
+        "créer du lien": "Créer du lien / Kontakte knüpfen",
+        "lexique": "Lexique / Lexikon"
+    };
+    const key = categoryName.trim().toLowerCase();
+    return mapping[key] || categoryName;
 }
 
 
@@ -387,7 +407,8 @@ async function loadAndBuild() {
     });
 
     // Filtrer les catégories devenues vides suite au filtrage
-    categories = categories.filter(cat => cat.cas.length > 0);
+    // Filtrer les catégories devenues vides pour les pages de contenu
+    const categoriesWithCases = categories.filter(cat => cat.cas.length > 0);
 
     // ─── 1. PRÉPARATION DES PAGES (pagination au niveau expressions)
     const contentPages = [];
@@ -409,7 +430,7 @@ async function loadAndBuild() {
     };
 
 
-    categories.forEach(cat => {
+    categoriesWithCases.forEach(cat => {
         cat.cas.forEach(casItem => {
             if (currentSlots > 0) pushCurrentPage();
 
@@ -444,15 +465,30 @@ async function loadAndBuild() {
 
     // ─── 2. SOMMAIRE ─────────────────────────────────────────
     const tocEntries = [];
-    categories.forEach(cat => {
-        tocEntries.push({ type: 'cat', title: cat.categorie });
-        cat.cas.forEach(casItem => {
-            tocEntries.push({ type: 'cas', title: casItem.nom_du_cas, refCategory: cat.categorie });
-        });
+    categoriesWithCases.forEach(cat => {
+        if (cat.cas.length === 1) {
+            tocEntries.push({
+                type: 'single-cat',
+                title: cat.categorie,
+                refCategory: cat.categorie,
+                casTitle: cat.cas[0].nom_du_cas,
+                isLexique: false
+            });
+        } else {
+            tocEntries.push({ type: 'cat', title: cat.categorie });
+            cat.cas.forEach(casItem => {
+                tocEntries.push({ type: 'cas', title: casItem.nom_du_cas, refCategory: cat.categorie });
+            });
+        }
     });
     if (allVocab.length > 0) {
-        tocEntries.push({ type: 'cat', title: "Lexique" });
-        tocEntries.push({ type: 'lexique', title: "Lexique / Lexikon", refCategory: "Lexique" });
+        tocEntries.push({
+            type: 'single-cat',
+            title: "Lexique / Lexikon",
+            refCategory: "Lexique",
+            casTitle: "Lexique / Lexikon",
+            isLexique: true
+        });
     }
 
     const MAX_TOC_LINES = 14;
@@ -462,7 +498,7 @@ async function loadAndBuild() {
 
     for (let i = 0; i < tocEntries.length; i++) {
         let entry = tocEntries[i];
-        let lineCost = entry.type === 'cat' ? 2 : 0.5;
+        let lineCost = (entry.type === 'cat' || entry.type === 'single-cat') ? 2 : 0.5;
         if (linesOnCurrentPage + lineCost > MAX_TOC_LINES && currentTocPage.length > 0) {
             tocPagesArray.push(currentTocPage);
             currentTocPage = [];
@@ -520,8 +556,12 @@ async function loadAndBuild() {
 
         let i = 0;
         while (i < entries.length) {
-            if (entries[i].type === 'cat') {
-                html += `<div class="toc-cat">${entries[i].title}</div>`;
+            if (entries[i].type === 'single-cat') {
+                const pageNum = getPageForCas(entries[i].refCategory, entries[i].casTitle, entries[i].isLexique ? 'lexique' : 'cas');
+                html += `<div class="toc-cat">${getCategoryLabel(entries[i].title)} — Page ${pageNum}</div>`;
+                i++;
+            } else if (entries[i].type === 'cat') {
+                html += `<div class="toc-cat">${getCategoryLabel(entries[i].title)}</div>`;
                 i++;
                 let casItems = [];
                 while (i < entries.length && (entries[i].type === 'cas' || entries[i].type === 'lexique')) { casItems.push(entries[i]); i++; }
@@ -571,7 +611,7 @@ async function loadAndBuild() {
         const contentPage = createPageElement();
 
         let html = `
-            <div class="page-category-label">${pageData.categorie}</div>
+            <div class="page-category-label">${getCategoryLabel(pageData.categorie)}</div>
             <div class="page-number">${contentStartPage + index}</div>
             <div class="page-content-wrapper">
         `;
@@ -625,13 +665,61 @@ async function loadAndBuild() {
     });
 
     // ── Pages de Lexique ──
-    const itemsPerPage = 21;
-    const lexiconPages = [];
-    for (let i = 0; i < allVocab.length; i += itemsPerPage) {
-        lexiconPages.push(allVocab.slice(i, i + itemsPerPage));
+    const vocabByCategory = {};
+    const seenGlobally = new Set();
+    categories.forEach(cat => {
+        if (cat.vocabulaire && cat.vocabulaire.length > 0) {
+            const catName = cat.categorie;
+            cat.vocabulaire.forEach(item => {
+                const normFr = item.francais.trim().toLowerCase();
+                if (!seenGlobally.has(normFr)) {
+                    seenGlobally.add(normFr);
+                    if (!vocabByCategory[catName]) {
+                        vocabByCategory[catName] = [];
+                    }
+                    vocabByCategory[catName].push(item);
+                }
+            });
+        }
+    });
+
+    // Trier le vocabulaire dans chaque catégorie
+    for (let catName in vocabByCategory) {
+        vocabByCategory[catName].sort((a, b) => a.francais.localeCompare(b.francais, 'fr', { sensitivity: 'base' }));
     }
 
-    lexiconPages.forEach((vocabSlice, idx) => {
+    // Créer la liste des tokens de mise en page
+    const tokens = [];
+    categories.forEach(cat => {
+        const items = vocabByCategory[cat.categorie];
+        if (items && items.length > 0) {
+            tokens.push({ type: 'header', title: getCategoryLabel(cat.categorie) });
+            items.forEach(item => {
+                tokens.push({ type: 'item', data: item });
+            });
+        }
+    });
+
+    const maxCostPerPage = 22;
+    const pagesTokens = [];
+    let currentPageTokens = [];
+    let currentCost = 0;
+
+    tokens.forEach(tok => {
+        const cost = tok.type === 'header' ? 2 : 1;
+        if (currentCost + cost > maxCostPerPage && currentPageTokens.length > 0) {
+            pagesTokens.push(currentPageTokens);
+            currentPageTokens = [];
+            currentCost = 0;
+        }
+        currentPageTokens.push(tok);
+        currentCost += cost;
+    });
+    if (currentPageTokens.length > 0) {
+        pagesTokens.push(currentPageTokens);
+    }
+
+    pagesTokens.forEach((toks, idx) => {
         const lexiconPageNum = contentStartPage + contentPages.length + idx;
         const pageEl = createPageElement();
         pageEl.classList.add('page', 'page-lexicon');
@@ -640,22 +728,27 @@ async function loadAndBuild() {
             <div class="page-category-label">Lexique / Lexikon</div>
             <div class="page-number">${lexiconPageNum}</div>
             <div class="page-content-wrapper" style="margin-top: 15mm; gap: 5mm;">
-                <h2 class="cas-title" style="margin-bottom: 5mm;">Lexique / Lexikon (${idx + 1}/${lexiconPages.length})</h2>
-                <div class="lexique-grid">
+                <h2 class="cas-title" style="margin-bottom: 5mm;">Lexique / Lexikon (${idx + 1}/${pagesTokens.length})</h2>
+                <div class="lexique-columns-container">
         `;
 
-        vocabSlice.forEach(item => {
-            html += `
-                <div class="lexique-item">
-                    <div class="lexique-fr">${parseGrammar(item.francais)}</div>
-                    <div class="lexique-trans">
-                        <strong>DE:</strong> ${parseGrammar(item.allemand.texte)} <span style="font-size:10pt; opacity:0.8;">(${parseGrammar(item.allemand.prononciation_FR || '')})</span>
+        toks.forEach(tok => {
+            if (tok.type === 'header') {
+                html += `<div class="lexique-cat-header">${tok.title}</div>`;
+            } else {
+                const item = tok.data;
+                html += `
+                    <div class="lexique-item">
+                        <div class="lexique-fr">${parseGrammar(item.francais)}</div>
+                        <div class="lexique-trans">
+                            <strong>DE:</strong> ${parseGrammar(item.allemand.texte)} <span style="font-size:10pt; opacity:0.8;">(${parseGrammar(item.allemand.prononciation_FR || '')})</span>
+                        </div>
+                        <div class="lexique-trans" style="margin-top:0.5mm;">
+                            <strong>EN:</strong> ${parseGrammar(item.anglais.texte)} <span style="font-size:10pt; opacity:0.8;">(${parseGrammar(item.anglais.prononciation_FR || '')})</span>
+                        </div>
                     </div>
-                    <div class="lexique-trans" style="margin-top:0.5mm;">
-                        <strong>EN:</strong> ${parseGrammar(item.anglais.texte)} <span style="font-size:10pt; opacity:0.8;">(${parseGrammar(item.anglais.prononciation_FR || '')})</span>
-                    </div>
-                </div>
-            `;
+                `;
+            }
         });
 
         html += `

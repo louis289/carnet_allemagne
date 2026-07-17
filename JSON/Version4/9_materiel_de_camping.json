@@ -1,119 +1,85 @@
 {
   "carnet_scout": {
     "categorie": "Matériel de camping",
-    "cas": [
+    "cas": [],
+    "vocabulaire": [
       {
-        "id_cas": 1,
-        "nom_du_cas": "Matériel de camping / Campingausrüstung",
-        "expressions": [
-          {
-            "id_expression": 1,
-            "francais": "[N1]le sac de couchage[/N1]",
-            "allemand": {
-              "texte": "[N1]der Schlafsack[/N1]",
-              "prononciation_FR": "[N1]dér chlaf-zak[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the sleeping bag[/N1]",
-              "prononciation_FR": "[N1]ze sli-ping bag[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 2,
-            "francais": "[N1]le tapis de sol[/N1]",
-            "allemand": {
-              "texte": "[N1]die Isomatte[/N1]",
-              "prononciation_FR": "[N1]di i-zo-ma-teu[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the sleeping mat[/N1]",
-              "prononciation_FR": "[N1]ze sli-ping mat[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 3,
-            "francais": "[N1]le sac à dos[/N1]",
-            "allemand": {
-              "texte": "[N1]der Rucksack[/N1]",
-              "prononciation_FR": "[N1]dér rouk-zak[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the backpack[/N1]",
-              "prononciation_FR": "[N1]ze bak-pak[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "francais": "[N1]la tente[/N1]",
-            "allemand": {
-              "texte": "[N1]das Zelt[/N1]",
-              "prononciation_FR": "[N1]dass tselt[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the tent[/N1]",
-              "prononciation_FR": "[N1]ze tent[/N1]"
-            },
-            "id_expression": 4,
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 5,
-            "francais": "[N1]la boussole[/N1]",
-            "allemand": {
-              "texte": "[N1]der Kompass[/N1]",
-              "prononciation_FR": "[N1]dér kom-pass[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the compass[/N1]",
-              "prononciation_FR": "[N1]ze kom-pass[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 6,
-            "francais": "[N1]la carte[/N1]",
-            "allemand": {
-              "texte": "[N1]die Karte[/N1]",
-              "prononciation_FR": "[N1]di kar-teu[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the map[/N1]",
-              "prononciation_FR": "[N1]ze map[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 7,
-            "francais": "[N1]le bidon d'eau[/N1]",
-            "allemand": {
-              "texte": "[N1]der Wasserkanister[/N1]",
-              "prononciation_FR": "[N1]dér vas-seur-ka-nis-teur[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the jerrycan[/N1]",
-              "prononciation_FR": "[N1]ze djé-ri-kann[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          }
-        ]
+        "francais": "la boussole",
+        "allemand": {
+          "texte": "der Kompass",
+          "prononciation_FR": "dér kom-pass"
+        },
+        "anglais": {
+          "texte": "the compass",
+          "prononciation_FR": "ze kom-pass"
+        }
+      },
+      {
+        "francais": "la carte",
+        "allemand": {
+          "texte": "die Karte",
+          "prononciation_FR": "di kar-teu"
+        },
+        "anglais": {
+          "texte": "the map",
+          "prononciation_FR": "ze map"
+        }
+      },
+      {
+        "francais": "la tente",
+        "allemand": {
+          "texte": "das Zelt",
+          "prononciation_FR": "dass tselt"
+        },
+        "anglais": {
+          "texte": "the tent",
+          "prononciation_FR": "ze tent"
+        }
+      },
+      {
+        "francais": "le bidon d'eau",
+        "allemand": {
+          "texte": "der Wasserkanister",
+          "prononciation_FR": "dér vas-seur-ka-nis-teur"
+        },
+        "anglais": {
+          "texte": "the jerrycan",
+          "prononciation_FR": "ze djé-ri-kann"
+        }
+      },
+      {
+        "francais": "le sac à dos",
+        "allemand": {
+          "texte": "der Rucksack",
+          "prononciation_FR": "dér rouk-zak"
+        },
+        "anglais": {
+          "texte": "the backpack",
+          "prononciation_FR": "ze bak-pak"
+        }
+      },
+      {
+        "francais": "le sac de couchage",
+        "allemand": {
+          "texte": "der Schlafsack",
+          "prononciation_FR": "dér chlaf-zak"
+        },
+        "anglais": {
+          "texte": "the sleeping bag",
+          "prononciation_FR": "ze sli-ping bag"
+        }
+      },
+      {
+        "francais": "le tapis de sol",
+        "allemand": {
+          "texte": "die Isomatte",
+          "prononciation_FR": "di i-zo-ma-teu"
+        },
+        "anglais": {
+          "texte": "the sleeping mat",
+          "prononciation_FR": "ze sli-ping mat"
+        }
       }
-    ],
-    "vocabulaire": []
+    ]
   }
 }

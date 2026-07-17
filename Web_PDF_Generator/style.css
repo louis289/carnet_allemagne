@@ -367,7 +367,7 @@ body.print-mode.spiral-alternating #app .page:nth-child(even) {
 .page-toc h2 {
     font-size: 45pt;
     color: var(--edln-blue);
-    margin: 0 0 15mm 0;
+    margin: 0 0 7.5mm 0;
     text-align: center;
     width: 100%;
     border-bottom: 3px solid var(--edln-yellow);
@@ -399,6 +399,18 @@ body.print-mode.spiral-alternating #app .page:nth-child(even) {
     border-bottom: 2px dashed var(--edln-yellow);
     padding-bottom: 2mm;
     margin-bottom: 3mm;
+}
+.toc-cat.toc-single-cat {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.toc-cat.toc-single-cat span.dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted var(--edln-yellow);
+    margin: 0 4mm;
+    position: relative;
+    top: 2px;
 }
 .toc-cas {
     color: var(--edln-green);
@@ -572,21 +584,35 @@ body.print-mode.spiral-alternating #app .page:nth-child(even) {
     display: flex;
     flex-direction: column;
 }
-.lexique-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.lexique-columns-container {
+    column-count: 3;
     column-gap: 8mm;
-    row-gap: 4mm;
+    width: 100%;
+    height: auto;
+}
+.lexique-cat-header {
+    font-weight: bold;
+    color: var(--edln-red);
+    font-size: 13pt;
+    text-transform: uppercase;
+    border-bottom: 2px dashed var(--edln-yellow);
+    padding-bottom: 1.5mm;
+    margin-bottom: 3mm;
+    margin-top: 4mm;
+    break-inside: avoid;
+    text-align: left;
     width: 100%;
 }
 .lexique-item {
     display: flex;
     flex-direction: column;
     background: #ffffff;
-    border-left: 5px solid var(--edln-red);
+    border-left: 5px solid var(--edln-green);
     padding: 1.5mm 2.5mm;
     border-radius: 0;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    break-inside: avoid;
+    margin-bottom: 3.5mm;
 }
 .lexique-fr {
     font-weight: bold;

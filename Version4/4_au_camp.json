@@ -68,21 +68,6 @@
           },
           {
             "id_expression": 5,
-            "francais": "Où [V1]est[/V1] [N1]le rassemblement[/N1] ?",
-            "allemand": {
-              "texte": "Wo [V1]ist[/V1] [N1]das Antreten[/N1]?",
-              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass an-tré-teun[/N1]?"
-            },
-            "anglais": {
-              "texte": "Where [V1]is[/V1] [N1]the assembly[/N1]?",
-              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze a-sem-bli[/N1]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 6,
             "francais": "[N1]On[/N1] [V1]part[/V1] à [N2]quelle heure[/N2] ?",
             "allemand": {
               "texte": "Um [N2]wie viel Uhr[/N2] [V1]gehen[/V1] [N1]wir[/N1]?",
@@ -97,7 +82,7 @@
             }
           },
           {
-            "id_expression": 7,
+            "id_expression": 6,
             "francais": "[N1]Nous[/N1] [V1]sommes[/V1] en [N2]retard[/N2] !",
             "allemand": {
               "texte": "[N1]Wir[/N1] [V1]sind[/V1] [A1]spät[/A1] [V2]dran[/V2]!",
@@ -112,22 +97,7 @@
             }
           },
           {
-            "id_expression": 8,
-            "francais": "Où [V1]est[/V1] [N1]le camp[/N1] ?",
-            "allemand": {
-              "texte": "Wo [V1]ist[/V1] [N1]das Lager[/N1]?",
-              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass la-gueur[/N1]?"
-            },
-            "anglais": {
-              "texte": "Where [V1]is[/V1] [N1]the camp[/N1]?",
-              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze kamp[/N1]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 9,
+            "id_expression": 7,
             "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]perdu[/A1] !",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]habe[/V1] mich [V2]verlaufen[/V2]!",
@@ -142,7 +112,7 @@
             }
           },
           {
-            "id_expression": 10,
+            "id_expression": 8,
             "francais": "Où [V1]sont[/V1] [N1]les toilettes[/N1] ?",
             "allemand": {
               "texte": "Wo [V1]sind[/V1] [N1]die Toiletten[/N1]?",
@@ -157,7 +127,7 @@
             }
           },
           {
-            "id_expression": 11,
+            "id_expression": 9,
             "francais": "[V1]Peux[/V1]-[N1]tu[/N1] [N2]me[/N2] [V2]montrer[/V2] ?",
             "allemand": {
               "texte": "[V1]Kannst[/V1] [N1]du[/N1] [N2]es mir[/N2] [V2]zeigen[/V2]?",
@@ -172,7 +142,7 @@
             }
           },
           {
-            "id_expression": 12,
+            "id_expression": 10,
             "francais": "[V1]C'est[/V1] [A1]tout droit[/A1].",
             "allemand": {
               "texte": "[V1]Geh[/V1] [A1]geradeaus[/A1].",
@@ -182,6 +152,36 @@
               "texte": "[V1]Go[/V1] [A1]straight ahead[/A1].",
               "prononciation_FR": "[V1]Go[/V1] [A1]stréït e-hed[/A1]."
             },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 11,
+            "francais": "[V1]Tourne[/V1] à [N1]droite[/N1].",
+            "allemand": {
+              "texte": "[V1]Bieg[/V1] nach [N1]rechts[/N1] [V2]ab[/V2].",
+              "prononciation_FR": "[V1]Bik[/V1] nakh [N1]rèchts[/N1] [V2]ap[/V2]."
+            },
+            "anglais": {
+              "texte": "[V1]Turn[/V1] [N1]right[/N1].",
+              "prononciation_FR": "[V1]Teurn[/V1] [N1]raït[/N1]."
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "francais": "Où [V1]est[/V1] [N1]le camp / le rassemblement[/N1] ?",
+            "allemand": {
+              "texte": "Wo [V1]ist[/V1] [N1]das Lager / das Antreten[/N1]?",
+              "prononciation_FR": "Vo [V1]ist[/V1] [N1]dass la-gueur / dass an-tré-teun[/N1]?"
+            },
+            "anglais": {
+              "texte": "Where [V1]is[/V1] [N1]the camp / the assembly[/N1]?",
+              "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze kamp / ze a-sem-bli[/N1]?"
+            },
+            "id_expression": 12,
             "audit": {
               "status": "accepted"
             }
