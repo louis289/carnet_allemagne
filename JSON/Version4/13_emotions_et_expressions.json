@@ -228,51 +228,6 @@
         ]
       }
     ],
-    "vocabulaire": [
-      {
-        "francais": "Tomate",
-        "allemand": {
-          "texte": "Tomate",
-          "prononciation_FR": "To-ma-teu"
-        },
-        "anglais": {
-          "texte": "Tomato",
-          "prononciation_FR": "To-méï-to"
-        }
-      },
-      {
-        "francais": "Haricot",
-        "allemand": {
-          "texte": "Bohne",
-          "prononciation_FR": "Bo-neu"
-        },
-        "anglais": {
-          "texte": "Bean",
-          "prononciation_FR": "Bin"
-        }
-      },
-      {
-        "francais": "Bière",
-        "allemand": {
-          "texte": "Bier",
-          "prononciation_FR": "Bir"
-        },
-        "anglais": {
-          "texte": "Beer",
-          "prononciation_FR": "Bir"
-        }
-      },
-      {
-        "francais": "Biscuit",
-        "allemand": {
-          "texte": "Keks",
-          "prononciation_FR": "Kéks"
-        },
-        "anglais": {
-          "texte": "Cookie",
-          "prononciation_FR": "Kou-ki"
-        }
-      }
-    ]
+    "vocabulaire": []
   }
 }

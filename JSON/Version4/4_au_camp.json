@@ -38,36 +38,6 @@
           },
           {
             "id_expression": 3,
-            "francais": "[A1]Quelle[/A1] [N1]heure[/N1] [V1]est[/V1]-[N2]il[/N2] ?",
-            "allemand": {
-              "texte": "[A1]Wie spät[/A1] [V1]ist[/V1] [N2]es[/N2]?",
-              "prononciation_FR": "[A1]Vi chpèt[/A1] [V1]ist[/V1] [N2]ess[/N2]?"
-            },
-            "anglais": {
-              "texte": "[A1]What[/A1] [N1]time[/N1] [V1]is[/V1] [N2]it[/N2]?",
-              "prononciation_FR": "[A1]Wot[/A1] [N1]taïm[/N1] [V1]iz[/V1] [N2]it[/N2]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 5,
-            "francais": "[N1]On[/N1] [V1]part[/V1] à [N2]quelle heure[/N2] ?",
-            "allemand": {
-              "texte": "Um [N2]wie viel Uhr[/N2] [V1]gehen[/V1] [N1]wir[/N1]?",
-              "prononciation_FR": "Oum [N2]vi fil our[/N2] [V1]gué-heun[/V1] [N1]vir[/N1]?"
-            },
-            "anglais": {
-              "texte": "At [N2]what time[/N2] [V1]do[/V1] [N1]we[/N1] [V2]leave[/V2]?",
-              "prononciation_FR": "At [N2]wot taïm[/N2] [V1]dou[/V1] [N1]wi[/N1] [V2]liv[/V2]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 6,
             "francais": "[N1]Nous[/N1] [V1]sommes[/V1] en [N2]retard[/N2] !",
             "allemand": {
               "texte": "[N1]Wir[/N1] [V1]sind[/V1] [A1]spät[/A1] [V2]dran[/V2]!",
@@ -82,7 +52,7 @@
             }
           },
           {
-            "id_expression": 7,
+            "id_expression": 4,
             "francais": "[N1]Je[/N1] [V1]suis[/V1] [A1]perdu[/A1] !",
             "allemand": {
               "texte": "[N1]Ich[/N1] [V1]habe[/V1] mich [V2]verlaufen[/V2]!",
@@ -97,22 +67,7 @@
             }
           },
           {
-            "id_expression": 9,
-            "francais": "[V1]Peux[/V1]-[N1]tu[/N1] [N2]me[/N2] [V2]montrer[/V2] ?",
-            "allemand": {
-              "texte": "[V1]Kannst[/V1] [N1]du[/N1] [N2]es mir[/N2] [V2]zeigen[/V2]?",
-              "prononciation_FR": "[V1]Kanst[/V1] [N1]dou[/N1] [N2]ess mir[/N2] [V2]tsaï-gueun[/V2]?"
-            },
-            "anglais": {
-              "texte": "[V1]Can[/V1] [N1]you[/N1] [V2]show[/V2] [N2]me[/N2]?",
-              "prononciation_FR": "[V1]Kan[/V1] [N1]you[/N1] [V2]cho[/V2] [N2]mi[/N2]?"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 10,
+            "id_expression": 5,
             "francais": "[V1]C'est[/V1] tout droit / à droite / à gauche.",
             "allemand": {
               "texte": "[V1]Es geht[/V1] geradeaus / nach rechts / nach links.",
@@ -127,6 +82,7 @@
             }
           },
           {
+            "id_expression": 6,
             "francais": "Où [V1]est[/V1] [N1]le camp / le rassemblement[/N1] ?",
             "allemand": {
               "texte": "Wo [V1]ist[/V1] [N1]das Lager / das Antreten[/N1]?",
@@ -136,7 +92,6 @@
               "texte": "Where [V1]is[/V1] [N1]the camp / the assembly[/N1]?",
               "prononciation_FR": "Wèr [V1]iz[/V1] [N1]ze kamp / ze a-sem-bli[/N1]?"
             },
-            "id_expression": 12,
             "audit": {
               "status": "accepted"
             }
@@ -236,6 +191,36 @@
             "audit": {
               "status": "accepted"
             }
+          },
+          {
+            "id_expression": 7,
+            "francais": "[A1]Quelle[/A1] [N1]heure[/N1] [V1]est[/V1]-[N2]il[/N2] ?",
+            "allemand": {
+              "texte": "[A1]Wie spät[/A1] [V1]ist[/V1] [N2]es[/N2]?",
+              "prononciation_FR": "[A1]Vi chpèt[/A1] [V1]ist[/V1] [N2]ess[/N2]?"
+            },
+            "anglais": {
+              "texte": "[A1]What[/A1] [N1]time[/N1] [V1]is[/V1] [N2]it[/N2]?",
+              "prononciation_FR": "[A1]Wot[/A1] [N1]taïm[/N1] [V1]iz[/V1] [N2]it[/N2]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
+          },
+          {
+            "id_expression": 8,
+            "francais": "[N1]On[/N1] [V1]part[/V1] à [N2]quelle heure[/N2] ?",
+            "allemand": {
+              "texte": "Um [N2]wie viel Uhr[/N2] [V1]gehen[/V1] [N1]wir[/N1]?",
+              "prononciation_FR": "Oum [N2]vi fil our[/N2] [V1]gué-heun[/V1] [N1]vir[/N1]?"
+            },
+            "anglais": {
+              "texte": "At [N2]what time[/N2] [V1]do[/V1] [N1]we[/N1] [V2]leave[/V2]?",
+              "prononciation_FR": "At [N2]wot taïm[/N2] [V1]dou[/V1] [N1]wi[/N1] [V2]liv[/V2]?"
+            },
+            "audit": {
+              "status": "accepted"
+            }
           }
         ]
       },
@@ -274,7 +259,7 @@
             }
           },
           {
-            "id_expression": 5,
+            "id_expression": 3,
             "francais": "[N1]Il[/N1] [V1]manque[/V1] [A1]une[/A1] [N2]boussole[/N2].",
             "allemand": {
               "texte": "[N1]Es[/N1] [V1]fehlt[/V1] [A1]ein[/A1] [N2]Kompass[/N2].",
@@ -289,7 +274,7 @@
             }
           },
           {
-            "id_expression": 7,
+            "id_expression": 4,
             "francais": "[V1]Partager[/V1] [A1]bien[/A1] [N1]le matériel[/N1].",
             "allemand": {
               "texte": "[V1]Teilt[/V1] [N1]das Material[/N1] [A1]gut auf[/A1].",
@@ -304,7 +289,7 @@
             }
           },
           {
-            "id_expression": 8,
+            "id_expression": 5,
             "francais": "[N1]Il[/N1] [V1]pleut[/V1] [A1]fort[/A1].",
             "allemand": {
               "texte": "[N1]Es[/N1] [V1]regnet[/V1] [A1]stark[/A1].",
@@ -323,139 +308,139 @@
     ],
     "vocabulaire": [
       {
-        "francais": "Nord",
+        "francais": "Le nord",
         "allemand": {
-          "texte": "Norden",
-          "prononciation_FR": "Nor-deun"
+          "texte": "der Norden",
+          "prononciation_FR": "dér nor-deun"
         },
         "anglais": {
-          "texte": "North",
-          "prononciation_FR": "Nors"
+          "texte": "the North",
+          "prononciation_FR": "ze nors"
         }
       },
       {
-        "francais": "Sud",
+        "francais": "Le sud",
         "allemand": {
-          "texte": "Süden",
-          "prononciation_FR": "Zu-deun"
+          "texte": "der Süden",
+          "prononciation_FR": "dér zu-deun"
         },
         "anglais": {
-          "texte": "South",
-          "prononciation_FR": "Saouss"
+          "texte": "the South",
+          "prononciation_FR": "ze saouss"
         }
       },
       {
-        "francais": "Est",
+        "francais": "L'est",
         "allemand": {
-          "texte": "Osten",
-          "prononciation_FR": "Os-teun"
+          "texte": "der Osten",
+          "prononciation_FR": "dér os-teun"
         },
         "anglais": {
-          "texte": "East",
-          "prononciation_FR": "Ist"
+          "texte": "the East",
+          "prononciation_FR": "zi ist"
         }
       },
       {
-        "francais": "Ouest",
+        "francais": "L'ouest",
         "allemand": {
-          "texte": "Westen",
-          "prononciation_FR": "Ves-teun"
+          "texte": "der Westen",
+          "prononciation_FR": "dér ves-teun"
         },
         "anglais": {
-          "texte": "West",
-          "prononciation_FR": "West"
+          "texte": "the West",
+          "prononciation_FR": "ze west"
         }
       },
       {
-        "francais": "Droite",
+        "francais": "La droite",
         "allemand": {
-          "texte": "Rechts",
-          "prononciation_FR": "Rèchts"
+          "texte": "rechts",
+          "prononciation_FR": "rèchts"
         },
         "anglais": {
-          "texte": "Right",
-          "prononciation_FR": "Raït"
+          "texte": "the right",
+          "prononciation_FR": "ze raït"
         }
       },
       {
-        "francais": "Gauche",
+        "francais": "La gauche",
         "allemand": {
-          "texte": "Links",
-          "prononciation_FR": "Links"
+          "texte": "links",
+          "prononciation_FR": "links"
         },
         "anglais": {
-          "texte": "Left",
-          "prononciation_FR": "Left"
+          "texte": "the left",
+          "prononciation_FR": "ze left"
         }
       },
       {
         "francais": "Le groupe",
         "allemand": {
-          "texte": "Die Gruppe",
-          "prononciation_FR": "Di grou-peu"
+          "texte": "die Gruppe",
+          "prononciation_FR": "di grou-peu"
         },
         "anglais": {
-          "texte": "The group",
-          "prononciation_FR": "Ze group"
+          "texte": "the group",
+          "prononciation_FR": "ze group"
         }
       },
       {
         "francais": "Les toilettes",
         "allemand": {
-          "texte": "Die Toiletten",
-          "prononciation_FR": "Di to-a-lèt-teun"
+          "texte": "die Toiletten",
+          "prononciation_FR": "di to-a-lèt-teun"
         },
         "anglais": {
-          "texte": "The toilets",
-          "prononciation_FR": "Ze toï-lets"
+          "texte": "the toilets",
+          "prononciation_FR": "ze toï-lets"
         }
       },
       {
         "francais": "Le camp",
         "allemand": {
-          "texte": "Das Lager",
-          "prononciation_FR": "Dass la-gueur"
+          "texte": "das Lager",
+          "prononciation_FR": "dass la-gueur"
         },
         "anglais": {
-          "texte": "The camp",
-          "prononciation_FR": "Ze kamp"
+          "texte": "the camp",
+          "prononciation_FR": "ze kamp"
         }
       },
       {
         "francais": "Le rassemblement",
         "allemand": {
-          "texte": "Das Antreten",
-          "prononciation_FR": "Dass an-tré-teun"
+          "texte": "das Antreten",
+          "prononciation_FR": "dass an-tré-teun"
         },
         "anglais": {
-          "texte": "The assembly",
-          "prononciation_FR": "Ze a-sem-bli"
+          "texte": "the assembly",
+          "prononciation_FR": "ze a-sem-bli"
         }
       },
       {
         "francais": "La lampe",
         "allemand": {
-          "texte": "Die Taschenlampe",
-          "prononciation_FR": "Di tach-eun-lam-peu"
+          "texte": "die Taschenlampe",
+          "prononciation_FR": "di tach-eun-lam-peu"
         },
         "anglais": {
-          "texte": "The torch",
-          "prononciation_FR": "Ze tortch"
+          "texte": "the torch",
+          "prononciation_FR": "ze tortch"
         }
       },
       {
         "francais": "La corde",
         "allemand": {
-          "texte": "Das Seil",
-          "prononciation_FR": "Dass zaïl"
+          "texte": "das Seil",
+          "prononciation_FR": "dass zaïl"
         },
         "anglais": {
-          "texte": "The rope",
-          "prononciation_FR": "Ze rop"
+          "texte": "the rope",
+          "prononciation_FR": "ze rop"
         }
       },
       {
-        "francais": "la boussole",
+        "francais": "La boussole",
         "allemand": {
           "texte": "der Kompass",
           "prononciation_FR": "dér kom-pass"
@@ -466,7 +451,7 @@
         }
       },
       {
-        "francais": "la carte",
+        "francais": "La carte",
         "allemand": {
           "texte": "die Karte",
           "prononciation_FR": "di kar-teu"
@@ -477,7 +462,7 @@
         }
       },
       {
-        "francais": "la tente",
+        "francais": "La tente",
         "allemand": {
           "texte": "das Zelt",
           "prononciation_FR": "dass tselt"
@@ -488,7 +473,7 @@
         }
       },
       {
-        "francais": "le bidon d'eau",
+        "francais": "Le bidon d'eau",
         "allemand": {
           "texte": "der Wasserkanister",
           "prononciation_FR": "dér vas-seur-ka-nis-teur"
@@ -499,7 +484,7 @@
         }
       },
       {
-        "francais": "le sac à dos",
+        "francais": "Le sac à dos",
         "allemand": {
           "texte": "der Rucksack",
           "prononciation_FR": "dér rouk-zak"
@@ -510,7 +495,7 @@
         }
       },
       {
-        "francais": "le sac de couchage",
+        "francais": "Le sac de couchage",
         "allemand": {
           "texte": "der Schlafsack",
           "prononciation_FR": "dér chlaf-zak"
@@ -521,7 +506,7 @@
         }
       },
       {
-        "francais": "le tapis de sol",
+        "francais": "Le tapis de sol",
         "allemand": {
           "texte": "die Isomatte",
           "prononciation_FR": "di i-zo-ma-teu"

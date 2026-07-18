@@ -4,226 +4,10 @@
     "cas": [
       {
         "id_cas": 1,
-        "nom_du_cas": "Événements et rites / Ereignisse und Rituale",
+        "nom_du_cas": "Logistique et déplacements / Logistik und Fortbewegung",
         "expressions": [
           {
             "id_expression": 1,
-            "francais": "[N1]la charte du camp[/N1]",
-            "allemand": {
-              "texte": "[N1]die Lagercharta[/N1]",
-              "prononciation_FR": "[N1]di la-gueur-kar-ta[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the camp charter[/N1]",
-              "prononciation_FR": "[N1]ze camp tchar-teur[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 2,
-            "francais": "[N1]la promesse scoute[/N1]",
-            "allemand": {
-              "texte": "[N1]das Pfadfinderversprechen[/N1]",
-              "prononciation_FR": "[N1]dass pfat-fin-deur-fer-chprè-kheun[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the scout promise[/N1]",
-              "prononciation_FR": "[N1]ze skaout pro-miss[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "francais": "[N1]la cérémonie d'ouverture / de fermeture[/N1]",
-            "allemand": {
-              "texte": "[N1]die Eröffnungsfeier / Abschlussfeier[/N1]",
-              "prononciation_FR": "[N1]di ér-euf-noungs-faï-eur / ap-chlouss-faï-eur[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the opening / closing ceremony[/N1]",
-              "prononciation_FR": "[N1]ze ou-peun-ing / clouz-ing sé-ré-mo-ni[/N1]"
-            },
-            "id_expression": 3,
-            "audit": {
-              "status": "accepted"
-            }
-          }
-        ]
-      },
-      {
-        "id_cas": 2,
-        "nom_du_cas": "Pratiques du camp / Lagerpraktiken",
-        "expressions": [
-          {
-            "id_expression": 1,
-            "francais": "[N1]la marche pleine conscience[/N1]",
-            "allemand": {
-              "texte": "[N1]der achtsame Spaziergang[/N1]",
-              "prononciation_FR": "[N1]dér akh-tsa-meu chpa-tsir-gang[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the mindful walk[/N1]",
-              "prononciation_FR": "[N1]ze maïnd-foul ouok[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 2,
-            "francais": "[N1]le rondin de bois[/N1]",
-            "allemand": {
-              "texte": "[N1]das Holzscheit[/N1]",
-              "prononciation_FR": "[N1]dass holts-chaït[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the wooden log[/N1]",
-              "prononciation_FR": "[N1]ze ouou-deun log[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 3,
-            "francais": "[N1]les mots gentils[/N1]",
-            "allemand": {
-              "texte": "[N1]die netten Worte[/N1]",
-              "prononciation_FR": "[N1]di né-teun vor-teu[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the kind words[/N1]",
-              "prononciation_FR": "[N1]ze kaïnd ouérdz[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 4,
-            "francais": "[N1]la communication non-violente[/N1]",
-            "allemand": {
-              "texte": "[N1]die gewaltfreie Kommunikation[/N1]",
-              "prononciation_FR": "[N1]di gué-valt-fraïe ko-mou-ni-ka-tsionn[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]nonviolent communication[/N1]",
-              "prononciation_FR": "[N1]nonn-vaïe-lent ko-miou-ni-keï-cheun[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 5,
-            "francais": "[N1]le débat mouvant[/N1]",
-            "allemand": {
-              "texte": "[N1]die Positionsdebatte[/N1]",
-              "prononciation_FR": "[N1]di po-zi-tsionns-dé-ba-teu[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the moving debate[/N1]",
-              "prononciation_FR": "[N1]ze mou-ving di-beït[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 6,
-            "francais": "[N1]le jeu de l'île[/N1]",
-            "allemand": {
-              "texte": "[N1]das Inselspiel[/N1]",
-              "prononciation_FR": "[N1]dass in-zel-chpil[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the island game[/N1]",
-              "prononciation_FR": "[N1]ze aï-land guéïm[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 7,
-            "francais": "[N1]le safari écologie[/N1]",
-            "allemand": {
-              "texte": "[N1]die Öko-Safari[/N1]",
-              "prononciation_FR": "[N1]di eu-ko-za-fa-ri[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the ecology safari[/N1]",
-              "prononciation_FR": "[N1]ze i-ko-lo-dji sa-fa-ri[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 8,
-            "francais": "[N1]le tri sélectif[/N1]",
-            "allemand": {
-              "texte": "[N1]die Mülltrennung[/N1]",
-              "prononciation_FR": "[N1]di mul-trén-oung[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]recycling / waste sorting[/N1]",
-              "prononciation_FR": "[N1]ri-saï-kling / ouést sor-ting[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 9,
-            "francais": "[N1]l'alimentation végétarienne[/N1]",
-            "allemand": {
-              "texte": "[N1]die vegetarische Ernährung[/N1]",
-              "prononciation_FR": "[N1]di vé-guét-a-rich-eu ér-né-roung[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]vegetarian food[/N1]",
-              "prononciation_FR": "[N1]védj-é-té-ri-ann foud[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 10,
-            "francais": "[N1]l'empreinte carbone[/N1]",
-            "allemand": {
-              "texte": "[N1]der CO₂-Fußabdruck[/N1]",
-              "prononciation_FR": "[N1]dass tsé-o-tsvaï-fouss-ap-drouk[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the carbon footprint[/N1]",
-              "prononciation_FR": "[N1]ze kar-beun fout-print[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 11,
-            "francais": "[N1]la désinstallation du camp[/N1]",
-            "allemand": {
-              "texte": "[N1]der Lagerabbau[/N1]",
-              "prononciation_FR": "[N1]dér la-gueur-ap-baou[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]striking camp[/N1]",
-              "prononciation_FR": "[N1]straï-king kamp[/N1]"
-            },
-            "audit": {
-              "status": "accepted"
-            }
-          },
-          {
-            "id_expression": 12,
             "francais": "[V1]Dépêchez[/V1]-[N1]vous[/N1] !",
             "allemand": {
               "texte": "[V1]Beeilt[/V1] [N1]euch[/N1]!",
@@ -238,7 +22,7 @@
             }
           },
           {
-            "id_expression": 13,
+            "id_expression": 2,
             "francais": "[N1]Ma place[/N1] [V1]est[/V1] [A1]ici[/A1].",
             "allemand": {
               "texte": "[N1]Mein Platz[/N1] [V1]ist[/V1] [A1]hier[/A1].",
@@ -253,7 +37,7 @@
             }
           },
           {
-            "id_expression": 14,
+            "id_expression": 3,
             "francais": "[N1]Le sac[/N1] en [N2]soute[/N2].",
             "allemand": {
               "texte": "[N1]Die Tasche[/N1] in [N2]den Kofferraum[/N2].",
@@ -266,26 +50,11 @@
             "audit": {
               "status": "accepted"
             }
-          },
-          {
-            "francais": "[N1]le concours de chants / de cuisine[/N1]",
-            "allemand": {
-              "texte": "[N1]der Gesangswettbewerb / Kochwettbewerb[/N1]",
-              "prononciation_FR": "[N1]dér gué-zangs-vet-bé-vérp / kokh-vet-bé-vérp[/N1]"
-            },
-            "anglais": {
-              "texte": "[N1]the singing / cooking contest[/N1]",
-              "prononciation_FR": "[N1]ze sing-ing / kou-king kon-tést[/N1]"
-            },
-            "id_expression": 16,
-            "audit": {
-              "status": "accepted"
-            }
           }
         ]
       },
       {
-        "id_cas": 3,
+        "id_cas": 2,
         "nom_du_cas": "Valeurs scoutes / Pfadfinderwerte",
         "expressions": [
           {
@@ -353,36 +122,36 @@
     ],
     "vocabulaire": [
       {
-        "francais": "Place",
+        "francais": "La place",
         "allemand": {
-          "texte": "Platz",
-          "prononciation_FR": "Plats"
+          "texte": "der Platz",
+          "prononciation_FR": "dér plats"
         },
         "anglais": {
-          "texte": "Seat",
-          "prononciation_FR": "Sit"
+          "texte": "the seat",
+          "prononciation_FR": "ze sit"
         }
       },
       {
-        "francais": "Sac",
+        "francais": "Le sac",
         "allemand": {
-          "texte": "Rucksack",
-          "prononciation_FR": "Rouk-zak"
+          "texte": "der Rucksack",
+          "prononciation_FR": "dér rouk-zak"
         },
         "anglais": {
-          "texte": "Bag / Backpack",
-          "prononciation_FR": "Bag / Bak-pak"
+          "texte": "the bag / the backpack",
+          "prononciation_FR": "ze bag / ze bak-pak"
         }
       },
       {
-        "francais": "Départ",
+        "francais": "Le départ",
         "allemand": {
-          "texte": "Abfahrt",
-          "prononciation_FR": "Ap-fart"
+          "texte": "die Abfahrt",
+          "prononciation_FR": "di ap-fart"
         },
         "anglais": {
-          "texte": "Departure",
-          "prononciation_FR": "Di-par-tchour"
+          "texte": "the departure",
+          "prononciation_FR": "ze di-par-tchour"
         }
       },
       {
@@ -399,12 +168,12 @@
       {
         "francais": "Le Jamboree / le BuLa",
         "allemand": {
-          "texte": "das Bundeslager / BuLa",
-          "prononciation_FR": "dass boun-deuss-la-gueur / Bou-La"
+          "texte": "das Bundeslager / das BuLa",
+          "prononciation_FR": "dass boun-deuss-la-gueur / dass bou-la"
         },
         "anglais": {
-          "texte": "the Jamboree / BuLa",
-          "prononciation_FR": "ze djam-bo-ri / Bou-La"
+          "texte": "the Jamboree / the BuLa",
+          "prononciation_FR": "ze djam-bo-ri / ze bou-la"
         }
       },
       {
@@ -427,6 +196,182 @@
         "anglais": {
           "texte": "the werewolf game",
           "prononciation_FR": "ze wêr-ouolf guêm"
+        }
+      },
+      {
+        "francais": "La charte du camp",
+        "allemand": {
+          "texte": "die Lagercharta",
+          "prononciation_FR": "di la-gueur-kar-ta"
+        },
+        "anglais": {
+          "texte": "the camp charter",
+          "prononciation_FR": "ze camp tchar-teur"
+        }
+      },
+      {
+        "francais": "La promesse scoute",
+        "allemand": {
+          "texte": "das Pfadfinderversprechen",
+          "prononciation_FR": "dass pfat-fin-deur-fer-chprè-kheun"
+        },
+        "anglais": {
+          "texte": "the scout promise",
+          "prononciation_FR": "ze skaout pro-miss"
+        }
+      },
+      {
+        "francais": "La cérémonie d'ouverture / de fermeture",
+        "allemand": {
+          "texte": "die Eröffnungsfeier / die Abschlussfeier",
+          "prononciation_FR": "di ér-euf-noungs-faï-eur / di ap-chlouss-faï-eur"
+        },
+        "anglais": {
+          "texte": "the opening / the closing ceremony",
+          "prononciation_FR": "ze ou-peun-ing / ze clouz-ing sé-ré-mo-ni"
+        }
+      },
+      {
+        "francais": "La marche pleine conscience",
+        "allemand": {
+          "texte": "der achtsame Spaziergang",
+          "prononciation_FR": "dér akh-tsa-meu chpa-tsir-gang"
+        },
+        "anglais": {
+          "texte": "the mindful walk",
+          "prononciation_FR": "ze maïnd-foul ouok"
+        }
+      },
+      {
+        "francais": "Le rondin de bois",
+        "allemand": {
+          "texte": "das Holzscheit",
+          "prononciation_FR": "dass holts-chaït"
+        },
+        "anglais": {
+          "texte": "the wooden log",
+          "prononciation_FR": "ze ouou-deun log"
+        }
+      },
+      {
+        "francais": "Les mots gentils",
+        "allemand": {
+          "texte": "die netten Worte",
+          "prononciation_FR": "di né-teun vor-teu"
+        },
+        "anglais": {
+          "texte": "the kind words",
+          "prononciation_FR": "ze kaïnd ouérdz"
+        }
+      },
+      {
+        "francais": "La communication non-violente",
+        "allemand": {
+          "texte": "die gewaltfreie Kommunikation",
+          "prononciation_FR": "di gué-valt-fraïe ko-mou-ni-ka-tsionn"
+        },
+        "anglais": {
+          "texte": "the nonviolent communication",
+          "prononciation_FR": "ze nonn-vaïe-lent ko-miou-ni-keï-cheun"
+        }
+      },
+      {
+        "francais": "Le débat mouvant",
+        "allemand": {
+          "texte": "die Positionsdebatte",
+          "prononciation_FR": "di po-zi-tsionns-dé-ba-teu"
+        },
+        "anglais": {
+          "texte": "the moving debate",
+          "prononciation_FR": "ze mou-ving di-beït"
+        }
+      },
+      {
+        "francais": "Le jeu de l'île",
+        "allemand": {
+          "texte": "das Inselspiel",
+          "prononciation_FR": "dass in-zel-chpil"
+        },
+        "anglais": {
+          "texte": "the island game",
+          "prononciation_FR": "ze aï-land guéïm"
+        }
+      },
+      {
+        "francais": "Le safari écologie",
+        "allemand": {
+          "texte": "die Öko-Safari",
+          "prononciation_FR": "di eu-ko-za-fa-ri"
+        },
+        "anglais": {
+          "texte": "the ecology safari",
+          "prononciation_FR": "ze i-ko-lo-dji sa-fa-ri"
+        }
+      },
+      {
+        "francais": "Le tri sélectif",
+        "allemand": {
+          "texte": "die Mülltrennung",
+          "prononciation_FR": "di mul-trén-oung"
+        },
+        "anglais": {
+          "texte": "the recycling / the waste sorting",
+          "prononciation_FR": "ze ri-saï-kling / ze ouést sor-ting"
+        }
+      },
+      {
+        "francais": "L'alimentation végétarienne",
+        "allemand": {
+          "texte": "die vegetarische Ernährung",
+          "prononciation_FR": "di vé-guét-a-rich-eu ér-né-roung"
+        },
+        "anglais": {
+          "texte": "the vegetarian food",
+          "prononciation_FR": "ze védj-é-té-ri-ann foud"
+        }
+      },
+      {
+        "francais": "L'empreinte carbone",
+        "allemand": {
+          "texte": "der CO₂-Fußabdruck",
+          "prononciation_FR": "dér tsé-o-tsvaï-fouss-ap-drouk"
+        },
+        "anglais": {
+          "texte": "the carbon footprint",
+          "prononciation_FR": "ze kar-beun fout-print"
+        }
+      },
+      {
+        "francais": "La désinstallation du camp",
+        "allemand": {
+          "texte": "der Lagerabbau",
+          "prononciation_FR": "dér la-gueur-ap-baou"
+        },
+        "anglais": {
+          "texte": "striking camp",
+          "prononciation_FR": "straï-king kamp"
+        }
+      },
+      {
+        "francais": "Le concours de chants",
+        "allemand": {
+          "texte": "der Gesangswettbewerb",
+          "prononciation_FR": "dér gué-zangs-vet-bé-vérp"
+        },
+        "anglais": {
+          "texte": "the singing contest",
+          "prononciation_FR": "ze sing-ing kon-tést"
+        }
+      },
+      {
+        "francais": "Le concours de cuisine",
+        "allemand": {
+          "texte": "der Kochwettbewerb",
+          "prononciation_FR": "dér kokh-vet-bé-vérp"
+        },
+        "anglais": {
+          "texte": "the cooking contest",
+          "prononciation_FR": "ze kou-king kon-tést"
         }
       }
     ]
